@@ -1,0 +1,17 @@
+name: GeoDiscovery
+main: de.lothomax.geodiscovery.GeoDiscovery
+version: 1.0.0
+api-version: '1.21'
+author: lothomax
+commands:
+  taufe:
+    description: Benennt eine entdeckte Region
+    usage: /taufe <Name>
+  geodiscovery:
+    description: Admin-Befehl
+    usage: /geodiscovery reload
+permissions:
+  geodiscovery.player.taufe:
+    default: true
+  geodiscovery.admin.reload:
+    default: op
