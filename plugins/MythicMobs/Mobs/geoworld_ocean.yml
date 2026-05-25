@@ -1,0 +1,408 @@
+# GeoWorld MythicMobs – Ocean
+# Generiert aus docs/CUSTOM_BIOMES.md
+# Ablageort: plugins/MythicMobs/Mobs/geoworld_ocean.yml
+
+AbyssalHunter:
+  Type: DROWNED
+  Display: '<&6>AbyssalHunter'
+  Health: 80
+  Damage: 5
+  Armor: 0
+  Options:
+    MovementSpeed: 0.25
+    Despawn: false
+    PreventOtherDrops: true
+    PreventItemPickup: true
+    Silent: false
+  Faction: GeoWorld
+  Skills:
+  - damage{amount=2} @Target ~onAttack
+  - effect:particles{p=crit;a=10} @Self ~onDamaged
+  Drops:
+    - PRISMARINE_SHARD 1-3 0.8
+    - PRISMARINE_CRYSTALS 1-2 0.5
+    - COD 1 0.9
+    - TROPICAL_FISH 1 0.5
+    - NAUTILUS_SHELL 1 0.1
+  LevelModifiers:
+    Health: 0.5
+    Damage: 0.25
+
+DeepOneSorcerer:
+  Type: DROWNED
+  Display: '<&6>DeepOneSorcerer'
+  Health: 5000
+  Damage: 20
+  Armor: 0
+  Options:
+    MovementSpeed: 0.25
+    Despawn: false
+    PreventOtherDrops: true
+    PreventItemPickup: true
+    Silent: false
+  Faction: GeoWorld
+  Skills:
+  - damage{amount=2} @Target ~onAttack
+  - effect:particles{p=crit;a=10} @Self ~onDamaged
+  Drops:
+    - PRISMARINE_SHARD 1-3 0.8
+    - PRISMARINE_CRYSTALS 1-2 0.5
+    - COD 1 0.9
+    - TROPICAL_FISH 1 0.5
+    - NAUTILUS_SHELL 1 0.1
+    - DIAMOND_BLOCK 1 0.05
+    - DIAMOND 1-2 0.3
+    - GOLD_INGOT 2-5 0.8
+  LevelModifiers:
+    Health: 0.5
+    Damage: 0.25
+  BossBar:
+    Enabled: true
+    Title: '<&4>DeepOneSorcerer'
+    Range: 64
+    Color: RED
+    Style: SEGMENTED_10
+
+LuminousJellyfish:
+  Type: GUARDIAN
+  Display: '<&6>LuminousJellyfish'
+  Health: 30
+  Damage: 0
+  Armor: 0
+  Options:
+    MovementSpeed: 0.25
+    Despawn: false
+    PreventOtherDrops: true
+    PreventItemPickup: true
+    Silent: false
+  Faction: GeoWorld
+  Skills:
+  - potion{type=POISON;duration=100;amplifier=1} @Target ~onAttack
+  - damage{amount=2} @Target ~onAttack
+  - effect:particles{p=crit;a=10} @Self ~onDamaged
+  Drops:
+    - PRISMARINE_SHARD 1-3 0.8
+    - PRISMARINE_CRYSTALS 1-2 0.5
+    - COD 1 0.9
+    - TROPICAL_FISH 1 0.5
+    - NAUTILUS_SHELL 1 0.1
+  LevelModifiers:
+    Health: 0.5
+    Damage: 0.25
+
+CoralGuardian:
+  Type: ZOMBIE
+  Display: '<&6>CoralGuardian'
+  Health: 80
+  Damage: 5
+  Armor: 0
+  Options:
+    MovementSpeed: 0.25
+    Despawn: false
+    PreventOtherDrops: true
+    PreventItemPickup: true
+    Silent: false
+  Faction: GeoWorld
+  Skills:
+  - damage{amount=2} @Target ~onAttack
+  - effect:particles{p=crit;a=10} @Self ~onDamaged
+  Drops:
+    - PRISMARINE_SHARD 1-3 0.8
+    - PRISMARINE_CRYSTALS 1-2 0.5
+    - COD 1 0.9
+    - TROPICAL_FISH 1 0.5
+    - NAUTILUS_SHELL 1 0.1
+  LevelModifiers:
+    Health: 0.5
+    Damage: 0.25
+
+IslandPirate:
+  Type: ZOMBIE
+  Display: '<&6>IslandPirate'
+  Health: 80
+  Damage: 5
+  Armor: 0
+  Options:
+    MovementSpeed: 0.25
+    Despawn: false
+    PreventOtherDrops: true
+    PreventItemPickup: true
+    Silent: false
+  Faction: GeoWorld
+  Skills:
+  - damage{amount=2} @Target ~onAttack
+  - effect:particles{p=crit;a=10} @Self ~onDamaged
+  Drops:
+    - PRISMARINE_SHARD 1-3 0.8
+    - PRISMARINE_CRYSTALS 1-2 0.5
+    - COD 1 0.9
+    - TROPICAL_FISH 1 0.5
+    - NAUTILUS_SHELL 1 0.1
+  LevelModifiers:
+    Health: 0.5
+    Damage: 0.25
+
+SandCrab:
+  Type: SHULKER
+  Display: '<&6>SandCrab'
+  Health: 30
+  Damage: 0
+  Armor: 0
+  Options:
+    MovementSpeed: 0.18
+    Despawn: false
+    PreventOtherDrops: true
+    PreventItemPickup: true
+    Silent: false
+  Faction: GeoWorld
+  Skills:
+  - damage{amount=2} @Target ~onAttack
+  - effect:particles{p=crit;a=10} @Self ~onDamaged
+  Drops:
+    - PRISMARINE_SHARD 1-3 0.8
+    - PRISMARINE_CRYSTALS 1-2 0.5
+    - COD 1 0.9
+    - TROPICAL_FISH 1 0.5
+    - NAUTILUS_SHELL 1 0.1
+  LevelModifiers:
+    Health: 0.5
+    Damage: 0.25
+
+DrownedKnight:
+  Type: ZOMBIE
+  Display: '<&6>DrownedKnight'
+  Health: 80
+  Damage: 5
+  Armor: 0
+  Options:
+    MovementSpeed: 0.25
+    Despawn: false
+    PreventOtherDrops: true
+    PreventItemPickup: true
+    Silent: false
+  Faction: GeoWorld
+  Skills:
+  - damage{amount=2} @Target ~onAttack
+  - effect:particles{p=crit;a=10} @Self ~onDamaged
+  Drops:
+    - PRISMARINE_SHARD 1-3 0.8
+    - PRISMARINE_CRYSTALS 1-2 0.5
+    - COD 1 0.9
+    - TROPICAL_FISH 1 0.5
+    - NAUTILUS_SHELL 1 0.1
+  LevelModifiers:
+    Health: 0.5
+    Damage: 0.25
+
+TideCaller:
+  Type: GUARDIAN
+  Display: '<&6>TideCaller'
+  Health: 5000
+  Damage: 20
+  Armor: 0
+  Options:
+    MovementSpeed: 0.25
+    Despawn: false
+    PreventOtherDrops: true
+    PreventItemPickup: true
+    Silent: false
+  Faction: GeoWorld
+  Skills:
+  - damage{amount=2} @Target ~onAttack
+  - effect:particles{p=crit;a=10} @Self ~onDamaged
+  Drops:
+    - PRISMARINE_SHARD 1-3 0.8
+    - PRISMARINE_CRYSTALS 1-2 0.5
+    - COD 1 0.9
+    - TROPICAL_FISH 1 0.5
+    - NAUTILUS_SHELL 1 0.1
+    - DIAMOND_BLOCK 1 0.05
+    - DIAMOND 1-2 0.3
+    - GOLD_INGOT 2-5 0.8
+  LevelModifiers:
+    Health: 0.5
+    Damage: 0.25
+  BossBar:
+    Enabled: true
+    Title: '<&4>TideCaller'
+    Range: 64
+    Color: RED
+    Style: SEGMENTED_10
+
+PearlOyster:
+  Type: ZOMBIE
+  Display: '<&6>PearlOyster'
+  Health: 30
+  Damage: 0
+  Armor: 0
+  Options:
+    MovementSpeed: 0.25
+    Despawn: false
+    PreventOtherDrops: true
+    PreventItemPickup: true
+    Silent: false
+  Faction: GeoWorld
+  Skills:
+  - damage{amount=2} @Target ~onAttack
+  - effect:particles{p=crit;a=10} @Self ~onDamaged
+  Drops:
+    - PRISMARINE_SHARD 1-3 0.8
+    - PRISMARINE_CRYSTALS 1-2 0.5
+    - COD 1 0.9
+    - TROPICAL_FISH 1 0.5
+    - NAUTILUS_SHELL 1 0.1
+  LevelModifiers:
+    Health: 0.5
+    Damage: 0.25
+
+LaguneShark:
+  Type: DROWNED
+  Display: '<&6>LaguneShark'
+  Health: 80
+  Damage: 5
+  Armor: 0
+  Options:
+    MovementSpeed: 0.4
+    Despawn: false
+    PreventOtherDrops: true
+    PreventItemPickup: true
+    Silent: false
+  Faction: GeoWorld
+  Skills:
+  - damage{amount=2} @Target ~onAttack
+  - effect:particles{p=crit;a=10} @Self ~onDamaged
+  Drops:
+    - PRISMARINE_SHARD 1-3 0.8
+    - PRISMARINE_CRYSTALS 1-2 0.5
+    - COD 1 0.9
+    - TROPICAL_FISH 1 0.5
+    - NAUTILUS_SHELL 1 0.1
+  LevelModifiers:
+    Health: 0.5
+    Damage: 0.25
+
+VolcanoSpirit:
+  Type: ZOMBIE
+  Display: '<&6>VolcanoSpirit'
+  Health: 80
+  Damage: 5
+  Armor: 0
+  Options:
+    MovementSpeed: 0.25
+    Despawn: false
+    PreventOtherDrops: true
+    PreventItemPickup: true
+    Silent: false
+  Faction: GeoWorld
+  Skills:
+  - damage{amount=2} @Target ~onAttack
+  - effect:particles{p=crit;a=10} @Self ~onDamaged
+  Drops:
+    - PRISMARINE_SHARD 1-3 0.8
+    - PRISMARINE_CRYSTALS 1-2 0.5
+    - COD 1 0.9
+    - TROPICAL_FISH 1 0.5
+    - NAUTILUS_SHELL 1 0.1
+  LevelModifiers:
+    Health: 0.5
+    Damage: 0.25
+
+LavaGull:
+  Type: PHANTOM
+  Display: '<&6>LavaGull'
+  Health: 80
+  Damage: 5
+  Armor: 0
+  Options:
+    MovementSpeed: 0.25
+    Despawn: false
+    PreventOtherDrops: true
+    PreventItemPickup: true
+    Silent: false
+  Faction: GeoWorld
+  Skills:
+  - damage{amount=2} @Target ~onAttack
+  - effect:particles{p=crit;a=10} @Self ~onDamaged
+  Drops:
+    - PRISMARINE_SHARD 1-3 0.8
+    - PRISMARINE_CRYSTALS 1-2 0.5
+    - COD 1 0.9
+    - TROPICAL_FISH 1 0.5
+    - NAUTILUS_SHELL 1 0.1
+  LevelModifiers:
+    Health: 0.5
+    Damage: 0.25
+
+RandomSpawning:
+  AbyssalHunter:
+    Enabled: false
+    Worlds: world
+    Biomes: DEEP_OCEAN
+    Chance: 0.05
+    MaxMobsPerChunk: 2
+  DeepOneSorcerer:
+    Enabled: false
+    Worlds: world
+    Biomes: DEEP_OCEAN
+    Chance: 0.05
+    MaxMobsPerChunk: 2
+  LuminousJellyfish:
+    Enabled: false
+    Worlds: world
+    Biomes: DEEP_OCEAN
+    Chance: 0.05
+    MaxMobsPerChunk: 2
+  CoralGuardian:
+    Enabled: false
+    Worlds: world
+    Biomes: DEEP_OCEAN
+    Chance: 0.05
+    MaxMobsPerChunk: 2
+  IslandPirate:
+    Enabled: false
+    Worlds: world
+    Biomes: DEEP_OCEAN
+    Chance: 0.05
+    MaxMobsPerChunk: 2
+  SandCrab:
+    Enabled: false
+    Worlds: world
+    Biomes: DEEP_OCEAN
+    Chance: 0.05
+    MaxMobsPerChunk: 2
+  DrownedKnight:
+    Enabled: false
+    Worlds: world
+    Biomes: DEEP_OCEAN
+    Chance: 0.05
+    MaxMobsPerChunk: 2
+  TideCaller:
+    Enabled: false
+    Worlds: world
+    Biomes: DEEP_OCEAN
+    Chance: 0.05
+    MaxMobsPerChunk: 2
+  PearlOyster:
+    Enabled: false
+    Worlds: world
+    Biomes: DEEP_OCEAN
+    Chance: 0.05
+    MaxMobsPerChunk: 2
+  LaguneShark:
+    Enabled: false
+    Worlds: world
+    Biomes: DEEP_OCEAN
+    Chance: 0.05
+    MaxMobsPerChunk: 2
+  VolcanoSpirit:
+    Enabled: false
+    Worlds: world
+    Biomes: DEEP_OCEAN
+    Chance: 0.05
+    MaxMobsPerChunk: 2
+  LavaGull:
+    Enabled: false
+    Worlds: world
+    Biomes: DEEP_OCEAN
+    Chance: 0.05
+    MaxMobsPerChunk: 2

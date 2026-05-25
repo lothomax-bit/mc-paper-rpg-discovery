@@ -1,0 +1,93 @@
+# GeoWorld MythicMobs – Waterfall
+# Generiert aus docs/CUSTOM_BIOMES.md
+# Ablageort: plugins/MythicMobs/Mobs/geoworld_waterfall.yml
+
+CaveHermit:
+  Type: ZOMBIE
+  Display: '<&6>CaveHermit'
+  Health: 30
+  Damage: 0
+  Armor: 0
+  Options:
+    MovementSpeed: 0.25
+    Despawn: false
+    PreventOtherDrops: true
+    PreventItemPickup: true
+    Silent: false
+  Faction: GeoWorld
+  Skills:
+  - damage{amount=2} @Target ~onAttack
+  - effect:particles{p=crit;a=10} @Self ~onDamaged
+  Drops:
+    - STONE 1-3 0.9
+    - PRISMARINE_SHARD 1 0.5
+  LevelModifiers:
+    Health: 0.5
+    Damage: 0.25
+
+WaterfallSpirit:
+  Type: PHANTOM
+  Display: '<&6>WaterfallSpirit'
+  Health: 80
+  Damage: 5
+  Armor: 0
+  Options:
+    MovementSpeed: 0.25
+    Despawn: false
+    PreventOtherDrops: true
+    PreventItemPickup: true
+    Silent: false
+  Faction: GeoWorld
+  Skills:
+  - potion{type=SLOWNESS;duration=80;amplifier=2} @Target ~onAttack
+  - damage{amount=2} @Target ~onAttack
+  - effect:particles{p=crit;a=10} @Self ~onDamaged
+  Drops:
+    - STONE 1-3 0.9
+    - PRISMARINE_SHARD 1 0.5
+  LevelModifiers:
+    Health: 0.5
+    Damage: 0.25
+
+MossGolem:
+  Type: IRON_GOLEM
+  Display: '<&6>MossGolem'
+  Health: 80
+  Damage: 5
+  Armor: 0
+  Options:
+    MovementSpeed: 0.18
+    Despawn: false
+    PreventOtherDrops: true
+    PreventItemPickup: true
+    Silent: false
+  Faction: GeoWorld
+  Skills:
+  - damage{amount=2} @Target ~onAttack
+  - effect:particles{p=crit;a=10} @Self ~onDamaged
+  Drops:
+    - STONE 1-3 0.9
+    - PRISMARINE_SHARD 1 0.5
+  LevelModifiers:
+    Health: 0.5
+    Damage: 0.25
+
+RandomSpawning:
+  CaveHermit:
+    Enabled: false
+    Worlds: world
+    Biomes: RIVER
+    Chance: 0.05
+    MaxMobsPerChunk: 2
+  WaterfallSpirit:
+    Enabled: false
+    Worlds: world
+    Biomes: RIVER
+    Chance: 0.05
+    MaxMobsPerChunk: 2
+  MossGolem:
+    Enabled: false
+    Worlds: world
+    Biomes: RIVER
+    Chance: 0.05
+    MaxMobsPerChunk: 2

@@ -1,0 +1,595 @@
+# GeoWorld MythicMobs – Forests
+# Generiert aus docs/CUSTOM_BIOMES.md
+# Ablageort: plugins/MythicMobs/Mobs/geoworld_forests.yml
+
+AncientTreeSpirit:
+  Type: ZOMBIE
+  Display: '<&6>AncientTreeSpirit'
+  Health: 80
+  Damage: 5
+  Armor: 0
+  Options:
+    MovementSpeed: 0.25
+    Despawn: false
+    PreventOtherDrops: true
+    PreventItemPickup: true
+    Silent: false
+  Faction: GeoWorld
+  Skills:
+  - potion{type=INVISIBILITY;duration=200;amplifier=0} @Self ~onSpawn
+  - potion{type=INVISIBILITY;duration=200;amplifier=0} @Self ~onTimer:200
+  Drops:
+    - OAK_LOG 1-3 0.8
+    - MOSS_BLOCK 1-2 0.5
+    - BONE 1-2 0.7
+    - ROTTEN_FLESH 1-3 0.8
+    - FEATHER 1-2 0.6
+  LevelModifiers:
+    Health: 0.5
+    Damage: 0.25
+
+ForestTroll:
+  Type: ZOMBIE
+  Display: '<&6>ForestTroll'
+  Health: 80
+  Damage: 5
+  Armor: 0
+  Options:
+    MovementSpeed: 0.18
+    Despawn: false
+    PreventOtherDrops: true
+    PreventItemPickup: true
+    Silent: false
+  Faction: GeoWorld
+  Skills:
+  - projectile{type=SNOWBALL;v=1.5;damage=8} @Target ~onTimer:100
+  - damage{amount=2} @Target ~onAttack
+  - effect:particles{p=crit;a=10} @Self ~onDamaged
+  Drops:
+    - OAK_LOG 1-3 0.8
+    - MOSS_BLOCK 1-2 0.5
+    - BONE 1-2 0.7
+    - ROTTEN_FLESH 1-3 0.8
+    - FEATHER 1-2 0.6
+  LevelModifiers:
+    Health: 0.5
+    Damage: 0.25
+
+CinderHound:
+  Type: WOLF
+  Display: '<&6>CinderHound'
+  Health: 80
+  Damage: 5
+  Armor: 0
+  Options:
+    MovementSpeed: 0.25
+    Despawn: false
+    PreventOtherDrops: true
+    PreventItemPickup: true
+    Silent: false
+  Faction: GeoWorld
+  Skills:
+  - damage{amount=2} @Target ~onAttack
+  - effect:particles{p=crit;a=10} @Self ~onDamaged
+  Drops:
+    - OAK_LOG 1-3 0.8
+    - MOSS_BLOCK 1-2 0.5
+    - BONE 1-2 0.7
+    - ROTTEN_FLESH 1-3 0.8
+    - FEATHER 1-2 0.6
+  LevelModifiers:
+    Health: 0.5
+    Damage: 0.25
+
+AshWalker:
+  Type: SKELETON
+  Display: '<&6>AshWalker'
+  Health: 80
+  Damage: 5
+  Armor: 0
+  Options:
+    MovementSpeed: 0.25
+    Despawn: false
+    PreventOtherDrops: true
+    PreventItemPickup: true
+    Silent: false
+  Faction: GeoWorld
+  Skills:
+  - damage{amount=2} @Target ~onAttack
+  - effect:particles{p=crit;a=10} @Self ~onDamaged
+  Drops:
+    - OAK_LOG 1-3 0.8
+    - MOSS_BLOCK 1-2 0.5
+    - BONE 1-2 0.7
+    - ROTTEN_FLESH 1-3 0.8
+    - FEATHER 1-2 0.6
+  LevelModifiers:
+    Health: 0.5
+    Damage: 0.25
+
+SaltGolem:
+  Type: IRON_GOLEM
+  Display: '<&6>SaltGolem'
+  Health: 80
+  Damage: 5
+  Armor: 0
+  Options:
+    MovementSpeed: 0.18
+    Despawn: false
+    PreventOtherDrops: true
+    PreventItemPickup: true
+    Silent: false
+  Faction: GeoWorld
+  Skills:
+  - damage{amount=2} @Target ~onAttack
+  - effect:particles{p=crit;a=10} @Self ~onDamaged
+  Drops:
+    - OAK_LOG 1-3 0.8
+    - MOSS_BLOCK 1-2 0.5
+    - BONE 1-2 0.7
+    - ROTTEN_FLESH 1-3 0.8
+    - FEATHER 1-2 0.6
+  LevelModifiers:
+    Health: 0.5
+    Damage: 0.25
+
+MiragePhantom:
+  Type: PHANTOM
+  Display: '<&6>MiragePhantom'
+  Health: 80
+  Damage: 5
+  Armor: 0
+  Options:
+    MovementSpeed: 0.55
+    Despawn: false
+    PreventOtherDrops: true
+    PreventItemPickup: true
+    Silent: false
+  Faction: GeoWorld
+  Skills:
+  - damage{amount=2} @Target ~onAttack
+  - effect:particles{p=crit;a=10} @Self ~onDamaged
+  Drops:
+    - OAK_LOG 1-3 0.8
+    - MOSS_BLOCK 1-2 0.5
+    - BONE 1-2 0.7
+    - ROTTEN_FLESH 1-3 0.8
+    - FEATHER 1-2 0.6
+  LevelModifiers:
+    Health: 0.5
+    Damage: 0.25
+
+SporeSpreader:
+  Type: CREEPER
+  Display: '<&6>SporeSpreader'
+  Health: 80
+  Damage: 5
+  Armor: 0
+  Options:
+    MovementSpeed: 0.25
+    Despawn: false
+    PreventOtherDrops: true
+    PreventItemPickup: true
+    Silent: false
+  Faction: GeoWorld
+  Skills:
+  - potion{type=POISON;duration=100;amplifier=1} @Target ~onAttack
+  - damage{amount=2} @Target ~onAttack
+  - effect:particles{p=crit;a=10} @Self ~onDamaged
+  Drops:
+    - OAK_LOG 1-3 0.8
+    - MOSS_BLOCK 1-2 0.5
+    - BONE 1-2 0.7
+    - ROTTEN_FLESH 1-3 0.8
+    - FEATHER 1-2 0.6
+  LevelModifiers:
+    Health: 0.5
+    Damage: 0.25
+
+FungalBehemoth:
+  Type: IRON_GOLEM
+  Display: '<&6>FungalBehemoth'
+  Health: 5000
+  Damage: 20
+  Armor: 0
+  Options:
+    MovementSpeed: 0.25
+    Despawn: false
+    PreventOtherDrops: true
+    PreventItemPickup: true
+    Silent: false
+  Faction: GeoWorld
+  Skills:
+  - damage{amount=2} @Target ~onAttack
+  - effect:particles{p=crit;a=10} @Self ~onDamaged
+  Drops:
+    - OAK_LOG 1-3 0.8
+    - MOSS_BLOCK 1-2 0.5
+    - BONE 1-2 0.7
+    - ROTTEN_FLESH 1-3 0.8
+    - FEATHER 1-2 0.6
+    - DIAMOND_BLOCK 1 0.05
+    - DIAMOND 1-2 0.3
+    - GOLD_INGOT 2-5 0.8
+  LevelModifiers:
+    Health: 0.5
+    Damage: 0.25
+  BossBar:
+    Enabled: true
+    Title: '<&4>FungalBehemoth'
+    Range: 64
+    Color: RED
+    Style: SEGMENTED_10
+
+PineNymph:
+  Type: ZOMBIE
+  Display: '<&6>PineNymph'
+  Health: 80
+  Damage: 5
+  Armor: 0
+  Options:
+    MovementSpeed: 0.25
+    Despawn: false
+    PreventOtherDrops: true
+    PreventItemPickup: true
+    Silent: false
+  Faction: GeoWorld
+  Skills:
+  - heal{amount=5} @Self ~onTimer:60
+  - damage{amount=2} @Target ~onAttack
+  - effect:particles{p=crit;a=10} @Self ~onDamaged
+  Drops:
+    - OAK_LOG 1-3 0.8
+    - MOSS_BLOCK 1-2 0.5
+    - BONE 1-2 0.7
+    - ROTTEN_FLESH 1-3 0.8
+    - FEATHER 1-2 0.6
+  LevelModifiers:
+    Health: 0.5
+    Damage: 0.25
+
+ShadowStalker:
+  Type: ZOMBIE
+  Display: '<&6>ShadowStalker'
+  Health: 80
+  Damage: 5
+  Armor: 0
+  Options:
+    MovementSpeed: 0.4
+    Despawn: false
+    PreventOtherDrops: true
+    PreventItemPickup: true
+    Silent: false
+  Faction: GeoWorld
+  Skills:
+  - potion{type=INVISIBILITY;duration=200;amplifier=0} @Self ~onSpawn
+  - potion{type=INVISIBILITY;duration=200;amplifier=0} @Self ~onTimer:200
+  Drops:
+    - OAK_LOG 1-3 0.8
+    - MOSS_BLOCK 1-2 0.5
+    - BONE 1-2 0.7
+    - ROTTEN_FLESH 1-3 0.8
+    - FEATHER 1-2 0.6
+  LevelModifiers:
+    Health: 0.5
+    Damage: 0.25
+
+GroveSpecter:
+  Type: ZOMBIE
+  Display: '<&6>GroveSpecter'
+  Health: 80
+  Damage: 5
+  Armor: 0
+  Options:
+    MovementSpeed: 0.25
+    Despawn: false
+    PreventOtherDrops: true
+    PreventItemPickup: true
+    Silent: false
+  Faction: GeoWorld
+  Skills:
+  - teleport{} @Self ~onDamaged{healthPercent<50}
+  - damage{amount=2} @Target ~onAttack
+  - effect:particles{p=crit;a=10} @Self ~onDamaged
+  Drops:
+    - OAK_LOG 1-3 0.8
+    - MOSS_BLOCK 1-2 0.5
+    - BONE 1-2 0.7
+    - ROTTEN_FLESH 1-3 0.8
+    - FEATHER 1-2 0.6
+  LevelModifiers:
+    Health: 0.5
+    Damage: 0.25
+
+WickerConstruct:
+  Type: IRON_GOLEM
+  Display: '<&6>WickerConstruct'
+  Health: 80
+  Damage: 5
+  Armor: 0
+  Options:
+    MovementSpeed: 0.25
+    Despawn: false
+    PreventOtherDrops: true
+    PreventItemPickup: true
+    Silent: false
+  Faction: GeoWorld
+  Skills:
+  - damage{amount=2} @Target ~onAttack
+  - effect:particles{p=crit;a=10} @Self ~onDamaged
+  Drops:
+    - OAK_LOG 1-3 0.8
+    - MOSS_BLOCK 1-2 0.5
+    - BONE 1-2 0.7
+    - ROTTEN_FLESH 1-3 0.8
+    - FEATHER 1-2 0.6
+  LevelModifiers:
+    Health: 0.5
+    Damage: 0.25
+
+GoldenFox:
+  Type: ZOMBIE
+  Display: '<&6>GoldenFox'
+  Health: 30
+  Damage: 0
+  Armor: 0
+  Options:
+    MovementSpeed: 0.25
+    Despawn: false
+    PreventOtherDrops: true
+    PreventItemPickup: true
+    Silent: false
+  Faction: GeoWorld
+  Skills:
+  - damage{amount=2} @Target ~onAttack
+  - effect:particles{p=crit;a=10} @Self ~onDamaged
+  Drops:
+    - OAK_LOG 1-3 0.8
+    - MOSS_BLOCK 1-2 0.5
+    - BONE 1-2 0.7
+    - ROTTEN_FLESH 1-3 0.8
+    - FEATHER 1-2 0.6
+  LevelModifiers:
+    Health: 0.5
+    Damage: 0.25
+
+HarvestGolem:
+  Type: IRON_GOLEM
+  Display: '<&6>HarvestGolem'
+  Health: 80
+  Damage: 5
+  Armor: 0
+  Options:
+    MovementSpeed: 0.18
+    Despawn: false
+    PreventOtherDrops: true
+    PreventItemPickup: true
+    Silent: false
+  Faction: GeoWorld
+  Skills:
+  - damage{amount=2} @Target ~onAttack
+  - effect:particles{p=crit;a=10} @Self ~onDamaged
+  Drops:
+    - OAK_LOG 1-3 0.8
+    - MOSS_BLOCK 1-2 0.5
+    - BONE 1-2 0.7
+    - ROTTEN_FLESH 1-3 0.8
+    - FEATHER 1-2 0.6
+  LevelModifiers:
+    Health: 0.5
+    Damage: 0.25
+
+PandaMonk:
+  Type: ZOMBIE
+  Display: '<&6>PandaMonk'
+  Health: 30
+  Damage: 0
+  Armor: 0
+  Options:
+    MovementSpeed: 0.25
+    Despawn: false
+    PreventOtherDrops: true
+    PreventItemPickup: true
+    Silent: false
+  Faction: GeoWorld
+  Skills:
+  - damage{amount=2} @Target ~onAttack
+  - effect:particles{p=crit;a=10} @Self ~onDamaged
+  Drops:
+    - OAK_LOG 1-3 0.8
+    - MOSS_BLOCK 1-2 0.5
+    - BONE 1-2 0.7
+    - ROTTEN_FLESH 1-3 0.8
+    - FEATHER 1-2 0.6
+  LevelModifiers:
+    Health: 0.5
+    Damage: 0.25
+
+BambooNinja:
+  Type: ZOMBIE
+  Display: '<&6>BambooNinja'
+  Health: 80
+  Damage: 5
+  Armor: 0
+  Options:
+    MovementSpeed: 0.4
+    Despawn: false
+    PreventOtherDrops: true
+    PreventItemPickup: true
+    Silent: false
+  Faction: GeoWorld
+  Skills:
+  - damage{amount=2} @Target ~onAttack
+  - effect:particles{p=crit;a=10} @Self ~onDamaged
+  Drops:
+    - OAK_LOG 1-3 0.8
+    - MOSS_BLOCK 1-2 0.5
+    - BONE 1-2 0.7
+    - ROTTEN_FLESH 1-3 0.8
+    - FEATHER 1-2 0.6
+  LevelModifiers:
+    Health: 0.5
+    Damage: 0.25
+
+CanopyMoth:
+  Type: PHANTOM
+  Display: '<&6>CanopyMoth'
+  Health: 80
+  Damage: 5
+  Armor: 0
+  Options:
+    MovementSpeed: 0.25
+    Despawn: false
+    PreventOtherDrops: true
+    PreventItemPickup: true
+    Silent: false
+  Faction: GeoWorld
+  Skills:
+  - damage{amount=2} @Target ~onAttack
+  - effect:particles{p=crit;a=10} @Self ~onDamaged
+  Drops:
+    - OAK_LOG 1-3 0.8
+    - MOSS_BLOCK 1-2 0.5
+    - BONE 1-2 0.7
+    - ROTTEN_FLESH 1-3 0.8
+    - FEATHER 1-2 0.6
+  LevelModifiers:
+    Health: 0.5
+    Damage: 0.25
+
+TwilightDruid:
+  Type: WITCH
+  Display: '<&6>TwilightDruid'
+  Health: 80
+  Damage: 5
+  Armor: 0
+  Options:
+    MovementSpeed: 0.25
+    Despawn: false
+    PreventOtherDrops: true
+    PreventItemPickup: true
+    Silent: false
+  Faction: GeoWorld
+  Skills:
+  - summon{type=ZOMBIE;amount=2;radius=3} @Self ~onDamaged{healthPercent<30}
+  - damage{amount=2} @Target ~onAttack
+  - effect:particles{p=crit;a=10} @Self ~onDamaged
+  Drops:
+    - OAK_LOG 1-3 0.8
+    - MOSS_BLOCK 1-2 0.5
+    - BONE 1-2 0.7
+    - ROTTEN_FLESH 1-3 0.8
+    - FEATHER 1-2 0.6
+  LevelModifiers:
+    Health: 0.5
+    Damage: 0.25
+
+RandomSpawning:
+  AncientTreeSpirit:
+    Enabled: false
+    Worlds: world
+    Biomes: FOREST
+    Chance: 0.05
+    MaxMobsPerChunk: 2
+  ForestTroll:
+    Enabled: false
+    Worlds: world
+    Biomes: FOREST
+    Chance: 0.05
+    MaxMobsPerChunk: 2
+  CinderHound:
+    Enabled: false
+    Worlds: world
+    Biomes: FOREST
+    Chance: 0.05
+    MaxMobsPerChunk: 2
+  AshWalker:
+    Enabled: false
+    Worlds: world
+    Biomes: FOREST
+    Chance: 0.05
+    MaxMobsPerChunk: 2
+  SaltGolem:
+    Enabled: false
+    Worlds: world
+    Biomes: FOREST
+    Chance: 0.05
+    MaxMobsPerChunk: 2
+  MiragePhantom:
+    Enabled: false
+    Worlds: world
+    Biomes: FOREST
+    Chance: 0.05
+    MaxMobsPerChunk: 2
+  SporeSpreader:
+    Enabled: false
+    Worlds: world
+    Biomes: FOREST
+    Chance: 0.05
+    MaxMobsPerChunk: 2
+  FungalBehemoth:
+    Enabled: false
+    Worlds: world
+    Biomes: FOREST
+    Chance: 0.05
+    MaxMobsPerChunk: 2
+  PineNymph:
+    Enabled: false
+    Worlds: world
+    Biomes: FOREST
+    Chance: 0.05
+    MaxMobsPerChunk: 2
+  ShadowStalker:
+    Enabled: false
+    Worlds: world
+    Biomes: FOREST
+    Chance: 0.05
+    MaxMobsPerChunk: 2
+  GroveSpecter:
+    Enabled: false
+    Worlds: world
+    Biomes: FOREST
+    Chance: 0.05
+    MaxMobsPerChunk: 2
+  WickerConstruct:
+    Enabled: false
+    Worlds: world
+    Biomes: FOREST
+    Chance: 0.05
+    MaxMobsPerChunk: 2
+  GoldenFox:
+    Enabled: false
+    Worlds: world
+    Biomes: FOREST
+    Chance: 0.05
+    MaxMobsPerChunk: 2
+  HarvestGolem:
+    Enabled: false
+    Worlds: world
+    Biomes: FOREST
+    Chance: 0.05
+    MaxMobsPerChunk: 2
+  PandaMonk:
+    Enabled: false
+    Worlds: world
+    Biomes: FOREST
+    Chance: 0.05
+    MaxMobsPerChunk: 2
+  BambooNinja:
+    Enabled: false
+    Worlds: world
+    Biomes: FOREST
+    Chance: 0.05
+    MaxMobsPerChunk: 2
+  CanopyMoth:
+    Enabled: false
+    Worlds: world
+    Biomes: FOREST
+    Chance: 0.05
+    MaxMobsPerChunk: 2
+  TwilightDruid:
+    Enabled: false
+    Worlds: world
+    Biomes: FOREST
+    Chance: 0.05
+    MaxMobsPerChunk: 2

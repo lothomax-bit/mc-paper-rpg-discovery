@@ -1,0 +1,220 @@
+# GeoWorld MythicMobs – Mountains
+# Generiert aus docs/CUSTOM_BIOMES.md
+# Ablageort: plugins/MythicMobs/Mobs/geoworld_mountains.yml
+
+CrystalGolem:
+  Type: IRON_GOLEM
+  Display: '<&6>CrystalGolem'
+  Health: 80
+  Damage: 5
+  Armor: 0
+  Options:
+    MovementSpeed: 0.18
+    Despawn: false
+    PreventOtherDrops: true
+    PreventItemPickup: true
+    Silent: false
+  Faction: GeoWorld
+  Skills:
+  - damage{amount=2} @Target ~onAttack
+  - effect:particles{p=crit;a=10} @Self ~onDamaged
+  Drops:
+    - AMETHYST_SHARD 1-2 0.6
+    - STONE 1-4 0.9
+    - IRON_INGOT 1 0.3
+    - COAL 1-3 0.7
+  LevelModifiers:
+    Health: 0.5
+    Damage: 0.25
+
+ShardWyvern:
+  Type: ENDER_DRAGON
+  Display: '<&6>ShardWyvern'
+  Health: 5000
+  Damage: 20
+  Armor: 0
+  Options:
+    MovementSpeed: 0.25
+    Despawn: false
+    PreventOtherDrops: true
+    PreventItemPickup: true
+    Silent: false
+  Faction: GeoWorld
+  Skills:
+  - damage{amount=2} @Target ~onAttack
+  - effect:particles{p=crit;a=10} @Self ~onDamaged
+  Drops:
+    - AMETHYST_SHARD 1-2 0.6
+    - STONE 1-4 0.9
+    - IRON_INGOT 1 0.3
+    - COAL 1-3 0.7
+    - DIAMOND_BLOCK 1 0.05
+    - DIAMOND 1-2 0.3
+    - GOLD_INGOT 2-5 0.8
+  LevelModifiers:
+    Health: 0.5
+    Damage: 0.25
+  BossBar:
+    Enabled: true
+    Title: '<&4>ShardWyvern'
+    Range: 64
+    Color: RED
+    Style: SEGMENTED_10
+
+CloudEagle:
+  Type: ZOMBIE
+  Display: '<&6>CloudEagle'
+  Health: 80
+  Damage: 5
+  Armor: 0
+  Options:
+    MovementSpeed: 0.25
+    Despawn: false
+    PreventOtherDrops: true
+    PreventItemPickup: true
+    Silent: false
+  Faction: GeoWorld
+  Skills:
+  - damage{amount=2} @Target ~onAttack
+  - effect:particles{p=crit;a=10} @Self ~onDamaged
+  Drops:
+    - AMETHYST_SHARD 1-2 0.6
+    - STONE 1-4 0.9
+    - IRON_INGOT 1 0.3
+    - COAL 1-3 0.7
+  LevelModifiers:
+    Health: 0.5
+    Damage: 0.25
+
+PlateauWarden:
+  Type: PHANTOM
+  Display: '<&6>PlateauWarden'
+  Health: 5000
+  Damage: 20
+  Armor: 0
+  Options:
+    MovementSpeed: 0.25
+    Despawn: false
+    PreventOtherDrops: true
+    PreventItemPickup: true
+    Silent: false
+  Faction: GeoWorld
+  Skills:
+  - potion{type=SLOWNESS;duration=80;amplifier=2} @Target ~onAttack
+  - damage{amount=2} @Target ~onAttack
+  - effect:particles{p=crit;a=10} @Self ~onDamaged
+  Drops:
+    - AMETHYST_SHARD 1-2 0.6
+    - STONE 1-4 0.9
+    - IRON_INGOT 1 0.3
+    - COAL 1-3 0.7
+    - DIAMOND_BLOCK 1 0.05
+    - DIAMOND 1-2 0.3
+    - GOLD_INGOT 2-5 0.8
+  LevelModifiers:
+    Health: 0.5
+    Damage: 0.25
+  BossBar:
+    Enabled: true
+    Title: '<&4>PlateauWarden'
+    Range: 64
+    Color: RED
+    Style: SEGMENTED_10
+
+LavaStalker:
+  Type: ZOMBIE
+  Display: '<&6>LavaStalker'
+  Health: 80
+  Damage: 5
+  Armor: 0
+  Options:
+    MovementSpeed: 0.4
+    Despawn: false
+    PreventOtherDrops: true
+    PreventItemPickup: true
+    Silent: false
+  Faction: GeoWorld
+  Skills:
+  - teleport{} @Self ~onDamaged{healthPercent<50}
+  - damage{amount=2} @Target ~onAttack
+  - effect:particles{p=crit;a=10} @Self ~onDamaged
+  Drops:
+    - AMETHYST_SHARD 1-2 0.6
+    - STONE 1-4 0.9
+    - IRON_INGOT 1 0.3
+    - COAL 1-3 0.7
+  LevelModifiers:
+    Health: 0.5
+    Damage: 0.25
+
+ObsidianColossus:
+  Type: IRON_GOLEM
+  Display: '<&6>ObsidianColossus'
+  Health: 25000
+  Damage: 25
+  Armor: 0
+  Options:
+    MovementSpeed: 0.25
+    Despawn: false
+    PreventOtherDrops: true
+    PreventItemPickup: true
+    Silent: false
+  Faction: GeoWorld
+  Skills:
+  - damage{amount=2} @Target ~onAttack
+  - effect:particles{p=crit;a=10} @Self ~onDamaged
+  Drops:
+    - AMETHYST_SHARD 1-2 0.6
+    - STONE 1-4 0.9
+    - IRON_INGOT 1 0.3
+    - COAL 1-3 0.7
+    - DIAMOND_BLOCK 1 0.05
+    - DIAMOND 1-2 0.3
+    - GOLD_INGOT 2-5 0.8
+  LevelModifiers:
+    Health: 0.5
+    Damage: 0.25
+  BossBar:
+    Enabled: true
+    Title: '<&4>ObsidianColossus'
+    Range: 64
+    Color: RED
+    Style: SEGMENTED_10
+
+RandomSpawning:
+  CrystalGolem:
+    Enabled: false
+    Worlds: world
+    Biomes: MOUNTAINS
+    Chance: 0.05
+    MaxMobsPerChunk: 2
+  ShardWyvern:
+    Enabled: false
+    Worlds: world
+    Biomes: MOUNTAINS
+    Chance: 0.05
+    MaxMobsPerChunk: 2
+  CloudEagle:
+    Enabled: false
+    Worlds: world
+    Biomes: MOUNTAINS
+    Chance: 0.05
+    MaxMobsPerChunk: 2
+  PlateauWarden:
+    Enabled: false
+    Worlds: world
+    Biomes: MOUNTAINS
+    Chance: 0.05
+    MaxMobsPerChunk: 2
+  LavaStalker:
+    Enabled: false
+    Worlds: world
+    Biomes: MOUNTAINS
+    Chance: 0.05
+    MaxMobsPerChunk: 2
+  ObsidianColossus:
+    Enabled: false
+    Worlds: world
+    Biomes: MOUNTAINS
+    Chance: 0.05
+    MaxMobsPerChunk: 2
