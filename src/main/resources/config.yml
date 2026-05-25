@@ -1,0 +1,131 @@
+enabled-biomes:
+  - JAGGED_PEAKS
+  - FROZEN_PEAKS
+  - STONY_PEAKS
+  - WINDSWEPT_HILLS
+  - WINDSWEPT_GRAVELLY_HILLS
+  - DESERT
+  - SAVANNA
+  - SAVANNA_PLATEAU
+  - WINDSWEPT_SAVANNA
+  - BADLANDS
+  - ERODED_BADLANDS
+  - JUNGLE
+  - BAMBOO_JUNGLE
+  - SPARSE_JUNGLE
+  - DARK_FOREST
+  - OLD_GROWTH_PINE_TAIGA
+  - OLD_GROWTH_SPRUCE_TAIGA
+  - ICE_SPIKES
+  - SNOWY_SLOPES
+  - FROZEN_RIVER
+  - SNOWY_BEACH
+  - SWAMP
+  - MANGROVE_SWAMP
+  - OCEAN
+  - DEEP_OCEAN
+  - WARM_OCEAN
+  - LUKEWARM_OCEAN
+  - DEEP_LUKEWARM_OCEAN
+  - COLD_OCEAN
+  - FROZEN_OCEAN
+  - DEEP_DARK
+  - LUSH_CAVES
+  - DRIPSTONE_CAVES
+  - BASALT_DELTAS
+  - CRIMSON_FOREST
+  - WARPED_FOREST
+  - SOUL_SAND_VALLEY
+  - NETHER_WASTES
+  - END_HIGHLANDS
+  - END_MIDLANDS
+  - SMALL_END_ISLANDS
+  - END_BARRENS
+
+enabled-structures:
+  - VILLAGE
+  - STRONGHOLD
+  - DESERT_PYRAMID
+  - JUNGLE_TEMPLE
+  - SWAMP_HUT
+  - IGLOO
+  - PILLAGER_OUTPOST
+  - WOODLAND_MANSION
+  - OCEAN_MONUMENT
+  - OCEAN_RUIN
+  - SHIPWRECK
+  - BURIED_TREASURE
+  - NETHER_FORTRESS
+  - BASTION_REMNANT
+  - END_CITY
+  - ANCIENT_CITY
+  - TRAIL_RUINS
+  - RUINED_PORTAL
+
+region-radius: 150
+naming-timeout: 60
+structure-check-interval: 100
+
+region-icons:
+  DEFAULT: "📍"
+  DESERT: "🏜️"
+  BADLANDS: "🏜️"
+  ERODED_BADLANDS: "🏜️"
+  OCEAN: "🌊"
+  DEEP_OCEAN: "🌊"
+  WARM_OCEAN: "🌊"
+  LUKEWARM_OCEAN: "🌊"
+  DEEP_LUKEWARM_OCEAN: "🌊"
+  COLD_OCEAN: "🌊"
+  FROZEN_OCEAN: "❄️"
+  JAGGED_PEAKS: "⛰️"
+  FROZEN_PEAKS: "🏔️"
+  STONY_PEAKS: "⛰️"
+  WINDSWEPT_HILLS: "⛰️"
+  ICE_SPIKES: "❄️"
+  SNOWY_SLOPES: "❄️"
+  JUNGLE: "🌴"
+  BAMBOO_JUNGLE: "🌴"
+  SPARSE_JUNGLE: "🌴"
+  DARK_FOREST: "🌲"
+  OLD_GROWTH_PINE_TAIGA: "🌲"
+  OLD_GROWTH_SPRUCE_TAIGA: "🌲"
+  SWAMP: "🌿"
+  MANGROVE_SWAMP: "🌿"
+  DEEP_DARK: "💀"
+  LUSH_CAVES: "🍄"
+  DRIPSTONE_CAVES: "🪨"
+  BASALT_DELTAS: "🔥"
+  CRIMSON_FOREST: "🔥"
+  WARPED_FOREST: "🔥"
+  SOUL_SAND_VALLEY: "🔥"
+  NETHER_WASTES: "🔥"
+  END_HIGHLANDS: "🌟"
+  END_MIDLANDS: "🌟"
+  SMALL_END_ISLANDS: "🌟"
+  END_BARRENS: "🌟"
+  VILLAGE: "🏘️"
+  STRONGHOLD: "🏰"
+  DESERT_PYRAMID: "🏜️"
+  JUNGLE_TEMPLE: "🌴"
+  SWAMP_HUT: "🌿"
+  IGLOO: "❄️"
+  PILLAGER_OUTPOST: "⚔️"
+  WOODLAND_MANSION: "🏚️"
+  OCEAN_MONUMENT: "🌊"
+  OCEAN_RUIN: "🌊"
+  SHIPWRECK: "⚓"
+  BURIED_TREASURE: "💎"
+  NETHER_FORTRESS: "🔥"
+  BASTION_REMNANT: "🔥"
+  END_CITY: "🌟"
+  ANCIENT_CITY: "💀"
+  TRAIL_RUINS: "🏛️"
+  RUINED_PORTAL: "🌀"
+
+messages:
+  actionbar-format: "%icon% §f%name% §7(Entdeckt von §e%player%§7)"
+  discovery-prompt: "§6§lNeuland entdeckt! §7Nutze §b/taufe [Name]§7 um diesen Ort zu benennen. §7(§e%seconds%s§7)"
+  naming-success: "§a§l✔ Region benannt! §f\"%name%\" §7wurde gespeichert."
+  naming-timeout-msg: "§c§lZeit abgelaufen! §7Die Region wurde nicht benannt."
+  naming-too-short: "§cDer Name muss mindestens 3 Zeichen lang sein."
