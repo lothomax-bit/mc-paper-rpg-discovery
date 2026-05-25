@@ -1,74 +1,105 @@
 package de.lothomax.geodiscovery.task;
 
-import de.lothomax.geodiscovery.GeoDiscovery;
+import de.lothomax.geodiscovery.database.RegionCache;
+import de.lothomax.geodiscovery.manager.ConfigManager;
 import de.lothomax.geodiscovery.model.DiscoveredRegion;
+import de.lothomax.geodiscovery.session.NamingSessionManager;
 import org.bukkit.Bukkit;
 import org.bukkit.Location;
+import org.bukkit.NamespacedKey;
 import org.bukkit.Registry;
 import org.bukkit.entity.Player;
-import org.bukkit.Chunk;
-import org.bukkit.generator.structure.GeneratedStructure;
-import org.bukkit.generator.structure.Structure;
+import org.bukkit.generator.structure.StructureType;
+import org.bukkit.scheduler.BukkitRunnable;
 
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 import java.util.Optional;
+import java.util.UUID;
 
-public class StructureCheckTask implements Runnable {
+public class StructureCheckTask extends BukkitRunnable {
 
-    private final GeoDiscovery plugin;
+    private final RegionCache regionCache;
+    private final NamingSessionManager sessionManager;
+    private final ConfigManager configManager;
+    private final Map<UUID, Long> lastStructureCheck = new HashMap<>();
 
-    public StructureCheckTask(GeoDiscovery plugin) {
-        this.plugin = plugin;
+    public StructureCheckTask(RegionCache regionCache, NamingSessionManager sessionManager, ConfigManager configManager) {
+        this.regionCache = regionCache;
+        this.sessionManager = sessionManager;
+        this.configManager = configManager;
     }
 
     @Override
     public void run() {
+        List<String> enabledStructures = configManager.getEnabledStructures();
+        if (enabledStructures == null || enabledStructures.isEmpty()) {
+            return;
+        }
+
+        long now = System.currentTimeMillis();
+        int regionRadius = configManager.getRegionRadius();
+
         for (Player player : Bukkit.getOnlinePlayers()) {
-            if (plugin.getNamingManager().hasActiveSession(player.getUniqueId())) {
+            // 2a. Skip if active session
+            if (sessionManager.hasSession(player.getUniqueId())) {
                 continue;
             }
 
-            Location loc = player.getLocation();
-            String worldUuid = loc.getWorld().getUID().toString();
-
-            // First check if already in a known region
-            Optional<DiscoveredRegion> nearestRegion = plugin.getRegionCache().findNearestRegion(worldUuid, loc.getX(), loc.getZ());
-            if (nearestRegion.isPresent()) {
-                DiscoveredRegion region = nearestRegion.get();
-                double dx = region.getCenterX() - loc.getX();
-                double dz = region.getCenterZ() - loc.getZ();
-                if (dx * dx + dz * dz <= region.getRadius() * region.getRadius()) {
-                    continue; // Already in a discovered region
-                }
+            // Check cooldown
+            long lastCheck = lastStructureCheck.getOrDefault(player.getUniqueId(), 0L);
+            if (now - lastCheck < 5000) {
+                continue;
             }
+            lastStructureCheck.put(player.getUniqueId(), now);
 
-            // Check for structures using Chunk API for better performance
-            Chunk currentChunk = loc.getChunk();
-            boolean found = false;
+            Location playerLoc = player.getLocation();
+            String worldUuid = player.getWorld().getUID().toString();
 
-            for (GeneratedStructure genStructure : currentChunk.getStructures()) {
-                if (genStructure.getBoundingBox().contains(loc.getX(), loc.getY(), loc.getZ())) {
-                    Structure structure = genStructure.getStructure();
-                    String structureKey = structure.getKey().getKey().toUpperCase();
+            // 2c. Iterate structure keys
+            for (String key : enabledStructures) {
+                StructureType structureType = Registry.STRUCTURE_TYPE.get(NamespacedKey.minecraft(key.toLowerCase()));
+                if (structureType == null) {
+                    continue; // invalid key in config
+                }
 
-                    if (plugin.getConfigManager().getEnabledStructures().contains(structureKey)) {
-                        DiscoveredRegion.Builder builder = new DiscoveredRegion.Builder()
-                                .discovererUuid(player.getUniqueId())
-                                .discovererName(player.getName())
-                                .worldUuid(loc.getWorld().getUID())
-                                .centerX(loc.getX())
-                                .centerZ(loc.getZ())
-                                .radius(plugin.getConfigManager().getRegionRadius())
-                                .regionType("STRUCTURE")
-                                .biomeKey(structureKey);
+                org.bukkit.util.StructureSearchResult searchResult = player.getWorld().locateNearestStructure(
+                        playerLoc,
+                        structureType,
+                        regionRadius * 2,
+                        false
+                );
 
-                        plugin.getNamingManager().startSession(player, builder);
-                        found = true;
-                        break;
+                if (searchResult == null) {
+                    continue;
+                }
+
+                Location structLoc = searchResult.getLocation();
+
+                double dx = structLoc.getX() - playerLoc.getX();
+                double dz = structLoc.getZ() - playerLoc.getZ();
+                double distanceSq = dx * dx + dz * dz;
+
+                if (distanceSq > regionRadius * regionRadius) {
+                    continue;
+                }
+
+                Optional<DiscoveredRegion> existingRegion = regionCache.findNearestRegion(worldUuid, structLoc.getX(), structLoc.getZ());
+                if (existingRegion.isPresent()) {
+                    DiscoveredRegion region = existingRegion.get();
+                    double rdx = region.getCenterX() - structLoc.getX();
+                    double rdz = region.getCenterZ() - structLoc.getZ();
+                    double rDistSq = rdx * rdx + rdz * rdz;
+
+                    if (rDistSq <= region.getRadius() * region.getRadius()) {
+                        continue; // Already known
                     }
                 }
-            }
-            if (found) {
-                continue;
+
+                // Start session for structure
+                sessionManager.startSession(player, structLoc, "minecraft:" + key.toLowerCase(), "STRUCTURE");
+                break; // only first unknown structure per tick per player
             }
         }
     }

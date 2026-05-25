@@ -63,4 +63,8 @@ public class RegionCache {
     public void clear() {
         cache.clear();
     }
+
+    public int getSize() {
+        return cache.values().stream().mapToInt(List::size).sum();
+    }
 }

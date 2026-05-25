@@ -1,6 +1,7 @@
 package de.lothomax.geodiscovery.command;
 
-import de.lothomax.geodiscovery.GeoDiscovery;
+import de.lothomax.geodiscovery.manager.ConfigManager;
+import de.lothomax.geodiscovery.session.NamingSessionManager;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
@@ -9,10 +10,12 @@ import org.jetbrains.annotations.NotNull;
 
 public class TaufeCommand implements CommandExecutor {
 
-    private final GeoDiscovery plugin;
+    private final NamingSessionManager sessionManager;
+    private final ConfigManager configManager;
 
-    public TaufeCommand(GeoDiscovery plugin) {
-        this.plugin = plugin;
+    public TaufeCommand(NamingSessionManager sessionManager, ConfigManager configManager) {
+        this.sessionManager = sessionManager;
+        this.configManager = configManager;
     }
 
     @Override
@@ -29,7 +32,12 @@ public class TaufeCommand implements CommandExecutor {
             return true;
         }
 
-        if (args.length == 0) {
+        if (!sessionManager.hasSession(player.getUniqueId())) {
+            player.sendMessage("Du hast gerade keine Entdeckung zu benennen.");
+            return true;
+        }
+
+        if (args.length < 1) {
             player.sendMessage("§cBitte gib einen Namen an: /taufe <Name>");
             return true;
         }
@@ -37,16 +45,21 @@ public class TaufeCommand implements CommandExecutor {
         String name = String.join(" ", args);
 
         if (name.length() < 3) {
-            player.sendMessage(plugin.getConfigManager().getMessage("naming-too-short"));
+            String shortMsg = configManager.getMessage("naming-too-short");
+            if (shortMsg != null) {
+                player.sendMessage(shortMsg);
+            } else {
+                player.sendMessage("Der Name ist zu kurz (mindestens 3 Zeichen).");
+            }
             return true;
         }
 
-        if (!plugin.getNamingManager().hasActiveSession(player.getUniqueId())) {
-            player.sendMessage("§cDu hast aktuell keine Region zu benennen.");
+        if (name.length() > 48) {
+            player.sendMessage("Der Name ist zu lang (maximal 48 Zeichen).");
             return true;
         }
 
-        plugin.getNamingManager().completeSession(player, name);
+        sessionManager.completeSession(player.getUniqueId(), name);
 
         return true;
     }
