@@ -66,7 +66,7 @@ geoworld-datapack/
 
 Für ALLE vier Noise-Dateien:
 - Basis: Vanilla large_biomes Variante der jeweiligen Datei
-- Ändere firstOctave auf -12 (statt Standard -7, statt Large Biomes -9)
+- Ändere firstOctave auf -10 (statt Standard -7, statt Large Biomes -9)
   Das macht Biome ca. 5–10x größer als Large Biomes
 - Amplituden (amplitudes-Array) entsprechend anpassen:
   Verwende 12 Einträge beginnend bei firstOctave -12, abnehmende Werte
