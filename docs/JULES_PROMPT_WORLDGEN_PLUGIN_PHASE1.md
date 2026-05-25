@@ -46,19 +46,39 @@ modules:
     waterfall-threshold: 4
     max-river-length: 800
     mountain-lake-chance: 0.35
-    mountain-lake-min-radius: 3
-    mountain-lake-max-radius: 7
-    river-width-high: 1
-    river-width-mid: 2
-    river-width-low: 3
-    river-carve-depth: 2
+    mountain-lake-min-radius: 2
+    mountain-lake-max-radius: 3
+    # Breite & Tiefe skalieren graduell mit abnehmendem Y
+    # Stufe 1: Hochgebirge (Y > 400)
+    river-width-1: 1
+    river-depth-1: 1
+    # Stufe 2: Mittlere Höhe (Y 250-400)
+    river-width-2: 2
+    river-depth-2: 2
+    # Stufe 3: Tiefland (Y 150-250)
+    river-width-3: 4
+    river-depth-3: 3
+    # Stufe 4: Tiefland nähe Küste (Y < 150)
+    river-width-4: 7
+    river-depth-4: 4
     river-bank-width: 2
     chunks-per-tick: 3
     geodiscovery-hook: true
     geodiscovery-lake-icon: "💧"
 ```
 
-GeoWorldConfig hat Getter für alle Werte.
+GeoWorldConfig hat Getter für alle Werte. Die vier Stufen werden als
+`RiverProfile`-Records gespeichert:
+```java
+record RiverProfile(int width, int depth) {}
+
+public RiverProfile getProfile(int y) {
+    if (y > 400) return new RiverProfile(width1, depth1);
+    if (y > 250) return new RiverProfile(width2, depth2);
+    if (y > 150) return new RiverProfile(width3, depth3);
+    return      new RiverProfile(width4, depth4);
+}
+```
 
 === LISTENER: de.lothomax.geoworld.listener.ChunkPopulateListener ===
 
@@ -102,6 +122,7 @@ Methode: List<RiverNode> trace(Location start)
 RiverNode ist ein Record mit:
 - int x, y, z
 - RiverNodeType type  // FLOW, WATERFALL_START, WATERFALL_END, LAKE, MOUTH
+- int dirX, dirZ      // Bewegungsrichtung (Einheitsvektor)
 
 Algorithmus (läuft komplett ohne Block-API, nur mit Höhendaten):
 
@@ -120,10 +141,13 @@ Algorithmus (läuft komplett ohne Block-API, nur mit Höhendaten):
    g. Wenn Nachbar bereits Wasser: Abbruch
 3. Rückgabe: List<RiverNode>
 
-Breite je nach Y-Position:
-- Y > 400: river-width-high (1 Block)
-- Y 200–400: river-width-mid (2 Blöcke)
-- Y < 200: river-width-low (3 Blöcke)
+**Breite & Tiefe** werden NICHT im Pathfinder festgelegt – der Placer berechnet
+sie pro Node anhand des Y-Werts via `config.getProfile(node.y())`.
+Dadurch skaliert der Fluss automatisch während er bergab fließt.
+
+Der Übergang zwischen Stufen ist graduell: Wenn sich das Profil zwischen
+zwei aufeinanderfolgenden Nodes ändert, wird die neue Breite sofort übernommen.
+Das erzeugt einen natürlichen, sanften Breitenunterschied.
 
 === NEUE KLASSE: de.lothomax.geoworld.module.river.RiverBiomeHelper ===
 
@@ -167,20 +191,18 @@ public static Material getBankMaterial(Biome biome) {
 
         // Dschungel
         case JUNGLE, SPARSE_JUNGLE, BAMBOO_JUNGLE
-            -> Material.DIRT;  // Dschungelufer: feuchte Erde
+            -> Material.DIRT;
 
-        // Nether (Sonderfall, Flüsse im Nether unwahrscheinlich, Fallback)
+        // Nether (Fallback)
         case NETHER_WASTES, CRIMSON_FOREST, WARPED_FOREST,
              SOUL_SAND_VALLEY, BASALT_DELTAS
             -> Material.SOUL_SAND;
 
-        // GeoWorld Custom Biome (via Namespace-String, kein enum)
-        // Wird separat behandelt, siehe getCustomBankMaterial()
-        default -> Material.GRAVEL;  // Universeller Fallback: Kies
+        default -> Material.GRAVEL;
     };
 }
 
-// Für geoworld:-Biome die nicht im Biome-enum sind:
+// Für geoworld:-Biome:
 public static Material getCustomBankMaterial(String biomeKey) {
     return switch (biomeKey) {
         case "geoworld:glacial_abyss",
@@ -204,7 +226,6 @@ public static Material getCustomBankMaterial(String biomeKey) {
              "geoworld:dream_forest"        -> Material.MOSS_BLOCK;
         case "geoworld:spore_jungle",
              "geoworld:bamboo_highlands"    -> Material.DIRT;
-        // Alle anderen geoworld:-Biome: Kies
         default                             -> Material.GRAVEL;
     };
 }
@@ -216,97 +237,97 @@ Methode: void place(World world, List<RiverNode> nodes, GeoWorldConfig config)
 
 Läuft auf Main-Thread.
 
-**Grundprinzip:**
-Der Fluss besteht aus drei Zonen (Querschnitt):
+**Querschnitt pro Node:**
 
 ```
-[UFER-LINKS]  [FLUSSBETT]  [UFER-RECHTS]
-   Sand/Gras    Kies+Wasser   Sand/Gras
+←─ Ufer (bank-width) ─→←──── Flussbett (width) ────→←─ Ufer (bank-width) ─→
+   Sand / Gras / MUD        [GRAVEL] + [WATER x depth]    Sand / Gras / MUD
 ```
 
-- **Flussbett** (alle FLOW-Nodes in Breite `river-width`):
-  Bodenblock = GRAVEL (immer, unabhängig vom Biom)
-  Darüber = WATER (source block)
+Breite und Tiefe werden per Node aus `config.getProfile(node.y())` gelesen:
 
-- **Ufer** (orthogonal links und rechts, Breite `river-bank-width`):
-  Bodenblock = biomspezifisches Material aus RiverBiomeHelper
-  Kein Wasser, Ufer liegt auf gleicher Höhe wie Flussbett-Oberkante
+| Y-Höhe | Breite | Tiefe | Charakter |
+|---------|--------|-------|-----------|
+| > 400   | 1 Bl.  | 1 Bl. | Schmaler Gebirgsbach |
+| 250–400 | 2 Bl.  | 2 Bl. | Bergfluss |
+| 150–250 | 4 Bl.  | 3 Bl. | Breiter Mittellandfluss |
+| < 150   | 7 Bl.  | 4 Bl. | Breiter Tieflandfluss Richtung Ozean |
 
 ---
 
-Vorgehensweise pro FLOW-Node bei Koordinate (x, y, z),
-Flussrichtung = (dx, dz) (Einheitsvektor, vom Pathfinder mitgeliefert):
+**Schritt 1 – Flussbett carven** (für alle FLOW-Nodes):
 
-**Schritt 1 – Flussbett carven:**
-  Für alle Positionen in der Flussbreite (orthogonal zur Richtung):
+  Für alle Positionen orthogonal zur Flussrichtung im Radius `width`:
   1. highestSolidY = höchster Festkörper-Block an (x, z)
-  2. Untersten Flussbett-Block (highestSolidY - carveDepth + 1): setze GRAVEL
-  3. Darüber (highestSolidY - carveDepth + 2 bis highestSolidY): setze WATER
+  2. Unterster Flussbett-Block (highestSolidY - depth): setze GRAVEL
+  3. Darüber (`depth - 1` Blöcke): setze WATER (source)
   Nur wenn isCarveableBlock(original) == true
 
-**Schritt 2 – Ufer setzen (links und rechts):**
-  Orthogonale Richtung zum Fluss: perpDir = (-dz, dx)
-  Für jede Ufer-Seite (Vorzeichen +1 und -1):
-    Für b = 1 bis `river-bank-width`:
-      ux = x + perpDir.x * (riverWidth + b)
-      uz = z + perpDir.z * (riverWidth + b)
-      highestSolidY = höchster Festkörper-Block an (ux, uz)
-      Biom an (ux, highestSolidY, uz) bestimmen:
-        - Vanilla Biome: RiverBiomeHelper.getBankMaterial(biome)
-        - Custom Biome (Key beginnt mit "geoworld:"): RiverBiomeHelper.getCustomBankMaterial(key)
-      setze Ufer-Block: world.getBlockAt(ux, highestSolidY, uz).setType(bankMaterial)
-      Wichtig: Nur ersetzen wenn isCarveableBlock(original) == true
-      Kein Wasser auf Uferblöcken setzen.
+  Hinweis: `depth` ist mindestens 1. Bei depth=1 gibt es einen Kies-Block,
+  kein Wasser darüber – in dem Fall ist der Kies-Block selbst gleichzeitig
+  der Wasserboden und wird mit WATER überschrieben. Korrekt:
+  - depth=1: highestSolidY = WATER (nur Wasseroberkante, kein sichtbarer Kies)
+    Ausnahme: highestSolidY - 1 = GRAVEL, highestSolidY = WATER
+  - depth=2: highestSolidY-1 = GRAVEL, highestSolidY = WATER
+  - depth=3: highestSolidY-2 = GRAVEL, highestSolidY-1 = WATER, highestSolidY = WATER
+  - depth=4: highestSolidY-3 = GRAVEL, highestSolidY-2..highestSolidY = WATER
 
-**Breite:** riverWidth ist die aktuelle Stufe (high/mid/low) aus der Config.
-**Richtungsvektor (dx, dz):** WaterfallPlacer erhält ihn als Parameter pro Node.
-Der RiverPathfinder speichert die Bewegungsrichtung im RiverNode:
-```java
-record RiverNode(int x, int y, int z, RiverNodeType type, int dirX, int dirZ) {}
-```
+**Schritt 2 – Ufer setzen** (links und rechts, `bank-width` Blöcke):
+
+  perpDir = (-dirZ, dirX)  // Orthogonal zur Flussrichtung
+  Für side in {+1, -1}:
+    Für b = 1 bis `river-bank-width`:
+      ux = x + perpDir.x * (width + b)
+      uz = z + perpDir.z * (width + b)
+      highestSolidY = höchster Festkörper-Block an (ux, uz)
+      bankMaterial = RiverBiomeHelper.get[Custom]BankMaterial(biome at ux,y,uz)
+      setze world.getBlockAt(ux, highestSolidY, uz) = bankMaterial
+      (nur wenn isCarveableBlock == true, kein Wasser setzen)
 
 ---
 
-Vorgehensweise pro WATERFALL-Node (senkrechter Abfall):
-  - NICHT carven, nur Wasser in die Luft setzen:
-    Setze Material.WATER (source) an (x, y, z) wenn AIR oder ersetzbarer Block.
-  - Wasserfallblöcke ersetzen KEINE Festkörperblöcke.
-  - Keine Ufer für Wasserfallblöcke.
+**WATERFALL-Nodes:**
+  Kein Carving. WATER source in die Luft setzen wenn Block AIR ist.
+  Keine Ufer für Wasserfallblöcke.
+  Breite des Wasserfalls = Breite des Flusses an WATERFALL_START-Y.
 
-Vorgehensweise pro LAKE-Node (Bergsee):
-  - Radius zwischen `mountain-lake-min-radius` und `mountain-lake-max-radius` (random)
-  - Für jeden Block im See-Kreis:
-    1. highestSolidY an (bx, bz)
-    2. Setze Seeboden: GRAVEL
-    3. Setze WATER darüber (carveDepth Blöcke)
-  - Für jeden Block im Ufer-Ring (Radius+1 bis Radius+`river-bank-width`):
-    1. highestSolidY an (bx, bz)
-    2. Setze biomspezifisches Ufermaterial (wie bei FLOW)
+**LAKE-Nodes (Bergsee):**
+  Radius: zufällig zwischen `mountain-lake-min-radius` (2) und
+  `mountain-lake-max-radius` (3). Bergseen sind bewusst klein–
+  kompakt, versteckt, realistisch.
 
-Bergsee-Generierung:
+  Tiefe des Sees = `river-depth` des aktuellen Y-Profils (meist 2).
+
+  Für jeden Block im Kreis:
+    if distSq <= radius^2:
+      Seeboden (highestSolidY - depth): GRAVEL
+      Darüber (depth Blöcke): WATER
+    else if distSq <= (radius + bankWidth)^2:
+      Uferblock: biomspezifisch (wie FLOW)
+
 ```java
-for (int dx = -radius; dx <= radius; dx++) {
-    for (int dz = -radius; dz <= radius; dz++) {
+for (int dx = -outerR; dx <= outerR; dx++) {
+    for (int dz = -outerR; dz <= outerR; dz++) {
         int distSq = dx*dx + dz*dz;
-        int bx = lakeX + dx;
-        int bz = lakeZ + dz;
-        int highestSolidY = getHighestSolid(world, bx, bz);
+        int bx = lakeX + dx, bz = lakeZ + dz;
+        int top = getHighestSolid(world, bx, bz);
         if (distSq <= radius * radius) {
-            // Seebett: Kies + Wasser
-            Block floor = world.getBlockAt(bx, highestSolidY - carveDepth, bz);
-            if (isCarveableBlock(floor.getType())) floor.setType(Material.GRAVEL);
-            for (int dy = 0; dy < carveDepth; dy++) {
-                Block b = world.getBlockAt(bx, highestSolidY - dy, bz);
+            // Seebett
+            if (isCarveableBlock(world.getBlockAt(bx, top - depth, bz).getType()))
+                world.getBlockAt(bx, top - depth, bz).setType(Material.GRAVEL);
+            for (int dy = 0; dy < depth; dy++) {
+                Block b = world.getBlockAt(bx, top - dy, bz);
                 if (isCarveableBlock(b.getType())) b.setType(Material.WATER);
             }
-        } else if (distSq <= (radius + bankWidth) * (radius + bankWidth)) {
-            // Seeufer: biomspezifisch
-            Block b = world.getBlockAt(bx, highestSolidY, bz);
-            Material bankMat = getBankMaterialForBlock(b);
-            if (isCarveableBlock(b.getType())) b.setType(bankMat);
+        } else if (distSq <= outerR * outerR) {
+            // Seeufer
+            Block b = world.getBlockAt(bx, top, bz);
+            if (isCarveableBlock(b.getType()))
+                b.setType(getBankMaterialForLocation(world, bx, top, bz));
         }
     }
 }
+// outerR = radius + bankWidth
 ```
 
 **Hilfsmethode isCarveableBlock(Material m):**
@@ -360,10 +381,11 @@ description: World generation enhancement plugin with river flow, waterfalls and
 - RiverFlowTask läuft ASYNC – niemals Block.setType() im async Task!
 - Alle Block-Änderungen IMMER via Bukkit.getScheduler().runTask() auf Main-Thread
 - getHighestBlockAt() ist teuer – nur einmal pro Koordinate aufrufen, Ergebnis cachen
+- Bei Stufe 4 (width=7, depth=4): bis zu (7*2+1) * 4 = 60 Blöcke pro Node.
+  Bei 800 Nodes max = 48.000 Block-Operationen pro Fluss. Akzeptabel, da async.
 - isCarveableBlock() und getBankMaterial() sind O(1) Set/Switch-Operationen
-- RiverBiomeHelper.getCustomBankMaterial() nur aufrufen wenn biomeKey mit "geoworld:" beginnt
 - Chunks aus der Queue entfernen bevor sie verarbeitet werden (nicht danach)
-- Wenn ein Chunk während der Verarbeitung ungeladen wird: try/catch mit ChunkUnloadException
+- Wenn ein Chunk während der Verarbeitung ungeladen wird: try/catch
 
 Gib die vollständige Projektstruktur mit allen Dateien aus, fertig zum
 Kompilieren mit mvn package.
