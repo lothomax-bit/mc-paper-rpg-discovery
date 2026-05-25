@@ -523,6 +523,52 @@ Das Donnern und Leuchten ist weithin sichtbar. Magma-Seen am Grund.
 
 ---
 
+## 💦 Besondere Höhlen hinter Wasserfällen
+
+> Das Plugin generiert an geeigneten Stellen Wasserfälle – hinter diesen verbergen sich besondere, versteckte Höhlen. Sie sind von außen nicht sichtbar und können nur durch den Wasservorhang betreten werden.
+
+### Merkmale dieser Höhlen
+
+- **Eingang:** Ausschließlich durch einen vom Plugin generierten Wasserfall erreichbar. Der Wasserschleier verdeckt den Eingang vollständig.
+- **Generierung:** Die Höhle wird direkt hinter dem Wasserfallblock in den Fels generiert – Größe und Form variieren je nach Biom.
+- **Atmosphäre:** Feuchte Wände (Moos, Glow Lichen), leises Tropfen, gedämpftes Licht durch das Wasser.
+- **Beleuchtung:** Kein natürliches Licht – nur schwaches Leuchten durch Glow Lichen oder Amethyst-Einschlüsse.
+
+### Inhalte & Belohnungen
+
+Je nach Biom, in dem der Wasserfall liegt, variiert der Inhalt der Höhle:
+
+| Biom-Typ | Mögliche Inhalte |
+|---|---|
+| Wälder / Ebenen | Kleines Lager, Schatztruhe mit seltenen Materialien, Pilze, Glow Lichen |
+| Gebirge / Plateau | Erzadern (Emerald, Diamant), Kristall-Einschlüsse, versteinerte Strukturen |
+| Sumpf / Feuchtgebiet | Alchemie-Zutaten, vergiftete Truhen, Moosstrukturen |
+| Wüste / Canyon | Antike Grabkammer, Sandstein-Reliefs, seltene Keramik-Loot |
+| Eis / Kälte | Eingefrorene Strukturen, gefrorene Truhen, Ice-Kristall-Cluster |
+| Mystisch / Märchenhaft | Rätselraum mit Runen, magische Partikeleffekte, Boss-Spawn |
+
+### MythicMobs (Beispiel-Spawns)
+
+- `CaveHermit` – Ein einsamer NPC oder Mob, der die Höhle bewohnt und bei Störung angreift
+- `WaterfallSpirit` – Geistiger Wächter des Wasserfalls, erscheint wenn Spieler die Höhle betritt
+- `MossGolem` – Kleiner Golem aus Moos und Stein, bewacht die Schatztruhe
+
+### Implementierungshinweis
+
+Die Höhlengenerierung wird vom Plugin beim Setzen eines Wasserfalls automatisch ausgelöst. In der `config.yml` kann unter `waterfall-caves` gesteuert werden, ob und wie häufig Höhlen erscheinen:
+
+```yaml
+waterfall-caves:
+  enabled: true
+  chance: 0.65        # 65% Wahrscheinlichkeit pro generiertem Wasserfall
+  min-size: 5         # Minimale Höhlenradius in Blöcken
+  max-size: 15        # Maximaler Höhlenradius in Blöcken
+  loot-table: "waterfall_cave_loot"
+  mob-spawns: true
+```
+
+---
+
 ## GeoDiscovery config.yml Ergänzung
 
 Diese Biome in `enabled-biomes` in der `config.yml` des GeoDiscovery-Plugins ergänzen:
