@@ -1,27 +1,55 @@
 enabled-biomes:
+  # Mountains & Hills
   - JAGGED_PEAKS
   - FROZEN_PEAKS
   - STONY_PEAKS
   - WINDSWEPT_HILLS
   - WINDSWEPT_GRAVELLY_HILLS
+  - MEADOW
+  - GROVE
+  - CHERRY_GROVE
+  # Deserts & Dry
   - DESERT
   - SAVANNA
   - SAVANNA_PLATEAU
   - WINDSWEPT_SAVANNA
   - BADLANDS
   - ERODED_BADLANDS
+  - WOODED_BADLANDS
+  # Jungle
   - JUNGLE
   - BAMBOO_JUNGLE
   - SPARSE_JUNGLE
+  # Forests
   - DARK_FOREST
   - OLD_GROWTH_PINE_TAIGA
   - OLD_GROWTH_SPRUCE_TAIGA
+  - FOREST
+  - FLOWER_FOREST
+  - BIRCH_FOREST
+  - OLD_GROWTH_BIRCH_FOREST
+  - TAIGA
+  - SNOWY_TAIGA
+  - WINDSWEPT_FOREST
+  # Cold & Snow
   - ICE_SPIKES
   - SNOWY_SLOPES
   - FROZEN_RIVER
   - SNOWY_BEACH
+  - SNOWY_PLAINS
+  - FROZEN_PEAKS
+  # Plains & Fields
+  - PLAINS
+  - SUNFLOWER_PLAINS
+  - STONY_SHORE
+  # Water & Beaches
+  - BEACH
+  - RIVER
+  - MUSHROOM_FIELDS
+  # Swamp
   - SWAMP
   - MANGROVE_SWAMP
+  # Ocean
   - OCEAN
   - DEEP_OCEAN
   - WARM_OCEAN
@@ -29,18 +57,25 @@ enabled-biomes:
   - DEEP_LUKEWARM_OCEAN
   - COLD_OCEAN
   - FROZEN_OCEAN
+  - DEEP_COLD_OCEAN
+  - DEEP_FROZEN_OCEAN
+  # Caves & Underground
   - DEEP_DARK
   - LUSH_CAVES
   - DRIPSTONE_CAVES
+  # Nether
   - BASALT_DELTAS
   - CRIMSON_FOREST
   - WARPED_FOREST
   - SOUL_SAND_VALLEY
   - NETHER_WASTES
+  # The End
+  - THE_END
   - END_HIGHLANDS
   - END_MIDLANDS
   - SMALL_END_ISLANDS
   - END_BARRENS
+  - THE_VOID
 
 enabled-structures:
   - VILLAGE
@@ -68,9 +103,56 @@ structure-check-interval: 100
 
 region-icons:
   DEFAULT: "📍"
+  # Mountains & Hills
+  JAGGED_PEAKS: "⛰️"
+  FROZEN_PEAKS: "🏔️"
+  STONY_PEAKS: "⛰️"
+  WINDSWEPT_HILLS: "⛰️"
+  WINDSWEPT_GRAVELLY_HILLS: "⛰️"
+  WINDSWEPT_FOREST: "🌲"
+  MEADOW: "🌸"
+  GROVE: "🌲"
+  CHERRY_GROVE: "🌸"
+  # Deserts & Dry
   DESERT: "🏜️"
   BADLANDS: "🏜️"
   ERODED_BADLANDS: "🏜️"
+  WOODED_BADLANDS: "🏜️"
+  SAVANNA: "🦁"
+  SAVANNA_PLATEAU: "🦁"
+  WINDSWEPT_SAVANNA: "🦁"
+  # Jungle
+  JUNGLE: "🌴"
+  BAMBOO_JUNGLE: "🌴"
+  SPARSE_JUNGLE: "🌴"
+  # Forests
+  DARK_FOREST: "🌲"
+  OLD_GROWTH_PINE_TAIGA: "🌲"
+  OLD_GROWTH_SPRUCE_TAIGA: "🌲"
+  FOREST: "🌳"
+  FLOWER_FOREST: "🌺"
+  BIRCH_FOREST: "🌳"
+  OLD_GROWTH_BIRCH_FOREST: "🌳"
+  TAIGA: "🌲"
+  SNOWY_TAIGA: "❄️"
+  # Cold & Snow
+  ICE_SPIKES: "❄️"
+  SNOWY_SLOPES: "❄️"
+  FROZEN_RIVER: "❄️"
+  SNOWY_BEACH: "❄️"
+  SNOWY_PLAINS: "❄️"
+  # Plains & Fields
+  PLAINS: "🌾"
+  SUNFLOWER_PLAINS: "🌻"
+  STONY_SHORE: "🪨"
+  # Water & Beaches
+  BEACH: "🏖️"
+  RIVER: "🏞️"
+  MUSHROOM_FIELDS: "🍄"
+  # Swamp
+  SWAMP: "🌿"
+  MANGROVE_SWAMP: "🌿"
+  # Ocean
   OCEAN: "🌊"
   DEEP_OCEAN: "🌊"
   WARM_OCEAN: "🌊"
@@ -78,32 +160,26 @@ region-icons:
   DEEP_LUKEWARM_OCEAN: "🌊"
   COLD_OCEAN: "🌊"
   FROZEN_OCEAN: "❄️"
-  JAGGED_PEAKS: "⛰️"
-  FROZEN_PEAKS: "🏔️"
-  STONY_PEAKS: "⛰️"
-  WINDSWEPT_HILLS: "⛰️"
-  ICE_SPIKES: "❄️"
-  SNOWY_SLOPES: "❄️"
-  JUNGLE: "🌴"
-  BAMBOO_JUNGLE: "🌴"
-  SPARSE_JUNGLE: "🌴"
-  DARK_FOREST: "🌲"
-  OLD_GROWTH_PINE_TAIGA: "🌲"
-  OLD_GROWTH_SPRUCE_TAIGA: "🌲"
-  SWAMP: "🌿"
-  MANGROVE_SWAMP: "🌿"
+  DEEP_COLD_OCEAN: "🌊"
+  DEEP_FROZEN_OCEAN: "❄️"
+  # Caves & Underground
   DEEP_DARK: "💀"
   LUSH_CAVES: "🍄"
   DRIPSTONE_CAVES: "🪨"
+  # Nether
   BASALT_DELTAS: "🔥"
   CRIMSON_FOREST: "🔥"
   WARPED_FOREST: "🔥"
   SOUL_SAND_VALLEY: "🔥"
   NETHER_WASTES: "🔥"
+  # The End
+  THE_END: "🌟"
   END_HIGHLANDS: "🌟"
   END_MIDLANDS: "🌟"
   SMALL_END_ISLANDS: "🌟"
   END_BARRENS: "🌟"
+  THE_VOID: "🕳️"
+  # Structures
   VILLAGE: "🏘️"
   STRONGHOLD: "🏰"
   DESERT_PYRAMID: "🏜️"
