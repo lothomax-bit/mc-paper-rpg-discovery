@@ -75,7 +75,7 @@ geoworld-datapack/
 > min_y + height darf 2032 nicht überschreiten → -64 + 2064 = 2000 ✅
 
 ### Biom-Größe (noise/*.json)
-Alle vier Noise-Dateien bekommen `firstOctave: -12` statt Standard `-7`.
+Alle vier Noise-Dateien bekommen `firstOctave: -10` statt Standard `-7`.
 Amplituden werden entsprechend angepasst um Kontrast zu erhalten.
 
 ### Berghöhe (density_function/overworld/offset.json)
