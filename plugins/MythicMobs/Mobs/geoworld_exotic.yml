@@ -1,0 +1,190 @@
+# GeoWorld MythicMobs – Exotic
+# Generiert aus docs/CUSTOM_BIOMES.md
+# Ablageort: plugins/MythicMobs/Mobs/geoworld_exotic.yml
+
+SkyDrake:
+  Type: PHANTOM
+  Display: '<&6>SkyDrake'
+  Health: 80
+  Damage: 5
+  Armor: 0
+  Options:
+    MovementSpeed: 0.25
+    Despawn: false
+    PreventOtherDrops: true
+    PreventItemPickup: true
+    Silent: false
+  Faction: GeoWorld
+  Skills:
+  - projectile{type=ARROW;v=2.5;onTick=[potion{type=SLOWNESS;d=40} @Target]} @Target ~onTimer:80
+  - damage{amount=2} @Target ~onAttack
+  - effect:particles{p=crit;a=10} @Self ~onDamaged
+  Drops:
+    - AMETHYST_SHARD 1 0.5
+    - GOLD_NUGGET 2-5 0.6
+  LevelModifiers:
+    Health: 0.5
+    Damage: 0.25
+
+IslePhoenix:
+  Type: ZOMBIE
+  Display: '<&6>IslePhoenix'
+  Health: 5000
+  Damage: 20
+  Armor: 0
+  Options:
+    MovementSpeed: 0.25
+    Despawn: false
+    PreventOtherDrops: true
+    PreventItemPickup: true
+    Silent: false
+  Faction: GeoWorld
+  Skills:
+  - heal{amount=full} @Self ~onDeath
+  - message{m='<&c>Er ersteht wieder!'} @World ~onDeath
+  Drops:
+    - AMETHYST_SHARD 1 0.5
+    - GOLD_NUGGET 2-5 0.6
+    - DIAMOND_BLOCK 1 0.05
+    - DIAMOND 1-2 0.3
+    - GOLD_INGOT 2-5 0.8
+  LevelModifiers:
+    Health: 0.5
+    Damage: 0.25
+  BossBar:
+    Enabled: true
+    Title: '<&4>IslePhoenix'
+    Range: 64
+    Color: RED
+    Style: SEGMENTED_10
+
+StoneGolem:
+  Type: IRON_GOLEM
+  Display: '<&6>StoneGolem'
+  Health: 30
+  Damage: 0
+  Armor: 0
+  Options:
+    MovementSpeed: 0.18
+    Despawn: false
+    PreventOtherDrops: true
+    PreventItemPickup: true
+    Silent: false
+  Faction: GeoWorld
+  Skills:
+  - damage{amount=2} @Target ~onAttack
+  - effect:particles{p=crit;a=10} @Self ~onDamaged
+  Drops:
+    - AMETHYST_SHARD 1 0.5
+    - GOLD_NUGGET 2-5 0.6
+  LevelModifiers:
+    Health: 0.5
+    Damage: 0.25
+
+PetrifiedWarden:
+  Type: ZOMBIE
+  Display: '<&6>PetrifiedWarden'
+  Health: 300
+  Damage: 12
+  Armor: 0
+  Options:
+    MovementSpeed: 0.25
+    Despawn: false
+    PreventOtherDrops: true
+    PreventItemPickup: true
+    Silent: false
+  Faction: GeoWorld
+  Skills:
+  - setvar{var=caster.noKnockback;value=true} @Self ~onSpawn
+  - damage{amount=2} @Target ~onAttack
+  - effect:particles{p=crit;a=10} @Self ~onDamaged
+  Drops:
+    - AMETHYST_SHARD 1 0.5
+    - GOLD_NUGGET 2-5 0.6
+  LevelModifiers:
+    Health: 0.5
+    Damage: 0.25
+
+VineStrangler:
+  Type: ZOMBIE
+  Display: '<&6>VineStrangler'
+  Health: 80
+  Damage: 5
+  Armor: 0
+  Options:
+    MovementSpeed: 0.25
+    Despawn: false
+    PreventOtherDrops: true
+    PreventItemPickup: true
+    Silent: false
+  Faction: GeoWorld
+  Skills:
+  - damage{amount=2} @Target ~onAttack
+  - effect:particles{p=crit;a=10} @Self ~onDamaged
+  Drops:
+    - AMETHYST_SHARD 1 0.5
+    - GOLD_NUGGET 2-5 0.6
+  LevelModifiers:
+    Health: 0.5
+    Damage: 0.25
+
+ChasmSerpent:
+  Type: ZOMBIE
+  Display: '<&6>ChasmSerpent'
+  Health: 80
+  Damage: 5
+  Armor: 0
+  Options:
+    MovementSpeed: 0.25
+    Despawn: false
+    PreventOtherDrops: true
+    PreventItemPickup: true
+    Silent: false
+  Faction: GeoWorld
+  Skills:
+  - damage{amount=2} @Target ~onAttack
+  - effect:particles{p=crit;a=10} @Self ~onDamaged
+  Drops:
+    - AMETHYST_SHARD 1 0.5
+    - GOLD_NUGGET 2-5 0.6
+  LevelModifiers:
+    Health: 0.5
+    Damage: 0.25
+
+RandomSpawning:
+  SkyDrake:
+    Enabled: false
+    Worlds: world
+    Biomes: JUNGLE
+    Chance: 0.05
+    MaxMobsPerChunk: 2
+  IslePhoenix:
+    Enabled: false
+    Worlds: world
+    Biomes: JUNGLE
+    Chance: 0.05
+    MaxMobsPerChunk: 2
+  StoneGolem:
+    Enabled: false
+    Worlds: world
+    Biomes: JUNGLE
+    Chance: 0.05
+    MaxMobsPerChunk: 2
+  PetrifiedWarden:
+    Enabled: false
+    Worlds: world
+    Biomes: JUNGLE
+    Chance: 0.05
+    MaxMobsPerChunk: 2
+  VineStrangler:
+    Enabled: false
+    Worlds: world
+    Biomes: JUNGLE
+    Chance: 0.05
+    MaxMobsPerChunk: 2
+  ChasmSerpent:
+    Enabled: false
+    Worlds: world
+    Biomes: JUNGLE
+    Chance: 0.05
+    MaxMobsPerChunk: 2

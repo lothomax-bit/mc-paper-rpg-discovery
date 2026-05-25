@@ -1,0 +1,584 @@
+# GeoWorld MythicMobs – Mystic
+# Generiert aus docs/CUSTOM_BIOMES.md
+# Ablageort: plugins/MythicMobs/Mobs/geoworld_mystic.yml
+
+StarFragment:
+  Type: ZOMBIE
+  Display: '<&6>StarFragment'
+  Health: 80
+  Damage: 5
+  Armor: 0
+  Options:
+    MovementSpeed: 0.25
+    Despawn: false
+    PreventOtherDrops: true
+    PreventItemPickup: true
+    Silent: false
+  Faction: GeoWorld
+  Skills:
+  - damage{amount=2} @Target ~onAttack
+  - effect:particles{p=crit;a=10} @Self ~onDamaged
+  Drops:
+    - AMETHYST_SHARD 1-2 0.6
+    - ECHO_SHARD 1 0.1
+    - GLOWSTONE_DUST 1-3 0.7
+    - EXPERIENCE_BOTTLE 1 0.3
+  LevelModifiers:
+    Health: 0.5
+    Damage: 0.25
+
+CelestialGuardian:
+  Type: ZOMBIE
+  Display: '<&6>CelestialGuardian'
+  Health: 300
+  Damage: 12
+  Armor: 0
+  Options:
+    MovementSpeed: 0.25
+    Despawn: false
+    PreventOtherDrops: true
+    PreventItemPickup: true
+    Silent: false
+  Faction: GeoWorld
+  Skills:
+  - damage{amount=2} @Target ~onAttack
+  - effect:particles{p=crit;a=10} @Self ~onDamaged
+  Drops:
+    - AMETHYST_SHARD 1-2 0.6
+    - ECHO_SHARD 1 0.1
+    - GLOWSTONE_DUST 1-3 0.7
+    - EXPERIENCE_BOTTLE 1 0.3
+  LevelModifiers:
+    Health: 0.5
+    Damage: 0.25
+
+DreamWeaver:
+  Type: ZOMBIE
+  Display: '<&6>DreamWeaver'
+  Health: 80
+  Damage: 5
+  Armor: 0
+  Options:
+    MovementSpeed: 0.25
+    Despawn: false
+    PreventOtherDrops: true
+    PreventItemPickup: true
+    Silent: false
+  Faction: GeoWorld
+  Skills:
+  - damage{amount=2} @Target ~onAttack
+  - effect:particles{p=crit;a=10} @Self ~onDamaged
+  Drops:
+    - AMETHYST_SHARD 1-2 0.6
+    - ECHO_SHARD 1 0.1
+    - GLOWSTONE_DUST 1-3 0.7
+    - EXPERIENCE_BOTTLE 1 0.3
+  LevelModifiers:
+    Health: 0.5
+    Damage: 0.25
+
+Nightmare:
+  Type: ZOMBIE
+  Display: '<&6>Nightmare'
+  Health: 80
+  Damage: 5
+  Armor: 0
+  Options:
+    MovementSpeed: 0.25
+    Despawn: false
+    PreventOtherDrops: true
+    PreventItemPickup: true
+    Silent: false
+  Faction: GeoWorld
+  Skills:
+  - damage{amount=2} @Target ~onAttack
+  - effect:particles{p=crit;a=10} @Self ~onDamaged
+  Drops:
+    - AMETHYST_SHARD 1-2 0.6
+    - ECHO_SHARD 1 0.1
+    - GLOWSTONE_DUST 1-3 0.7
+    - EXPERIENCE_BOTTLE 1 0.3
+  LevelModifiers:
+    Health: 0.5
+    Damage: 0.25
+
+RuneGuardian:
+  Type: ZOMBIE
+  Display: '<&6>RuneGuardian'
+  Health: 80
+  Damage: 5
+  Armor: 0
+  Options:
+    MovementSpeed: 0.25
+    Despawn: false
+    PreventOtherDrops: true
+    PreventItemPickup: true
+    Silent: false
+  Faction: GeoWorld
+  Skills:
+  - damage{amount=2} @Target ~onAttack
+  - effect:particles{p=crit;a=10} @Self ~onDamaged
+  Drops:
+    - AMETHYST_SHARD 1-2 0.6
+    - ECHO_SHARD 1 0.1
+    - GLOWSTONE_DUST 1-3 0.7
+    - EXPERIENCE_BOTTLE 1 0.3
+  LevelModifiers:
+    Health: 0.5
+    Damage: 0.25
+
+AncientSeer:
+  Type: WITCH
+  Display: '<&6>AncientSeer'
+  Health: 80
+  Damage: 5
+  Armor: 0
+  Options:
+    MovementSpeed: 0.25
+    Despawn: false
+    PreventOtherDrops: true
+    PreventItemPickup: true
+    Silent: false
+  Faction: GeoWorld
+  Skills:
+  - potion{type=SLOWNESS;duration=80;amplifier=2} @Target ~onAttack
+  - damage{amount=8;radius=5} @PIR{r=5} ~onTimer:120
+  Drops:
+    - AMETHYST_SHARD 1-2 0.6
+    - ECHO_SHARD 1 0.1
+    - GLOWSTONE_DUST 1-3 0.7
+    - EXPERIENCE_BOTTLE 1 0.3
+  LevelModifiers:
+    Health: 0.5
+    Damage: 0.25
+
+EclipsePhantom:
+  Type: PHANTOM
+  Display: '<&6>EclipsePhantom'
+  Health: 80
+  Damage: 5
+  Armor: 0
+  Options:
+    MovementSpeed: 0.55
+    Despawn: false
+    PreventOtherDrops: true
+    PreventItemPickup: true
+    Silent: false
+  Faction: GeoWorld
+  Skills:
+  - damage{amount=2} @Target ~onAttack
+  - effect:particles{p=crit;a=10} @Self ~onDamaged
+  Drops:
+    - AMETHYST_SHARD 1-2 0.6
+    - ECHO_SHARD 1 0.1
+    - GLOWSTONE_DUST 1-3 0.7
+    - EXPERIENCE_BOTTLE 1 0.3
+  LevelModifiers:
+    Health: 0.5
+    Damage: 0.25
+
+SolarWraith:
+  Type: PHANTOM
+  Display: '<&6>SolarWraith'
+  Health: 5000
+  Damage: 20
+  Armor: 0
+  Options:
+    MovementSpeed: 0.55
+    Despawn: false
+    PreventOtherDrops: true
+    PreventItemPickup: true
+    Silent: false
+  Faction: GeoWorld
+  Skills:
+  - damage{amount=2} @Target ~onAttack
+  - effect:particles{p=crit;a=10} @Self ~onDamaged
+  Drops:
+    - AMETHYST_SHARD 1-2 0.6
+    - ECHO_SHARD 1 0.1
+    - GLOWSTONE_DUST 1-3 0.7
+    - EXPERIENCE_BOTTLE 1 0.3
+    - DIAMOND_BLOCK 1 0.05
+    - DIAMOND 1-2 0.3
+    - GOLD_INGOT 2-5 0.8
+  LevelModifiers:
+    Health: 0.5
+    Damage: 0.25
+  BossBar:
+    Enabled: true
+    Title: '<&4>SolarWraith'
+    Range: 64
+    Color: RED
+    Style: SEGMENTED_10
+
+OasisDjinn:
+  Type: BLAZE
+  Display: '<&6>OasisDjinn'
+  Health: 80
+  Damage: 5
+  Armor: 0
+  Options:
+    MovementSpeed: 0.25
+    Despawn: false
+    PreventOtherDrops: true
+    PreventItemPickup: true
+    Silent: false
+  Faction: GeoWorld
+  Skills:
+  - damage{amount=2} @Target ~onAttack
+  - effect:particles{p=crit;a=10} @Self ~onDamaged
+  Drops:
+    - AMETHYST_SHARD 1-2 0.6
+    - ECHO_SHARD 1 0.1
+    - GLOWSTONE_DUST 1-3 0.7
+    - EXPERIENCE_BOTTLE 1 0.3
+  LevelModifiers:
+    Health: 0.5
+    Damage: 0.25
+
+MirageHydra:
+  Type: IRON_GOLEM
+  Display: '<&6>MirageHydra'
+  Health: 5000
+  Damage: 20
+  Armor: 0
+  Options:
+    MovementSpeed: 0.25
+    Despawn: false
+    PreventOtherDrops: true
+    PreventItemPickup: true
+    Silent: false
+  Faction: GeoWorld
+  Skills:
+  - damage{amount=2} @Target ~onAttack
+  - effect:particles{p=crit;a=10} @Self ~onDamaged
+  Drops:
+    - AMETHYST_SHARD 1-2 0.6
+    - ECHO_SHARD 1 0.1
+    - GLOWSTONE_DUST 1-3 0.7
+    - EXPERIENCE_BOTTLE 1 0.3
+    - DIAMOND_BLOCK 1 0.05
+    - DIAMOND 1-2 0.3
+    - GOLD_INGOT 2-5 0.8
+  LevelModifiers:
+    Health: 0.5
+    Damage: 0.25
+  BossBar:
+    Enabled: true
+    Title: '<&4>MirageHydra'
+    Range: 64
+    Color: RED
+    Style: SEGMENTED_10
+
+MoonElemental:
+  Type: BLAZE
+  Display: '<&6>MoonElemental'
+  Health: 80
+  Damage: 5
+  Armor: 0
+  Options:
+    MovementSpeed: 0.25
+    Despawn: false
+    PreventOtherDrops: true
+    PreventItemPickup: true
+    Silent: false
+  Faction: GeoWorld
+  Skills:
+  - message{m='<&7>Der Mob verschwindet im Tageslicht...'} @Self ~onTimer:20
+  - remove{} @Self onConditions[isDay=true] ~onTimer:20
+  Drops:
+    - AMETHYST_SHARD 1-2 0.6
+    - ECHO_SHARD 1 0.1
+    - GLOWSTONE_DUST 1-3 0.7
+    - EXPERIENCE_BOTTLE 1 0.3
+  LevelModifiers:
+    Health: 0.5
+    Damage: 0.25
+
+LunarWolf:
+  Type: WOLF
+  Display: '<&6>LunarWolf'
+  Health: 80
+  Damage: 5
+  Armor: 0
+  Options:
+    MovementSpeed: 0.25
+    Despawn: false
+    PreventOtherDrops: true
+    PreventItemPickup: true
+    Silent: false
+  Faction: GeoWorld
+  Skills:
+  - summon{type=self;amount=2;radius=10} @Self ~onFirstSpawn
+  - damage{amount=2} @Target ~onAttack
+  - effect:particles{p=crit;a=10} @Self ~onDamaged
+  Drops:
+    - AMETHYST_SHARD 1-2 0.6
+    - ECHO_SHARD 1 0.1
+    - GLOWSTONE_DUST 1-3 0.7
+    - EXPERIENCE_BOTTLE 1 0.3
+  LevelModifiers:
+    Health: 0.5
+    Damage: 0.25
+
+ThunderCallerWyvern:
+  Type: PHANTOM
+  Display: '<&6>ThunderCallerWyvern'
+  Health: 80
+  Damage: 5
+  Armor: 0
+  Options:
+    MovementSpeed: 0.25
+    Despawn: false
+    PreventOtherDrops: true
+    PreventItemPickup: true
+    Silent: false
+  Faction: GeoWorld
+  Skills:
+  - damage{amount=2} @Target ~onAttack
+  - effect:particles{p=crit;a=10} @Self ~onDamaged
+  Drops:
+    - AMETHYST_SHARD 1-2 0.6
+    - ECHO_SHARD 1 0.1
+    - GLOWSTONE_DUST 1-3 0.7
+    - EXPERIENCE_BOTTLE 1 0.3
+  LevelModifiers:
+    Health: 0.5
+    Damage: 0.25
+
+StormGolem:
+  Type: IRON_GOLEM
+  Display: '<&6>StormGolem'
+  Health: 80
+  Damage: 5
+  Armor: 0
+  Options:
+    MovementSpeed: 0.18
+    Despawn: false
+    PreventOtherDrops: true
+    PreventItemPickup: true
+    Silent: false
+  Faction: GeoWorld
+  Skills:
+  - damage{amount=2} @Target ~onAttack
+  - effect:particles{p=crit;a=10} @Self ~onDamaged
+  Drops:
+    - AMETHYST_SHARD 1-2 0.6
+    - ECHO_SHARD 1 0.1
+    - GLOWSTONE_DUST 1-3 0.7
+    - EXPERIENCE_BOTTLE 1 0.3
+  LevelModifiers:
+    Health: 0.5
+    Damage: 0.25
+
+SporeVine:
+  Type: CREEPER
+  Display: '<&6>SporeVine'
+  Health: 80
+  Damage: 5
+  Armor: 0
+  Options:
+    MovementSpeed: 0.25
+    Despawn: false
+    PreventOtherDrops: true
+    PreventItemPickup: true
+    Silent: false
+  Faction: GeoWorld
+  Skills:
+  - potion{type=POISON;duration=100;amplifier=1} @Target ~onAttack
+  - damage{amount=2} @Target ~onAttack
+  - effect:particles{p=crit;a=10} @Self ~onDamaged
+  Drops:
+    - AMETHYST_SHARD 1-2 0.6
+    - ECHO_SHARD 1 0.1
+    - GLOWSTONE_DUST 1-3 0.7
+    - EXPERIENCE_BOTTLE 1 0.3
+  LevelModifiers:
+    Health: 0.5
+    Damage: 0.25
+
+JungleStalker:
+  Type: ZOMBIE
+  Display: '<&6>JungleStalker'
+  Health: 80
+  Damage: 5
+  Armor: 0
+  Options:
+    MovementSpeed: 0.4
+    Despawn: false
+    PreventOtherDrops: true
+    PreventItemPickup: true
+    Silent: false
+  Faction: GeoWorld
+  Skills:
+  - potion{type=INVISIBILITY;duration=200;amplifier=0} @Self ~onSpawn
+  - potion{type=INVISIBILITY;duration=200;amplifier=0} @Self ~onTimer:200
+  Drops:
+    - AMETHYST_SHARD 1-2 0.6
+    - ECHO_SHARD 1 0.1
+    - GLOWSTONE_DUST 1-3 0.7
+    - EXPERIENCE_BOTTLE 1 0.3
+  LevelModifiers:
+    Health: 0.5
+    Damage: 0.25
+
+RuinsCurator:
+  Type: PHANTOM
+  Display: '<&6>RuinsCurator'
+  Health: 80
+  Damage: 5
+  Armor: 0
+  Options:
+    MovementSpeed: 0.25
+    Despawn: false
+    PreventOtherDrops: true
+    PreventItemPickup: true
+    Silent: false
+  Faction: GeoWorld
+  Skills:
+  - potion{type=SLOWNESS;duration=80;amplifier=2} @Target ~onAttack
+  - damage{amount=2} @Target ~onAttack
+  - effect:particles{p=crit;a=10} @Self ~onDamaged
+  Drops:
+    - AMETHYST_SHARD 1-2 0.6
+    - ECHO_SHARD 1 0.1
+    - GLOWSTONE_DUST 1-3 0.7
+    - EXPERIENCE_BOTTLE 1 0.3
+  LevelModifiers:
+    Health: 0.5
+    Damage: 0.25
+
+ColossalStatue:
+  Type: IRON_GOLEM
+  Display: '<&6>ColossalStatue'
+  Health: 80
+  Damage: 5
+  Armor: 0
+  Options:
+    MovementSpeed: 0.25
+    Despawn: false
+    PreventOtherDrops: true
+    PreventItemPickup: true
+    Silent: true
+  Faction: GeoWorld
+  Skills:
+  - damage{amount=2} @Target ~onAttack
+  - effect:particles{p=crit;a=10} @Self ~onDamaged
+  Drops:
+    - AMETHYST_SHARD 1-2 0.6
+    - ECHO_SHARD 1 0.1
+    - GLOWSTONE_DUST 1-3 0.7
+    - EXPERIENCE_BOTTLE 1 0.3
+  LevelModifiers:
+    Health: 0.5
+    Damage: 0.25
+
+RandomSpawning:
+  StarFragment:
+    Enabled: false
+    Worlds: world
+    Biomes: DARK_FOREST
+    Chance: 0.05
+    MaxMobsPerChunk: 2
+  CelestialGuardian:
+    Enabled: false
+    Worlds: world
+    Biomes: DARK_FOREST
+    Chance: 0.05
+    MaxMobsPerChunk: 2
+  DreamWeaver:
+    Enabled: false
+    Worlds: world
+    Biomes: DARK_FOREST
+    Chance: 0.05
+    MaxMobsPerChunk: 2
+  Nightmare:
+    Enabled: false
+    Worlds: world
+    Biomes: DARK_FOREST
+    Chance: 0.05
+    MaxMobsPerChunk: 2
+  RuneGuardian:
+    Enabled: false
+    Worlds: world
+    Biomes: DARK_FOREST
+    Chance: 0.05
+    MaxMobsPerChunk: 2
+  AncientSeer:
+    Enabled: false
+    Worlds: world
+    Biomes: DARK_FOREST
+    Chance: 0.05
+    MaxMobsPerChunk: 2
+  EclipsePhantom:
+    Enabled: false
+    Worlds: world
+    Biomes: DARK_FOREST
+    Chance: 0.05
+    MaxMobsPerChunk: 2
+  SolarWraith:
+    Enabled: false
+    Worlds: world
+    Biomes: DARK_FOREST
+    Chance: 0.05
+    MaxMobsPerChunk: 2
+  OasisDjinn:
+    Enabled: false
+    Worlds: world
+    Biomes: DARK_FOREST
+    Chance: 0.05
+    MaxMobsPerChunk: 2
+  MirageHydra:
+    Enabled: false
+    Worlds: world
+    Biomes: DARK_FOREST
+    Chance: 0.05
+    MaxMobsPerChunk: 2
+  MoonElemental:
+    Enabled: false
+    Worlds: world
+    Biomes: DARK_FOREST
+    Chance: 0.05
+    MaxMobsPerChunk: 2
+  LunarWolf:
+    Enabled: false
+    Worlds: world
+    Biomes: DARK_FOREST
+    Chance: 0.05
+    MaxMobsPerChunk: 2
+  ThunderCallerWyvern:
+    Enabled: false
+    Worlds: world
+    Biomes: DARK_FOREST
+    Chance: 0.05
+    MaxMobsPerChunk: 2
+  StormGolem:
+    Enabled: false
+    Worlds: world
+    Biomes: DARK_FOREST
+    Chance: 0.05
+    MaxMobsPerChunk: 2
+  SporeVine:
+    Enabled: false
+    Worlds: world
+    Biomes: DARK_FOREST
+    Chance: 0.05
+    MaxMobsPerChunk: 2
+  JungleStalker:
+    Enabled: false
+    Worlds: world
+    Biomes: DARK_FOREST
+    Chance: 0.05
+    MaxMobsPerChunk: 2
+  RuinsCurator:
+    Enabled: false
+    Worlds: world
+    Biomes: DARK_FOREST
+    Chance: 0.05
+    MaxMobsPerChunk: 2
+  ColossalStatue:
+    Enabled: false
+    Worlds: world
+    Biomes: DARK_FOREST
+    Chance: 0.05
+    MaxMobsPerChunk: 2

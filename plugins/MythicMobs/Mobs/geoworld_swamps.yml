@@ -1,0 +1,192 @@
+# GeoWorld MythicMobs – Swamps
+# Generiert aus docs/CUSTOM_BIOMES.md
+# Ablageort: plugins/MythicMobs/Mobs/geoworld_swamps.yml
+
+BayouWitch:
+  Type: WITCH
+  Display: '<&6>BayouWitch'
+  Health: 80
+  Damage: 5
+  Armor: 0
+  Options:
+    MovementSpeed: 0.25
+    Despawn: false
+    PreventOtherDrops: true
+    PreventItemPickup: true
+    Silent: false
+  Faction: GeoWorld
+  Skills:
+  - damage{amount=2} @Target ~onAttack
+  - effect:particles{p=crit;a=10} @Self ~onDamaged
+  Drops:
+    - SLIMEBALL 1-2 0.7
+    - CLAY_BALL 1-3 0.8
+    - SPIDER_EYE 1 0.4
+    - FERMENTED_SPIDER_EYE 1 0.2
+  LevelModifiers:
+    Health: 0.5
+    Damage: 0.25
+
+VoodooSkeleton:
+  Type: SKELETON
+  Display: '<&6>VoodooSkeleton'
+  Health: 80
+  Damage: 5
+  Armor: 0
+  Options:
+    MovementSpeed: 0.25
+    Despawn: false
+    PreventOtherDrops: true
+    PreventItemPickup: true
+    Silent: false
+  Faction: GeoWorld
+  Skills:
+  - damage{amount=2} @Target ~onAttack
+  - effect:particles{p=crit;a=10} @Self ~onDamaged
+  Drops:
+    - SLIMEBALL 1-2 0.7
+    - CLAY_BALL 1-3 0.8
+    - SPIDER_EYE 1 0.4
+    - FERMENTED_SPIDER_EYE 1 0.2
+  LevelModifiers:
+    Health: 0.5
+    Damage: 0.25
+
+BogCrocodile:
+  Type: DROWNED
+  Display: '<&6>BogCrocodile'
+  Health: 80
+  Damage: 5
+  Armor: 0
+  Options:
+    MovementSpeed: 0.25
+    Despawn: false
+    PreventOtherDrops: true
+    PreventItemPickup: true
+    Silent: false
+  Faction: GeoWorld
+  Skills:
+  - damage{amount=2} @Target ~onAttack
+  - effect:particles{p=crit;a=10} @Self ~onDamaged
+  Drops:
+    - SLIMEBALL 1-2 0.7
+    - CLAY_BALL 1-3 0.8
+    - SPIDER_EYE 1 0.4
+    - FERMENTED_SPIDER_EYE 1 0.2
+  LevelModifiers:
+    Health: 0.5
+    Damage: 0.25
+
+GlowFrog:
+  Type: ZOMBIE
+  Display: '<&6>GlowFrog'
+  Health: 30
+  Damage: 0
+  Armor: 0
+  Options:
+    MovementSpeed: 0.25
+    Despawn: false
+    PreventOtherDrops: true
+    PreventItemPickup: true
+    Silent: false
+  Faction: GeoWorld
+  Skills:
+  - damage{amount=2} @Target ~onAttack
+  - effect:particles{p=crit;a=10} @Self ~onDamaged
+  Drops:
+    - SLIMEBALL 1-2 0.7
+    - CLAY_BALL 1-3 0.8
+    - SPIDER_EYE 1 0.4
+    - FERMENTED_SPIDER_EYE 1 0.2
+  LevelModifiers:
+    Health: 0.5
+    Damage: 0.25
+
+WillOWisp:
+  Type: ZOMBIE
+  Display: '<&6>WillOWisp'
+  Health: 80
+  Damage: 5
+  Armor: 0
+  Options:
+    MovementSpeed: 0.25
+    Despawn: false
+    PreventOtherDrops: true
+    PreventItemPickup: true
+    Silent: false
+  Faction: GeoWorld
+  Skills:
+  - damage{amount=2} @Target ~onAttack
+  - effect:particles{p=crit;a=10} @Self ~onDamaged
+  Drops:
+    - SLIMEBALL 1-2 0.7
+    - CLAY_BALL 1-3 0.8
+    - SPIDER_EYE 1 0.4
+    - FERMENTED_SPIDER_EYE 1 0.2
+  LevelModifiers:
+    Health: 0.5
+    Damage: 0.25
+
+MoorBanshee:
+  Type: ZOMBIE
+  Display: '<&6>MoorBanshee'
+  Health: 80
+  Damage: 5
+  Armor: 0
+  Options:
+    MovementSpeed: 0.25
+    Despawn: false
+    PreventOtherDrops: true
+    PreventItemPickup: true
+    Silent: false
+  Faction: GeoWorld
+  Skills:
+  - damage{amount=8;radius=5} @PIR{r=5} ~onTimer:120
+  - damage{amount=2} @Target ~onAttack
+  - effect:particles{p=crit;a=10} @Self ~onDamaged
+  Drops:
+    - SLIMEBALL 1-2 0.7
+    - CLAY_BALL 1-3 0.8
+    - SPIDER_EYE 1 0.4
+    - FERMENTED_SPIDER_EYE 1 0.2
+  LevelModifiers:
+    Health: 0.5
+    Damage: 0.25
+
+RandomSpawning:
+  BayouWitch:
+    Enabled: false
+    Worlds: world
+    Biomes: SWAMP
+    Chance: 0.05
+    MaxMobsPerChunk: 2
+  VoodooSkeleton:
+    Enabled: false
+    Worlds: world
+    Biomes: SWAMP
+    Chance: 0.05
+    MaxMobsPerChunk: 2
+  BogCrocodile:
+    Enabled: false
+    Worlds: world
+    Biomes: SWAMP
+    Chance: 0.05
+    MaxMobsPerChunk: 2
+  GlowFrog:
+    Enabled: false
+    Worlds: world
+    Biomes: SWAMP
+    Chance: 0.05
+    MaxMobsPerChunk: 2
+  WillOWisp:
+    Enabled: false
+    Worlds: world
+    Biomes: SWAMP
+    Chance: 0.05
+    MaxMobsPerChunk: 2
+  MoorBanshee:
+    Enabled: false
+    Worlds: world
+    Biomes: SWAMP
+    Chance: 0.05
+    MaxMobsPerChunk: 2

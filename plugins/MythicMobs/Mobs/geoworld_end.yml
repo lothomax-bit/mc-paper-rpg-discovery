@@ -1,0 +1,196 @@
+# GeoWorld MythicMobs – End
+# Generiert aus docs/CUSTOM_BIOMES.md
+# Ablageort: plugins/MythicMobs/Mobs/geoworld_end.yml
+
+EndCrawler:
+  Type: CAVE_SPIDER
+  Display: '<&6>EndCrawler'
+  Health: 80
+  Damage: 5
+  Armor: 0
+  Options:
+    MovementSpeed: 0.25
+    Despawn: false
+    PreventOtherDrops: true
+    PreventItemPickup: true
+    Silent: false
+  Faction: GeoWorld
+  Skills:
+  - teleport{} @Self ~onDamaged{healthPercent<50}
+  - damage{amount=2} @Target ~onAttack
+  - effect:particles{p=crit;a=10} @Self ~onDamaged
+  Drops:
+    - ENDER_PEARL 1 0.5
+    - CHORUS_FRUIT 1-2 0.6
+    - PURPUR_BLOCK 1 0.4
+  LevelModifiers:
+    Health: 0.5
+    Damage: 0.25
+
+ChorusReaper:
+  Type: ZOMBIE
+  Display: '<&6>ChorusReaper'
+  Health: 300
+  Damage: 12
+  Armor: 0
+  Options:
+    MovementSpeed: 0.25
+    Despawn: false
+    PreventOtherDrops: true
+    PreventItemPickup: true
+    Silent: false
+  Faction: GeoWorld
+  Skills:
+  - damage{amount=2} @Target ~onAttack
+  - effect:particles{p=crit;a=10} @Self ~onDamaged
+  Drops:
+    - ENDER_PEARL 1 0.5
+    - CHORUS_FRUIT 1-2 0.6
+    - PURPUR_BLOCK 1 0.4
+  LevelModifiers:
+    Health: 0.5
+    Damage: 0.25
+
+VoidSentinel:
+  Type: ZOMBIE
+  Display: '<&6>VoidSentinel'
+  Health: 80
+  Damage: 5
+  Armor: 0
+  Options:
+    MovementSpeed: 0.25
+    Despawn: false
+    PreventOtherDrops: true
+    PreventItemPickup: true
+    Silent: false
+  Faction: GeoWorld
+  Skills:
+  - damage{amount=2} @Target ~onAttack
+  - effect:particles{p=crit;a=10} @Self ~onDamaged
+  Drops:
+    - ENDER_PEARL 1 0.5
+    - CHORUS_FRUIT 1-2 0.6
+    - PURPUR_BLOCK 1 0.4
+  LevelModifiers:
+    Health: 0.5
+    Damage: 0.25
+
+OblivionBoss:
+  Type: IRON_GOLEM
+  Display: '<&6>OblivionBoss'
+  Health: 25000
+  Damage: 25
+  Armor: 0
+  Options:
+    MovementSpeed: 0.25
+    Despawn: false
+    PreventOtherDrops: true
+    PreventItemPickup: true
+    Silent: false
+  Faction: GeoWorld
+  Skills:
+  - projectile{type=SNOWBALL;v=1.5;damage=8} @Target ~onTimer:100
+  - damage{amount=2} @Target ~onAttack
+  - effect:particles{p=crit;a=10} @Self ~onDamaged
+  Drops:
+    - ENDER_PEARL 1 0.5
+    - CHORUS_FRUIT 1-2 0.6
+    - PURPUR_BLOCK 1 0.4
+    - DIAMOND_BLOCK 1 0.05
+    - DIAMOND 1-2 0.3
+    - GOLD_INGOT 2-5 0.8
+  LevelModifiers:
+    Health: 0.5
+    Damage: 0.25
+  BossBar:
+    Enabled: true
+    Title: '<&4>OblivionBoss'
+    Range: 64
+    Color: RED
+    Style: SEGMENTED_10
+
+SpireGargoyle:
+  Type: IRON_GOLEM
+  Display: '<&6>SpireGargoyle'
+  Health: 80
+  Damage: 5
+  Armor: 0
+  Options:
+    MovementSpeed: 0.25
+    Despawn: false
+    PreventOtherDrops: true
+    PreventItemPickup: true
+    Silent: false
+  Faction: GeoWorld
+  Skills:
+  - damage{amount=2} @Target ~onAttack
+  - effect:particles{p=crit;a=10} @Self ~onDamaged
+  Drops:
+    - ENDER_PEARL 1 0.5
+    - CHORUS_FRUIT 1-2 0.6
+    - PURPUR_BLOCK 1 0.4
+  LevelModifiers:
+    Health: 0.5
+    Damage: 0.25
+
+EndKnight:
+  Type: ZOMBIE
+  Display: '<&6>EndKnight'
+  Health: 80
+  Damage: 5
+  Armor: 0
+  Options:
+    MovementSpeed: 0.25
+    Despawn: false
+    PreventOtherDrops: true
+    PreventItemPickup: true
+    Silent: false
+  Faction: GeoWorld
+  Skills:
+  - damage{amount=2} @Target ~onAttack
+  - effect:particles{p=crit;a=10} @Self ~onDamaged
+  Drops:
+    - ENDER_PEARL 1 0.5
+    - CHORUS_FRUIT 1-2 0.6
+    - PURPUR_BLOCK 1 0.4
+  LevelModifiers:
+    Health: 0.5
+    Damage: 0.25
+
+RandomSpawning:
+  EndCrawler:
+    Enabled: false
+    Worlds: world
+    Biomes: THE_END
+    Chance: 0.05
+    MaxMobsPerChunk: 2
+  ChorusReaper:
+    Enabled: false
+    Worlds: world
+    Biomes: THE_END
+    Chance: 0.05
+    MaxMobsPerChunk: 2
+  VoidSentinel:
+    Enabled: false
+    Worlds: world
+    Biomes: THE_END
+    Chance: 0.05
+    MaxMobsPerChunk: 2
+  OblivionBoss:
+    Enabled: false
+    Worlds: world
+    Biomes: THE_END
+    Chance: 0.05
+    MaxMobsPerChunk: 2
+  SpireGargoyle:
+    Enabled: false
+    Worlds: world
+    Biomes: THE_END
+    Chance: 0.05
+    MaxMobsPerChunk: 2
+  EndKnight:
+    Enabled: false
+    Worlds: world
+    Biomes: THE_END
+    Chance: 0.05
+    MaxMobsPerChunk: 2

@@ -1,0 +1,354 @@
+# GeoWorld MythicMobs – Caves
+# Generiert aus docs/CUSTOM_BIOMES.md
+# Ablageort: plugins/MythicMobs/Mobs/geoworld_caves.yml
+
+CrystalMimic:
+  Type: ZOMBIE
+  Display: '<&6>CrystalMimic'
+  Health: 80
+  Damage: 5
+  Armor: 0
+  Options:
+    MovementSpeed: 0.25
+    Despawn: false
+    PreventOtherDrops: true
+    PreventItemPickup: true
+    Silent: false
+  Faction: GeoWorld
+  Skills:
+  - potion{type=INVISIBILITY;duration=200;amplifier=0} @Self ~onSpawn
+  - potion{type=INVISIBILITY;duration=200;amplifier=0} @Self ~onTimer:200
+  Drops:
+    - STONE 2-4 0.9
+    - IRON_INGOT 1-2 0.4
+    - COAL 1-3 0.8
+    - GLOW_INK_SAC 1 0.5
+  LevelModifiers:
+    Health: 0.5
+    Damage: 0.25
+
+GeodeGuardian:
+  Type: ZOMBIE
+  Display: '<&6>GeodeGuardian'
+  Health: 300
+  Damage: 12
+  Armor: 0
+  Options:
+    MovementSpeed: 0.25
+    Despawn: false
+    PreventOtherDrops: true
+    PreventItemPickup: true
+    Silent: false
+  Faction: GeoWorld
+  Skills:
+  - damage{amount=3} @Attacker ~onDamaged
+  - damage{amount=2} @Target ~onAttack
+  - effect:particles{p=crit;a=10} @Self ~onDamaged
+  Drops:
+    - STONE 2-4 0.9
+    - IRON_INGOT 1-2 0.4
+    - COAL 1-3 0.8
+    - GLOW_INK_SAC 1 0.5
+  LevelModifiers:
+    Health: 0.5
+    Damage: 0.25
+
+MoltenElemental:
+  Type: BLAZE
+  Display: '<&6>MoltenElemental'
+  Health: 80
+  Damage: 5
+  Armor: 0
+  Options:
+    MovementSpeed: 0.25
+    Despawn: false
+    PreventOtherDrops: true
+    PreventItemPickup: true
+    Silent: false
+  Faction: GeoWorld
+  Skills:
+  - blockwave{material=MAGMA_BLOCK;radius=2;duration=100} @Self ~onTimer:60
+  - damage{amount=2} @Target ~onAttack
+  - effect:particles{p=crit;a=10} @Self ~onDamaged
+  Drops:
+    - STONE 2-4 0.9
+    - IRON_INGOT 1-2 0.4
+    - COAL 1-3 0.8
+    - GLOW_INK_SAC 1 0.5
+  LevelModifiers:
+    Health: 0.5
+    Damage: 0.25
+
+InfernoDrake:
+  Type: IRON_GOLEM
+  Display: '<&6>InfernoDrake'
+  Health: 5000
+  Damage: 20
+  Armor: 0
+  Options:
+    MovementSpeed: 0.25
+    Despawn: false
+    PreventOtherDrops: true
+    PreventItemPickup: true
+    Silent: false
+  Faction: GeoWorld
+  Skills:
+  - damage{amount=2} @Target ~onAttack
+  - effect:particles{p=crit;a=10} @Self ~onDamaged
+  Drops:
+    - STONE 2-4 0.9
+    - IRON_INGOT 1-2 0.4
+    - COAL 1-3 0.8
+    - GLOW_INK_SAC 1 0.5
+    - DIAMOND_BLOCK 1 0.05
+    - DIAMOND 1-2 0.3
+    - GOLD_INGOT 2-5 0.8
+  LevelModifiers:
+    Health: 0.5
+    Damage: 0.25
+  BossBar:
+    Enabled: true
+    Title: '<&4>InfernoDrake'
+    Range: 64
+    Color: RED
+    Style: SEGMENTED_10
+
+EchoBat:
+  Type: ZOMBIE
+  Display: '<&6>EchoBat'
+  Health: 80
+  Damage: 5
+  Armor: 0
+  Options:
+    MovementSpeed: 0.25
+    Despawn: false
+    PreventOtherDrops: true
+    PreventItemPickup: true
+    Silent: false
+  Faction: GeoWorld
+  Skills:
+  - damage{amount=2} @Target ~onAttack
+  - effect:particles{p=crit;a=10} @Self ~onDamaged
+  Drops:
+    - STONE 2-4 0.9
+    - IRON_INGOT 1-2 0.4
+    - COAL 1-3 0.8
+    - GLOW_INK_SAC 1 0.5
+  LevelModifiers:
+    Health: 0.5
+    Damage: 0.25
+
+ChamberColossus:
+  Type: IRON_GOLEM
+  Display: '<&6>ChamberColossus'
+  Health: 5000
+  Damage: 20
+  Armor: 0
+  Options:
+    MovementSpeed: 0.25
+    Despawn: false
+    PreventOtherDrops: true
+    PreventItemPickup: true
+    Silent: false
+  Faction: GeoWorld
+  Skills:
+  - damage{amount=2} @Target ~onAttack
+  - effect:particles{p=crit;a=10} @Self ~onDamaged
+  Drops:
+    - STONE 2-4 0.9
+    - IRON_INGOT 1-2 0.4
+    - COAL 1-3 0.8
+    - GLOW_INK_SAC 1 0.5
+    - DIAMOND_BLOCK 1 0.05
+    - DIAMOND 1-2 0.3
+    - GOLD_INGOT 2-5 0.8
+  LevelModifiers:
+    Health: 0.5
+    Damage: 0.25
+  BossBar:
+    Enabled: true
+    Title: '<&4>ChamberColossus'
+    Range: 64
+    Color: RED
+    Style: SEGMENTED_10
+
+GlowMushroomCrab:
+  Type: SHULKER
+  Display: '<&6>GlowMushroomCrab'
+  Health: 80
+  Damage: 5
+  Armor: 0
+  Options:
+    MovementSpeed: 0.18
+    Despawn: false
+    PreventOtherDrops: true
+    PreventItemPickup: true
+    Silent: false
+  Faction: GeoWorld
+  Skills:
+  - damage{amount=2} @Target ~onAttack
+  - effect:particles{p=crit;a=10} @Self ~onDamaged
+  Drops:
+    - STONE 2-4 0.9
+    - IRON_INGOT 1-2 0.4
+    - COAL 1-3 0.8
+    - GLOW_INK_SAC 1 0.5
+  LevelModifiers:
+    Health: 0.5
+    Damage: 0.25
+
+SporeQueen:
+  Type: CREEPER
+  Display: '<&6>SporeQueen'
+  Health: 5000
+  Damage: 20
+  Armor: 0
+  Options:
+    MovementSpeed: 0.25
+    Despawn: false
+    PreventOtherDrops: true
+    PreventItemPickup: true
+    Silent: false
+  Faction: GeoWorld
+  Skills:
+  - potion{type=POISON;duration=100;amplifier=1} @Target ~onAttack
+  - damage{amount=2} @Target ~onAttack
+  - effect:particles{p=crit;a=10} @Self ~onDamaged
+  Drops:
+    - STONE 2-4 0.9
+    - IRON_INGOT 1-2 0.4
+    - COAL 1-3 0.8
+    - GLOW_INK_SAC 1 0.5
+    - DIAMOND_BLOCK 1 0.05
+    - DIAMOND 1-2 0.3
+    - GOLD_INGOT 2-5 0.8
+  LevelModifiers:
+    Health: 0.5
+    Damage: 0.25
+  BossBar:
+    Enabled: true
+    Title: '<&4>SporeQueen'
+    Range: 64
+    Color: RED
+    Style: SEGMENTED_10
+
+CinderSprite:
+  Type: ZOMBIE
+  Display: '<&6>CinderSprite'
+  Health: 80
+  Damage: 5
+  Armor: 0
+  Options:
+    MovementSpeed: 0.25
+    Despawn: false
+    PreventOtherDrops: true
+    PreventItemPickup: true
+    Silent: false
+  Faction: GeoWorld
+  Skills:
+  - damage{amount=2} @Target ~onAttack
+  - effect:particles{p=crit;a=10} @Self ~onDamaged
+  Drops:
+    - STONE 2-4 0.9
+    - IRON_INGOT 1-2 0.4
+    - COAL 1-3 0.8
+    - GLOW_INK_SAC 1 0.5
+  LevelModifiers:
+    Health: 0.5
+    Damage: 0.25
+
+LavaFallTitan:
+  Type: DROWNED
+  Display: '<&6>LavaFallTitan'
+  Health: 5000
+  Damage: 20
+  Armor: 0
+  Options:
+    MovementSpeed: 0.25
+    Despawn: false
+    PreventOtherDrops: true
+    PreventItemPickup: true
+    Silent: false
+  Faction: GeoWorld
+  Skills:
+  - damage{amount=2} @Target ~onAttack
+  - effect:particles{p=crit;a=10} @Self ~onDamaged
+  Drops:
+    - STONE 2-4 0.9
+    - IRON_INGOT 1-2 0.4
+    - COAL 1-3 0.8
+    - GLOW_INK_SAC 1 0.5
+    - DIAMOND_BLOCK 1 0.05
+    - DIAMOND 1-2 0.3
+    - GOLD_INGOT 2-5 0.8
+  LevelModifiers:
+    Health: 0.5
+    Damage: 0.25
+  BossBar:
+    Enabled: true
+    Title: '<&4>LavaFallTitan'
+    Range: 64
+    Color: RED
+    Style: SEGMENTED_10
+
+RandomSpawning:
+  CrystalMimic:
+    Enabled: false
+    Worlds: world
+    Biomes: DRIPSTONE_CAVES
+    Chance: 0.05
+    MaxMobsPerChunk: 2
+  GeodeGuardian:
+    Enabled: false
+    Worlds: world
+    Biomes: DRIPSTONE_CAVES
+    Chance: 0.05
+    MaxMobsPerChunk: 2
+  MoltenElemental:
+    Enabled: false
+    Worlds: world
+    Biomes: DRIPSTONE_CAVES
+    Chance: 0.05
+    MaxMobsPerChunk: 2
+  InfernoDrake:
+    Enabled: false
+    Worlds: world
+    Biomes: DRIPSTONE_CAVES
+    Chance: 0.05
+    MaxMobsPerChunk: 2
+  EchoBat:
+    Enabled: false
+    Worlds: world
+    Biomes: DRIPSTONE_CAVES
+    Chance: 0.05
+    MaxMobsPerChunk: 2
+  ChamberColossus:
+    Enabled: false
+    Worlds: world
+    Biomes: DRIPSTONE_CAVES
+    Chance: 0.05
+    MaxMobsPerChunk: 2
+  GlowMushroomCrab:
+    Enabled: false
+    Worlds: world
+    Biomes: DRIPSTONE_CAVES
+    Chance: 0.05
+    MaxMobsPerChunk: 2
+  SporeQueen:
+    Enabled: false
+    Worlds: world
+    Biomes: DRIPSTONE_CAVES
+    Chance: 0.05
+    MaxMobsPerChunk: 2
+  CinderSprite:
+    Enabled: false
+    Worlds: world
+    Biomes: DRIPSTONE_CAVES
+    Chance: 0.05
+    MaxMobsPerChunk: 2
+  LavaFallTitan:
+    Enabled: false
+    Worlds: world
+    Biomes: DRIPSTONE_CAVES
+    Chance: 0.05
+    MaxMobsPerChunk: 2

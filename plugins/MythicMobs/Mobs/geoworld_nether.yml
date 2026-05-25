@@ -1,0 +1,195 @@
+# GeoWorld MythicMobs – Nether
+# Generiert aus docs/CUSTOM_BIOMES.md
+# Ablageort: plugins/MythicMobs/Mobs/geoworld_nether.yml
+
+NetherBloom:
+  Type: ZOMBIE
+  Display: '<&6>NetherBloom'
+  Health: 80
+  Damage: 5
+  Armor: 0
+  Options:
+    MovementSpeed: 0.25
+    Despawn: false
+    PreventOtherDrops: true
+    PreventItemPickup: true
+    Silent: false
+  Faction: GeoWorld
+  Skills:
+  - potion{type=POISON;duration=100;amplifier=1} @Target ~onAttack
+  - damage{amount=2} @Target ~onAttack
+  - effect:particles{p=crit;a=10} @Self ~onDamaged
+  Drops:
+    - BLAZE_ROD 1 0.4
+    - NETHER_BRICK 1-3 0.7
+    - GOLD_INGOT 1 0.3
+    - GHAST_TEAR 1 0.1
+  LevelModifiers:
+    Health: 0.5
+    Damage: 0.25
+
+WarpedPiglin:
+  Type: ZOMBIE
+  Display: '<&6>WarpedPiglin'
+  Health: 80
+  Damage: 5
+  Armor: 0
+  Options:
+    MovementSpeed: 0.25
+    Despawn: false
+    PreventOtherDrops: true
+    PreventItemPickup: true
+    Silent: false
+  Faction: GeoWorld
+  Skills:
+  - damage{amount=2} @Target ~onAttack
+  - effect:particles{p=crit;a=10} @Self ~onDamaged
+  Drops:
+    - BLAZE_ROD 1 0.4
+    - NETHER_BRICK 1-3 0.7
+    - GOLD_INGOT 1 0.3
+    - GHAST_TEAR 1 0.1
+  LevelModifiers:
+    Health: 0.5
+    Damage: 0.25
+
+SoulLibrarian:
+  Type: PHANTOM
+  Display: '<&6>SoulLibrarian'
+  Health: 80
+  Damage: 5
+  Armor: 0
+  Options:
+    MovementSpeed: 0.25
+    Despawn: false
+    PreventOtherDrops: true
+    PreventItemPickup: true
+    Silent: false
+  Faction: GeoWorld
+  Skills:
+  - potion{type=SLOWNESS;duration=80;amplifier=2} @Target ~onAttack
+  - summon{type=ZOMBIE;amount=2;radius=3} @Self ~onDamaged{healthPercent<30}
+  Drops:
+    - BLAZE_ROD 1 0.4
+    - NETHER_BRICK 1-3 0.7
+    - GOLD_INGOT 1 0.3
+    - GHAST_TEAR 1 0.1
+  LevelModifiers:
+    Health: 0.5
+    Damage: 0.25
+
+ArchivistWreath:
+  Type: ZOMBIE
+  Display: '<&6>ArchivistWreath'
+  Health: 300
+  Damage: 12
+  Armor: 0
+  Options:
+    MovementSpeed: 0.25
+    Despawn: false
+    PreventOtherDrops: true
+    PreventItemPickup: true
+    Silent: false
+  Faction: GeoWorld
+  Skills:
+  - setvar{var=target.xp;value=-50} @Target ~onAttack
+  - damage{amount=2} @Target ~onAttack
+  - effect:particles{p=crit;a=10} @Self ~onDamaged
+  Drops:
+    - BLAZE_ROD 1 0.4
+    - NETHER_BRICK 1-3 0.7
+    - GOLD_INGOT 1 0.3
+    - GHAST_TEAR 1 0.1
+  LevelModifiers:
+    Health: 0.5
+    Damage: 0.25
+
+BasaltBrute:
+  Type: ZOMBIE
+  Display: '<&6>BasaltBrute'
+  Health: 80
+  Damage: 5
+  Armor: 0
+  Options:
+    MovementSpeed: 0.25
+    Despawn: false
+    PreventOtherDrops: true
+    PreventItemPickup: true
+    Silent: false
+  Faction: GeoWorld
+  Skills:
+  - projectile{type=SNOWBALL;v=1.5;damage=8} @Target ~onTimer:100
+  - damage{amount=2} @Target ~onAttack
+  - effect:particles{p=crit;a=10} @Self ~onDamaged
+  Drops:
+    - BLAZE_ROD 1 0.4
+    - NETHER_BRICK 1-3 0.7
+    - GOLD_INGOT 1 0.3
+    - GHAST_TEAR 1 0.1
+  LevelModifiers:
+    Health: 0.5
+    Damage: 0.25
+
+LavaDjinn:
+  Type: PHANTOM
+  Display: '<&6>LavaDjinn'
+  Health: 80
+  Damage: 5
+  Armor: 0
+  Options:
+    MovementSpeed: 0.25
+    Despawn: false
+    PreventOtherDrops: true
+    PreventItemPickup: true
+    Silent: false
+  Faction: GeoWorld
+  Skills:
+  - summon{type=ZOMBIE;amount=2;radius=3} @Self ~onDamaged{healthPercent<30}
+  - damage{amount=2} @Target ~onAttack
+  - effect:particles{p=crit;a=10} @Self ~onDamaged
+  Drops:
+    - BLAZE_ROD 1 0.4
+    - NETHER_BRICK 1-3 0.7
+    - GOLD_INGOT 1 0.3
+    - GHAST_TEAR 1 0.1
+  LevelModifiers:
+    Health: 0.5
+    Damage: 0.25
+
+RandomSpawning:
+  NetherBloom:
+    Enabled: false
+    Worlds: world
+    Biomes: NETHER_WASTES
+    Chance: 0.05
+    MaxMobsPerChunk: 2
+  WarpedPiglin:
+    Enabled: false
+    Worlds: world
+    Biomes: NETHER_WASTES
+    Chance: 0.05
+    MaxMobsPerChunk: 2
+  SoulLibrarian:
+    Enabled: false
+    Worlds: world
+    Biomes: NETHER_WASTES
+    Chance: 0.05
+    MaxMobsPerChunk: 2
+  ArchivistWreath:
+    Enabled: false
+    Worlds: world
+    Biomes: NETHER_WASTES
+    Chance: 0.05
+    MaxMobsPerChunk: 2
+  BasaltBrute:
+    Enabled: false
+    Worlds: world
+    Biomes: NETHER_WASTES
+    Chance: 0.05
+    MaxMobsPerChunk: 2
+  LavaDjinn:
+    Enabled: false
+    Worlds: world
+    Biomes: NETHER_WASTES
+    Chance: 0.05
+    MaxMobsPerChunk: 2

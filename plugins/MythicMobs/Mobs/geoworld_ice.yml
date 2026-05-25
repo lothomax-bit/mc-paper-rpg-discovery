@@ -1,0 +1,205 @@
+# GeoWorld MythicMobs – Ice
+# Generiert aus docs/CUSTOM_BIOMES.md
+# Ablageort: plugins/MythicMobs/Mobs/geoworld_ice.yml
+
+GlacialWraith:
+  Type: PHANTOM
+  Display: '<&6>GlacialWraith'
+  Health: 80
+  Damage: 5
+  Armor: 0
+  Options:
+    MovementSpeed: 0.55
+    Despawn: false
+    PreventOtherDrops: true
+    PreventItemPickup: true
+    Silent: false
+  Faction: GeoWorld
+  Skills:
+  - potion{type=SLOWNESS;duration=80;amplifier=2} @Target ~onAttack
+  - damage{amount=2} @Target ~onAttack
+  - effect:particles{p=crit;a=10} @Self ~onDamaged
+  Drops:
+    - PACKED_ICE 1-2 0.6
+    - BLUE_ICE 1 0.3
+    - SNOWBALL 2-4 0.9
+    - LEATHER 1 0.5
+  LevelModifiers:
+    Health: 0.5
+    Damage: 0.25
+
+IceTitan:
+  Type: IRON_GOLEM
+  Display: '<&6>IceTitan'
+  Health: 5000
+  Damage: 20
+  Armor: 0
+  Options:
+    MovementSpeed: 0.25
+    Despawn: false
+    PreventOtherDrops: true
+    PreventItemPickup: true
+    Silent: false
+  Faction: GeoWorld
+  Skills:
+  - potion{type=SLOWNESS;duration=80;amplifier=2} @Target ~onAttack
+  - damage{amount=2} @Target ~onAttack
+  - effect:particles{p=crit;a=10} @Self ~onDamaged
+  Drops:
+    - PACKED_ICE 1-2 0.6
+    - BLUE_ICE 1 0.3
+    - SNOWBALL 2-4 0.9
+    - LEATHER 1 0.5
+    - DIAMOND_BLOCK 1 0.05
+    - DIAMOND 1-2 0.3
+    - GOLD_INGOT 2-5 0.8
+  LevelModifiers:
+    Health: 0.5
+    Damage: 0.25
+  BossBar:
+    Enabled: true
+    Title: '<&4>IceTitan'
+    Range: 64
+    Color: RED
+    Style: SEGMENTED_10
+
+AuroraShaMan:
+  Type: ZOMBIE
+  Display: '<&6>AuroraShaMan'
+  Health: 80
+  Damage: 5
+  Armor: 0
+  Options:
+    MovementSpeed: 0.25
+    Despawn: false
+    PreventOtherDrops: true
+    PreventItemPickup: true
+    Silent: false
+  Faction: GeoWorld
+  Skills:
+  - summon{type=ZOMBIE;amount=2;radius=3} @Self ~onDamaged{healthPercent<30}
+  - damage{amount=2} @Target ~onAttack
+  - effect:particles{p=crit;a=10} @Self ~onDamaged
+  Drops:
+    - PACKED_ICE 1-2 0.6
+    - BLUE_ICE 1 0.3
+    - SNOWBALL 2-4 0.9
+    - LEATHER 1 0.5
+  LevelModifiers:
+    Health: 0.5
+    Damage: 0.25
+
+TundraWolf:
+  Type: WOLF
+  Display: '<&6>TundraWolf'
+  Health: 80
+  Damage: 5
+  Armor: 0
+  Options:
+    MovementSpeed: 0.25
+    Despawn: false
+    PreventOtherDrops: true
+    PreventItemPickup: true
+    Silent: false
+  Faction: GeoWorld
+  Skills:
+  - summon{type=self;amount=2;radius=10} @Self ~onFirstSpawn
+  - damage{amount=2} @Target ~onAttack
+  - effect:particles{p=crit;a=10} @Self ~onDamaged
+  Drops:
+    - PACKED_ICE 1-2 0.6
+    - BLUE_ICE 1 0.3
+    - SNOWBALL 2-4 0.9
+    - LEATHER 1 0.5
+  LevelModifiers:
+    Health: 0.5
+    Damage: 0.25
+
+FrozenMariner:
+  Type: ZOMBIE
+  Display: '<&6>FrozenMariner'
+  Health: 80
+  Damage: 5
+  Armor: 0
+  Options:
+    MovementSpeed: 0.25
+    Despawn: false
+    PreventOtherDrops: true
+    PreventItemPickup: true
+    Silent: false
+  Faction: GeoWorld
+  Skills:
+  - damage{amount=2} @Target ~onAttack
+  - effect:particles{p=crit;a=10} @Self ~onDamaged
+  Drops:
+    - PACKED_ICE 1-2 0.6
+    - BLUE_ICE 1 0.3
+    - SNOWBALL 2-4 0.9
+    - LEATHER 1 0.5
+  LevelModifiers:
+    Health: 0.5
+    Damage: 0.25
+
+IceWhale:
+  Type: IRON_GOLEM
+  Display: '<&6>IceWhale'
+  Health: 30
+  Damage: 0
+  Armor: 0
+  Options:
+    MovementSpeed: 0.25
+    Despawn: false
+    PreventOtherDrops: true
+    PreventItemPickup: true
+    Silent: false
+  Faction: GeoWorld
+  Skills:
+  - potion{type=SLOWNESS;duration=80;amplifier=2} @Target ~onAttack
+  - damage{amount=2} @Target ~onAttack
+  - effect:particles{p=crit;a=10} @Self ~onDamaged
+  Drops:
+    - PACKED_ICE 1-2 0.6
+    - BLUE_ICE 1 0.3
+    - SNOWBALL 2-4 0.9
+    - LEATHER 1 0.5
+  LevelModifiers:
+    Health: 0.5
+    Damage: 0.25
+
+RandomSpawning:
+  GlacialWraith:
+    Enabled: false
+    Worlds: world
+    Biomes: ICE_SPIKES
+    Chance: 0.05
+    MaxMobsPerChunk: 2
+  IceTitan:
+    Enabled: false
+    Worlds: world
+    Biomes: ICE_SPIKES
+    Chance: 0.05
+    MaxMobsPerChunk: 2
+  AuroraShaMan:
+    Enabled: false
+    Worlds: world
+    Biomes: ICE_SPIKES
+    Chance: 0.05
+    MaxMobsPerChunk: 2
+  TundraWolf:
+    Enabled: false
+    Worlds: world
+    Biomes: ICE_SPIKES
+    Chance: 0.05
+    MaxMobsPerChunk: 2
+  FrozenMariner:
+    Enabled: false
+    Worlds: world
+    Biomes: ICE_SPIKES
+    Chance: 0.05
+    MaxMobsPerChunk: 2
+  IceWhale:
+    Enabled: false
+    Worlds: world
+    Biomes: ICE_SPIKES
+    Chance: 0.05
+    MaxMobsPerChunk: 2
