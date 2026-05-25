@@ -105,6 +105,23 @@ public class DatabaseManager {
         });
     }
 
+    public CompletableFuture<Void> updateDiscovererName(UUID uuid, String newName) {
+        return CompletableFuture.runAsync(() -> {
+            String sql = "UPDATE discovered_regions SET discoverer_name = ? WHERE discoverer_uuid = ?";
+
+            try (Connection connection = dataSource.getConnection();
+                 PreparedStatement ps = connection.prepareStatement(sql)) {
+
+                ps.setString(1, newName);
+                ps.setString(2, uuid.toString());
+
+                ps.executeUpdate();
+            } catch (SQLException e) {
+                logger.log(Level.SEVERE, "Failed to update discoverer name for UUID: " + uuid, e);
+            }
+        });
+    }
+
     public CompletableFuture<List<DiscoveredRegion>> getAllRegions(String worldUuid) {
         return CompletableFuture.supplyAsync(() -> {
             List<DiscoveredRegion> regions = new ArrayList<>();

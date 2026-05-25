@@ -6,19 +6,17 @@ import de.lothomax.geodiscovery.database.DatabaseManager;
 import de.lothomax.geodiscovery.database.RegionCache;
 import de.lothomax.geodiscovery.listener.PlayerMoveListener;
 import de.lothomax.geodiscovery.manager.ConfigManager;
-import de.lothomax.geodiscovery.manager.NamingManager;
+import de.lothomax.geodiscovery.session.NamingSessionManager;
 import de.lothomax.geodiscovery.task.StructureCheckTask;
-import org.bukkit.Bukkit;
 import org.bukkit.plugin.java.JavaPlugin;
-import org.bukkit.scheduler.BukkitTask;
 
 public class GeoDiscovery extends JavaPlugin {
 
     private DatabaseManager databaseManager;
     private RegionCache regionCache;
     private ConfigManager configManager;
-    private NamingManager namingManager;
-    private BukkitTask structureCheckTask;
+    private NamingSessionManager sessionManager;
+    private StructureCheckTask structureTask;
 
     @Override
     public void onEnable() {
@@ -26,39 +24,40 @@ public class GeoDiscovery extends JavaPlugin {
         this.configManager = new ConfigManager(this);
         this.databaseManager = new DatabaseManager(getDataFolder(), getLogger());
         this.regionCache = new RegionCache(getLogger());
-        this.namingManager = new NamingManager(this);
 
         // Setup DB and Cache
         this.databaseManager.initialize();
         this.regionCache.loadFromDatabase(this.databaseManager);
 
+        // Session Manager
+        this.sessionManager = new NamingSessionManager(this);
+
         // Register Listeners
-        Bukkit.getPluginManager().registerEvents(new PlayerMoveListener(this), this);
+        getServer().getPluginManager().registerEvents(
+            new PlayerMoveListener(regionCache, sessionManager, configManager), this);
+        getServer().getPluginManager().registerEvents(sessionManager, this);
 
         // Register Commands
-        getCommand("taufe").setExecutor(new TaufeCommand(this));
-        getCommand("geodiscovery").setExecutor(new GeoDiscoveryCommand(this));
+        getCommand("taufe").setExecutor(new TaufeCommand(sessionManager, configManager));
+        getCommand("geodiscovery").setExecutor(new GeoDiscoveryCommand(this, regionCache, configManager));
 
         // Start Tasks
-        long interval = configManager.getStructureCheckInterval();
-        this.structureCheckTask = Bukkit.getScheduler().runTaskTimer(
-                this,
-                new StructureCheckTask(this),
-                interval,
-                interval
-        );
+        this.structureTask = new StructureCheckTask(regionCache, sessionManager, configManager);
+        this.structureTask.runTaskTimer(this, 20L, configManager.getStructureCheckInterval());
 
         getLogger().info("GeoDiscovery has been enabled!");
     }
 
     @Override
     public void onDisable() {
-        if (this.namingManager != null) {
-            this.namingManager.cancelAllSessions();
+        // Alle aktiven Sessions canceln
+        if (this.sessionManager != null) {
+            this.sessionManager.cancelAllSessions();
         }
 
-        if (this.structureCheckTask != null) {
-            this.structureCheckTask.cancel();
+        // Struktur-Task stoppen
+        if (this.structureTask != null) {
+            this.structureTask.cancel();
         }
 
         if (this.databaseManager != null) {
@@ -80,7 +79,7 @@ public class GeoDiscovery extends JavaPlugin {
         return configManager;
     }
 
-    public NamingManager getNamingManager() {
-        return namingManager;
+    public NamingSessionManager getSessionManager() {
+        return sessionManager;
     }
 }

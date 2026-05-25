@@ -1,9 +1,11 @@
 package de.lothomax.geodiscovery.listener;
 
 import de.lothomax.geodiscovery.GeoDiscovery;
+import de.lothomax.geodiscovery.database.RegionCache;
+import de.lothomax.geodiscovery.manager.ConfigManager;
 import de.lothomax.geodiscovery.model.DiscoveredRegion;
-import net.kyori.adventure.text.Component;
-import net.kyori.adventure.text.serializer.legacy.LegacyComponentSerializer;
+import de.lothomax.geodiscovery.session.NamingSessionManager;
+import de.lothomax.geodiscovery.util.ActionBarUtil;
 import org.bukkit.Location;
 import org.bukkit.block.Biome;
 import org.bukkit.entity.Player;
@@ -11,14 +13,22 @@ import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.player.PlayerMoveEvent;
 
+import java.util.HashMap;
+import java.util.Map;
 import java.util.Optional;
+import java.util.UUID;
 
 public class PlayerMoveListener implements Listener {
 
-    private final GeoDiscovery plugin;
+    private final RegionCache regionCache;
+    private final NamingSessionManager sessionManager;
+    private final ConfigManager configManager;
+    private final Map<UUID, Long> lastActionbarDisplay = new HashMap<>();
 
-    public PlayerMoveListener(GeoDiscovery plugin) {
-        this.plugin = plugin;
+    public PlayerMoveListener(RegionCache regionCache, NamingSessionManager sessionManager, ConfigManager configManager) {
+        this.regionCache = regionCache;
+        this.sessionManager = sessionManager;
+        this.configManager = configManager;
     }
 
     @EventHandler
@@ -26,16 +36,47 @@ public class PlayerMoveListener implements Listener {
         Location from = event.getFrom();
         Location to = event.getTo();
 
-        if (to == null || (from.getBlockX() == to.getBlockX() && from.getBlockZ() == to.getBlockZ())) {
+        if (to == null) {
+            return;
+        }
+
+        // Only trigger when block coordinates have changed
+        if (from.getBlockX() == to.getBlockX() &&
+            from.getBlockY() == to.getBlockY() &&
+            from.getBlockZ() == to.getBlockZ()) {
             return;
         }
 
         Player player = event.getPlayer();
+
+        // 1. Get current biome
+        Biome biome = to.getBlock().getBiome();
+
+        // 2. Get biome key as string
+        String fullKey = biome.getKey().toString(); // e.g., "minecraft:desert"
+        String keyWithoutNamespace = biome.getKey().getKey(); // e.g., "desert"
+
+        // 3. Check if biome is in enabled-biomes
+        boolean isEnabled = configManager.getEnabledBiomes().contains(keyWithoutNamespace) ||
+                            configManager.getEnabledBiomes().contains(fullKey);
+
+        // 4. Return if not enabled
+        if (!isEnabled) {
+            return;
+        }
+
+        // 5. Check if player has an active session
+        if (sessionManager.hasSession(player.getUniqueId())) {
+            return;
+        }
+
+        // 6. Get world UUID
         String worldUuid = player.getWorld().getUID().toString();
 
-        // Check if player entered a known region
-        Optional<DiscoveredRegion> nearestRegion = plugin.getRegionCache().findNearestRegion(worldUuid, to.getX(), to.getZ());
+        // 7. Call findNearestRegion
+        Optional<DiscoveredRegion> nearestRegion = regionCache.findNearestRegion(worldUuid, to.getX(), to.getZ());
 
+        // 8. If present and distance <= radius
         if (nearestRegion.isPresent()) {
             DiscoveredRegion region = nearestRegion.get();
             double dx = region.getCenterX() - to.getX();
@@ -43,47 +84,22 @@ public class PlayerMoveListener implements Listener {
             double distanceSq = dx * dx + dz * dz;
 
             if (distanceSq <= region.getRadius() * region.getRadius()) {
-                sendActionBar(player, region);
-                return; // Player is inside a known region
+                // Player is in known region
+                long now = System.currentTimeMillis();
+                long lastDisplay = lastActionbarDisplay.getOrDefault(player.getUniqueId(), 0L);
+
+                // Show actionbar via ActionBarUtil (2000ms cooldown)
+                if (now - lastDisplay > 2000) {
+                    String actionbarText = ActionBarUtil.buildActionBarText(region, configManager);
+                    ActionBarUtil.send(player, actionbarText);
+                    lastActionbarDisplay.put(player.getUniqueId(), now);
+                }
+                return;
             }
         }
 
-        // Check if player is discovering a new biome
-        if (plugin.getNamingManager().hasActiveSession(player.getUniqueId())) {
-            return; // Player is already naming a region
-        }
-
-        Biome biome = to.getBlock().getBiome();
-        String biomeName = biome.name();
-
-        if (plugin.getConfigManager().getEnabledBiomes().contains(biomeName)) {
-            // Check if there's an existing region of this biome nearby to prevent rapid re-discovery.
-            // Simplified check: if not in any region, start discovery
-
-            DiscoveredRegion.Builder builder = new DiscoveredRegion.Builder()
-                    .discovererUuid(player.getUniqueId())
-                    .discovererName(player.getName())
-                    .worldUuid(player.getWorld().getUID())
-                    .centerX(to.getX())
-                    .centerZ(to.getZ())
-                    .radius(plugin.getConfigManager().getRegionRadius())
-                    .regionType("BIOME")
-                    .biomeKey(biomeName);
-
-            plugin.getNamingManager().startSession(player, builder);
-        }
-    }
-
-    private void sendActionBar(Player player, DiscoveredRegion region) {
-        String format = plugin.getConfigManager().getMessage("actionbar-format");
-        String icon = plugin.getConfigManager().getRegionIcon(region.getBiomeKey());
-
-        String message = format.replace("%icon%", icon)
-                .replace("%name%", region.getRegionName())
-                .replace("%player%", region.getDiscovererName());
-
-        // Parse legacy color codes for Adventure component
-        Component component = LegacyComponentSerializer.legacySection().deserialize(message.replace("§", "\u00A7"));
-        player.sendActionBar(component);
+        // 9. If no result or distance > radius
+        // Player entered unknown territory
+        sessionManager.startSession(player, to, fullKey, "BIOME");
     }
 }
