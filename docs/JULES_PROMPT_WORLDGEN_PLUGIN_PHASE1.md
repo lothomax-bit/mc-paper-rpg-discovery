@@ -130,8 +130,7 @@ Hinweis zur Quellenwahrscheinlichkeit:
 - Da ein Bergchunk typischerweise wenige WATER-Source-Blöcke über Y=200 hat,
   ergibt sich in der Praxis ca. 1 aktiver Fluss pro 12 Bergbiom-Chunks.
 - spring-max-per-chunk: 1 stellt sicher, dass selbst bei vielen WATER-Blöcken
-  nie mehr als ein Flusssystem pro Chunk startet. Das verhindert überlappende
-  Flussbetten und Performance-Spitzen.
+  nie mehr als ein Flusssystem pro Chunk startet.
 
 === PATHFINDER: de.lothomax.geoworld.module.river.RiverPathfinder ===
 
@@ -139,7 +138,7 @@ Methode: List<RiverNode> trace(Location start)
 
 RiverNode ist ein Record mit:
 - int x, y, z
-- RiverNodeType type  // FLOW, WATERFALL_START, WATERFALL_END, LAKE, MOUTH
+- RiverNodeType type  // FLOW, WATERFALL_START, WATERFALL_END, LAKE, MOUTH, CONFLUENCE
 - int dirX, dirZ      // Bewegungsrichtung (Einheitsvektor)
 
 Algorithmus (läuft komplett ohne Block-API, nur mit Höhendaten):
@@ -155,17 +154,29 @@ Algorithmus (läuft komplett ohne Block-API, nur mit Höhendaten):
       - Füge WATERFALL_END Node ein
       - Wenn `mountain-lake-chance` erfüllt: LAKE Node einfügen
    e. Sonst: FLOW Node einfügen
-   f. Wenn neighborY <= `sea-level`: MOUTH Node, Abbruch
-   g. Wenn Nachbar bereits Wasser: Abbruch
+   f. Wenn neighborY <= `sea-level`: MOUTH Node einfügen, Abbruch
+   g. Passiver Confluence-Check (WICHTIG – VOR dem harten Abbruch prüfen):
+      Wenn der Ziel-Nachbar-Block bereits WATER ist (vom Vanilla-Generator
+      oder einem früher platzierten GeoWorld-Fluss):
+        - Füge CONFLUENCE Node ein (markiert die Einmündung)
+        - Folge dem bestehenden Wasserlauf weiter bergab statt abzubrechen
+        - D.h.: Setze currentPos = neighborPos, KEIN Abbruch
+        - Der Trace läuft entlang des bestehenden Flussbetts bis MOUTH
+        - WaterfallPlacer überschreibt das bestehende Bett NICHT erneut
+          (isCarveableBlock gibt für WATER false zurück – nur Ufermaterial
+          wird ggf. aktualisiert)
+      Hinweis: Das erzeugt passiv realistische Einmündungen ohne Registry.
+      Zwei Nebenflüsse, die in denselben Hauptfluss münden, laufen ab der
+      Confluence-Stelle gemeinsam zum Ozean.
+   h. Wenn Nachbar bereits Wasser UND kein niedrigerer Nachbar mehr findbar
+      (Plateau): Abbruch (Endlosschleife vermeiden)
 3. Rückgabe: List<RiverNode>
 
 **Breite & Tiefe** werden NICHT im Pathfinder festgelegt – der Placer berechnet
 sie pro Node anhand des Y-Werts via `config.getProfile(node.y())`.
-Dadurch skaliert der Fluss automatisch während er bergab fließt.
 
 Der Übergang zwischen Stufen ist graduell: Wenn sich das Profil zwischen
 zwei aufeinanderfolgenden Nodes ändert, wird die neue Breite sofort übernommen.
-Das erzeugt einen natürlichen, sanften Breitenunterschied.
 
 === NEUE KLASSE: de.lothomax.geoworld.module.river.RiverBiomeHelper ===
 
@@ -175,30 +186,19 @@ Ufermaterial-Typ zurückgibt.
 ```java
 public static Material getBankMaterial(Biome biome) {
     return switch (biome) {
-        // Schnee & Eis
         case FROZEN_PEAKS, SNOWY_SLOPES, SNOWY_PLAINS,
              SNOWY_TAIGA, SNOWY_BEACH, ICE_SPIKES
             -> Material.SNOW_BLOCK;
-
-        // Wüste & Sand
         case DESERT, BADLANDS, ERODED_BADLANDS,
              WOODED_BADLANDS, BEACH
             -> Material.SAND;
-
-        // Sumpf & Feuchtgebiet
         case SWAMP, MANGROVE_SWAMP
             -> Material.MUD;
-
-        // Pilzinsel
         case MUSHROOM_FIELDS
             -> Material.MYCELIUM;
-
-        // Steinige Berge & Gebirge
         case STONY_PEAKS, STONY_SHORE, WINDSWEPT_GRAVELLY_HILLS,
              JAGGED_PEAKS, WINDSWEPT_HILLS
             -> Material.GRAVEL;
-
-        // Tiefland-Gras & Wald (Standard)
         case PLAINS, SUNFLOWER_PLAINS, MEADOW,
              FOREST, FLOWER_FOREST, BIRCH_FOREST,
              OLD_GROWTH_BIRCH_FOREST, DARK_FOREST,
@@ -206,21 +206,15 @@ public static Material getBankMaterial(Biome biome) {
              WINDSWEPT_FOREST, WINDSWEPT_SAVANNA,
              SAVANNA, SAVANNA_PLATEAU
             -> Material.GRASS_BLOCK;
-
-        // Dschungel
         case JUNGLE, SPARSE_JUNGLE, BAMBOO_JUNGLE
             -> Material.DIRT;
-
-        // Nether (Fallback)
         case NETHER_WASTES, CRIMSON_FOREST, WARPED_FOREST,
              SOUL_SAND_VALLEY, BASALT_DELTAS
             -> Material.SOUL_SAND;
-
         default -> Material.GRAVEL;
     };
 }
 
-// Für geoworld:-Biome:
 public static Material getCustomBankMaterial(String biomeKey) {
     return switch (biomeKey) {
         case "geoworld:glacial_abyss",
@@ -273,9 +267,13 @@ Breite und Tiefe werden per Node aus `config.getProfile(node.y())` gelesen:
 
 ---
 
-**Schritt 1 – Flussbett carven** (für alle FLOW-Nodes):
+**Schritt 1 – Flussbett carven** (für alle FLOW- und CONFLUENCE-Nodes):
 
-  Für alle Positionen orthogonal zur Flussrichtung im Radius `width`:
+  Für CONFLUENCE-Nodes: isCarveableBlock() gibt für Material.WATER false zurück,
+  daher wird das bestehende Flussbett nicht neu gecarvet. Nur Uferblöcke
+  (Schritt 2) werden ggf. aktualisiert, wenn sie carveable sind.
+
+  Für alle anderen Positionen orthogonal zur Flussrichtung im Radius `width`:
   1. highestSolidY = höchster Festkörper-Block an (x, z)
   2. Unterster Flussbett-Block (highestSolidY - depth): setze GRAVEL
   3. Darüber (`depth - 1` Blöcke): setze WATER (source)
@@ -289,7 +287,7 @@ Breite und Tiefe werden per Node aus `config.getProfile(node.y())` gelesen:
 
 **Schritt 2 – Ufer setzen** (links und rechts, `bank-width` Blöcke):
 
-  perpDir = (-dirZ, dirX)  // Orthogonal zur Flussrichtung
+  perpDir = (-dirZ, dirX)
   Für side in {+1, -1}:
     Für b = 1 bis `river-bank-width`:
       ux = x + perpDir.x * (width + b)
@@ -308,17 +306,12 @@ Breite und Tiefe werden per Node aus `config.getProfile(node.y())` gelesen:
 
 **LAKE-Nodes (Bergsee):**
   Radius: zufällig zwischen `mountain-lake-min-radius` (2) und
-  `mountain-lake-max-radius` (3). Bergseen sind bewusst klein –
-  kompakt, versteckt, realistisch.
-
-  Tiefe des Sees = `river-depth` des aktuellen Y-Profils (meist 2).
+  `mountain-lake-max-radius` (3).
+  Tiefe = `river-depth` des aktuellen Y-Profils (meist 2).
 
   Für jeden Block im Kreis:
-    if distSq <= radius^2:
-      Seeboden (highestSolidY - depth): GRAVEL
-      Darüber (depth Blöcke): WATER
-    else if distSq <= (radius + bankWidth)^2:
-      Uferblock: biomspezifisch (wie FLOW)
+    if distSq <= radius^2: Seeboden GRAVEL, darüber WATER
+    else if distSq <= (radius + bankWidth)^2: Uferblock biomspezifisch
 
 ```java
 for (int dx = -outerR; dx <= outerR; dx++) {
@@ -327,7 +320,6 @@ for (int dx = -outerR; dx <= outerR; dx++) {
         int bx = lakeX + dx, bz = lakeZ + dz;
         int top = getHighestSolid(world, bx, bz);
         if (distSq <= radius * radius) {
-            // Seebett
             if (isCarveableBlock(world.getBlockAt(bx, top - depth, bz).getType()))
                 world.getBlockAt(bx, top - depth, bz).setType(Material.GRAVEL);
             for (int dy = 0; dy < depth; dy++) {
@@ -335,7 +327,6 @@ for (int dx = -outerR; dx <= outerR; dx++) {
                 if (isCarveableBlock(b.getType())) b.setType(Material.WATER);
             }
         } else if (distSq <= outerR * outerR) {
-            // Seeufer
             Block b = world.getBlockAt(bx, top, bz);
             if (isCarveableBlock(b.getType()))
                 b.setType(getBankMaterialForLocation(world, bx, top, bz));
@@ -347,6 +338,9 @@ for (int dx = -outerR; dx <= outerR; dx++) {
 
 **Hilfsmethode isCarveableBlock(Material m):**
 ```java
+// WICHTIG: Material.WATER ist NICHT in der CARVEABLE-Liste.
+// Das ist die Grundlage des passiven Confluence-Systems:
+// Bestehende Flussbetten werden nicht überschrieben.
 private static final Set<Material> CARVEABLE = Set.of(
     Material.GRASS_BLOCK, Material.DIRT, Material.COARSE_DIRT,
     Material.ROOTED_DIRT, Material.PODZOL, Material.MUD, Material.CLAY,
@@ -373,10 +367,8 @@ Wenn ein LAKE Node erzeugt wird und `geodiscovery-hook: true`:
 ```java
 Plugin geo = Bukkit.getPluginManager().getPlugin("GeoDiscovery");
 if (geo != null && geo.isEnabled()) {
-    // Logge Location des Sees in eine separate CSV-Datei
     // plugins/GeoWorld/pending_lakes.csv
     // Format: worldUuid,x,y,z,radius
-    // GeoDiscovery-API wird später diese CSV importieren können
 }
 ```
 
@@ -395,12 +387,13 @@ description: World generation enhancement plugin with river flow, waterfalls and
 
 - RiverFlowTask läuft ASYNC – niemals Block.setType() im async Task!
 - Alle Block-Änderungen IMMER via Bukkit.getScheduler().runTask() auf Main-Thread
-- getHighestBlockAt() ist teuer – nur einmal pro Koordinate aufrufen, Ergebnis cachen
 - spring-max-per-chunk: 1 verhindert, dass ein einzelner Chunk dutzende Traces startet
-- Bei Stufe 4 (width=7, depth=4): bis zu (7*2+1) * 4 = 60 Blöcke pro Node.
-  Bei 800 Nodes max = 48.000 Block-Operationen pro Fluss. Akzeptabel, da async.
-- isCarveableBlock() und getBankMaterial() sind O(1) Set/Switch-Operationen
-- Chunks aus der Queue entfernen bevor sie verarbeitet werden (nicht danach)
+- Passives Confluence-System: kein ConcurrentHashMap-Overhead, WATER nicht in CARVEABLE
+- CONFLUENCE-Nodes erzeugen keine zusätzlichen Block-Operationen (WATER already placed)
+- Bei Stufe 4 (width=7, depth=4): bis zu 60 Blöcke pro Node, 800 Nodes max = 48.000 ops
+- getHighestBlockAt() ist teuer – Ergebnis cachen, nur einmal pro Koordinate aufrufen
+- isCarveableBlock() und getBankMaterial() sind O(1)
+- Chunks aus der Queue entfernen bevor sie verarbeitet werden
 - Wenn ein Chunk während der Verarbeitung ungeladen wird: try/catch
 
 Gib die vollständige Projektstruktur mit allen Dateien aus, fertig zum
