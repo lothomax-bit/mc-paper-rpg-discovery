@@ -52,6 +52,7 @@ modules:
     river-width-mid: 2
     river-width-low: 3
     river-carve-depth: 2
+    river-bank-width: 2
     chunks-per-tick: 3
     geodiscovery-hook: true
     geodiscovery-lake-icon: "💧"
@@ -124,73 +125,185 @@ Breite je nach Y-Position:
 - Y 200–400: river-width-mid (2 Blöcke)
 - Y < 200: river-width-low (3 Blöcke)
 
+=== NEUE KLASSE: de.lothomax.geoworld.module.river.RiverBiomeHelper ===
+
+Statische Hilfsklasse, die für ein gegebenes Biom den passenden
+Ufermaterial-Typ zurückgibt.
+
+```java
+public static Material getBankMaterial(Biome biome) {
+    return switch (biome) {
+        // Schnee & Eis
+        case FROZEN_PEAKS, SNOWY_SLOPES, SNOWY_PLAINS,
+             SNOWY_TAIGA, SNOWY_BEACH, ICE_SPIKES
+            -> Material.SNOW_BLOCK;
+
+        // Wüste & Sand
+        case DESERT, BADLANDS, ERODED_BADLANDS,
+             WOODED_BADLANDS, BEACH
+            -> Material.SAND;
+
+        // Sumpf & Feuchtgebiet
+        case SWAMP, MANGROVE_SWAMP
+            -> Material.MUD;
+
+        // Pilzinsel
+        case MUSHROOM_FIELDS
+            -> Material.MYCELIUM;
+
+        // Steinige Berge & Gebirge
+        case STONY_PEAKS, STONY_SHORE, WINDSWEPT_GRAVELLY_HILLS,
+             JAGGED_PEAKS, WINDSWEPT_HILLS
+            -> Material.GRAVEL;
+
+        // Tiefland-Gras & Wald (Standard)
+        case PLAINS, SUNFLOWER_PLAINS, MEADOW,
+             FOREST, FLOWER_FOREST, BIRCH_FOREST,
+             OLD_GROWTH_BIRCH_FOREST, DARK_FOREST,
+             TAIGA, OLD_GROWTH_PINE_TAIGA, OLD_GROWTH_SPRUCE_TAIGA,
+             WINDSWEPT_FOREST, WINDSWEPT_SAVANNA,
+             SAVANNA, SAVANNA_PLATEAU
+            -> Material.GRASS_BLOCK;
+
+        // Dschungel
+        case JUNGLE, SPARSE_JUNGLE, BAMBOO_JUNGLE
+            -> Material.DIRT;  // Dschungelufer: feuchte Erde
+
+        // Nether (Sonderfall, Flüsse im Nether unwahrscheinlich, Fallback)
+        case NETHER_WASTES, CRIMSON_FOREST, WARPED_FOREST,
+             SOUL_SAND_VALLEY, BASALT_DELTAS
+            -> Material.SOUL_SAND;
+
+        // GeoWorld Custom Biome (via Namespace-String, kein enum)
+        // Wird separat behandelt, siehe getCustomBankMaterial()
+        default -> Material.GRAVEL;  // Universeller Fallback: Kies
+    };
+}
+
+// Für geoworld:-Biome die nicht im Biome-enum sind:
+public static Material getCustomBankMaterial(String biomeKey) {
+    return switch (biomeKey) {
+        case "geoworld:glacial_abyss",
+             "geoworld:aurora_tundra",
+             "geoworld:rime_coast"          -> Material.PACKED_ICE;
+        case "geoworld:dune_sea",
+             "geoworld:coral_archipelago",
+             "geoworld:pearl_lagoon",
+             "geoworld:volcanic_island"     -> Material.SAND;
+        case "geoworld:red_canyon",
+             "geoworld:ember_plains",
+             "geoworld:volcanic_ashfields"  -> Material.RED_SAND;
+        case "geoworld:cursed_bayou",
+             "geoworld:mangrove_labyrinth",
+             "geoworld:peat_moors"          -> Material.MUD;
+        case "geoworld:fungal_expanse",
+             "geoworld:fungal_depths"       -> Material.MYCELIUM;
+        case "geoworld:salt_flats"          -> Material.CALCITE;
+        case "geoworld:ancient_forest",
+             "geoworld:verdant_chasms",
+             "geoworld:dream_forest"        -> Material.MOSS_BLOCK;
+        case "geoworld:spore_jungle",
+             "geoworld:bamboo_highlands"    -> Material.DIRT;
+        // Alle anderen geoworld:-Biome: Kies
+        default                             -> Material.GRAVEL;
+    };
+}
+```
+
 === PLACER: de.lothomax.geoworld.module.river.WaterfallPlacer ===
 
 Methode: void place(World world, List<RiverNode> nodes, GeoWorldConfig config)
 
 Läuft auf Main-Thread.
 
-**Grundprinzip (River Carving):**
-Der Fluss liegt bündig im Terrain – wie in der Realität.
-Statt Wasser auf den Boden zu legen, wird der Bodenblock selbst
-durch Wasser ersetzt. Das ergibt ein natürliches Flussbett.
+**Grundprinzip:**
+Der Fluss besteht aus drei Zonen (Querschnitt):
 
-Vorgehensweise pro FLOW-Node bei Koordinate (x, y, z):
+```
+[UFER-LINKS]  [FLUSSBETT]  [UFER-RECHTS]
+   Sand/Gras    Kies+Wasser   Sand/Gras
+```
 
-  1. Bestimme den höchsten Festkörper-Block an (x, z): highestSolidY
-  2. Ersetze die obersten `river-carve-depth` Festkörper-Blöcke durch Material.WATER:
-     ```
-     for (int dy = 0; dy < carveDepth; dy++) {
-         Block b = world.getBlockAt(x, highestSolidY - dy, z);
-         if (b.getType().isSolid()) {
-             b.setType(Material.WATER);
-         }
-     }
-     ```
-  3. Statt den Originalblock zu überschreiben: Nur ersetzen wenn der Block
-     in der "erlaubten Material-Liste" liegt:
-     Erlaubt: GRASS_BLOCK, DIRT, STONE, GRAVEL, SAND, SANDSTONE, COARSE_DIRT,
-              PODZOL, MUD, CLAY, SNOW_BLOCK, POWDER_SNOW, ROOTED_DIRT,
-              MOSSY_COBBLESTONE, COBBLESTONE, DEEPSLATE, TUFF,
-              alle Terrakotta-Varianten, alle Sandstein-Varianten
-     Nicht ersetzen: BEDROCK, OBSIDIAN, jede Erzsorte, CHEST, strukturelle Blöcke
-  4. Breite: Für jede Breiten-Stufe (river-width) werden die Nachbarblöcke
-     in einem Radius orthogonal zur Flussrichtung genauso gecarved.
+- **Flussbett** (alle FLOW-Nodes in Breite `river-width`):
+  Bodenblock = GRAVEL (immer, unabhängig vom Biom)
+  Darüber = WATER (source block)
+
+- **Ufer** (orthogonal links und rechts, Breite `river-bank-width`):
+  Bodenblock = biomspezifisches Material aus RiverBiomeHelper
+  Kein Wasser, Ufer liegt auf gleicher Höhe wie Flussbett-Oberkante
+
+---
+
+Vorgehensweise pro FLOW-Node bei Koordinate (x, y, z),
+Flussrichtung = (dx, dz) (Einheitsvektor, vom Pathfinder mitgeliefert):
+
+**Schritt 1 – Flussbett carven:**
+  Für alle Positionen in der Flussbreite (orthogonal zur Richtung):
+  1. highestSolidY = höchster Festkörper-Block an (x, z)
+  2. Untersten Flussbett-Block (highestSolidY - carveDepth + 1): setze GRAVEL
+  3. Darüber (highestSolidY - carveDepth + 2 bis highestSolidY): setze WATER
+  Nur wenn isCarveableBlock(original) == true
+
+**Schritt 2 – Ufer setzen (links und rechts):**
+  Orthogonale Richtung zum Fluss: perpDir = (-dz, dx)
+  Für jede Ufer-Seite (Vorzeichen +1 und -1):
+    Für b = 1 bis `river-bank-width`:
+      ux = x + perpDir.x * (riverWidth + b)
+      uz = z + perpDir.z * (riverWidth + b)
+      highestSolidY = höchster Festkörper-Block an (ux, uz)
+      Biom an (ux, highestSolidY, uz) bestimmen:
+        - Vanilla Biome: RiverBiomeHelper.getBankMaterial(biome)
+        - Custom Biome (Key beginnt mit "geoworld:"): RiverBiomeHelper.getCustomBankMaterial(key)
+      setze Ufer-Block: world.getBlockAt(ux, highestSolidY, uz).setType(bankMaterial)
+      Wichtig: Nur ersetzen wenn isCarveableBlock(original) == true
+      Kein Wasser auf Uferblöcken setzen.
+
+**Breite:** riverWidth ist die aktuelle Stufe (high/mid/low) aus der Config.
+**Richtungsvektor (dx, dz):** WaterfallPlacer erhält ihn als Parameter pro Node.
+Der RiverPathfinder speichert die Bewegungsrichtung im RiverNode:
+```java
+record RiverNode(int x, int y, int z, RiverNodeType type, int dirX, int dirZ) {}
+```
+
+---
 
 Vorgehensweise pro WATERFALL-Node (senkrechter Abfall):
-  - Hier wird NICHT gecarved, sondern Wasser in die Luft gesetzt:
-    Setze Material.WATER (source) an (x, y, z) wenn der Block dort AIR oder
-    ein ersetzbarer Block ist.
-  - Wasserfallblöcke dürfen bestehende Festkörperblöcke NICHT ersetzen.
+  - NICHT carven, nur Wasser in die Luft setzen:
+    Setze Material.WATER (source) an (x, y, z) wenn AIR oder ersetzbarer Block.
+  - Wasserfallblöcke ersetzen KEINE Festkörperblöcke.
+  - Keine Ufer für Wasserfallblöcke.
 
 Vorgehensweise pro LAKE-Node (Bergsee):
   - Radius zwischen `mountain-lake-min-radius` und `mountain-lake-max-radius` (random)
-  - Für jeden Block im Kreis:
-    1. Bestimme highestSolidY an (x, z)
-    2. Ersetze die obersten `river-carve-depth` Festkörper-Blöcke durch WATER
-       (gleiche Materialprüfung wie bei FLOW)
-    3. Boden des Sees (highestSolidY - carveDepth): ersetze durch GRAVEL oder SAND (random)
-  - Erzeugt einen natürlichen Bergsee der ins Terrain eingebettet ist.
+  - Für jeden Block im See-Kreis:
+    1. highestSolidY an (bx, bz)
+    2. Setze Seeboden: GRAVEL
+    3. Setze WATER darüber (carveDepth Blöcke)
+  - Für jeden Block im Ufer-Ring (Radius+1 bis Radius+`river-bank-width`):
+    1. highestSolidY an (bx, bz)
+    2. Setze biomspezifisches Ufermaterial (wie bei FLOW)
 
-Bergsee-Generierung (Kreis-Algorithmus):
+Bergsee-Generierung:
 ```java
 for (int dx = -radius; dx <= radius; dx++) {
     for (int dz = -radius; dz <= radius; dz++) {
-        if (dx*dx + dz*dz <= radius*radius) {
-            int bx = lakeX + dx;
-            int bz = lakeZ + dz;
-            int highestSolidY = getHighestSolid(world, bx, bz);
+        int distSq = dx*dx + dz*dz;
+        int bx = lakeX + dx;
+        int bz = lakeZ + dz;
+        int highestSolidY = getHighestSolid(world, bx, bz);
+        if (distSq <= radius * radius) {
+            // Seebett: Kies + Wasser
+            Block floor = world.getBlockAt(bx, highestSolidY - carveDepth, bz);
+            if (isCarveableBlock(floor.getType())) floor.setType(Material.GRAVEL);
             for (int dy = 0; dy < carveDepth; dy++) {
                 Block b = world.getBlockAt(bx, highestSolidY - dy, bz);
-                if (isCarveableBlock(b.getType())) {
-                    b.setType(Material.WATER);
-                }
+                if (isCarveableBlock(b.getType())) b.setType(Material.WATER);
             }
-            // Seeboden
-            Block floor = world.getBlockAt(bx, highestSolidY - carveDepth, bz);
-            if (isCarveableBlock(floor.getType())) {
-                floor.setType(Math.random() > 0.5 ? Material.GRAVEL : Material.SAND);
-            }
+        } else if (distSq <= (radius + bankWidth) * (radius + bankWidth)) {
+            // Seeufer: biomspezifisch
+            Block b = world.getBlockAt(bx, highestSolidY, bz);
+            Material bankMat = getBankMaterialForBlock(b);
+            if (isCarveableBlock(b.getType())) b.setType(bankMat);
         }
     }
 }
@@ -205,7 +318,9 @@ private static final Set<Material> CARVEABLE = Set.of(
     Material.GRAVEL, Material.SAND, Material.SANDSTONE,
     Material.RED_SAND, Material.RED_SANDSTONE,
     Material.SNOW_BLOCK, Material.POWDER_SNOW,
-    Material.DEEPSLATE, Material.TUFF,
+    Material.DEEPSLATE, Material.TUFF, Material.CALCITE,
+    Material.MYCELIUM, Material.MOSS_BLOCK, Material.SOUL_SAND,
+    Material.SOUL_SOIL, Material.PACKED_ICE, Material.BLUE_ICE,
     Material.TERRACOTTA, Material.WHITE_TERRACOTTA, Material.ORANGE_TERRACOTTA,
     Material.MAGENTA_TERRACOTTA, Material.LIGHT_BLUE_TERRACOTTA,
     Material.YELLOW_TERRACOTTA, Material.LIME_TERRACOTTA, Material.PINK_TERRACOTTA,
@@ -245,7 +360,8 @@ description: World generation enhancement plugin with river flow, waterfalls and
 - RiverFlowTask läuft ASYNC – niemals Block.setType() im async Task!
 - Alle Block-Änderungen IMMER via Bukkit.getScheduler().runTask() auf Main-Thread
 - getHighestBlockAt() ist teuer – nur einmal pro Koordinate aufrufen, Ergebnis cachen
-- isCarveableBlock() ist ein Set.contains()-Check – O(1), kein Performance-Problem
+- isCarveableBlock() und getBankMaterial() sind O(1) Set/Switch-Operationen
+- RiverBiomeHelper.getCustomBankMaterial() nur aufrufen wenn biomeKey mit "geoworld:" beginnt
 - Chunks aus der Queue entfernen bevor sie verarbeitet werden (nicht danach)
 - Wenn ein Chunk während der Verarbeitung ungeladen wird: try/catch mit ChunkUnloadException
 
