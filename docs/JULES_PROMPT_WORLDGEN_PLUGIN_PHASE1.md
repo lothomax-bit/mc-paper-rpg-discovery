@@ -51,6 +51,7 @@ modules:
     river-width-high: 1
     river-width-mid: 2
     river-width-low: 3
+    river-carve-depth: 2
     chunks-per-tick: 3
     geodiscovery-hook: true
     geodiscovery-lake-icon: "💧"
@@ -127,26 +128,92 @@ Breite je nach Y-Position:
 
 Methode: void place(World world, List<RiverNode> nodes, GeoWorldConfig config)
 
-Läuft auf Main-Thread:
+Läuft auf Main-Thread.
 
-1. Iteriere RiverNode-Liste
-2. FLOW: Setze Material.WATER (source) mit BlockData waterlogged=true wenn möglich
-3. WATERFALL_START / WATERFALL Nodes: Setze Material.WATER senkrecht
-4. LAKE: Generiere Bergsee
-   - Radius zwischen `mountain-lake-min-radius` und `mountain-lake-max-radius` (random)
-   - Fülle Kreis mit Material.WATER auf Höhe des WATERFALL_END
-   - Boden: Material.GRAVEL oder SAND (random)
-5. MOUTH: Letzter Block, kein Setzen nötig
+**Grundprinzip (River Carving):**
+Der Fluss liegt bündig im Terrain – wie in der Realität.
+Statt Wasser auf den Boden zu legen, wird der Bodenblock selbst
+durch Wasser ersetzt. Das ergibt ein natürliches Flussbett.
+
+Vorgehensweise pro FLOW-Node bei Koordinate (x, y, z):
+
+  1. Bestimme den höchsten Festkörper-Block an (x, z): highestSolidY
+  2. Ersetze die obersten `river-carve-depth` Festkörper-Blöcke durch Material.WATER:
+     ```
+     for (int dy = 0; dy < carveDepth; dy++) {
+         Block b = world.getBlockAt(x, highestSolidY - dy, z);
+         if (b.getType().isSolid()) {
+             b.setType(Material.WATER);
+         }
+     }
+     ```
+  3. Statt den Originalblock zu überschreiben: Nur ersetzen wenn der Block
+     in der "erlaubten Material-Liste" liegt:
+     Erlaubt: GRASS_BLOCK, DIRT, STONE, GRAVEL, SAND, SANDSTONE, COARSE_DIRT,
+              PODZOL, MUD, CLAY, SNOW_BLOCK, POWDER_SNOW, ROOTED_DIRT,
+              MOSSY_COBBLESTONE, COBBLESTONE, DEEPSLATE, TUFF,
+              alle Terrakotta-Varianten, alle Sandstein-Varianten
+     Nicht ersetzen: BEDROCK, OBSIDIAN, jede Erzsorte, CHEST, strukturelle Blöcke
+  4. Breite: Für jede Breiten-Stufe (river-width) werden die Nachbarblöcke
+     in einem Radius orthogonal zur Flussrichtung genauso gecarved.
+
+Vorgehensweise pro WATERFALL-Node (senkrechter Abfall):
+  - Hier wird NICHT gecarved, sondern Wasser in die Luft gesetzt:
+    Setze Material.WATER (source) an (x, y, z) wenn der Block dort AIR oder
+    ein ersetzbarer Block ist.
+  - Wasserfallblöcke dürfen bestehende Festkörperblöcke NICHT ersetzen.
+
+Vorgehensweise pro LAKE-Node (Bergsee):
+  - Radius zwischen `mountain-lake-min-radius` und `mountain-lake-max-radius` (random)
+  - Für jeden Block im Kreis:
+    1. Bestimme highestSolidY an (x, z)
+    2. Ersetze die obersten `river-carve-depth` Festkörper-Blöcke durch WATER
+       (gleiche Materialprüfung wie bei FLOW)
+    3. Boden des Sees (highestSolidY - carveDepth): ersetze durch GRAVEL oder SAND (random)
+  - Erzeugt einen natürlichen Bergsee der ins Terrain eingebettet ist.
 
 Bergsee-Generierung (Kreis-Algorithmus):
 ```java
 for (int dx = -radius; dx <= radius; dx++) {
     for (int dz = -radius; dz <= radius; dz++) {
         if (dx*dx + dz*dz <= radius*radius) {
-            // Wasser setzen wenn Block darüber Luft ist
+            int bx = lakeX + dx;
+            int bz = lakeZ + dz;
+            int highestSolidY = getHighestSolid(world, bx, bz);
+            for (int dy = 0; dy < carveDepth; dy++) {
+                Block b = world.getBlockAt(bx, highestSolidY - dy, bz);
+                if (isCarveableBlock(b.getType())) {
+                    b.setType(Material.WATER);
+                }
+            }
+            // Seeboden
+            Block floor = world.getBlockAt(bx, highestSolidY - carveDepth, bz);
+            if (isCarveableBlock(floor.getType())) {
+                floor.setType(Math.random() > 0.5 ? Material.GRAVEL : Material.SAND);
+            }
         }
     }
 }
+```
+
+**Hilfsmethode isCarveableBlock(Material m):**
+```java
+private static final Set<Material> CARVEABLE = Set.of(
+    Material.GRASS_BLOCK, Material.DIRT, Material.COARSE_DIRT,
+    Material.ROOTED_DIRT, Material.PODZOL, Material.MUD, Material.CLAY,
+    Material.STONE, Material.COBBLESTONE, Material.MOSSY_COBBLESTONE,
+    Material.GRAVEL, Material.SAND, Material.SANDSTONE,
+    Material.RED_SAND, Material.RED_SANDSTONE,
+    Material.SNOW_BLOCK, Material.POWDER_SNOW,
+    Material.DEEPSLATE, Material.TUFF,
+    Material.TERRACOTTA, Material.WHITE_TERRACOTTA, Material.ORANGE_TERRACOTTA,
+    Material.MAGENTA_TERRACOTTA, Material.LIGHT_BLUE_TERRACOTTA,
+    Material.YELLOW_TERRACOTTA, Material.LIME_TERRACOTTA, Material.PINK_TERRACOTTA,
+    Material.GRAY_TERRACOTTA, Material.LIGHT_GRAY_TERRACOTTA,
+    Material.CYAN_TERRACOTTA, Material.PURPLE_TERRACOTTA, Material.BLUE_TERRACOTTA,
+    Material.BROWN_TERRACOTTA, Material.GREEN_TERRACOTTA, Material.RED_TERRACOTTA,
+    Material.BLACK_TERRACOTTA
+);
 ```
 
 === GEODISCOVERY HOOK ===
@@ -178,6 +245,7 @@ description: World generation enhancement plugin with river flow, waterfalls and
 - RiverFlowTask läuft ASYNC – niemals Block.setType() im async Task!
 - Alle Block-Änderungen IMMER via Bukkit.getScheduler().runTask() auf Main-Thread
 - getHighestBlockAt() ist teuer – nur einmal pro Koordinate aufrufen, Ergebnis cachen
+- isCarveableBlock() ist ein Set.contains()-Check – O(1), kein Performance-Problem
 - Chunks aus der Queue entfernen bevor sie verarbeitet werden (nicht danach)
 - Wenn ein Chunk während der Verarbeitung ungeladen wird: try/catch mit ChunkUnloadException
 
