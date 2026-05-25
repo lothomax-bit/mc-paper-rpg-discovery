@@ -1,0 +1,24 @@
+modules:
+  river-flow:
+    enabled: true
+    min-spring-y: 200
+    sea-level: 63
+    waterfall-threshold: 4
+    max-river-length: 800
+    mountain-lake-chance: 0.35
+    mountain-lake-min-radius: 2
+    mountain-lake-max-radius: 3
+    spring-chance: 0.08
+    spring-max-per-chunk: 1
+    river-width-1: 1
+    river-depth-1: 1
+    river-width-2: 2
+    river-depth-2: 2
+    river-width-3: 4
+    river-depth-3: 3
+    river-width-4: 7
+    river-depth-4: 4
+    river-bank-width: 2
+    chunks-per-tick: 3
+    geodiscovery-hook: true
+    geodiscovery-lake-icon: "💧"
