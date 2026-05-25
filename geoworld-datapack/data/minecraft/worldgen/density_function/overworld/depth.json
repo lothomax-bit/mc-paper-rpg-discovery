@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:add",
+  "argument1": "minecraft:overworld/offset",
+  "argument2": {
+    "type": "minecraft:mul",
+    "argument1": "minecraft:overworld/factor",
+    "argument2": {
+      "type": "minecraft:y_clamped_gradient",
+      "from_y": -52,
+      "to_y": 1988,
+      "from_value": 2.0,
+      "to_value": -2.0
+    }
+  }
+}
