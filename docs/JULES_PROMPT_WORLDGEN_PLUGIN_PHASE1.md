@@ -48,6 +48,11 @@ modules:
     mountain-lake-chance: 0.35
     mountain-lake-min-radius: 2
     mountain-lake-max-radius: 3
+    # Quellenwahrscheinlichkeit & Limit pro Chunk
+    # 0.08 ≈ 1 Quelle pro ~12 Bergbiom-Chunks
+    spring-chance: 0.08
+    # Maximal 1 Fluss-Quelle pro Chunk (auch wenn mehrere WATER-Blocks vorhanden)
+    spring-max-per-chunk: 1
     # Breite & Tiefe skalieren graduell mit abnehmendem Y
     # Stufe 1: Hochgebirge (Y > 400)
     river-width-1: 1
@@ -102,18 +107,31 @@ Extends BukkitRunnable, läuft ASYNC:
 
 1. Nimmt bis zu `chunks-per-tick` Chunks aus der pendingChunks Queue
 2. Für jeden Chunk:
-   a. Iteriere alle Blöcke im Chunk von Y=`min-spring-y` bis Y=maxY
-   b. Prüfe ob Block == Material.WATER
-   c. Prüfe ob darüber Luft ist (source block, kein fließendes Wasser)
-   d. Prüfe ob Biom ein Bergbiom ist:
+   a. Initialisiere springsThisChunk = 0
+   b. Iteriere alle Blöcke im Chunk von Y=`min-spring-y` bis Y=maxY
+   c. Prüfe ob Block == Material.WATER
+   d. Prüfe ob darüber Luft ist (source block, kein fließendes Wasser)
+   e. Prüfe ob Biom ein Bergbiom ist:
       Erlaubte Biome: JAGGED_PEAKS, FROZEN_PEAKS, STONY_PEAKS, WINDSWEPT_HILLS,
       WINDSWEPT_GRAVELLY_HILLS, SNOWY_SLOPES + alle geoworld:-Biome die
       continentalness > 0.4 haben (crystal_peaks, skyreach_plateau, obsidian_spires,
       floating_isles)
-   e. Rufe RiverPathfinder.trace(block.getLocation()) auf
-   f. Sammle List<RiverNode> Ergebnis
+   f. Quellenfilter (NUR wenn alle Bedingungen oben erfüllt):
+      - Wenn springsThisChunk >= `spring-max-per-chunk`: Chunk überspringen (break)
+      - Wenn random.nextDouble() >= `spring-chance`: diesen Block überspringen (continue)
+      - Sonst: springsThisChunk++, weiter mit Schritt g
+   g. Rufe RiverPathfinder.trace(block.getLocation()) auf
+   h. Sammle List<RiverNode> Ergebnis
 3. Wechsle auf Main-Thread (Bukkit.getScheduler().runTask()) für Block-Platzierung
 4. Platziere alle gesammelten Blöcke via WaterfallPlacer
+
+Hinweis zur Quellenwahrscheinlichkeit:
+- spring-chance: 0.08 bedeutet ~8% je gefundenem WATER-Source-Block im Bergbiom.
+- Da ein Bergchunk typischerweise wenige WATER-Source-Blöcke über Y=200 hat,
+  ergibt sich in der Praxis ca. 1 aktiver Fluss pro 12 Bergbiom-Chunks.
+- spring-max-per-chunk: 1 stellt sicher, dass selbst bei vielen WATER-Blöcken
+  nie mehr als ein Flusssystem pro Chunk startet. Das verhindert überlappende
+  Flussbetten und Performance-Spitzen.
 
 === PATHFINDER: de.lothomax.geoworld.module.river.RiverPathfinder ===
 
@@ -263,11 +281,8 @@ Breite und Tiefe werden per Node aus `config.getProfile(node.y())` gelesen:
   3. Darüber (`depth - 1` Blöcke): setze WATER (source)
   Nur wenn isCarveableBlock(original) == true
 
-  Hinweis: `depth` ist mindestens 1. Bei depth=1 gibt es einen Kies-Block,
-  kein Wasser darüber – in dem Fall ist der Kies-Block selbst gleichzeitig
-  der Wasserboden und wird mit WATER überschrieben. Korrekt:
-  - depth=1: highestSolidY = WATER (nur Wasseroberkante, kein sichtbarer Kies)
-    Ausnahme: highestSolidY - 1 = GRAVEL, highestSolidY = WATER
+  Korrekte Schichtung:
+  - depth=1: highestSolidY-1 = GRAVEL, highestSolidY = WATER
   - depth=2: highestSolidY-1 = GRAVEL, highestSolidY = WATER
   - depth=3: highestSolidY-2 = GRAVEL, highestSolidY-1 = WATER, highestSolidY = WATER
   - depth=4: highestSolidY-3 = GRAVEL, highestSolidY-2..highestSolidY = WATER
@@ -293,7 +308,7 @@ Breite und Tiefe werden per Node aus `config.getProfile(node.y())` gelesen:
 
 **LAKE-Nodes (Bergsee):**
   Radius: zufällig zwischen `mountain-lake-min-radius` (2) und
-  `mountain-lake-max-radius` (3). Bergseen sind bewusst klein–
+  `mountain-lake-max-radius` (3). Bergseen sind bewusst klein –
   kompakt, versteckt, realistisch.
 
   Tiefe des Sees = `river-depth` des aktuellen Y-Profils (meist 2).
@@ -381,6 +396,7 @@ description: World generation enhancement plugin with river flow, waterfalls and
 - RiverFlowTask läuft ASYNC – niemals Block.setType() im async Task!
 - Alle Block-Änderungen IMMER via Bukkit.getScheduler().runTask() auf Main-Thread
 - getHighestBlockAt() ist teuer – nur einmal pro Koordinate aufrufen, Ergebnis cachen
+- spring-max-per-chunk: 1 verhindert, dass ein einzelner Chunk dutzende Traces startet
 - Bei Stufe 4 (width=7, depth=4): bis zu (7*2+1) * 4 = 60 Blöcke pro Node.
   Bei 800 Nodes max = 48.000 Block-Operationen pro Fluss. Akzeptabel, da async.
 - isCarveableBlock() und getBankMaterial() sind O(1) Set/Switch-Operationen
