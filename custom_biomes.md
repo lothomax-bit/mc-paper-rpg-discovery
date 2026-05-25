@@ -1,6 +1,6 @@
 # 🌍 Custom Biomes – GeoDiscovery Plugin
 
-Diese Datei dokumentiert **35 zusätzliche Biome**, die im GeoDiscovery-Plugin als Entdeckungsorte genutzt werden können.  
+Diese Datei dokumentiert **35 zusätzliche Biome** (Vanilla Bukkit-API), die im GeoDiscovery-Plugin als Entdeckungsorte genutzt werden können, sowie **1 eigenes Custom-Biom** mit Datapack-Integration.  
 Jedes Biom enthält den Bukkit-API-Namen, ein passendes Icon, eine kurze Beschreibung sowie einen empfohlenen Entdeckungs-Radius.
 
 ---
@@ -44,6 +44,7 @@ Jedes Biom enthält den Bukkit-API-Namen, ein passendes Icon, eine kurze Beschre
 | 33 | `LUSH_CAVES` | 🍄 | Höhle | 120 |
 | 34 | `DRIPSTONE_CAVES` | 🪨 | Höhle | 120 |
 | 35 | `BASALT_DELTAS` | 🔥 | Nether | 180 |
+| **36** | **`geoworld:waterfall_grotto`** | **🕏** | **Custom Höhle** | **100** |
 
 ---
 
@@ -65,7 +66,7 @@ Jedes Biom enthält den Bukkit-API-Namen, ein passendes Icon, eine kurze Beschre
 
 #### 3. `MEADOW`
 - **Icon:** 🌸
-- **Beschreibung:** Sanfte Blumenwiesen in Bergtälern, häufig mit Bienen und Eichen.
+- **Beschreibung:** Sanfte Blumenwiesen in Bergтälern, häufig mit Bienen und Eichen.
 - **Entdeckungs-Radius:** 180 Blöcke
 - **Besonderheit:** Nur in Bergregionen (Höhe 1.18+).
 
@@ -277,7 +278,7 @@ Jedes Biom enthält den Bukkit-API-Namen, ein passendes Icon, eine kurze Beschre
 
 #### 31. `DRIPSTONE_CAVES`
 - **Icon:** 🪨
-- **Beschreibung:** Tropfsteinhöhle mit riesigen Stalaktiten und Stalagmiten.
+- **Beschreibung:** Tropfsteinkammer mit riesigen Stalaktiten und Stalagmiten.
 - **Entdeckungs-Radius:** 120 Blöcke
 - **Besonderheit:** Spitzen richten Schaden an; Tropfstein füllt Kessel mit Lava.
 
@@ -319,9 +320,205 @@ Jedes Biom enthält den Bukkit-API-Namen, ein passendes Icon, eine kurze Beschre
 
 ---
 
-## ⚙️ config.yml Integration
+## 🕏 Custom Biom: Waterfall Grotto
 
-Um alle 35 Biome in der `config.yml` zu aktivieren, füge folgende Einträge zur `enabled-biomes` Liste hinzu:
+### 36. `geoworld:waterfall_grotto`
+**Die Wasserfallgrotte**
+
+Versteckte Höhlen, die sich direkt hinter den vom Datapack generierten Wasserfällen befinden.
+Der Wasserfall dient als natürlicher Vorhang – dahinter öffnet sich eine geräumige Grotte
+aus Moos-Stein, Calcite und Tropfstein. Glow Lichen beleuchtet die Wände schwach.
+Tiefe Wasserbäder am Boden und ein kleines Rinnsal führen tiefer ins Berginnere.
+
+- **Icon:** 🕏
+- **Entdeckungs-Radius:** 100 Blöcke
+- **Atmosphäre:** Gischt-Partikel, Wasserrauschen, dämmriges Grün von Glow Lichen, Kühle
+- **Oberfläche/Schichtung:** Mossy Stone → Calcite → Stone → Deepslate (Grotten-Boden); Wasserfall aus der Datapack-Struktur als Eingang
+- **Besonderheit:** Spawnt **nur** dort, wo das Datapack einen Wasserfall generiert hat. Die Höhle ist von außen unsichtbar – der Wasserfall verbirgt den Eingang vollständig.
+
+### 🧹 MythicMobs-Integration
+
+| Mob-ID | Name | Verhalten | Spawn-Bedingung |
+|---|---|---|---|
+| `GrottoSerpent` | Grottennattern | Lauert im Wasser, greift bei Durchwaten an | Im Wasserbad am Grottengrund |
+| `MossBehemoth` | Mooskolosse | Passiv bis berührt, extrem hohe HP, bewacht innere Kammer | Innerste Höhlenkammer |
+| `WaterfallSprite` | Wasserfallgeist | Passiv, gibt Spielern kurz Wasseratmungs-Buff | Am Wasserfall-Eingang |
+| `GrottoWarden` | Grottenwächter *(Elite)* | Erscheint nur wenn Spieler die innere Kammer betritt; Blindness + Slowness AoE | Innere Kammer, 1 Spawn pro Grotte |
+
+**MythicMobs Beispiel-Mob** (`plugins/MythicMobs/Mobs/waterfall_grotto.yml`):
+```yaml
+GrottoSerpent:
+  Type: GUARDIAN
+  Display: '§bGrottennatter'
+  Health: 40
+  Damage: 6
+  Options:
+    PreventOtherDrops: true
+    MovementSpeed: 0.28
+  Skills:
+  - skill{s=PoisonBite} @trigger ~onAttack
+  - effect:particles{p=drip_water;amount=8} @self ~onTimer:10
+  Drops:
+  - PRISMARINE_SHARD 1-3 1
+  - EXPERIENCE_ORB 15 1
+
+MossBehemoth:
+  Type: IRON_GOLEM
+  Display: '§2Mooskoloss'
+  Health: 300
+  Damage: 14
+  Options:
+    PreventOtherDrops: true
+    Neutral: true
+  Skills:
+  - skill{s=GroundSlam} @NearestPlayer{r=4} ~onTimer:40
+  Drops:
+  - MOSS_BLOCK 3-6 1
+  - MOSSY_COBBLESTONE 5-10 1
+  - EXPERIENCE_ORB 60 1
+
+WaterfallSprite:
+  Type: ALLAY
+  Display: '§bWasserfallgeist'
+  Health: 20
+  Faction: friendly
+  Options:
+    PreventOtherDrops: true
+    Neutral: true
+  Skills:
+  - potion{type=WATER_BREATHING;duration=120;amp=0} @NearestPlayer{r=5} ~onTimer:60
+
+GrottoWarden:
+  Type: ELDER_GUARDIAN
+  Display: '§4§lGrottenwächter'
+  Health: 500
+  Damage: 18
+  Options:
+    PreventOtherDrops: true
+    Boss: true
+  Skills:
+  - skill{s=BlindnessAoE} @PIR{r=10} ~onSpawn
+  - skill{s=CaveCollapse} @NearestPlayer{r=6} ~onTimer:60
+  Drops:
+  - HEART_OF_THE_SEA 1 0.15
+  - NAUTILUS_SHELL 2-4 1
+  - EXPERIENCE_ORB 150 1
+```
+
+### 📦 Datapack-Verbindung
+
+Das Biom setzt voraus, dass der Wasserfall als **placed_feature** im Datapack definiert ist.
+Die Grotte wird als zweite Feature-Schicht direkt hinter dem Wasserfall platziert:
+
+```
+datapack/
+  data/
+    geoworld/
+      worldgen/
+        placed_feature/
+          waterfall.json          ← Wasserfall-Feature (bereits vorhanden)
+          waterfall_grotto.json   ← Grotten-Feature (neu, direkt dahinter)
+        biome/
+          waterfall_grotto.json   ← Biom-Definition
+```
+
+**`waterfall_grotto.json` (placed_feature):**
+```json
+{
+  "feature": "geoworld:waterfall_grotto_carver",
+  "placement": [
+    {
+      "type": "minecraft:count",
+      "count": 1
+    },
+    {
+      "type": "minecraft:in_square"
+    },
+    {
+      "type": "minecraft:height_range",
+      "height": {
+        "type": "minecraft:uniform",
+        "min_inclusive": { "absolute": 30 },
+        "max_inclusive": { "absolute": 150 }
+      }
+    },
+    {
+      "type": "minecraft:biome"
+    }
+  ]
+}
+```
+
+**`waterfall_grotto.json` (biome):**
+```json
+{
+  "precipitation": "rain",
+  "temperature": 0.6,
+  "downfall": 0.8,
+  "effects": {
+    "sky_color": 7972607,
+    "fog_color": 12638463,
+    "water_color": 4159204,
+    "water_fog_color": 329011,
+    "ambient_sound": "minecraft:ambient.cave",
+    "mood_sound": {
+      "sound": "minecraft:ambient.cave",
+      "tick_delay": 6000,
+      "block_search_extent": 8,
+      "offset": 2.0
+    },
+    "additions_sound": {
+      "sound": "minecraft:ambient.underwater.loop.additions.ultra_rare",
+      "tick_chance": 0.001
+    },
+    "particle": {
+      "options": { "type": "minecraft:dripping_water" },
+      "probability": 0.02
+    }
+  },
+  "spawners": {
+    "monster": [],
+    "creature": [
+      { "type": "minecraft:axolotl", "weight": 10, "minCount": 1, "maxCount": 2 }
+    ],
+    "ambient": [
+      { "type": "minecraft:bat", "weight": 10, "minCount": 1, "maxCount": 4 }
+    ],
+    "water_creature": [],
+    "water_ambient": []
+  },
+  "features": [
+    [], [], [], [], [], [], [],
+    ["geoworld:waterfall_grotto"],
+    [],
+    []
+  ],
+  "carvers": {}
+}
+```
+
+### ⚙️ GeoDiscovery config.yml
+
+```yaml
+enabled-biomes:
+  # ... (alle anderen Biome wie gehabt) ...
+  - geoworld:waterfall_grotto
+
+region-icons:
+  geoworld:waterfall_grotto: "🕏"
+
+region-names:
+  geoworld:waterfall_grotto: "Wasserfallgrotte"
+
+region-descriptions:
+  geoworld:waterfall_grotto: "Eine verborgene Höhle hinter einem Wasserfall. Was verbirgt sich im Inneren?"
+```
+
+---
+
+## ⚙️ config.yml Integration (alle Biome)
+
+Um alle 35 Vanilla-Biome + das Custom-Biom in der `config.yml` zu aktivieren:
 
 ```yaml
 enabled-biomes:
@@ -375,6 +572,8 @@ enabled-biomes:
   - THE_VOID
   # Berge
   - WINDSWEPT_GRAVELLY_HILLS
+  # Custom
+  - geoworld:waterfall_grotto
 ```
 
 ---
