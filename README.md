@@ -24,14 +24,24 @@ mc-paper-rpg-discovery/
 
 ## 🌍 Komponente 1 – GeoWorld Datapack
 
-Ein Vanilla-Datapack, das die Weltgenerierung des Overworld-Bioms erweitert. Es registriert **26 Custom-Biome** (Namespace `geoworld:`) und integriert diese in die Vanilla-Biom-Verteilung mittels angepasster Noise-Parameter.
+Ein Vanilla-Datapack, das die Weltgenerierung des Overworld-Bioms erweitert. Es registriert **50 Custom-Biome** (Namespace `geoworld:`) und integriert diese in die Vanilla-Biom-Verteilung mittels angepasster Noise-Parameter.
 
 **Custom-Biome-Kategorien:**
-- 🏔️ Hochgebirge: `crystal_peaks`, `skyreach_plateau`, `obsidian_spires`, `floating_isles`, ...
-- 🌊 Ozean/Küste: `pearl_lagoon`, `abyssal_trench`, `coral_archipelago`, ...
-- 🌲 Wälder: `ancient_grove`, `mushroom_forest`, `luminous_forest`, ...
-- 🏜️ Wüste/Trocken: `salt_flats`, `red_canyon`, `glass_desert`, ...
-- 🌋 Vulkan/Speziell: `lava_falls`, `geothermal_vents`, ...
+
+| Kategorie | Anzahl | Beispiele |
+|---|---|---|
+| ⛰️ Gebirge & Höhenlagen | 4 | `crystal_peaks`, `skyreach_plateau`, `obsidian_spires`, `floating_isles` |
+| 🌊 Ozeane & Küste | 8 | `pearl_lagoon`, `abyssal_trench`, `coral_archipelago`, `sunken_city`, ... |
+| 🌲 Wälder & Ebenen | 9 | `ancient_forest`, `whispering_pines`, `haunted_grove`, `golden_woodland`, ... |
+| 🏜️ Wüste & Trocken | 3 | `salt_flats`, `red_canyon`, `dune_sea` |
+| ❄️ Eis & Kälte | 3 | `glacial_abyss`, `aurora_tundra`, `rime_coast` |
+| 🪵 Sümpfe & Feuchtgebiete | 3 | `cursed_bayou`, `mangrove_labyrinth`, `peat_moors` |
+| 💥 Vulkan & Feuer | 4 | `lava_falls`, `ember_plains`, `volcanic_ashfields`, `volcanic_island` |
+| 🪫 Höhlen & Untergrund | 4 | `crystal_caverns`, `magma_depths`, `echo_chambers`, `fungal_depths` |
+| 🔥 Nether (Erweitert) | 3 | `nether_garden`, `soul_archive`, `magma_delta_rim` |
+| ⭐ The End (Erweitert) | 3 | `end_coral_reef`, `void_sanctum`, `elytra_spires` |
+| ✨ Mystisch & Märchenhaft | 10 | `starfall_meadow`, `dream_forest`, `rune_highlands`, `eclipse_valley`, ... |
+| 🌎 Sonstige | 2 | `petrified_wasteland`, `verdant_chasms` |
 
 **Deployment:** `geoworld-datapack/` → `world/datapacks/geoworld-datapack/`
 
@@ -86,7 +96,7 @@ Dokumentation: [`docs/WORLDGEN_PLUGIN_ARCHITECTURE.md`](docs/WORLDGEN_PLUGIN_ARC
 
 ## 🐉 Komponente 3 – MythicMobs Konfigurationen
 
-Biom-spezifische Mob-Konfigurationen für MythicMobs 5.x. Jedes Custom-Biom hat eigene Kreaturen mit passenden Skills, Stats und Spawn-Bedingungen.
+Biom-spezifische Mob-Konfigurationen für MythicMobs 5.x. Jedes der 50 Custom-Biome hat eigene Kreaturen mit passenden Skills, Stats und Spawn-Bedingungen.
 
 **Deployment:** `plugins/MythicMobs/` → `plugins/MythicMobs/` (mergen)
 
@@ -121,7 +131,7 @@ Dokumentation: [`docs/JULES_PROMPT_MYTHICMOBS.md`](docs/JULES_PROMPT_MYTHICMOBS.
 
 | Datei | Inhalt |
 |---|---|
-| [`docs/CUSTOM_BIOMES.md`](docs/CUSTOM_BIOMES.md) | Alle 26 Custom-Biome mit Beschreibung, Icon und Spawn-Regeln |
+| [`docs/CUSTOM_BIOMES.md`](docs/CUSTOM_BIOMES.md) | Alle 50 Custom-Biome mit Beschreibung, Icon und Spawn-Regeln |
 | [`docs/WORLDGEN_ARCHITECTURE.md`](docs/WORLDGEN_ARCHITECTURE.md) | Technische Architektur des Datapacks |
 | [`docs/WORLDGEN_PLUGIN_ARCHITECTURE.md`](docs/WORLDGEN_PLUGIN_ARCHITECTURE.md) | Architektur des GeoWorld Plugins |
 | [`docs/JULES_PROMPT_WORLDGEN_PLUGIN_PHASE1.md`](docs/JULES_PROMPT_WORLDGEN_PLUGIN_PHASE1.md) | Jules-Prompt Phase 1 |
