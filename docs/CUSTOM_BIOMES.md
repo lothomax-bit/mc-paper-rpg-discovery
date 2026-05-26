@@ -416,7 +416,7 @@ Unterhalb wachsen seltene Perlen-Strukturen aus Calcite und Prismarin.
 - **Atmosphäre:** Türkises Licht, sanftes Plätschern, Möwen-Rufe
 - **Oberfläche:** White Sand → Calcite mit Unterwasser-Perlen-Features
 - **MythicMobs:** `PearlOyster` (Passiv, lässt seltene Perlen fallen), `LaguneShark` (Schnell, aggressiv bei Blütgeruch)
-- **GeoDiscovery Icon:** `🪚`
+- **GeoDiscovery Icon:** `🪪`
 
 ---
 
@@ -519,7 +519,7 @@ Das Donnern und Leuchten ist weithin sichtbar. Magma-Seen am Grund.
 - **Atmosphäre:** Rotes Glutlicht, Donnern der Lava, Hitzewellen
 - **Oberfläche:** Magma → Blackstone → Deepslate mit Lavafall-Features
 - **MythicMobs:** `CinderSprite` (Kleiner Feuerdämon, schwamartig), `LavaFallTitan` (Riesiger Boss hinter dem Wasserfall)
-- **GeoDiscovery Icon:** `🍋`
+- **GeoDiscovery Icon:** `🌋`
 
 ---
 
@@ -672,7 +672,7 @@ region-icons:
   geoworld:elytra_spires: "🪂"
   geoworld:sunken_city: "🏛️"
   geoworld:volcanic_island: "🌋"
-  geoworld:pearl_lagoon: "🪚"
+  geoworld:pearl_lagoon: "🪪"
   geoworld:starfall_meadow: "⭐"
   geoworld:dream_forest: "🌈"
   geoworld:rune_highlands: "🔮"
@@ -683,5 +683,5 @@ region-icons:
   geoworld:spore_jungle: "🌻"
   geoworld:rime_coast: "🧊"
   geoworld:ancient_ruins: "🏛️"
-  geoworld:lava_falls: "🍋"
+  geoworld:lava_falls: "🌋"
 ```
