@@ -1,6 +1,7 @@
 package de.lothomax.geoworld.module.river;
 
 import de.lothomax.geoworld.config.GeoWorldConfig;
+import org.bukkit.HeightMap;
 import org.bukkit.Material;
 import org.bukkit.World;
 import org.bukkit.block.Block;
@@ -38,19 +39,20 @@ public class RiverPathfinder {
 
         while (iterations < maxIterations) {
             int bestNx = currentX;
-            int bestNy = currentY;
+            // FIX: use WORLD_SURFACE so water bodies don't inflate neighbour height
+            int bestNy = world.getHighestBlockYAt(currentX, currentZ, HeightMap.WORLD_SURFACE);
             int bestNz = currentZ;
             int bestDirX = 0;
             int bestDirZ = 0;
             boolean foundLower = false;
             boolean foundWaterConfluence = false;
 
-            // Find lowest neighbor
+            // Find lowest neighbour using WORLD_SURFACE heightmap
             for (int[] dir : DIRECTIONS) {
                 int nx = currentX + dir[0];
                 int nz = currentZ + dir[1];
-
-                int ny = world.getHighestBlockYAt(nx, nz);
+                // FIX: WORLD_SURFACE excludes fluids from height calculation
+                int ny = world.getHighestBlockYAt(nx, nz, HeightMap.WORLD_SURFACE);
 
                 if (ny < bestNy) {
                     bestNx = nx;
@@ -62,11 +64,12 @@ public class RiverPathfinder {
                 }
             }
 
+            // If no lower neighbour found, check for water confluence at same height
             if (!foundLower) {
                 for (int[] dir : DIRECTIONS) {
                     int nx = currentX + dir[0];
                     int nz = currentZ + dir[1];
-                    int ny = world.getHighestBlockYAt(nx, nz);
+                    int ny = world.getHighestBlockYAt(nx, nz, HeightMap.WORLD_SURFACE);
 
                     if (ny == currentY) {
                         Block b = world.getBlockAt(nx, ny, nz);
@@ -89,6 +92,8 @@ public class RiverPathfinder {
 
             int deltaY = currentY - bestNy;
 
+            // FIX: Check confluence BEFORE sea-level and waterfall checks so a river
+            // joining an existing watercourse doesn't get wrongly terminated or carved.
             Block neighborBlock = world.getBlockAt(bestNx, bestNy, bestNz);
             if (neighborBlock.getType() == Material.WATER) {
                 nodes.add(new RiverNode(bestNx, bestNy, bestNz, RiverNodeType.CONFLUENCE, bestDirX, bestDirZ));
@@ -99,11 +104,13 @@ public class RiverPathfinder {
                 continue;
             }
 
+            // Reached the ocean / sea level
             if (bestNy <= config.getSeaLevel()) {
                 nodes.add(new RiverNode(bestNx, bestNy, bestNz, RiverNodeType.MOUTH, bestDirX, bestDirZ));
                 break;
             }
 
+            // Waterfall
             if (deltaY > config.getWaterfallThreshold()) {
                 nodes.add(new RiverNode(currentX, currentY, currentZ, RiverNodeType.WATERFALL_START, bestDirX, bestDirZ));
                 for (int y = currentY - 1; y > bestNy; y--) {

@@ -5,7 +5,9 @@ import org.bukkit.Bukkit;
 import org.bukkit.Chunk;
 import org.bukkit.ChunkSnapshot;
 import org.bukkit.Material;
+import org.bukkit.NamespacedKey;
 import org.bukkit.World;
+import org.bukkit.block.Biome;
 import org.bukkit.plugin.Plugin;
 import org.bukkit.scheduler.BukkitRunnable;
 
@@ -24,12 +26,12 @@ public class RiverFlowTask extends BukkitRunnable {
     private final WaterfallPlacer placer;
 
     private static final Set<String> ALLOWED_BIOMES = Set.of(
-            "MINECRAFT:JAGGED_PEAKS", "MINECRAFT:FROZEN_PEAKS", "MINECRAFT:STONY_PEAKS",
-            "MINECRAFT:WINDSWEPT_HILLS", "MINECRAFT:WINDSWEPT_GRAVELLY_HILLS", "MINECRAFT:SNOWY_SLOPES"
+            "minecraft:jagged_peaks", "minecraft:frozen_peaks", "minecraft:stony_peaks",
+            "minecraft:windswept_hills", "minecraft:windswept_gravelly_hills", "minecraft:snowy_slopes"
     );
     private static final Set<String> ALLOWED_CUSTOM_BIOMES = Set.of(
-            "GEOWORLD:CRYSTAL_PEAKS", "GEOWORLD:SKYREACH_PLATEAU",
-            "GEOWORLD:OBSIDIAN_SPIRES", "GEOWORLD:FLOATING_ISLES"
+            "geoworld:crystal_peaks", "geoworld:skyreach_plateau",
+            "geoworld:obsidian_spires", "geoworld:floating_isles"
     );
 
     public RiverFlowTask(Plugin plugin, GeoWorldConfig config, LinkedBlockingQueue<Chunk> pendingChunks) {
@@ -53,7 +55,6 @@ public class RiverFlowTask extends BukkitRunnable {
             try {
                 if (!chunk.isLoaded()) continue;
 
-                // Get ChunkSnapshot for async operations
                 ChunkSnapshot snapshot = chunk.getChunkSnapshot(true, true, false);
                 World world = chunk.getWorld();
 
@@ -74,9 +75,9 @@ public class RiverFlowTask extends BukkitRunnable {
         int startX = chunk.getX() << 4;
         int startZ = chunk.getZ() << 4;
 
+        outer:
         for (int x = 0; x < 16; x++) {
             for (int z = 0; z < 16; z++) {
-                // Determine highest block to bound our search
                 int highestY = snapshot.getHighestBlockYAt(x, z);
                 if (highestY < minY) continue;
 
@@ -86,28 +87,22 @@ public class RiverFlowTask extends BukkitRunnable {
                     if (type == Material.WATER) {
                         Material above = snapshot.getBlockType(x, y + 1, z);
                         if (above.isAir()) {
-                            // Check biome
-                            String biomeKey = snapshot.getBiome(x, y, z).getKey().getKey().toUpperCase();
-                            String namespace = snapshot.getBiome(x, y, z).getKey().getNamespace().toUpperCase();
-                            String fullKey = namespace + ":" + biomeKey;
+                            // FIX: cache biome lookup – only one call per block
+                            Biome biome = snapshot.getBiome(x, y, z);
+                            NamespacedKey key = biome.getKey();
+                            // FIX: use lowercase to match the Set entries
+                            String fullKey = key.getNamespace().toLowerCase() + ":" + key.getKey().toLowerCase();
 
-                            boolean isAllowed = ALLOWED_BIOMES.contains(fullKey) || ALLOWED_CUSTOM_BIOMES.contains(fullKey);
+                            boolean isAllowed = ALLOWED_BIOMES.contains(fullKey)
+                                    || ALLOWED_CUSTOM_BIOMES.contains(fullKey);
 
                             if (isAllowed) {
                                 if (springsThisChunk >= maxSprings) {
-                                    return;
+                                    break outer; // FIX: break outer loop, not just inner
                                 }
 
                                 if (random.nextDouble() < config.getSpringChance()) {
                                     springsThisChunk++;
-
-                                    // Use snapshot-based pathfinder or main thread?
-                                    // The instruction says "läuft komplett ohne Block-API, nur mit Höhendaten"
-                                    // However, getting highest block at arbitrary coordinates requires chunks.
-                                    // It's not safe to do `world.getHighestBlockAt` async for unloaded chunks.
-                                    // We will schedule pathfinding and placing on main thread to be safe and accurate,
-                                    // or we use a main thread task just for trace & place.
-                                    // Since Pathfinder needs cross-chunk data safely, let's schedule it on main thread.
 
                                     final int blockX = startX + x;
                                     final int blockY = y;
