@@ -1,0 +1,8 @@
+name: GeoWorld
+main: de.lothomax.geoworld.GeoWorld
+version: 1.0.0
+api-version: '1.21'
+author: lothomax
+depend: []
+softdepend: [GeoDiscovery]
+description: World generation enhancement plugin with river flow, waterfalls and mountain lakes
