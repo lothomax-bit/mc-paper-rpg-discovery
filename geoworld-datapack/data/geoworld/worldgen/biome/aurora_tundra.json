@@ -1,26 +1,33 @@
 {
-  "temperature": -0.5,
-  "downfall": 0.5,
+  "temperature": -0.7,
+  "downfall": 0.9,
   "has_precipitation": true,
   "effects": {
-    "fog_color": 255,
-    "water_color": 4159204,
+    "fog_color": 5004289,
+    "water_color": 4020182,
     "water_fog_color": 329011,
-    "sky_color": 255
+    "sky_color": 5004289
   },
   "spawners": {
     "monster": [],
-    "creature": [
-      {
-        "type": "minecraft:wolf",
-        "weight": 10,
-        "minCount": 1,
-        "maxCount": 4
-      }
-    ],
+    "creature": [],
     "ambient": [],
     "water_creature": [],
     "water_ambient": []
   },
-  "features": []
+  "features": [
+    [],
+    [],
+    [],
+    [],
+    [],
+    [],
+    [],
+    [],
+    [],
+    [],
+    []
+  ],
+  "spawn_costs": {},
+  "carvers": {}
 }
