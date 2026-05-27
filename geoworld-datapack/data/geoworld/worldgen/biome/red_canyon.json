@@ -19,5 +19,5 @@
   },
   "features": [[],[],[],[],[],[],[],[],[],[],[]],
   "spawn_costs": {},
-  "carvers": {"air": [], "liquid": []}
+  "carvers": {}
 }
