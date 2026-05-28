@@ -1,6 +1,6 @@
 # mc-paper-rpg-discovery
 
-Ein modulares RPG-Erkundungsprojekt für **Paper 1.21+**. Das Projekt besteht aus drei unabhängigen Komponenten, die zusammenspielen: einem Datapack für Custom-Biome und Weltgenerierung, einem Java-Plugin für dynamische Flussgenerierung, und MythicMobs-Konfigurationen für biom-spezifische Kreaturen.
+Ein modulares RPG-Erkundungsprojekt für **Paper 26.1+**. Das Projekt besteht aus drei unabhängigen Komponenten, die zusammenspielen: einem Datapack für Custom-Biome und Weltgenerierung, einem Java-Plugin für dynamische Flussgenerierung, und MythicMobs-Konfigurationen für biom-spezifische Kreaturen.
 
 ---
 
