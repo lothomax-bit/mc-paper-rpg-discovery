@@ -1,0 +1,1028 @@
+[22:08:55] [ServerMain/INFO]: [bootstrap] Running Java 25 (OpenJDK 64-Bit Server VM 25.0.3+9-LTS; Eclipse Adoptium Temurin-25.0.3+9) on Windows Server 2025 10.0 (amd64)
+[22:08:56] [ServerMain/INFO]: [bootstrap] Loading Paper 26.1.2-63-main@711c5de (2026-05-11T08:20:02Z) for Minecraft 26.1.2
+[22:08:56] [ServerMain/INFO]: [PluginInitializerManager] Initializing plugins...
+[22:08:57] [ServerMain/INFO]: [PluginInitializerManager] Initialized 23 plugins
+[22:08:57] [ServerMain/INFO]: [PluginInitializerManager] Paper plugins (2):
+ - RoseStacker (1.5.40), ToolStats (2.0.4)
+[22:08:57] [ServerMain/INFO]: [PluginInitializerManager] Bukkit plugins (21):
+ - AnvilORM (1.0.1), AuraSkills (2.3.12), AuthorityAdmin (2.4.2), Backuper (4.0.5), BlueMap (5.20), Chunky (1.5.3), DHSupport (0.13.1), DeathChest (2.2.9), GSit (3.3.3), Geyser-Spigot (2.10.0-SNAPSHOT), InteractionVisualizer (2026.1.1.0), Maintenance (5.0.0), Multiverse-Core (5.6.2), Multiverse-Inventories (5.3.3), Multiverse-Portals (5.2.2), MythicMobs (5.12.0-SNAPSHOT-local), Plan (5.7 build 3306), ProtocolLib (5.4.0), ViaBackwards (5.9.1), ViaVersion (5.9.1), floodgate (2.2.5-SNAPSHOT (b132-5a72b6a))
+[22:09:00] [ServerMain/INFO]: Environment: Environment[sessionHost=https://sessionserver.mojang.com, servicesHost=https://api.minecraftservices.com, profilesHost=https://api.mojang.com, name=PROD]
+[22:09:00] [ServerMain/INFO]: Found new data pack file/bukkit, loading it automatically
+[22:09:00] [ServerMain/INFO]: Found new data pack file/geoworld-datapack, loading it automatically
+[22:09:00] [ServerMain/INFO]: Found new data pack paper, loading it automatically
+[22:09:00] [Worker-Main-3/ERROR]: Carver: Failed to parse either. First: Not a string: {}; Second: Failed to parse either. First: Not a json array: {}; Second: No key type in MapLike[{}]
+[22:09:00] [Worker-Main-3/ERROR]: Carver: Failed to parse either. First: Not a string: {}; Second: Failed to parse either. First: Not a json array: {}; Second: No key type in MapLike[{}]
+[22:09:00] [Worker-Main-4/ERROR]: Carver: Failed to parse either. First: Not a string: {}; Second: Failed to parse either. First: Not a json array: {}; Second: No key type in MapLike[{}]
+[22:09:00] [Worker-Main-4/ERROR]: Carver: Failed to parse either. First: Not a string: {}; Second: Failed to parse either. First: Not a json array: {}; Second: No key type in MapLike[{}]
+[22:09:00] [Worker-Main-3/ERROR]: Carver: Failed to parse either. First: Not a string: {}; Second: Failed to parse either. First: Not a json array: {}; Second: No key type in MapLike[{}]
+[22:09:00] [Worker-Main-3/ERROR]: Carver: Failed to parse either. First: Not a string: {}; Second: Failed to parse either. First: Not a json array: {}; Second: No key type in MapLike[{}]
+[22:09:00] [Worker-Main-1/ERROR]: Carver: Failed to parse either. First: Not a string: {}; Second: Failed to parse either. First: Not a json array: {}; Second: No key type in MapLike[{}]
+[22:09:00] [Worker-Main-3/ERROR]: Carver: Failed to parse either. First: Not a string: {}; Second: Failed to parse either. First: Not a json array: {}; Second: No key type in MapLike[{}]
+[22:09:00] [Worker-Main-1/ERROR]: Carver: Failed to parse either. First: Not a string: {}; Second: Failed to parse either. First: Not a json array: {}; Second: No key type in MapLike[{}]
+[22:09:00] [Worker-Main-1/ERROR]: Carver: Failed to parse either. First: Not a string: {}; Second: Failed to parse either. First: Not a json array: {}; Second: No key type in MapLike[{}]
+[22:09:00] [Worker-Main-1/ERROR]: Carver: Failed to parse either. First: Not a string: {}; Second: Failed to parse either. First: Not a json array: {}; Second: No key type in MapLike[{}]
+[22:09:00] [Worker-Main-3/ERROR]: Carver: Failed to parse either. First: Not a string: {}; Second: Failed to parse either. First: Not a json array: {}; Second: No key type in MapLike[{}]
+[22:09:00] [Worker-Main-3/ERROR]: Carver: Failed to parse either. First: Not a string: {}; Second: Failed to parse either. First: Not a json array: {}; Second: No key type in MapLike[{}]
+[22:09:00] [Worker-Main-3/ERROR]: Carver: Failed to parse either. First: Not a string: {}; Second: Failed to parse either. First: Not a json array: {}; Second: No key type in MapLike[{}]
+[22:09:00] [Worker-Main-3/ERROR]: Carver: Failed to parse either. First: Not a string: {}; Second: Failed to parse either. First: Not a json array: {}; Second: No key type in MapLike[{}]
+[22:09:00] [Worker-Main-3/ERROR]: Carver: Failed to parse either. First: Not a string: {}; Second: Failed to parse either. First: Not a json array: {}; Second: No key type in MapLike[{}]
+[22:09:00] [Worker-Main-1/ERROR]: Carver: Failed to parse either. First: Not a string: {}; Second: Failed to parse either. First: Not a json array: {}; Second: No key type in MapLike[{}]
+[22:09:00] [Worker-Main-3/ERROR]: Carver: Failed to parse either. First: Not a string: {}; Second: Failed to parse either. First: Not a json array: {}; Second: No key type in MapLike[{}]
+[22:09:00] [Worker-Main-3/ERROR]: Carver: Failed to parse either. First: Not a string: {}; Second: Failed to parse either. First: Not a json array: {}; Second: No key type in MapLike[{}]
+[22:09:00] [Worker-Main-1/ERROR]: Carver: Failed to parse either. First: Not a string: {}; Second: Failed to parse either. First: Not a json array: {}; Second: No key type in MapLike[{}]
+[22:09:00] [Worker-Main-3/ERROR]: Carver: Failed to parse either. First: Not a string: {}; Second: Failed to parse either. First: Not a json array: {}; Second: No key type in MapLike[{}]
+[22:09:00] [Worker-Main-3/ERROR]: Carver: Failed to parse either. First: Not a string: {}; Second: Failed to parse either. First: Not a json array: {}; Second: No key type in MapLike[{}]
+[22:09:00] [Worker-Main-3/ERROR]: Carver: Failed to parse either. First: Not a string: {}; Second: Failed to parse either. First: Not a json array: {}; Second: No key type in MapLike[{}]
+[22:09:00] [Worker-Main-3/ERROR]: Carver: Failed to parse either. First: Not a string: {}; Second: Failed to parse either. First: Not a json array: {}; Second: No key type in MapLike[{}]
+[22:09:00] [Worker-Main-3/ERROR]: Carver: Failed to parse either. First: Not a string: {}; Second: Failed to parse either. First: Not a json array: {}; Second: No key type in MapLike[{}]
+[22:09:00] [Worker-Main-3/ERROR]: Carver: Failed to parse either. First: Not a string: {}; Second: Failed to parse either. First: Not a json array: {}; Second: No key type in MapLike[{}]
+[22:09:00] [Worker-Main-1/ERROR]: Carver: Failed to parse either. First: Not a string: {}; Second: Failed to parse either. First: Not a json array: {}; Second: No key type in MapLike[{}]
+[22:09:00] [Worker-Main-3/ERROR]: Carver: Failed to parse either. First: Not a string: {}; Second: Failed to parse either. First: Not a json array: {}; Second: No key type in MapLike[{}]
+[22:09:00] [Worker-Main-3/ERROR]: Carver: Failed to parse either. First: Not a string: {}; Second: Failed to parse either. First: Not a json array: {}; Second: No key type in MapLike[{}]
+[22:09:00] [Worker-Main-3/ERROR]: Carver: Failed to parse either. First: Not a string: {}; Second: Failed to parse either. First: Not a json array: {}; Second: No key type in MapLike[{}]
+[22:09:00] [Worker-Main-3/ERROR]: Carver: Failed to parse either. First: Not a string: {}; Second: Failed to parse either. First: Not a json array: {}; Second: No key type in MapLike[{}]
+[22:09:00] [Worker-Main-3/ERROR]: Carver: Failed to parse either. First: Not a string: {}; Second: Failed to parse either. First: Not a json array: {}; Second: No key type in MapLike[{}]
+[22:09:00] [Worker-Main-3/ERROR]: Carver: Failed to parse either. First: Not a string: {}; Second: Failed to parse either. First: Not a json array: {}; Second: No key type in MapLike[{}]
+[22:09:00] [Worker-Main-3/ERROR]: Carver: Failed to parse either. First: Not a string: {}; Second: Failed to parse either. First: Not a json array: {}; Second: No key type in MapLike[{}]
+[22:09:00] [Worker-Main-3/ERROR]: Carver: Failed to parse either. First: Not a string: {}; Second: Failed to parse either. First: Not a json array: {}; Second: No key type in MapLike[{}]
+[22:09:00] [Worker-Main-1/ERROR]: Carver: Failed to parse either. First: Not a string: {}; Second: Failed to parse either. First: Not a json array: {}; Second: No key type in MapLike[{}]
+[22:09:00] [Worker-Main-1/ERROR]: Carver: Failed to parse either. First: Not a string: {}; Second: Failed to parse either. First: Not a json array: {}; Second: No key type in MapLike[{}]
+[22:09:00] [Worker-Main-4/ERROR]: Carver: Failed to parse either. First: Not a string: {}; Second: Failed to parse either. First: Not a json array: {}; Second: No key type in MapLike[{}]
+[22:09:00] [Worker-Main-3/ERROR]: Carver: Failed to parse either. First: Not a string: {}; Second: Failed to parse either. First: Not a json array: {}; Second: No key type in MapLike[{}]
+[22:09:00] [Worker-Main-4/ERROR]: Carver: Failed to parse either. First: Not a string: {}; Second: Failed to parse either. First: Not a json array: {}; Second: No key type in MapLike[{}]
+[22:09:00] [Worker-Main-3/ERROR]: Carver: Failed to parse either. First: Not a string: {}; Second: Failed to parse either. First: Not a json array: {}; Second: No key type in MapLike[{}]
+[22:09:00] [Worker-Main-3/ERROR]: Carver: Failed to parse either. First: Not a string: {}; Second: Failed to parse either. First: Not a json array: {}; Second: No key type in MapLike[{}]
+[22:09:00] [Worker-Main-3/ERROR]: Carver: Failed to parse either. First: Not a string: {}; Second: Failed to parse either. First: Not a json array: {}; Second: No key type in MapLike[{}]
+[22:09:00] [Worker-Main-3/ERROR]: Carver: Failed to parse either. First: Not a string: {}; Second: Failed to parse either. First: Not a json array: {}; Second: No key type in MapLike[{}]
+[22:09:01] [Worker-Main-2/ERROR]: Registry loading errors:
+> Errors in registry minecraft:root:
+>> Errors in element minecraft:worldgen/density_function:
+java.lang.IllegalStateException: Unbound values in registry ResourceKey[minecraft:root / minecraft:worldgen/density_function]: [minecraft:overworld/caves/entrances, minecraft:overworld/caves/spaghetti_2d]
+	at net.minecraft.core.MappedRegistry.freeze(MappedRegistry.java:311)
+	at net.minecraft.resources.RegistryLoadTask.freezeRegistry(RegistryLoadTask.java:82)
+	at net.minecraft.resources.RegistryDataLoader.lambda$load$3(RegistryDataLoader.java:218)
+	at java.base/java.util.stream.ReferencePipeline$2$1.accept(ReferencePipeline.java:196)
+	at java.base/java.util.AbstractList$RandomAccessSpliterator.forEachRemaining(AbstractList.java:722)
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:570)
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:560)
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:635)
+	at java.base/java.util.stream.AbstractPipeline.evaluateToArrayNode(AbstractPipeline.java:291)
+	at java.base/java.util.stream.ReferencePipeline.toArray(ReferencePipeline.java:652)
+	at java.base/java.util.stream.ReferencePipeline.toArray(ReferencePipeline.java:658)
+	at java.base/java.util.stream.ReferencePipeline.toList(ReferencePipeline.java:663)
+	at net.minecraft.resources.RegistryDataLoader.lambda$load$2(RegistryDataLoader.java:218)
+	at java.base/java.util.concurrent.CompletableFuture$UniApply.tryFire(CompletableFuture.java:667)
+	at java.base/java.util.concurrent.CompletableFuture$Completion.exec(CompletableFuture.java:504)
+	at java.base/java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:511)
+	at java.base/java.util.concurrent.ForkJoinPool$WorkQueue.topLevelExec(ForkJoinPool.java:1450)
+	at java.base/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:2019)
+	at java.base/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:187)
+>> Errors in element minecraft:worldgen/noise_settings:
+java.lang.IllegalStateException: Unbound values in registry ResourceKey[minecraft:root / minecraft:worldgen/noise_settings]: [minecraft:overworld]
+	at net.minecraft.core.MappedRegistry.freeze(MappedRegistry.java:311)
+	at net.minecraft.resources.RegistryLoadTask.freezeRegistry(RegistryLoadTask.java:82)
+	at net.minecraft.resources.RegistryDataLoader.lambda$load$3(RegistryDataLoader.java:218)
+	at java.base/java.util.stream.ReferencePipeline$2$1.accept(ReferencePipeline.java:196)
+	at java.base/java.util.AbstractList$RandomAccessSpliterator.forEachRemaining(AbstractList.java:722)
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:570)
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:560)
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:635)
+	at java.base/java.util.stream.AbstractPipeline.evaluateToArrayNode(AbstractPipeline.java:291)
+	at java.base/java.util.stream.ReferencePipeline.toArray(ReferencePipeline.java:652)
+	at java.base/java.util.stream.ReferencePipeline.toArray(ReferencePipeline.java:658)
+	at java.base/java.util.stream.ReferencePipeline.toList(ReferencePipeline.java:663)
+	at net.minecraft.resources.RegistryDataLoader.lambda$load$2(RegistryDataLoader.java:218)
+	at java.base/java.util.concurrent.CompletableFuture$UniApply.tryFire(CompletableFuture.java:667)
+	at java.base/java.util.concurrent.CompletableFuture$Completion.exec(CompletableFuture.java:504)
+	at java.base/java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:511)
+	at java.base/java.util.concurrent.ForkJoinPool$WorkQueue.topLevelExec(ForkJoinPool.java:1450)
+	at java.base/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:2019)
+	at java.base/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:187)
+> Errors in registry minecraft:worldgen/biome:
+>> Errors in element geoworld:abyssal_trench:
+java.lang.IllegalStateException: Failed to parse geoworld:abyssal_trench from pack file/geoworld-datapack
+	at net.minecraft.resources.RegistryLoadTask$PendingRegistration.loadFromResource(RegistryLoadTask.java:116)
+	at net.minecraft.resources.ResourceManagerRegistryLoadTask.lambda$load$2(ResourceManagerRegistryLoadTask.java:55)
+	at net.minecraft.util.thread.ParallelMapTransform$Container.applyOperation(ParallelMapTransform.java:123)
+	at net.minecraft.util.thread.ParallelMapTransform$BatchedTaskSplitter.lambda$createTask$0(ParallelMapTransform.java:80)
+	at java.base/java.util.concurrent.CompletableFuture$AsyncRun.run(CompletableFuture.java:1825)
+	at java.base/java.util.concurrent.CompletableFuture$AsyncRun.exec(CompletableFuture.java:1817)
+	at java.base/java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:511)
+	at java.base/java.util.concurrent.ForkJoinPool$WorkQueue.topLevelExec(ForkJoinPool.java:1450)
+	at java.base/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:2019)
+	at java.base/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:187)
+Caused by: java.lang.IllegalStateException: Failed to parse either. First: Not a string: {}; Second: Failed to parse either. First: Not a json array: {}; Second: No key type in MapLike[{}]
+	at com.mojang.serialization.DataResult$Error.getOrThrow(DataResult.java:287)
+	at com.mojang.serialization.DataResult.getOrThrow(DataResult.java:81)
+	at net.minecraft.resources.RegistryLoadTask$PendingRegistration.loadFromResource(RegistryLoadTask.java:109)
+	... 9 more
+>> Errors in element geoworld:ancient_forest:
+java.lang.IllegalStateException: Failed to parse geoworld:ancient_forest from pack file/geoworld-datapack
+	at net.minecraft.resources.RegistryLoadTask$PendingRegistration.loadFromResource(RegistryLoadTask.java:116)
+	at net.minecraft.resources.ResourceManagerRegistryLoadTask.lambda$load$2(ResourceManagerRegistryLoadTask.java:55)
+	at net.minecraft.util.thread.ParallelMapTransform$Container.applyOperation(ParallelMapTransform.java:123)
+	at net.minecraft.util.thread.ParallelMapTransform$BatchedTaskSplitter.lambda$createTask$0(ParallelMapTransform.java:80)
+	at java.base/java.util.concurrent.CompletableFuture$AsyncRun.run(CompletableFuture.java:1825)
+	at java.base/java.util.concurrent.CompletableFuture$AsyncRun.exec(CompletableFuture.java:1817)
+	at java.base/java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:511)
+	at java.base/java.util.concurrent.ForkJoinPool$WorkQueue.topLevelExec(ForkJoinPool.java:1450)
+	at java.base/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:2019)
+	at java.base/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:187)
+Caused by: java.lang.IllegalStateException: Failed to parse either. First: Not a string: {}; Second: Failed to parse either. First: Not a json array: {}; Second: No key type in MapLike[{}]
+	at com.mojang.serialization.DataResult$Error.getOrThrow(DataResult.java:287)
+	at com.mojang.serialization.DataResult.getOrThrow(DataResult.java:81)
+	at net.minecraft.resources.RegistryLoadTask$PendingRegistration.loadFromResource(RegistryLoadTask.java:109)
+	... 9 more
+>> Errors in element geoworld:ancient_ruins:
+java.lang.IllegalStateException: Failed to parse geoworld:ancient_ruins from pack file/geoworld-datapack
+	at net.minecraft.resources.RegistryLoadTask$PendingRegistration.loadFromResource(RegistryLoadTask.java:116)
+	at net.minecraft.resources.ResourceManagerRegistryLoadTask.lambda$load$2(ResourceManagerRegistryLoadTask.java:55)
+	at net.minecraft.util.thread.ParallelMapTransform$Container.applyOperation(ParallelMapTransform.java:123)
+	at net.minecraft.util.thread.ParallelMapTransform$BatchedTaskSplitter.lambda$createTask$0(ParallelMapTransform.java:80)
+	at java.base/java.util.concurrent.CompletableFuture$AsyncRun.run(CompletableFuture.java:1825)
+	at java.base/java.util.concurrent.CompletableFuture$AsyncRun.exec(CompletableFuture.java:1817)
+	at java.base/java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:511)
+	at java.base/java.util.concurrent.ForkJoinPool$WorkQueue.topLevelExec(ForkJoinPool.java:1450)
+	at java.base/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:2019)
+	at java.base/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:187)
+Caused by: java.lang.IllegalStateException: Failed to parse either. First: Not a string: {}; Second: Failed to parse either. First: Not a json array: {}; Second: No key type in MapLike[{}]
+	at com.mojang.serialization.DataResult$Error.getOrThrow(DataResult.java:287)
+	at com.mojang.serialization.DataResult.getOrThrow(DataResult.java:81)
+	at net.minecraft.resources.RegistryLoadTask$PendingRegistration.loadFromResource(RegistryLoadTask.java:109)
+	... 9 more
+>> Errors in element geoworld:aurora_tundra:
+java.lang.IllegalStateException: Failed to parse geoworld:aurora_tundra from pack file/geoworld-datapack
+	at net.minecraft.resources.RegistryLoadTask$PendingRegistration.loadFromResource(RegistryLoadTask.java:116)
+	at net.minecraft.resources.ResourceManagerRegistryLoadTask.lambda$load$2(ResourceManagerRegistryLoadTask.java:55)
+	at net.minecraft.util.thread.ParallelMapTransform$Container.applyOperation(ParallelMapTransform.java:123)
+	at net.minecraft.util.thread.ParallelMapTransform$BatchedTaskSplitter.lambda$createTask$0(ParallelMapTransform.java:80)
+	at java.base/java.util.concurrent.CompletableFuture$AsyncRun.run(CompletableFuture.java:1825)
+	at java.base/java.util.concurrent.CompletableFuture$AsyncRun.exec(CompletableFuture.java:1817)
+	at java.base/java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:511)
+	at java.base/java.util.concurrent.ForkJoinPool$WorkQueue.topLevelExec(ForkJoinPool.java:1450)
+	at java.base/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:2019)
+	at java.base/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:187)
+Caused by: java.lang.IllegalStateException: Failed to parse either. First: Not a string: {}; Second: Failed to parse either. First: Not a json array: {}; Second: No key type in MapLike[{}]
+	at com.mojang.serialization.DataResult$Error.getOrThrow(DataResult.java:287)
+	at com.mojang.serialization.DataResult.getOrThrow(DataResult.java:81)
+	at net.minecraft.resources.RegistryLoadTask$PendingRegistration.loadFromResource(RegistryLoadTask.java:109)
+	... 9 more
+>> Errors in element geoworld:bamboo_highlands:
+java.lang.IllegalStateException: Failed to parse geoworld:bamboo_highlands from pack file/geoworld-datapack
+	at net.minecraft.resources.RegistryLoadTask$PendingRegistration.loadFromResource(RegistryLoadTask.java:116)
+	at net.minecraft.resources.ResourceManagerRegistryLoadTask.lambda$load$2(ResourceManagerRegistryLoadTask.java:55)
+	at net.minecraft.util.thread.ParallelMapTransform$Container.applyOperation(ParallelMapTransform.java:123)
+	at net.minecraft.util.thread.ParallelMapTransform$BatchedTaskSplitter.lambda$createTask$0(ParallelMapTransform.java:80)
+	at java.base/java.util.concurrent.CompletableFuture$AsyncRun.run(CompletableFuture.java:1825)
+	at java.base/java.util.concurrent.CompletableFuture$AsyncRun.exec(CompletableFuture.java:1817)
+	at java.base/java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:511)
+	at java.base/java.util.concurrent.ForkJoinPool$WorkQueue.topLevelExec(ForkJoinPool.java:1450)
+	at java.base/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:2019)
+	at java.base/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:187)
+Caused by: java.lang.IllegalStateException: Failed to parse either. First: Not a string: {}; Second: Failed to parse either. First: Not a json array: {}; Second: No key type in MapLike[{}]
+	at com.mojang.serialization.DataResult$Error.getOrThrow(DataResult.java:287)
+	at com.mojang.serialization.DataResult.getOrThrow(DataResult.java:81)
+	at net.minecraft.resources.RegistryLoadTask$PendingRegistration.loadFromResource(RegistryLoadTask.java:109)
+	... 9 more
+>> Errors in element geoworld:bioluminescent_shallows:
+java.lang.IllegalStateException: Failed to parse geoworld:bioluminescent_shallows from pack file/geoworld-datapack
+	at net.minecraft.resources.RegistryLoadTask$PendingRegistration.loadFromResource(RegistryLoadTask.java:116)
+	at net.minecraft.resources.ResourceManagerRegistryLoadTask.lambda$load$2(ResourceManagerRegistryLoadTask.java:55)
+	at net.minecraft.util.thread.ParallelMapTransform$Container.applyOperation(ParallelMapTransform.java:123)
+	at net.minecraft.util.thread.ParallelMapTransform$BatchedTaskSplitter.lambda$createTask$0(ParallelMapTransform.java:80)
+	at java.base/java.util.concurrent.CompletableFuture$AsyncRun.run(CompletableFuture.java:1825)
+	at java.base/java.util.concurrent.CompletableFuture$AsyncRun.exec(CompletableFuture.java:1817)
+	at java.base/java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:511)
+	at java.base/java.util.concurrent.ForkJoinPool$WorkQueue.topLevelExec(ForkJoinPool.java:1450)
+	at java.base/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:2019)
+	at java.base/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:187)
+Caused by: java.lang.IllegalStateException: Failed to parse either. First: Not a string: {}; Second: Failed to parse either. First: Not a json array: {}; Second: No key type in MapLike[{}]
+	at com.mojang.serialization.DataResult$Error.getOrThrow(DataResult.java:287)
+	at com.mojang.serialization.DataResult.getOrThrow(DataResult.java:81)
+	at net.minecraft.resources.RegistryLoadTask$PendingRegistration.loadFromResource(RegistryLoadTask.java:109)
+	... 9 more
+>> Errors in element geoworld:coral_archipelago:
+java.lang.IllegalStateException: Failed to parse geoworld:coral_archipelago from pack file/geoworld-datapack
+	at net.minecraft.resources.RegistryLoadTask$PendingRegistration.loadFromResource(RegistryLoadTask.java:116)
+	at net.minecraft.resources.ResourceManagerRegistryLoadTask.lambda$load$2(ResourceManagerRegistryLoadTask.java:55)
+	at net.minecraft.util.thread.ParallelMapTransform$Container.applyOperation(ParallelMapTransform.java:123)
+	at net.minecraft.util.thread.ParallelMapTransform$BatchedTaskSplitter.lambda$createTask$0(ParallelMapTransform.java:80)
+	at java.base/java.util.concurrent.CompletableFuture$AsyncRun.run(CompletableFuture.java:1825)
+	at java.base/java.util.concurrent.CompletableFuture$AsyncRun.exec(CompletableFuture.java:1817)
+	at java.base/java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:511)
+	at java.base/java.util.concurrent.ForkJoinPool$WorkQueue.topLevelExec(ForkJoinPool.java:1450)
+	at java.base/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:2019)
+	at java.base/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:187)
+Caused by: java.lang.IllegalStateException: Failed to parse either. First: Not a string: {}; Second: Failed to parse either. First: Not a json array: {}; Second: No key type in MapLike[{}]
+	at com.mojang.serialization.DataResult$Error.getOrThrow(DataResult.java:287)
+	at com.mojang.serialization.DataResult.getOrThrow(DataResult.java:81)
+	at net.minecraft.resources.RegistryLoadTask$PendingRegistration.loadFromResource(RegistryLoadTask.java:109)
+	... 9 more
+>> Errors in element geoworld:crystal_caverns:
+java.lang.IllegalStateException: Failed to parse geoworld:crystal_caverns from pack file/geoworld-datapack
+	at net.minecraft.resources.RegistryLoadTask$PendingRegistration.loadFromResource(RegistryLoadTask.java:116)
+	at net.minecraft.resources.ResourceManagerRegistryLoadTask.lambda$load$2(ResourceManagerRegistryLoadTask.java:55)
+	at net.minecraft.util.thread.ParallelMapTransform$Container.applyOperation(ParallelMapTransform.java:123)
+	at net.minecraft.util.thread.ParallelMapTransform$BatchedTaskSplitter.lambda$createTask$0(ParallelMapTransform.java:80)
+	at java.base/java.util.concurrent.CompletableFuture$AsyncRun.run(CompletableFuture.java:1825)
+	at java.base/java.util.concurrent.CompletableFuture$AsyncRun.exec(CompletableFuture.java:1817)
+	at java.base/java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:511)
+	at java.base/java.util.concurrent.ForkJoinPool$WorkQueue.topLevelExec(ForkJoinPool.java:1450)
+	at java.base/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:2019)
+	at java.base/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:187)
+Caused by: java.lang.IllegalStateException: Failed to parse either. First: Not a string: {}; Second: Failed to parse either. First: Not a json array: {}; Second: No key type in MapLike[{}]
+	at com.mojang.serialization.DataResult$Error.getOrThrow(DataResult.java:287)
+	at com.mojang.serialization.DataResult.getOrThrow(DataResult.java:81)
+	at net.minecraft.resources.RegistryLoadTask$PendingRegistration.loadFromResource(RegistryLoadTask.java:109)
+	... 9 more
+>> Errors in element geoworld:crystal_peaks:
+java.lang.IllegalStateException: Failed to parse geoworld:crystal_peaks from pack file/geoworld-datapack
+	at net.minecraft.resources.RegistryLoadTask$PendingRegistration.loadFromResource(RegistryLoadTask.java:116)
+	at net.minecraft.resources.ResourceManagerRegistryLoadTask.lambda$load$2(ResourceManagerRegistryLoadTask.java:55)
+	at net.minecraft.util.thread.ParallelMapTransform$Container.applyOperation(ParallelMapTransform.java:123)
+	at net.minecraft.util.thread.ParallelMapTransform$BatchedTaskSplitter.lambda$createTask$0(ParallelMapTransform.java:80)
+	at java.base/java.util.concurrent.CompletableFuture$AsyncRun.run(CompletableFuture.java:1825)
+	at java.base/java.util.concurrent.CompletableFuture$AsyncRun.exec(CompletableFuture.java:1817)
+	at java.base/java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:511)
+	at java.base/java.util.concurrent.ForkJoinPool$WorkQueue.topLevelExec(ForkJoinPool.java:1450)
+	at java.base/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:2019)
+	at java.base/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:187)
+Caused by: java.lang.IllegalStateException: Failed to parse either. First: Not a string: {}; Second: Failed to parse either. First: Not a json array: {}; Second: No key type in MapLike[{}]
+	at com.mojang.serialization.DataResult$Error.getOrThrow(DataResult.java:287)
+	at com.mojang.serialization.DataResult.getOrThrow(DataResult.java:81)
+	at net.minecraft.resources.RegistryLoadTask$PendingRegistration.loadFromResource(RegistryLoadTask.java:109)
+	... 9 more
+>> Errors in element geoworld:cursed_bayou:
+java.lang.IllegalStateException: Failed to parse geoworld:cursed_bayou from pack file/geoworld-datapack
+	at net.minecraft.resources.RegistryLoadTask$PendingRegistration.loadFromResource(RegistryLoadTask.java:116)
+	at net.minecraft.resources.ResourceManagerRegistryLoadTask.lambda$load$2(ResourceManagerRegistryLoadTask.java:55)
+	at net.minecraft.util.thread.ParallelMapTransform$Container.applyOperation(ParallelMapTransform.java:123)
+	at net.minecraft.util.thread.ParallelMapTransform$BatchedTaskSplitter.lambda$createTask$0(ParallelMapTransform.java:80)
+	at java.base/java.util.concurrent.CompletableFuture$AsyncRun.run(CompletableFuture.java:1825)
+	at java.base/java.util.concurrent.CompletableFuture$AsyncRun.exec(CompletableFuture.java:1817)
+	at java.base/java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:511)
+	at java.base/java.util.concurrent.ForkJoinPool$WorkQueue.topLevelExec(ForkJoinPool.java:1450)
+	at java.base/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:2019)
+	at java.base/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:187)
+Caused by: java.lang.IllegalStateException: Failed to parse either. First: Not a string: {}; Second: Failed to parse either. First: Not a json array: {}; Second: No key type in MapLike[{}]
+	at com.mojang.serialization.DataResult$Error.getOrThrow(DataResult.java:287)
+	at com.mojang.serialization.DataResult.getOrThrow(DataResult.java:81)
+	at net.minecraft.resources.RegistryLoadTask$PendingRegistration.loadFromResource(RegistryLoadTask.java:109)
+	... 9 more
+>> Errors in element geoworld:dream_forest:
+java.lang.IllegalStateException: Failed to parse geoworld:dream_forest from pack file/geoworld-datapack
+	at net.minecraft.resources.RegistryLoadTask$PendingRegistration.loadFromResource(RegistryLoadTask.java:116)
+	at net.minecraft.resources.ResourceManagerRegistryLoadTask.lambda$load$2(ResourceManagerRegistryLoadTask.java:55)
+	at net.minecraft.util.thread.ParallelMapTransform$Container.applyOperation(ParallelMapTransform.java:123)
+	at net.minecraft.util.thread.ParallelMapTransform$BatchedTaskSplitter.lambda$createTask$0(ParallelMapTransform.java:80)
+	at java.base/java.util.concurrent.CompletableFuture$AsyncRun.run(CompletableFuture.java:1825)
+	at java.base/java.util.concurrent.CompletableFuture$AsyncRun.exec(CompletableFuture.java:1817)
+	at java.base/java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:511)
+	at java.base/java.util.concurrent.ForkJoinPool$WorkQueue.topLevelExec(ForkJoinPool.java:1450)
+	at java.base/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:2019)
+	at java.base/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:187)
+Caused by: java.lang.IllegalStateException: Failed to parse either. First: Not a string: {}; Second: Failed to parse either. First: Not a json array: {}; Second: No key type in MapLike[{}]
+	at com.mojang.serialization.DataResult$Error.getOrThrow(DataResult.java:287)
+	at com.mojang.serialization.DataResult.getOrThrow(DataResult.java:81)
+	at net.minecraft.resources.RegistryLoadTask$PendingRegistration.loadFromResource(RegistryLoadTask.java:109)
+	... 9 more
+>> Errors in element geoworld:dune_sea:
+java.lang.IllegalStateException: Failed to parse geoworld:dune_sea from pack file/geoworld-datapack
+	at net.minecraft.resources.RegistryLoadTask$PendingRegistration.loadFromResource(RegistryLoadTask.java:116)
+	at net.minecraft.resources.ResourceManagerRegistryLoadTask.lambda$load$2(ResourceManagerRegistryLoadTask.java:55)
+	at net.minecraft.util.thread.ParallelMapTransform$Container.applyOperation(ParallelMapTransform.java:123)
+	at net.minecraft.util.thread.ParallelMapTransform$BatchedTaskSplitter.lambda$createTask$0(ParallelMapTransform.java:80)
+	at java.base/java.util.concurrent.CompletableFuture$AsyncRun.run(CompletableFuture.java:1825)
+	at java.base/java.util.concurrent.CompletableFuture$AsyncRun.exec(CompletableFuture.java:1817)
+	at java.base/java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:511)
+	at java.base/java.util.concurrent.ForkJoinPool$WorkQueue.topLevelExec(ForkJoinPool.java:1450)
+	at java.base/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:2019)
+	at java.base/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:187)
+Caused by: java.lang.IllegalStateException: Failed to parse either. First: Not a string: {}; Second: Failed to parse either. First: Not a json array: {}; Second: No key type in MapLike[{}]
+	at com.mojang.serialization.DataResult$Error.getOrThrow(DataResult.java:287)
+	at com.mojang.serialization.DataResult.getOrThrow(DataResult.java:81)
+	at net.minecraft.resources.RegistryLoadTask$PendingRegistration.loadFromResource(RegistryLoadTask.java:109)
+	... 9 more
+>> Errors in element geoworld:echo_chambers:
+java.lang.IllegalStateException: Failed to parse geoworld:echo_chambers from pack file/geoworld-datapack
+	at net.minecraft.resources.RegistryLoadTask$PendingRegistration.loadFromResource(RegistryLoadTask.java:116)
+	at net.minecraft.resources.ResourceManagerRegistryLoadTask.lambda$load$2(ResourceManagerRegistryLoadTask.java:55)
+	at net.minecraft.util.thread.ParallelMapTransform$Container.applyOperation(ParallelMapTransform.java:123)
+	at net.minecraft.util.thread.ParallelMapTransform$BatchedTaskSplitter.lambda$createTask$0(ParallelMapTransform.java:80)
+	at java.base/java.util.concurrent.CompletableFuture$AsyncRun.run(CompletableFuture.java:1825)
+	at java.base/java.util.concurrent.CompletableFuture$AsyncRun.exec(CompletableFuture.java:1817)
+	at java.base/java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:511)
+	at java.base/java.util.concurrent.ForkJoinPool$WorkQueue.topLevelExec(ForkJoinPool.java:1450)
+	at java.base/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:2019)
+	at java.base/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:187)
+Caused by: java.lang.IllegalStateException: Failed to parse either. First: Not a string: {}; Second: Failed to parse either. First: Not a json array: {}; Second: No key type in MapLike[{}]
+	at com.mojang.serialization.DataResult$Error.getOrThrow(DataResult.java:287)
+	at com.mojang.serialization.DataResult.getOrThrow(DataResult.java:81)
+	at net.minecraft.resources.RegistryLoadTask$PendingRegistration.loadFromResource(RegistryLoadTask.java:109)
+	... 9 more
+>> Errors in element geoworld:eclipse_valley:
+java.lang.IllegalStateException: Failed to parse geoworld:eclipse_valley from pack file/geoworld-datapack
+	at net.minecraft.resources.RegistryLoadTask$PendingRegistration.loadFromResource(RegistryLoadTask.java:116)
+	at net.minecraft.resources.ResourceManagerRegistryLoadTask.lambda$load$2(ResourceManagerRegistryLoadTask.java:55)
+	at net.minecraft.util.thread.ParallelMapTransform$Container.applyOperation(ParallelMapTransform.java:123)
+	at net.minecraft.util.thread.ParallelMapTransform$BatchedTaskSplitter.lambda$createTask$0(ParallelMapTransform.java:80)
+	at java.base/java.util.concurrent.CompletableFuture$AsyncRun.run(CompletableFuture.java:1825)
+	at java.base/java.util.concurrent.CompletableFuture$AsyncRun.exec(CompletableFuture.java:1817)
+	at java.base/java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:511)
+	at java.base/java.util.concurrent.ForkJoinPool$WorkQueue.topLevelExec(ForkJoinPool.java:1450)
+	at java.base/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:2019)
+	at java.base/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:187)
+Caused by: java.lang.IllegalStateException: Failed to parse either. First: Not a string: {}; Second: Failed to parse either. First: Not a json array: {}; Second: No key type in MapLike[{}]
+	at com.mojang.serialization.DataResult$Error.getOrThrow(DataResult.java:287)
+	at com.mojang.serialization.DataResult.getOrThrow(DataResult.java:81)
+	at net.minecraft.resources.RegistryLoadTask$PendingRegistration.loadFromResource(RegistryLoadTask.java:109)
+	... 9 more
+>> Errors in element geoworld:ember_plains:
+java.lang.IllegalStateException: Failed to parse geoworld:ember_plains from pack file/geoworld-datapack
+	at net.minecraft.resources.RegistryLoadTask$PendingRegistration.loadFromResource(RegistryLoadTask.java:116)
+	at net.minecraft.resources.ResourceManagerRegistryLoadTask.lambda$load$2(ResourceManagerRegistryLoadTask.java:55)
+	at net.minecraft.util.thread.ParallelMapTransform$Container.applyOperation(ParallelMapTransform.java:123)
+	at net.minecraft.util.thread.ParallelMapTransform$BatchedTaskSplitter.lambda$createTask$0(ParallelMapTransform.java:80)
+	at java.base/java.util.concurrent.CompletableFuture$AsyncRun.run(CompletableFuture.java:1825)
+	at java.base/java.util.concurrent.CompletableFuture$AsyncRun.exec(CompletableFuture.java:1817)
+	at java.base/java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:511)
+	at java.base/java.util.concurrent.ForkJoinPool$WorkQueue.topLevelExec(ForkJoinPool.java:1450)
+	at java.base/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:2019)
+	at java.base/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:187)
+Caused by: java.lang.IllegalStateException: Failed to parse either. First: Not a string: {}; Second: Failed to parse either. First: Not a json array: {}; Second: No key type in MapLike[{}]
+	at com.mojang.serialization.DataResult$Error.getOrThrow(DataResult.java:287)
+	at com.mojang.serialization.DataResult.getOrThrow(DataResult.java:81)
+	at net.minecraft.resources.RegistryLoadTask$PendingRegistration.loadFromResource(RegistryLoadTask.java:109)
+	... 9 more
+>> Errors in element geoworld:end/elytra_spires:
+java.lang.IllegalStateException: Failed to parse geoworld:end/elytra_spires from pack file/geoworld-datapack
+	at net.minecraft.resources.RegistryLoadTask$PendingRegistration.loadFromResource(RegistryLoadTask.java:116)
+	at net.minecraft.resources.ResourceManagerRegistryLoadTask.lambda$load$2(ResourceManagerRegistryLoadTask.java:55)
+	at net.minecraft.util.thread.ParallelMapTransform$Container.applyOperation(ParallelMapTransform.java:123)
+	at net.minecraft.util.thread.ParallelMapTransform$BatchedTaskSplitter.lambda$createTask$0(ParallelMapTransform.java:80)
+	at java.base/java.util.concurrent.CompletableFuture$AsyncRun.run(CompletableFuture.java:1825)
+	at java.base/java.util.concurrent.CompletableFuture$AsyncRun.exec(CompletableFuture.java:1817)
+	at java.base/java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:511)
+	at java.base/java.util.concurrent.ForkJoinPool$WorkQueue.topLevelExec(ForkJoinPool.java:1450)
+	at java.base/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:2019)
+	at java.base/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:187)
+Caused by: java.lang.IllegalStateException: No key spawn_costs in MapLike[{"temperature":0.5,"downfall":0.5,"has_precipitation":false,"effects":{"fog_color":10518688,"water_color":4159204,"water_fog_color":329011,"sky_color":0},"spawners":{"monster":[],"creature":[],"ambient":[],"water_creature":[],"water_ambient":[]},"features":[[],[],[],[],[],[],[],[],[],[],[]]}]; No key carvers in MapLike[{"temperature":0.5,"downfall":0.5,"has_precipitation":false,"effects":{"fog_color":10518688,"water_color":4159204,"water_fog_color":329011,"sky_color":0},"spawners":{"monster":[],"creature":[],"ambient":[],"water_creature":[],"water_ambient":[]},"features":[[],[],[],[],[],[],[],[],[],[],[]]}]
+	at com.mojang.serialization.DataResult$Error.getOrThrow(DataResult.java:287)
+	at com.mojang.serialization.DataResult.getOrThrow(DataResult.java:81)
+	at net.minecraft.resources.RegistryLoadTask$PendingRegistration.loadFromResource(RegistryLoadTask.java:109)
+	... 9 more
+>> Errors in element geoworld:end/end_coral_reef:
+java.lang.IllegalStateException: Failed to parse geoworld:end/end_coral_reef from pack file/geoworld-datapack
+	at net.minecraft.resources.RegistryLoadTask$PendingRegistration.loadFromResource(RegistryLoadTask.java:116)
+	at net.minecraft.resources.ResourceManagerRegistryLoadTask.lambda$load$2(ResourceManagerRegistryLoadTask.java:55)
+	at net.minecraft.util.thread.ParallelMapTransform$Container.applyOperation(ParallelMapTransform.java:123)
+	at net.minecraft.util.thread.ParallelMapTransform$BatchedTaskSplitter.lambda$createTask$0(ParallelMapTransform.java:80)
+	at java.base/java.util.concurrent.CompletableFuture$AsyncRun.run(CompletableFuture.java:1825)
+	at java.base/java.util.concurrent.CompletableFuture$AsyncRun.exec(CompletableFuture.java:1817)
+	at java.base/java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:511)
+	at java.base/java.util.concurrent.ForkJoinPool$WorkQueue.topLevelExec(ForkJoinPool.java:1450)
+	at java.base/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:2019)
+	at java.base/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:187)
+Caused by: java.lang.IllegalStateException: No key spawn_costs in MapLike[{"temperature":0.5,"downfall":0.5,"has_precipitation":false,"effects":{"fog_color":10518688,"water_color":4159204,"water_fog_color":329011,"sky_color":0},"spawners":{"monster":[],"creature":[],"ambient":[],"water_creature":[],"water_ambient":[]},"features":[[],[],[],[],[],[],[],[],[],[],[]]}]; No key carvers in MapLike[{"temperature":0.5,"downfall":0.5,"has_precipitation":false,"effects":{"fog_color":10518688,"water_color":4159204,"water_fog_color":329011,"sky_color":0},"spawners":{"monster":[],"creature":[],"ambient":[],"water_creature":[],"water_ambient":[]},"features":[[],[],[],[],[],[],[],[],[],[],[]]}]
+	at com.mojang.serialization.DataResult$Error.getOrThrow(DataResult.java:287)
+	at com.mojang.serialization.DataResult.getOrThrow(DataResult.java:81)
+	at net.minecraft.resources.RegistryLoadTask$PendingRegistration.loadFromResource(RegistryLoadTask.java:109)
+	... 9 more
+>> Errors in element geoworld:end/void_sanctum:
+java.lang.IllegalStateException: Failed to parse geoworld:end/void_sanctum from pack file/geoworld-datapack
+	at net.minecraft.resources.RegistryLoadTask$PendingRegistration.loadFromResource(RegistryLoadTask.java:116)
+	at net.minecraft.resources.ResourceManagerRegistryLoadTask.lambda$load$2(ResourceManagerRegistryLoadTask.java:55)
+	at net.minecraft.util.thread.ParallelMapTransform$Container.applyOperation(ParallelMapTransform.java:123)
+	at net.minecraft.util.thread.ParallelMapTransform$BatchedTaskSplitter.lambda$createTask$0(ParallelMapTransform.java:80)
+	at java.base/java.util.concurrent.CompletableFuture$AsyncRun.run(CompletableFuture.java:1825)
+	at java.base/java.util.concurrent.CompletableFuture$AsyncRun.exec(CompletableFuture.java:1817)
+	at java.base/java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:511)
+	at java.base/java.util.concurrent.ForkJoinPool$WorkQueue.topLevelExec(ForkJoinPool.java:1450)
+	at java.base/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:2019)
+	at java.base/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:187)
+Caused by: java.lang.IllegalStateException: No key spawn_costs in MapLike[{"temperature":0.5,"downfall":0.5,"has_precipitation":false,"effects":{"fog_color":10518688,"water_color":4159204,"water_fog_color":329011,"sky_color":0},"spawners":{"monster":[],"creature":[],"ambient":[],"water_creature":[],"water_ambient":[]},"features":[[],[],[],[],[],[],[],[],[],[],[]]}]; No key carvers in MapLike[{"temperature":0.5,"downfall":0.5,"has_precipitation":false,"effects":{"fog_color":10518688,"water_color":4159204,"water_fog_color":329011,"sky_color":0},"spawners":{"monster":[],"creature":[],"ambient":[],"water_creature":[],"water_ambient":[]},"features":[[],[],[],[],[],[],[],[],[],[],[]]}]
+	at com.mojang.serialization.DataResult$Error.getOrThrow(DataResult.java:287)
+	at com.mojang.serialization.DataResult.getOrThrow(DataResult.java:81)
+	at net.minecraft.resources.RegistryLoadTask$PendingRegistration.loadFromResource(RegistryLoadTask.java:109)
+	... 9 more
+>> Errors in element geoworld:floating_isles:
+java.lang.IllegalStateException: Failed to parse geoworld:floating_isles from pack file/geoworld-datapack
+	at net.minecraft.resources.RegistryLoadTask$PendingRegistration.loadFromResource(RegistryLoadTask.java:116)
+	at net.minecraft.resources.ResourceManagerRegistryLoadTask.lambda$load$2(ResourceManagerRegistryLoadTask.java:55)
+	at net.minecraft.util.thread.ParallelMapTransform$Container.applyOperation(ParallelMapTransform.java:123)
+	at net.minecraft.util.thread.ParallelMapTransform$BatchedTaskSplitter.lambda$createTask$0(ParallelMapTransform.java:80)
+	at java.base/java.util.concurrent.CompletableFuture$AsyncRun.run(CompletableFuture.java:1825)
+	at java.base/java.util.concurrent.CompletableFuture$AsyncRun.exec(CompletableFuture.java:1817)
+	at java.base/java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:511)
+	at java.base/java.util.concurrent.ForkJoinPool$WorkQueue.topLevelExec(ForkJoinPool.java:1450)
+	at java.base/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:2019)
+	at java.base/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:187)
+Caused by: java.lang.IllegalStateException: Failed to parse either. First: Not a string: {}; Second: Failed to parse either. First: Not a json array: {}; Second: No key type in MapLike[{}]
+	at com.mojang.serialization.DataResult$Error.getOrThrow(DataResult.java:287)
+	at com.mojang.serialization.DataResult.getOrThrow(DataResult.java:81)
+	at net.minecraft.resources.RegistryLoadTask$PendingRegistration.loadFromResource(RegistryLoadTask.java:109)
+	... 9 more
+>> Errors in element geoworld:fungal_depths:
+java.lang.IllegalStateException: Failed to parse geoworld:fungal_depths from pack file/geoworld-datapack
+	at net.minecraft.resources.RegistryLoadTask$PendingRegistration.loadFromResource(RegistryLoadTask.java:116)
+	at net.minecraft.resources.ResourceManagerRegistryLoadTask.lambda$load$2(ResourceManagerRegistryLoadTask.java:55)
+	at net.minecraft.util.thread.ParallelMapTransform$Container.applyOperation(ParallelMapTransform.java:123)
+	at net.minecraft.util.thread.ParallelMapTransform$BatchedTaskSplitter.lambda$createTask$0(ParallelMapTransform.java:80)
+	at java.base/java.util.concurrent.CompletableFuture$AsyncRun.run(CompletableFuture.java:1825)
+	at java.base/java.util.concurrent.CompletableFuture$AsyncRun.exec(CompletableFuture.java:1817)
+	at java.base/java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:511)
+	at java.base/java.util.concurrent.ForkJoinPool$WorkQueue.topLevelExec(ForkJoinPool.java:1450)
+	at java.base/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:2019)
+	at java.base/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:187)
+Caused by: java.lang.IllegalStateException: Failed to parse either. First: Not a string: {}; Second: Failed to parse either. First: Not a json array: {}; Second: No key type in MapLike[{}]
+	at com.mojang.serialization.DataResult$Error.getOrThrow(DataResult.java:287)
+	at com.mojang.serialization.DataResult.getOrThrow(DataResult.java:81)
+	at net.minecraft.resources.RegistryLoadTask$PendingRegistration.loadFromResource(RegistryLoadTask.java:109)
+	... 9 more
+>> Errors in element geoworld:fungal_expanse:
+java.lang.IllegalStateException: Failed to parse geoworld:fungal_expanse from pack file/geoworld-datapack
+	at net.minecraft.resources.RegistryLoadTask$PendingRegistration.loadFromResource(RegistryLoadTask.java:116)
+	at net.minecraft.resources.ResourceManagerRegistryLoadTask.lambda$load$2(ResourceManagerRegistryLoadTask.java:55)
+	at net.minecraft.util.thread.ParallelMapTransform$Container.applyOperation(ParallelMapTransform.java:123)
+	at net.minecraft.util.thread.ParallelMapTransform$BatchedTaskSplitter.lambda$createTask$0(ParallelMapTransform.java:80)
+	at java.base/java.util.concurrent.CompletableFuture$AsyncRun.run(CompletableFuture.java:1825)
+	at java.base/java.util.concurrent.CompletableFuture$AsyncRun.exec(CompletableFuture.java:1817)
+	at java.base/java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:511)
+	at java.base/java.util.concurrent.ForkJoinPool$WorkQueue.topLevelExec(ForkJoinPool.java:1450)
+	at java.base/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:2019)
+	at java.base/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:187)
+Caused by: java.lang.IllegalStateException: Failed to parse either. First: Not a string: {}; Second: Failed to parse either. First: Not a json array: {}; Second: No key type in MapLike[{}]
+	at com.mojang.serialization.DataResult$Error.getOrThrow(DataResult.java:287)
+	at com.mojang.serialization.DataResult.getOrThrow(DataResult.java:81)
+	at net.minecraft.resources.RegistryLoadTask$PendingRegistration.loadFromResource(RegistryLoadTask.java:109)
+	... 9 more
+>> Errors in element geoworld:glacial_abyss:
+java.lang.IllegalStateException: Failed to parse geoworld:glacial_abyss from pack file/geoworld-datapack
+	at net.minecraft.resources.RegistryLoadTask$PendingRegistration.loadFromResource(RegistryLoadTask.java:116)
+	at net.minecraft.resources.ResourceManagerRegistryLoadTask.lambda$load$2(ResourceManagerRegistryLoadTask.java:55)
+	at net.minecraft.util.thread.ParallelMapTransform$Container.applyOperation(ParallelMapTransform.java:123)
+	at net.minecraft.util.thread.ParallelMapTransform$BatchedTaskSplitter.lambda$createTask$0(ParallelMapTransform.java:80)
+	at java.base/java.util.concurrent.CompletableFuture$AsyncRun.run(CompletableFuture.java:1825)
+	at java.base/java.util.concurrent.CompletableFuture$AsyncRun.exec(CompletableFuture.java:1817)
+	at java.base/java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:511)
+	at java.base/java.util.concurrent.ForkJoinPool$WorkQueue.topLevelExec(ForkJoinPool.java:1450)
+	at java.base/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:2019)
+	at java.base/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:187)
+Caused by: java.lang.IllegalStateException: Failed to parse either. First: Not a string: {}; Second: Failed to parse either. First: Not a json array: {}; Second: No key type in MapLike[{}]
+	at com.mojang.serialization.DataResult$Error.getOrThrow(DataResult.java:287)
+	at com.mojang.serialization.DataResult.getOrThrow(DataResult.java:81)
+	at net.minecraft.resources.RegistryLoadTask$PendingRegistration.loadFromResource(RegistryLoadTask.java:109)
+	... 9 more
+>> Errors in element geoworld:golden_woodland:
+java.lang.IllegalStateException: Failed to parse geoworld:golden_woodland from pack file/geoworld-datapack
+	at net.minecraft.resources.RegistryLoadTask$PendingRegistration.loadFromResource(RegistryLoadTask.java:116)
+	at net.minecraft.resources.ResourceManagerRegistryLoadTask.lambda$load$2(ResourceManagerRegistryLoadTask.java:55)
+	at net.minecraft.util.thread.ParallelMapTransform$Container.applyOperation(ParallelMapTransform.java:123)
+	at net.minecraft.util.thread.ParallelMapTransform$BatchedTaskSplitter.lambda$createTask$0(ParallelMapTransform.java:80)
+	at java.base/java.util.concurrent.CompletableFuture$AsyncRun.run(CompletableFuture.java:1825)
+	at java.base/java.util.concurrent.CompletableFuture$AsyncRun.exec(CompletableFuture.java:1817)
+	at java.base/java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:511)
+	at java.base/java.util.concurrent.ForkJoinPool$WorkQueue.topLevelExec(ForkJoinPool.java:1450)
+	at java.base/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:2019)
+	at java.base/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:187)
+Caused by: java.lang.IllegalStateException: Failed to parse either. First: Not a string: {}; Second: Failed to parse either. First: Not a json array: {}; Second: No key type in MapLike[{}]
+	at com.mojang.serialization.DataResult$Error.getOrThrow(DataResult.java:287)
+	at com.mojang.serialization.DataResult.getOrThrow(DataResult.java:81)
+	at net.minecraft.resources.RegistryLoadTask$PendingRegistration.loadFromResource(RegistryLoadTask.java:109)
+	... 9 more
+>> Errors in element geoworld:haunted_grove:
+java.lang.IllegalStateException: Failed to parse geoworld:haunted_grove from pack file/geoworld-datapack
+	at net.minecraft.resources.RegistryLoadTask$PendingRegistration.loadFromResource(RegistryLoadTask.java:116)
+	at net.minecraft.resources.ResourceManagerRegistryLoadTask.lambda$load$2(ResourceManagerRegistryLoadTask.java:55)
+	at net.minecraft.util.thread.ParallelMapTransform$Container.applyOperation(ParallelMapTransform.java:123)
+	at net.minecraft.util.thread.ParallelMapTransform$BatchedTaskSplitter.lambda$createTask$0(ParallelMapTransform.java:80)
+	at java.base/java.util.concurrent.CompletableFuture$AsyncRun.run(CompletableFuture.java:1825)
+	at java.base/java.util.concurrent.CompletableFuture$AsyncRun.exec(CompletableFuture.java:1817)
+	at java.base/java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:511)
+	at java.base/java.util.concurrent.ForkJoinPool$WorkQueue.topLevelExec(ForkJoinPool.java:1450)
+	at java.base/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:2019)
+	at java.base/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:187)
+Caused by: java.lang.IllegalStateException: Failed to parse either. First: Not a string: {}; Second: Failed to parse either. First: Not a json array: {}; Second: No key type in MapLike[{}]
+	at com.mojang.serialization.DataResult$Error.getOrThrow(DataResult.java:287)
+	at com.mojang.serialization.DataResult.getOrThrow(DataResult.java:81)
+	at net.minecraft.resources.RegistryLoadTask$PendingRegistration.loadFromResource(RegistryLoadTask.java:109)
+	... 9 more
+>> Errors in element geoworld:lava_falls:
+java.lang.IllegalStateException: Failed to parse geoworld:lava_falls from pack file/geoworld-datapack
+	at net.minecraft.resources.RegistryLoadTask$PendingRegistration.loadFromResource(RegistryLoadTask.java:116)
+	at net.minecraft.resources.ResourceManagerRegistryLoadTask.lambda$load$2(ResourceManagerRegistryLoadTask.java:55)
+	at net.minecraft.util.thread.ParallelMapTransform$Container.applyOperation(ParallelMapTransform.java:123)
+	at net.minecraft.util.thread.ParallelMapTransform$BatchedTaskSplitter.lambda$createTask$0(ParallelMapTransform.java:80)
+	at java.base/java.util.concurrent.CompletableFuture$AsyncRun.run(CompletableFuture.java:1825)
+	at java.base/java.util.concurrent.CompletableFuture$AsyncRun.exec(CompletableFuture.java:1817)
+	at java.base/java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:511)
+	at java.base/java.util.concurrent.ForkJoinPool$WorkQueue.topLevelExec(ForkJoinPool.java:1450)
+	at java.base/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:2019)
+	at java.base/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:187)
+Caused by: java.lang.IllegalStateException: Failed to parse either. First: Not a string: {}; Second: Failed to parse either. First: Not a json array: {}; Second: No key type in MapLike[{}]
+	at com.mojang.serialization.DataResult$Error.getOrThrow(DataResult.java:287)
+	at com.mojang.serialization.DataResult.getOrThrow(DataResult.java:81)
+	at net.minecraft.resources.RegistryLoadTask$PendingRegistration.loadFromResource(RegistryLoadTask.java:109)
+	... 9 more
+>> Errors in element geoworld:magma_depths:
+java.lang.IllegalStateException: Failed to parse geoworld:magma_depths from pack file/geoworld-datapack
+	at net.minecraft.resources.RegistryLoadTask$PendingRegistration.loadFromResource(RegistryLoadTask.java:116)
+	at net.minecraft.resources.ResourceManagerRegistryLoadTask.lambda$load$2(ResourceManagerRegistryLoadTask.java:55)
+	at net.minecraft.util.thread.ParallelMapTransform$Container.applyOperation(ParallelMapTransform.java:123)
+	at net.minecraft.util.thread.ParallelMapTransform$BatchedTaskSplitter.lambda$createTask$0(ParallelMapTransform.java:80)
+	at java.base/java.util.concurrent.CompletableFuture$AsyncRun.run(CompletableFuture.java:1825)
+	at java.base/java.util.concurrent.CompletableFuture$AsyncRun.exec(CompletableFuture.java:1817)
+	at java.base/java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:511)
+	at java.base/java.util.concurrent.ForkJoinPool$WorkQueue.topLevelExec(ForkJoinPool.java:1450)
+	at java.base/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:2019)
+	at java.base/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:187)
+Caused by: java.lang.IllegalStateException: Failed to parse either. First: Not a string: {}; Second: Failed to parse either. First: Not a json array: {}; Second: No key type in MapLike[{}]
+	at com.mojang.serialization.DataResult$Error.getOrThrow(DataResult.java:287)
+	at com.mojang.serialization.DataResult.getOrThrow(DataResult.java:81)
+	at net.minecraft.resources.RegistryLoadTask$PendingRegistration.loadFromResource(RegistryLoadTask.java:109)
+	... 9 more
+>> Errors in element geoworld:mangrove_labyrinth:
+java.lang.IllegalStateException: Failed to parse geoworld:mangrove_labyrinth from pack file/geoworld-datapack
+	at net.minecraft.resources.RegistryLoadTask$PendingRegistration.loadFromResource(RegistryLoadTask.java:116)
+	at net.minecraft.resources.ResourceManagerRegistryLoadTask.lambda$load$2(ResourceManagerRegistryLoadTask.java:55)
+	at net.minecraft.util.thread.ParallelMapTransform$Container.applyOperation(ParallelMapTransform.java:123)
+	at net.minecraft.util.thread.ParallelMapTransform$BatchedTaskSplitter.lambda$createTask$0(ParallelMapTransform.java:80)
+	at java.base/java.util.concurrent.CompletableFuture$AsyncRun.run(CompletableFuture.java:1825)
+	at java.base/java.util.concurrent.CompletableFuture$AsyncRun.exec(CompletableFuture.java:1817)
+	at java.base/java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:511)
+	at java.base/java.util.concurrent.ForkJoinPool$WorkQueue.topLevelExec(ForkJoinPool.java:1450)
+	at java.base/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:2019)
+	at java.base/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:187)
+Caused by: java.lang.IllegalStateException: Failed to parse either. First: Not a string: {}; Second: Failed to parse either. First: Not a json array: {}; Second: No key type in MapLike[{}]
+	at com.mojang.serialization.DataResult$Error.getOrThrow(DataResult.java:287)
+	at com.mojang.serialization.DataResult.getOrThrow(DataResult.java:81)
+	at net.minecraft.resources.RegistryLoadTask$PendingRegistration.loadFromResource(RegistryLoadTask.java:109)
+	... 9 more
+>> Errors in element geoworld:mirage_oasis:
+java.lang.IllegalStateException: Failed to parse geoworld:mirage_oasis from pack file/geoworld-datapack
+	at net.minecraft.resources.RegistryLoadTask$PendingRegistration.loadFromResource(RegistryLoadTask.java:116)
+	at net.minecraft.resources.ResourceManagerRegistryLoadTask.lambda$load$2(ResourceManagerRegistryLoadTask.java:55)
+	at net.minecraft.util.thread.ParallelMapTransform$Container.applyOperation(ParallelMapTransform.java:123)
+	at net.minecraft.util.thread.ParallelMapTransform$BatchedTaskSplitter.lambda$createTask$0(ParallelMapTransform.java:80)
+	at java.base/java.util.concurrent.CompletableFuture$AsyncRun.run(CompletableFuture.java:1825)
+	at java.base/java.util.concurrent.CompletableFuture$AsyncRun.exec(CompletableFuture.java:1817)
+	at java.base/java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:511)
+	at java.base/java.util.concurrent.ForkJoinPool$WorkQueue.topLevelExec(ForkJoinPool.java:1450)
+	at java.base/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:2019)
+	at java.base/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:187)
+Caused by: java.lang.IllegalStateException: Failed to parse either. First: Not a string: {}; Second: Failed to parse either. First: Not a json array: {}; Second: No key type in MapLike[{}]
+	at com.mojang.serialization.DataResult$Error.getOrThrow(DataResult.java:287)
+	at com.mojang.serialization.DataResult.getOrThrow(DataResult.java:81)
+	at net.minecraft.resources.RegistryLoadTask$PendingRegistration.loadFromResource(RegistryLoadTask.java:109)
+	... 9 more
+>> Errors in element geoworld:moonstone_basin:
+java.lang.IllegalStateException: Failed to parse geoworld:moonstone_basin from pack file/geoworld-datapack
+	at net.minecraft.resources.RegistryLoadTask$PendingRegistration.loadFromResource(RegistryLoadTask.java:116)
+	at net.minecraft.resources.ResourceManagerRegistryLoadTask.lambda$load$2(ResourceManagerRegistryLoadTask.java:55)
+	at net.minecraft.util.thread.ParallelMapTransform$Container.applyOperation(ParallelMapTransform.java:123)
+	at net.minecraft.util.thread.ParallelMapTransform$BatchedTaskSplitter.lambda$createTask$0(ParallelMapTransform.java:80)
+	at java.base/java.util.concurrent.CompletableFuture$AsyncRun.run(CompletableFuture.java:1825)
+	at java.base/java.util.concurrent.CompletableFuture$AsyncRun.exec(CompletableFuture.java:1817)
+	at java.base/java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:511)
+	at java.base/java.util.concurrent.ForkJoinPool$WorkQueue.topLevelExec(ForkJoinPool.java:1450)
+	at java.base/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:2019)
+	at java.base/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:187)
+Caused by: java.lang.IllegalStateException: Failed to parse either. First: Not a string: {}; Second: Failed to parse either. First: Not a json array: {}; Second: No key type in MapLike[{}]
+	at com.mojang.serialization.DataResult$Error.getOrThrow(DataResult.java:287)
+	at com.mojang.serialization.DataResult.getOrThrow(DataResult.java:81)
+	at net.minecraft.resources.RegistryLoadTask$PendingRegistration.loadFromResource(RegistryLoadTask.java:109)
+	... 9 more
+>> Errors in element geoworld:nether/magma_delta_rim:
+java.lang.IllegalStateException: Failed to parse geoworld:nether/magma_delta_rim from pack file/geoworld-datapack
+	at net.minecraft.resources.RegistryLoadTask$PendingRegistration.loadFromResource(RegistryLoadTask.java:116)
+	at net.minecraft.resources.ResourceManagerRegistryLoadTask.lambda$load$2(ResourceManagerRegistryLoadTask.java:55)
+	at net.minecraft.util.thread.ParallelMapTransform$Container.applyOperation(ParallelMapTransform.java:123)
+	at net.minecraft.util.thread.ParallelMapTransform$BatchedTaskSplitter.lambda$createTask$0(ParallelMapTransform.java:80)
+	at java.base/java.util.concurrent.CompletableFuture$AsyncRun.run(CompletableFuture.java:1825)
+	at java.base/java.util.concurrent.CompletableFuture$AsyncRun.exec(CompletableFuture.java:1817)
+	at java.base/java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:511)
+	at java.base/java.util.concurrent.ForkJoinPool$WorkQueue.topLevelExec(ForkJoinPool.java:1450)
+	at java.base/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:2019)
+	at java.base/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:187)
+Caused by: java.lang.IllegalStateException: No key spawn_costs in MapLike[{"temperature":2.0,"downfall":0.0,"has_precipitation":false,"effects":{"fog_color":3343107,"water_color":4159204,"water_fog_color":329011,"sky_color":7254527},"spawners":{"monster":[],"creature":[],"ambient":[],"water_creature":[],"water_ambient":[]},"features":[[],[],[],[],[],[],[],[],[],[],[]]}]; No key carvers in MapLike[{"temperature":2.0,"downfall":0.0,"has_precipitation":false,"effects":{"fog_color":3343107,"water_color":4159204,"water_fog_color":329011,"sky_color":7254527},"spawners":{"monster":[],"creature":[],"ambient":[],"water_creature":[],"water_ambient":[]},"features":[[],[],[],[],[],[],[],[],[],[],[]]}]
+	at com.mojang.serialization.DataResult$Error.getOrThrow(DataResult.java:287)
+	at com.mojang.serialization.DataResult.getOrThrow(DataResult.java:81)
+	at net.minecraft.resources.RegistryLoadTask$PendingRegistration.loadFromResource(RegistryLoadTask.java:109)
+	... 9 more
+>> Errors in element geoworld:nether/nether_garden:
+java.lang.IllegalStateException: Failed to parse geoworld:nether/nether_garden from pack file/geoworld-datapack
+	at net.minecraft.resources.RegistryLoadTask$PendingRegistration.loadFromResource(RegistryLoadTask.java:116)
+	at net.minecraft.resources.ResourceManagerRegistryLoadTask.lambda$load$2(ResourceManagerRegistryLoadTask.java:55)
+	at net.minecraft.util.thread.ParallelMapTransform$Container.applyOperation(ParallelMapTransform.java:123)
+	at net.minecraft.util.thread.ParallelMapTransform$BatchedTaskSplitter.lambda$createTask$0(ParallelMapTransform.java:80)
+	at java.base/java.util.concurrent.CompletableFuture$AsyncRun.run(CompletableFuture.java:1825)
+	at java.base/java.util.concurrent.CompletableFuture$AsyncRun.exec(CompletableFuture.java:1817)
+	at java.base/java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:511)
+	at java.base/java.util.concurrent.ForkJoinPool$WorkQueue.topLevelExec(ForkJoinPool.java:1450)
+	at java.base/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:2019)
+	at java.base/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:187)
+Caused by: java.lang.IllegalStateException: No key spawn_costs in MapLike[{"temperature":2.0,"downfall":0.0,"has_precipitation":false,"effects":{"fog_color":3343107,"water_color":4159204,"water_fog_color":329011,"sky_color":7254527},"spawners":{"monster":[],"creature":[],"ambient":[],"water_creature":[],"water_ambient":[]},"features":[[],[],[],[],[],[],[],[],[],[],[]]}]; No key carvers in MapLike[{"temperature":2.0,"downfall":0.0,"has_precipitation":false,"effects":{"fog_color":3343107,"water_color":4159204,"water_fog_color":329011,"sky_color":7254527},"spawners":{"monster":[],"creature":[],"ambient":[],"water_creature":[],"water_ambient":[]},"features":[[],[],[],[],[],[],[],[],[],[],[]]}]
+	at com.mojang.serialization.DataResult$Error.getOrThrow(DataResult.java:287)
+	at com.mojang.serialization.DataResult.getOrThrow(DataResult.java:81)
+	at net.minecraft.resources.RegistryLoadTask$PendingRegistration.loadFromResource(RegistryLoadTask.java:109)
+	... 9 more
+>> Errors in element geoworld:nether/soul_archive:
+java.lang.IllegalStateException: Failed to parse geoworld:nether/soul_archive from pack file/geoworld-datapack
+	at net.minecraft.resources.RegistryLoadTask$PendingRegistration.loadFromResource(RegistryLoadTask.java:116)
+	at net.minecraft.resources.ResourceManagerRegistryLoadTask.lambda$load$2(ResourceManagerRegistryLoadTask.java:55)
+	at net.minecraft.util.thread.ParallelMapTransform$Container.applyOperation(ParallelMapTransform.java:123)
+	at net.minecraft.util.thread.ParallelMapTransform$BatchedTaskSplitter.lambda$createTask$0(ParallelMapTransform.java:80)
+	at java.base/java.util.concurrent.CompletableFuture$AsyncRun.run(CompletableFuture.java:1825)
+	at java.base/java.util.concurrent.CompletableFuture$AsyncRun.exec(CompletableFuture.java:1817)
+	at java.base/java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:511)
+	at java.base/java.util.concurrent.ForkJoinPool$WorkQueue.topLevelExec(ForkJoinPool.java:1450)
+	at java.base/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:2019)
+	at java.base/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:187)
+Caused by: java.lang.IllegalStateException: No key spawn_costs in MapLike[{"temperature":2.0,"downfall":0.0,"has_precipitation":false,"effects":{"fog_color":3343107,"water_color":4159204,"water_fog_color":329011,"sky_color":7254527},"spawners":{"monster":[],"creature":[],"ambient":[],"water_creature":[],"water_ambient":[]},"features":[[],[],[],[],[],[],[],[],[],[],[]]}]; No key carvers in MapLike[{"temperature":2.0,"downfall":0.0,"has_precipitation":false,"effects":{"fog_color":3343107,"water_color":4159204,"water_fog_color":329011,"sky_color":7254527},"spawners":{"monster":[],"creature":[],"ambient":[],"water_creature":[],"water_ambient":[]},"features":[[],[],[],[],[],[],[],[],[],[],[]]}]
+	at com.mojang.serialization.DataResult$Error.getOrThrow(DataResult.java:287)
+	at com.mojang.serialization.DataResult.getOrThrow(DataResult.java:81)
+	at net.minecraft.resources.RegistryLoadTask$PendingRegistration.loadFromResource(RegistryLoadTask.java:109)
+	... 9 more
+>> Errors in element geoworld:obsidian_spires:
+java.lang.IllegalStateException: Failed to parse geoworld:obsidian_spires from pack file/geoworld-datapack
+	at net.minecraft.resources.RegistryLoadTask$PendingRegistration.loadFromResource(RegistryLoadTask.java:116)
+	at net.minecraft.resources.ResourceManagerRegistryLoadTask.lambda$load$2(ResourceManagerRegistryLoadTask.java:55)
+	at net.minecraft.util.thread.ParallelMapTransform$Container.applyOperation(ParallelMapTransform.java:123)
+	at net.minecraft.util.thread.ParallelMapTransform$BatchedTaskSplitter.lambda$createTask$0(ParallelMapTransform.java:80)
+	at java.base/java.util.concurrent.CompletableFuture$AsyncRun.run(CompletableFuture.java:1825)
+	at java.base/java.util.concurrent.CompletableFuture$AsyncRun.exec(CompletableFuture.java:1817)
+	at java.base/java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:511)
+	at java.base/java.util.concurrent.ForkJoinPool$WorkQueue.topLevelExec(ForkJoinPool.java:1450)
+	at java.base/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:2019)
+	at java.base/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:187)
+Caused by: java.lang.IllegalStateException: Failed to parse either. First: Not a string: {}; Second: Failed to parse either. First: Not a json array: {}; Second: No key type in MapLike[{}]
+	at com.mojang.serialization.DataResult$Error.getOrThrow(DataResult.java:287)
+	at com.mojang.serialization.DataResult.getOrThrow(DataResult.java:81)
+	at net.minecraft.resources.RegistryLoadTask$PendingRegistration.loadFromResource(RegistryLoadTask.java:109)
+	... 9 more
+>> Errors in element geoworld:pearl_lagoon:
+java.lang.IllegalStateException: Failed to parse geoworld:pearl_lagoon from pack file/geoworld-datapack
+	at net.minecraft.resources.RegistryLoadTask$PendingRegistration.loadFromResource(RegistryLoadTask.java:116)
+	at net.minecraft.resources.ResourceManagerRegistryLoadTask.lambda$load$2(ResourceManagerRegistryLoadTask.java:55)
+	at net.minecraft.util.thread.ParallelMapTransform$Container.applyOperation(ParallelMapTransform.java:123)
+	at net.minecraft.util.thread.ParallelMapTransform$BatchedTaskSplitter.lambda$createTask$0(ParallelMapTransform.java:80)
+	at java.base/java.util.concurrent.CompletableFuture$AsyncRun.run(CompletableFuture.java:1825)
+	at java.base/java.util.concurrent.CompletableFuture$AsyncRun.exec(CompletableFuture.java:1817)
+	at java.base/java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:511)
+	at java.base/java.util.concurrent.ForkJoinPool$WorkQueue.topLevelExec(ForkJoinPool.java:1450)
+	at java.base/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:2019)
+	at java.base/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:187)
+Caused by: java.lang.IllegalStateException: Failed to parse either. First: Not a string: {}; Second: Failed to parse either. First: Not a json array: {}; Second: No key type in MapLike[{}]
+	at com.mojang.serialization.DataResult$Error.getOrThrow(DataResult.java:287)
+	at com.mojang.serialization.DataResult.getOrThrow(DataResult.java:81)
+	at net.minecraft.resources.RegistryLoadTask$PendingRegistration.loadFromResource(RegistryLoadTask.java:109)
+	... 9 more
+>> Errors in element geoworld:peat_moors:
+java.lang.IllegalStateException: Failed to parse geoworld:peat_moors from pack file/geoworld-datapack
+	at net.minecraft.resources.RegistryLoadTask$PendingRegistration.loadFromResource(RegistryLoadTask.java:116)
+	at net.minecraft.resources.ResourceManagerRegistryLoadTask.lambda$load$2(ResourceManagerRegistryLoadTask.java:55)
+	at net.minecraft.util.thread.ParallelMapTransform$Container.applyOperation(ParallelMapTransform.java:123)
+	at net.minecraft.util.thread.ParallelMapTransform$BatchedTaskSplitter.lambda$createTask$0(ParallelMapTransform.java:80)
+	at java.base/java.util.concurrent.CompletableFuture$AsyncRun.run(CompletableFuture.java:1825)
+	at java.base/java.util.concurrent.CompletableFuture$AsyncRun.exec(CompletableFuture.java:1817)
+	at java.base/java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:511)
+	at java.base/java.util.concurrent.ForkJoinPool$WorkQueue.topLevelExec(ForkJoinPool.java:1450)
+	at java.base/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:2019)
+	at java.base/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:187)
+Caused by: java.lang.IllegalStateException: Failed to parse either. First: Not a string: {}; Second: Failed to parse either. First: Not a json array: {}; Second: No key type in MapLike[{}]
+	at com.mojang.serialization.DataResult$Error.getOrThrow(DataResult.java:287)
+	at com.mojang.serialization.DataResult.getOrThrow(DataResult.java:81)
+	at net.minecraft.resources.RegistryLoadTask$PendingRegistration.loadFromResource(RegistryLoadTask.java:109)
+	... 9 more
+>> Errors in element geoworld:petrified_wasteland:
+java.lang.IllegalStateException: Failed to parse geoworld:petrified_wasteland from pack file/geoworld-datapack
+	at net.minecraft.resources.RegistryLoadTask$PendingRegistration.loadFromResource(RegistryLoadTask.java:116)
+	at net.minecraft.resources.ResourceManagerRegistryLoadTask.lambda$load$2(ResourceManagerRegistryLoadTask.java:55)
+	at net.minecraft.util.thread.ParallelMapTransform$Container.applyOperation(ParallelMapTransform.java:123)
+	at net.minecraft.util.thread.ParallelMapTransform$BatchedTaskSplitter.lambda$createTask$0(ParallelMapTransform.java:80)
+	at java.base/java.util.concurrent.CompletableFuture$AsyncRun.run(CompletableFuture.java:1825)
+	at java.base/java.util.concurrent.CompletableFuture$AsyncRun.exec(CompletableFuture.java:1817)
+	at java.base/java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:511)
+	at java.base/java.util.concurrent.ForkJoinPool$WorkQueue.topLevelExec(ForkJoinPool.java:1450)
+	at java.base/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:2019)
+	at java.base/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:187)
+Caused by: java.lang.IllegalStateException: Failed to parse either. First: Not a string: {}; Second: Failed to parse either. First: Not a json array: {}; Second: No key type in MapLike[{}]
+	at com.mojang.serialization.DataResult$Error.getOrThrow(DataResult.java:287)
+	at com.mojang.serialization.DataResult.getOrThrow(DataResult.java:81)
+	at net.minecraft.resources.RegistryLoadTask$PendingRegistration.loadFromResource(RegistryLoadTask.java:109)
+	... 9 more
+>> Errors in element geoworld:red_canyon:
+java.lang.IllegalStateException: Failed to parse geoworld:red_canyon from pack file/geoworld-datapack
+	at net.minecraft.resources.RegistryLoadTask$PendingRegistration.loadFromResource(RegistryLoadTask.java:116)
+	at net.minecraft.resources.ResourceManagerRegistryLoadTask.lambda$load$2(ResourceManagerRegistryLoadTask.java:55)
+	at net.minecraft.util.thread.ParallelMapTransform$Container.applyOperation(ParallelMapTransform.java:123)
+	at net.minecraft.util.thread.ParallelMapTransform$BatchedTaskSplitter.lambda$createTask$0(ParallelMapTransform.java:80)
+	at java.base/java.util.concurrent.CompletableFuture$AsyncRun.run(CompletableFuture.java:1825)
+	at java.base/java.util.concurrent.CompletableFuture$AsyncRun.exec(CompletableFuture.java:1817)
+	at java.base/java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:511)
+	at java.base/java.util.concurrent.ForkJoinPool$WorkQueue.topLevelExec(ForkJoinPool.java:1450)
+	at java.base/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:2019)
+	at java.base/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:187)
+Caused by: java.lang.IllegalStateException: Failed to parse either. First: Not a string: {}; Second: Failed to parse either. First: Not a json array: {}; Second: No key type in MapLike[{}]
+	at com.mojang.serialization.DataResult$Error.getOrThrow(DataResult.java:287)
+	at com.mojang.serialization.DataResult.getOrThrow(DataResult.java:81)
+	at net.minecraft.resources.RegistryLoadTask$PendingRegistration.loadFromResource(RegistryLoadTask.java:109)
+	... 9 more
+>> Errors in element geoworld:rime_coast:
+java.lang.IllegalStateException: Failed to parse geoworld:rime_coast from pack file/geoworld-datapack
+	at net.minecraft.resources.RegistryLoadTask$PendingRegistration.loadFromResource(RegistryLoadTask.java:116)
+	at net.minecraft.resources.ResourceManagerRegistryLoadTask.lambda$load$2(ResourceManagerRegistryLoadTask.java:55)
+	at net.minecraft.util.thread.ParallelMapTransform$Container.applyOperation(ParallelMapTransform.java:123)
+	at net.minecraft.util.thread.ParallelMapTransform$BatchedTaskSplitter.lambda$createTask$0(ParallelMapTransform.java:80)
+	at java.base/java.util.concurrent.CompletableFuture$AsyncRun.run(CompletableFuture.java:1825)
+	at java.base/java.util.concurrent.CompletableFuture$AsyncRun.exec(CompletableFuture.java:1817)
+	at java.base/java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:511)
+	at java.base/java.util.concurrent.ForkJoinPool$WorkQueue.topLevelExec(ForkJoinPool.java:1450)
+	at java.base/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:2019)
+	at java.base/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:187)
+Caused by: java.lang.IllegalStateException: Failed to parse either. First: Not a string: {}; Second: Failed to parse either. First: Not a json array: {}; Second: No key type in MapLike[{}]
+	at com.mojang.serialization.DataResult$Error.getOrThrow(DataResult.java:287)
+	at com.mojang.serialization.DataResult.getOrThrow(DataResult.java:81)
+	at net.minecraft.resources.RegistryLoadTask$PendingRegistration.loadFromResource(RegistryLoadTask.java:109)
+	... 9 more
+>> Errors in element geoworld:rune_highlands:
+java.lang.IllegalStateException: Failed to parse geoworld:rune_highlands from pack file/geoworld-datapack
+	at net.minecraft.resources.RegistryLoadTask$PendingRegistration.loadFromResource(RegistryLoadTask.java:116)
+	at net.minecraft.resources.ResourceManagerRegistryLoadTask.lambda$load$2(ResourceManagerRegistryLoadTask.java:55)
+	at net.minecraft.util.thread.ParallelMapTransform$Container.applyOperation(ParallelMapTransform.java:123)
+	at net.minecraft.util.thread.ParallelMapTransform$BatchedTaskSplitter.lambda$createTask$0(ParallelMapTransform.java:80)
+	at java.base/java.util.concurrent.CompletableFuture$AsyncRun.run(CompletableFuture.java:1825)
+	at java.base/java.util.concurrent.CompletableFuture$AsyncRun.exec(CompletableFuture.java:1817)
+	at java.base/java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:511)
+	at java.base/java.util.concurrent.ForkJoinPool$WorkQueue.topLevelExec(ForkJoinPool.java:1450)
+	at java.base/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:2019)
+	at java.base/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:187)
+Caused by: java.lang.IllegalStateException: Failed to parse either. First: Not a string: {}; Second: Failed to parse either. First: Not a json array: {}; Second: No key type in MapLike[{}]
+	at com.mojang.serialization.DataResult$Error.getOrThrow(DataResult.java:287)
+	at com.mojang.serialization.DataResult.getOrThrow(DataResult.java:81)
+	at net.minecraft.resources.RegistryLoadTask$PendingRegistration.loadFromResource(RegistryLoadTask.java:109)
+	... 9 more
+>> Errors in element geoworld:salt_flats:
+java.lang.IllegalStateException: Failed to parse geoworld:salt_flats from pack file/geoworld-datapack
+	at net.minecraft.resources.RegistryLoadTask$PendingRegistration.loadFromResource(RegistryLoadTask.java:116)
+	at net.minecraft.resources.ResourceManagerRegistryLoadTask.lambda$load$2(ResourceManagerRegistryLoadTask.java:55)
+	at net.minecraft.util.thread.ParallelMapTransform$Container.applyOperation(ParallelMapTransform.java:123)
+	at net.minecraft.util.thread.ParallelMapTransform$BatchedTaskSplitter.lambda$createTask$0(ParallelMapTransform.java:80)
+	at java.base/java.util.concurrent.CompletableFuture$AsyncRun.run(CompletableFuture.java:1825)
+	at java.base/java.util.concurrent.CompletableFuture$AsyncRun.exec(CompletableFuture.java:1817)
+	at java.base/java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:511)
+	at java.base/java.util.concurrent.ForkJoinPool$WorkQueue.topLevelExec(ForkJoinPool.java:1450)
+	at java.base/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:2019)
+	at java.base/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:187)
+Caused by: java.lang.IllegalStateException: Failed to parse either. First: Not a string: {}; Second: Failed to parse either. First: Not a json array: {}; Second: No key type in MapLike[{}]
+	at com.mojang.serialization.DataResult$Error.getOrThrow(DataResult.java:287)
+	at com.mojang.serialization.DataResult.getOrThrow(DataResult.java:81)
+	at net.minecraft.resources.RegistryLoadTask$PendingRegistration.loadFromResource(RegistryLoadTask.java:109)
+	... 9 more
+>> Errors in element geoworld:skyreach_plateau:
+java.lang.IllegalStateException: Failed to parse geoworld:skyreach_plateau from pack file/geoworld-datapack
+	at net.minecraft.resources.RegistryLoadTask$PendingRegistration.loadFromResource(RegistryLoadTask.java:116)
+	at net.minecraft.resources.ResourceManagerRegistryLoadTask.lambda$load$2(ResourceManagerRegistryLoadTask.java:55)
+	at net.minecraft.util.thread.ParallelMapTransform$Container.applyOperation(ParallelMapTransform.java:123)
+	at net.minecraft.util.thread.ParallelMapTransform$BatchedTaskSplitter.lambda$createTask$0(ParallelMapTransform.java:80)
+	at java.base/java.util.concurrent.CompletableFuture$AsyncRun.run(CompletableFuture.java:1825)
+	at java.base/java.util.concurrent.CompletableFuture$AsyncRun.exec(CompletableFuture.java:1817)
+	at java.base/java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:511)
+	at java.base/java.util.concurrent.ForkJoinPool$WorkQueue.topLevelExec(ForkJoinPool.java:1450)
+	at java.base/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:2019)
+	at java.base/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:187)
+Caused by: java.lang.IllegalStateException: Failed to parse either. First: Not a string: {}; Second: Failed to parse either. First: Not a json array: {}; Second: No key type in MapLike[{}]; No key downfall in MapLike[{"temperature":0.5,"downgen":0.5,"has_precipitation":true,"effects":{"fog_color":12638463,"water_color":4159204,"water_fog_color":329011,"sky_color":8895951},"spawners":{"monster":[],"creature":[],"ambient":[],"water_creature":[],"water_ambient":[]},"features":[[],[],[],[],[],[],[],[],[],[],[]],"spawn_costs":{},"carvers":{}}]
+	at com.mojang.serialization.DataResult$Error.getOrThrow(DataResult.java:287)
+	at com.mojang.serialization.DataResult.getOrThrow(DataResult.java:81)
+	at net.minecraft.resources.RegistryLoadTask$PendingRegistration.loadFromResource(RegistryLoadTask.java:109)
+	... 9 more
+>> Errors in element geoworld:spore_jungle:
+java.lang.IllegalStateException: Failed to parse geoworld:spore_jungle from pack file/geoworld-datapack
+	at net.minecraft.resources.RegistryLoadTask$PendingRegistration.loadFromResource(RegistryLoadTask.java:116)
+	at net.minecraft.resources.ResourceManagerRegistryLoadTask.lambda$load$2(ResourceManagerRegistryLoadTask.java:55)
+	at net.minecraft.util.thread.ParallelMapTransform$Container.applyOperation(ParallelMapTransform.java:123)
+	at net.minecraft.util.thread.ParallelMapTransform$BatchedTaskSplitter.lambda$createTask$0(ParallelMapTransform.java:80)
+	at java.base/java.util.concurrent.CompletableFuture$AsyncRun.run(CompletableFuture.java:1825)
+	at java.base/java.util.concurrent.CompletableFuture$AsyncRun.exec(CompletableFuture.java:1817)
+	at java.base/java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:511)
+	at java.base/java.util.concurrent.ForkJoinPool$WorkQueue.topLevelExec(ForkJoinPool.java:1450)
+	at java.base/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:2019)
+	at java.base/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:187)
+Caused by: java.lang.IllegalStateException: Failed to parse either. First: Not a string: {}; Second: Failed to parse either. First: Not a json array: {}; Second: No key type in MapLike[{}]
+	at com.mojang.serialization.DataResult$Error.getOrThrow(DataResult.java:287)
+	at com.mojang.serialization.DataResult.getOrThrow(DataResult.java:81)
+	at net.minecraft.resources.RegistryLoadTask$PendingRegistration.loadFromResource(RegistryLoadTask.java:109)
+	... 9 more
+>> Errors in element geoworld:starfall_meadow:
+java.lang.IllegalStateException: Failed to parse geoworld:starfall_meadow from pack file/geoworld-datapack
+	at net.minecraft.resources.RegistryLoadTask$PendingRegistration.loadFromResource(RegistryLoadTask.java:116)
+	at net.minecraft.resources.ResourceManagerRegistryLoadTask.lambda$load$2(ResourceManagerRegistryLoadTask.java:55)
+	at net.minecraft.util.thread.ParallelMapTransform$Container.applyOperation(ParallelMapTransform.java:123)
+	at net.minecraft.util.thread.ParallelMapTransform$BatchedTaskSplitter.lambda$createTask$0(ParallelMapTransform.java:80)
+	at java.base/java.util.concurrent.CompletableFuture$AsyncRun.run(CompletableFuture.java:1825)
+	at java.base/java.util.concurrent.CompletableFuture$AsyncRun.exec(CompletableFuture.java:1817)
+	at java.base/java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:511)
+	at java.base/java.util.concurrent.ForkJoinPool$WorkQueue.topLevelExec(ForkJoinPool.java:1450)
+	at java.base/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:2019)
+	at java.base/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:187)
+Caused by: java.lang.IllegalStateException: Failed to parse either. First: Not a string: {}; Second: Failed to parse either. First: Not a json array: {}; Second: No key type in MapLike[{}]
+	at com.mojang.serialization.DataResult$Error.getOrThrow(DataResult.java:287)
+	at com.mojang.serialization.DataResult.getOrThrow(DataResult.java:81)
+	at net.minecraft.resources.RegistryLoadTask$PendingRegistration.loadFromResource(RegistryLoadTask.java:109)
+	... 9 more
+>> Errors in element geoworld:sunken_city:
+java.lang.IllegalStateException: Failed to parse geoworld:sunken_city from pack file/geoworld-datapack
+	at net.minecraft.resources.RegistryLoadTask$PendingRegistration.loadFromResource(RegistryLoadTask.java:116)
+	at net.minecraft.resources.ResourceManagerRegistryLoadTask.lambda$load$2(ResourceManagerRegistryLoadTask.java:55)
+	at net.minecraft.util.thread.ParallelMapTransform$Container.applyOperation(ParallelMapTransform.java:123)
+	at net.minecraft.util.thread.ParallelMapTransform$BatchedTaskSplitter.lambda$createTask$0(ParallelMapTransform.java:80)
+	at java.base/java.util.concurrent.CompletableFuture$AsyncRun.run(CompletableFuture.java:1825)
+	at java.base/java.util.concurrent.CompletableFuture$AsyncRun.exec(CompletableFuture.java:1817)
+	at java.base/java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:511)
+	at java.base/java.util.concurrent.ForkJoinPool$WorkQueue.topLevelExec(ForkJoinPool.java:1450)
+	at java.base/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:2019)
+	at java.base/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:187)
+Caused by: java.lang.IllegalStateException: Failed to parse either. First: Not a string: {}; Second: Failed to parse either. First: Not a json array: {}; Second: No key type in MapLike[{}]
+	at com.mojang.serialization.DataResult$Error.getOrThrow(DataResult.java:287)
+	at com.mojang.serialization.DataResult.getOrThrow(DataResult.java:81)
+	at net.minecraft.resources.RegistryLoadTask$PendingRegistration.loadFromResource(RegistryLoadTask.java:109)
+	... 9 more
+>> Errors in element geoworld:thunder_steppe:
+java.lang.IllegalStateException: Failed to parse geoworld:thunder_steppe from pack file/geoworld-datapack
+	at net.minecraft.resources.RegistryLoadTask$PendingRegistration.loadFromResource(RegistryLoadTask.java:116)
+	at net.minecraft.resources.ResourceManagerRegistryLoadTask.lambda$load$2(ResourceManagerRegistryLoadTask.java:55)
+	at net.minecraft.util.thread.ParallelMapTransform$Container.applyOperation(ParallelMapTransform.java:123)
+	at net.minecraft.util.thread.ParallelMapTransform$BatchedTaskSplitter.lambda$createTask$0(ParallelMapTransform.java:80)
+	at java.base/java.util.concurrent.CompletableFuture$AsyncRun.run(CompletableFuture.java:1825)
+	at java.base/java.util.concurrent.CompletableFuture$AsyncRun.exec(CompletableFuture.java:1817)
+	at java.base/java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:511)
+	at java.base/java.util.concurrent.ForkJoinPool$WorkQueue.topLevelExec(ForkJoinPool.java:1450)
+	at java.base/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:2019)
+	at java.base/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:187)
+Caused by: java.lang.IllegalStateException: Failed to parse either. First: Not a string: {}; Second: Failed to parse either. First: Not a json array: {}; Second: No key type in MapLike[{}]
+	at com.mojang.serialization.DataResult$Error.getOrThrow(DataResult.java:287)
+	at com.mojang.serialization.DataResult.getOrThrow(DataResult.java:81)
+	at net.minecraft.resources.RegistryLoadTask$PendingRegistration.loadFromResource(RegistryLoadTask.java:109)
+	... 9 more
+>> Errors in element geoworld:twilight_canopy:
+java.lang.IllegalStateException: Failed to parse geoworld:twilight_canopy from pack file/geoworld-datapack
+	at net.minecraft.resources.RegistryLoadTask$PendingRegistration.loadFromResource(RegistryLoadTask.java:116)
+	at net.minecraft.resources.ResourceManagerRegistryLoadTask.lambda$load$2(ResourceManagerRegistryLoadTask.java:55)
+	at net.minecraft.util.thread.ParallelMapTransform$Container.applyOperation(ParallelMapTransform.java:123)
+	at net.minecraft.util.thread.ParallelMapTransform$BatchedTaskSplitter.lambda$createTask$0(ParallelMapTransform.java:80)
+	at java.base/java.util.concurrent.CompletableFuture$AsyncRun.run(CompletableFuture.java:1825)
+	at java.base/java.util.concurrent.CompletableFuture$AsyncRun.exec(CompletableFuture.java:1817)
+	at java.base/java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:511)
+	at java.base/java.util.concurrent.ForkJoinPool$WorkQueue.topLevelExec(ForkJoinPool.java:1450)
+	at java.base/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:2019)
+	at java.base/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:187)
+Caused by: java.lang.IllegalStateException: Failed to parse either. First: Not a string: {}; Second: Failed to parse either. First: Not a json array: {}; Second: No key type in MapLike[{}]
+	at com.mojang.serialization.DataResult$Error.getOrThrow(DataResult.java:287)
+	at com.mojang.serialization.DataResult.getOrThrow(DataResult.java:81)
+	at net.minecraft.resources.RegistryLoadTask$PendingRegistration.loadFromResource(RegistryLoadTask.java:109)
+	... 9 more
+>> Errors in element geoworld:verdant_chasms:
+java.lang.IllegalStateException: Failed to parse geoworld:verdant_chasms from pack file/geoworld-datapack
+	at net.minecraft.resources.RegistryLoadTask$PendingRegistration.loadFromResource(RegistryLoadTask.java:116)
+	at net.minecraft.resources.ResourceManagerRegistryLoadTask.lambda$load$2(ResourceManagerRegistryLoadTask.java:55)
+	at net.minecraft.util.thread.ParallelMapTransform$Container.applyOperation(ParallelMapTransform.java:123)
+	at net.minecraft.util.thread.ParallelMapTransform$BatchedTaskSplitter.lambda$createTask$0(ParallelMapTransform.java:80)
+	at java.base/java.util.concurrent.CompletableFuture$AsyncRun.run(CompletableFuture.java:1825)
+	at java.base/java.util.concurrent.CompletableFuture$AsyncRun.exec(CompletableFuture.java:1817)
+	at java.base/java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:511)
+	at java.base/java.util.concurrent.ForkJoinPool$WorkQueue.topLevelExec(ForkJoinPool.java:1450)
+	at java.base/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:2019)
+	at java.base/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:187)
+Caused by: java.lang.IllegalStateException: Failed to parse either. First: Not a string: {}; Second: Failed to parse either. First: Not a json array: {}; Second: No key type in MapLike[{}]
+	at com.mojang.serialization.DataResult$Error.getOrThrow(DataResult.java:287)
+	at com.mojang.serialization.DataResult.getOrThrow(DataResult.java:81)
+	at net.minecraft.resources.RegistryLoadTask$PendingRegistration.loadFromResource(RegistryLoadTask.java:109)
+	... 9 more
+>> Errors in element geoworld:volcanic_ashfields:
+java.lang.IllegalStateException: Failed to parse geoworld:volcanic_ashfields from pack file/geoworld-datapack
+	at net.minecraft.resources.RegistryLoadTask$PendingRegistration.loadFromResource(RegistryLoadTask.java:116)
+	at net.minecraft.resources.ResourceManagerRegistryLoadTask.lambda$load$2(ResourceManagerRegistryLoadTask.java:55)
+	at net.minecraft.util.thread.ParallelMapTransform$Container.applyOperation(ParallelMapTransform.java:123)
+	at net.minecraft.util.thread.ParallelMapTransform$BatchedTaskSplitter.lambda$createTask$0(ParallelMapTransform.java:80)
+	at java.base/java.util.concurrent.CompletableFuture$AsyncRun.run(CompletableFuture.java:1825)
+	at java.base/java.util.concurrent.CompletableFuture$AsyncRun.exec(CompletableFuture.java:1817)
+	at java.base/java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:511)
+	at java.base/java.util.concurrent.ForkJoinPool$WorkQueue.topLevelExec(ForkJoinPool.java:1450)
+	at java.base/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:2019)
+	at java.base/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:187)
+Caused by: java.lang.IllegalStateException: Failed to parse either. First: Not a string: {}; Second: Failed to parse either. First: Not a json array: {}; Second: No key type in MapLike[{}]
+	at com.mojang.serialization.DataResult$Error.getOrThrow(DataResult.java:287)
+	at com.mojang.serialization.DataResult.getOrThrow(DataResult.java:81)
+	at net.minecraft.resources.RegistryLoadTask$PendingRegistration.loadFromResource(RegistryLoadTask.java:109)
+	... 9 more
+>> Errors in element geoworld:volcanic_island:
+java.lang.IllegalStateException: Failed to parse geoworld:volcanic_island from pack file/geoworld-datapack
+	at net.minecraft.resources.RegistryLoadTask$PendingRegistration.loadFromResource(RegistryLoadTask.java:116)
+	at net.minecraft.resources.ResourceManagerRegistryLoadTask.lambda$load$2(ResourceManagerRegistryLoadTask.java:55)
+	at net.minecraft.util.thread.ParallelMapTransform$Container.applyOperation(ParallelMapTransform.java:123)
+	at net.minecraft.util.thread.ParallelMapTransform$BatchedTaskSplitter.lambda$createTask$0(ParallelMapTransform.java:80)
+	at java.base/java.util.concurrent.CompletableFuture$AsyncRun.run(CompletableFuture.java:1825)
+	at java.base/java.util.concurrent.CompletableFuture$AsyncRun.exec(CompletableFuture.java:1817)
+	at java.base/java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:511)
+	at java.base/java.util.concurrent.ForkJoinPool$WorkQueue.topLevelExec(ForkJoinPool.java:1450)
+	at java.base/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:2019)
+	at java.base/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:187)
+Caused by: java.lang.IllegalStateException: Failed to parse either. First: Not a string: {}; Second: Failed to parse either. First: Not a json array: {}; Second: No key type in MapLike[{}]
+	at com.mojang.serialization.DataResult$Error.getOrThrow(DataResult.java:287)
+	at com.mojang.serialization.DataResult.getOrThrow(DataResult.java:81)
+	at net.minecraft.resources.RegistryLoadTask$PendingRegistration.loadFromResource(RegistryLoadTask.java:109)
+	... 9 more
+>> Errors in element geoworld:whispering_pines:
+java.lang.IllegalStateException: Failed to parse geoworld:whispering_pines from pack file/geoworld-datapack
+	at net.minecraft.resources.RegistryLoadTask$PendingRegistration.loadFromResource(RegistryLoadTask.java:116)
+	at net.minecraft.resources.ResourceManagerRegistryLoadTask.lambda$load$2(ResourceManagerRegistryLoadTask.java:55)
+	at net.minecraft.util.thread.ParallelMapTransform$Container.applyOperation(ParallelMapTransform.java:123)
+	at net.minecraft.util.thread.ParallelMapTransform$BatchedTaskSplitter.lambda$createTask$0(ParallelMapTransform.java:80)
+	at java.base/java.util.concurrent.CompletableFuture$AsyncRun.run(CompletableFuture.java:1825)
+	at java.base/java.util.concurrent.CompletableFuture$AsyncRun.exec(CompletableFuture.java:1817)
+	at java.base/java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:511)
+	at java.base/java.util.concurrent.ForkJoinPool$WorkQueue.topLevelExec(ForkJoinPool.java:1450)
+	at java.base/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:2019)
+	at java.base/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:187)
+Caused by: java.lang.IllegalStateException: Failed to parse either. First: Not a string: {}; Second: Failed to parse either. First: Not a json array: {}; Second: No key type in MapLike[{}]
+	at com.mojang.serialization.DataResult$Error.getOrThrow(DataResult.java:287)
+	at com.mojang.serialization.DataResult.getOrThrow(DataResult.java:81)
+	at net.minecraft.resources.RegistryLoadTask$PendingRegistration.loadFromResource(RegistryLoadTask.java:109)
+	... 9 more
+> Errors in registry minecraft:worldgen/density_function:
+>> Errors in element minecraft:overworld/caves/entrances:
+java.lang.IllegalStateException: Failed to parse minecraft:overworld/caves/entrances from pack file/geoworld-datapack
+	at net.minecraft.resources.RegistryLoadTask$PendingRegistration.loadFromResource(RegistryLoadTask.java:116)
+	at net.minecraft.resources.ResourceManagerRegistryLoadTask.lambda$load$2(ResourceManagerRegistryLoadTask.java:55)
+	at net.minecraft.util.thread.ParallelMapTransform$Container.applyOperation(ParallelMapTransform.java:123)
+	at net.minecraft.util.thread.ParallelMapTransform$SingleTaskSplitter.lambda$scheduleBatch$0(ParallelMapTransform.java:155)
+	at java.base/java.util.concurrent.CompletableFuture$AsyncRun.run(CompletableFuture.java:1825)
+	at java.base/java.util.concurrent.CompletableFuture$AsyncRun.exec(CompletableFuture.java:1817)
+	at java.base/java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:511)
+	at java.base/java.util.concurrent.ForkJoinPool$WorkQueue.topLevelExec(ForkJoinPool.java:1450)
+	at java.base/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:2019)
+	at java.base/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:187)
+Caused by: java.lang.IllegalStateException: Failed to parse either. First: Not a number: {"type":"minecraft:cache_once","argument":{"type":"minecraft:min","argument1":{"type":"minecraft:add","argument1":{"type":"minecraft:add","argument1":0.37,"argument2":{"type":"minecraft:noise","noise":"minecraft:cave_entrance","xz_scale":0.75,"y_scale":0.5}},"argument2":{"type":"minecraft:y_clamped_gradient","from_value":0.3,"from_y":-10,"to_value":0.0,"to_y":30}},"argument2":{"type":"minecraft:add","argument1":"minecraft:overworld/caves/spaghetti_roughness_function","argument2":{"type":"minecraft:clamp","input":{"type":"minecraft:add","argument1":{"type":"minecraft:max","argument1":{"type":"minecraft:abs","argument":{"type":"minecraft:interval_select","functions":[{"type":"minecraft:mul","argument1":0.75,"argument2":{"type":"minecraft:noise","noise":"minecraft:spaghetti_3d_1","xz_scale":1.3333333333333333,"y_scale":1.3333333333333333}},{"type":"minecraft:mul","argument1":1.0,"argument2":{"type":"minecraft:noise","noise":"minecraft:spaghetti_3d_1","xz_scale":1.0,"y_scale":1.0}},{"type":"minecraft:mul","argument1":1.5,"argument2":{"type":"minecraft:noise","noise":"minecraft:spaghetti_3d_1","xz_scale":0.6666666666666666,"y_scale":0.6666666666666666}},{"type":"minecraft:mul","argument1":2.0,"argument2":{"type":"minecraft:noise","noise":"minecraft:spaghetti_3d_1","xz_scale":0.5,"y_scale":0.5}}],"input":{"type":"minecraft:cache_once","argument":{"type":"minecraft:noise","noise":"minecraft:spaghetti_3d_rarity","xz_scale":2.0,"y_scale":1.0}},"thresholds":[-0.5,0.0,0.5]}},"argument2":{"type":"minecraft:abs","argument":{"type":"minecraft:interval_select","functions":[{"type":"minecraft:mul","argument1":0.75,"argument2":{"type":"minecraft:noise","noise":"minecraft:spaghetti_3d_2","xz_scale":1.3333333333333333,"y_scale":1.3333333333333333}},{"type":"minecraft:mul","argument1":1.0,"argument2":{"type":"minecraft:noise","noise":"minecraft:spaghetti_3d_2","xz_scale":1.0,"y_scale":1.0}},{"type":"minecraft:mul","argument1":1.5,"argument2":{"type":"minecraft:noise","noise":"minecraft:spaghetti_3d_2","xz_scale":0.6666666666666666,"y_scale":0.6666666666666666}},{"type":"minecraft:mul","argument1":2.0,"argument2":{"type":"minecraft:noise","noise":"minecraft:spaghetti_3d_2","xz_scale":0.5,"y_scale":0.5}}],"input":{"type":"minecraft:cache_once","argument":{"type":"minecraft:noise","noise":"minecraft:spaghetti_3d_rarity","xz_scale":2.0,"y_scale":1.0}},"thresholds":[-0.5,0.0,0.5]}}},"argument2":{"type":"minecraft:add","argument1":-0.0765,"argument2":{"type":"minecraft:mul","argument1":-0.011499999999999996,"argument2":{"type":"minecraft:noise","noise":"minecraft:spaghetti_3d_thickness","xz_scale":1.0,"y_scale":1.0}}}},"max":1.0,"min":-1.0}}}}; Second: Failed to parse either. First: Not a number: {"type":"minecraft:min","argument1":{"type":"minecraft:add","argument1":{"type":"minecraft:add","argument1":0.37,"argument2":{"type":"minecraft:noise","noise":"minecraft:cave_entrance","xz_scale":0.75,"y_scale":0.5}},"argument2":{"type":"minecraft:y_clamped_gradient","from_value":0.3,"from_y":-10,"to_value":0.0,"to_y":30}},"argument2":{"type":"minecraft:add","argument1":"minecraft:overworld/caves/spaghetti_roughness_function","argument2":{"type":"minecraft:clamp","input":{"type":"minecraft:add","argument1":{"type":"minecraft:max","argument1":{"type":"minecraft:abs","argument":{"type":"minecraft:interval_select","functions":[{"type":"minecraft:mul","argument1":0.75,"argument2":{"type":"minecraft:noise","noise":"minecraft:spaghetti_3d_1","xz_scale":1.3333333333333333,"y_scale":1.3333333333333333}},{"type":"minecraft:mul","argument1":1.0,"argument2":{"type":"minecraft:noise","noise":"minecraft:spaghetti_3d_1","xz_scale":1.0,"y_scale":1.0}},{"type":"minecraft:mul","argument1":1.5,"argument2":{"type":"minecraft:noise","noise":"minecraft:spaghetti_3d_1","xz_scale":0.6666666666666666,"y_scale":0.6666666666666666}},{"type":"minecraft:mul","argument1":2.0,"argument2":{"type":"minecraft:noise","noise":"minecraft:spaghetti_3d_1","xz_scale":0.5,"y_scale":0.5}}],"input":{"type":"minecraft:cache_once","argument":{"type":"minecraft:noise","noise":"minecraft:spaghetti_3d_rarity","xz_scale":2.0,"y_scale":1.0}},"thresholds":[-0.5,0.0,0.5]}},"argument2":{"type":"minecraft:abs","argument":{"type":"minecraft:interval_select","functions":[{"type":"minecraft:mul","argument1":0.75,"argument2":{"type":"minecraft:noise","noise":"minecraft:spaghetti_3d_2","xz_scale":1.3333333333333333,"y_scale":1.3333333333333333}},{"type":"minecraft:mul","argument1":1.0,"argument2":{"type":"minecraft:noise","noise":"minecraft:spaghetti_3d_2","xz_scale":1.0,"y_scale":1.0}},{"type":"minecraft:mul","argument1":1.5,"argument2":{"type":"minecraft:noise","noise":"minecraft:spaghetti_3d_2","xz_scale":0.6666666666666666,"y_scale":0.6666666666666666}},{"type":"minecraft:mul","argument1":2.0,"argument2":{"type":"minecraft:noise","noise":"minecraft:spaghetti_3d_2","xz_scale":0.5,"y_scale":0.5}}],"input":{"type":"minecraft:cache_once","argument":{"type":"minecraft:noise","noise":"minecraft:spaghetti_3d_rarity","xz_scale":2.0,"y_scale":1.0}},"thresholds":[-0.5,0.0,0.5]}}},"argument2":{"type":"minecraft:add","argument1":-0.0765,"argument2":{"type":"minecraft:mul","argument1":-0.011499999999999996,"argument2":{"type":"minecraft:noise","noise":"minecraft:spaghetti_3d_thickness","xz_scale":1.0,"y_scale":1.0}}}},"max":1.0,"min":-1.0}}}; Second: Failed to parse either. First: Not a number: {"type":"minecraft:add","argument1":"minecraft:overworld/caves/spaghetti_roughness_function","argument2":{"type":"minecraft:clamp","input":{"type":"minecraft:add","argument1":{"type":"minecraft:max","argument1":{"type":"minecraft:abs","argument":{"type":"minecraft:interval_select","functions":[{"type":"minecraft:mul","argument1":0.75,"argument2":{"type":"minecraft:noise","noise":"minecraft:spaghetti_3d_1","xz_scale":1.3333333333333333,"y_scale":1.3333333333333333}},{"type":"minecraft:mul","argument1":1.0,"argument2":{"type":"minecraft:noise","noise":"minecraft:spaghetti_3d_1","xz_scale":1.0,"y_scale":1.0}},{"type":"minecraft:mul","argument1":1.5,"argument2":{"type":"minecraft:noise","noise":"minecraft:spaghetti_3d_1","xz_scale":0.6666666666666666,"y_scale":0.6666666666666666}},{"type":"minecraft:mul","argument1":2.0,"argument2":{"type":"minecraft:noise","noise":"minecraft:spaghetti_3d_1","xz_scale":0.5,"y_scale":0.5}}],"input":{"type":"minecraft:cache_once","argument":{"type":"minecraft:noise","noise":"minecraft:spaghetti_3d_rarity","xz_scale":2.0,"y_scale":1.0}},"thresholds":[-0.5,0.0,0.5]}},"argument2":{"type":"minecraft:abs","argument":{"type":"minecraft:interval_select","functions":[{"type":"minecraft:mul","argument1":0.75,"argument2":{"type":"minecraft:noise","noise":"minecraft:spaghetti_3d_2","xz_scale":1.3333333333333333,"y_scale":1.3333333333333333}},{"type":"minecraft:mul","argument1":1.0,"argument2":{"type":"minecraft:noise","noise":"minecraft:spaghetti_3d_2","xz_scale":1.0,"y_scale":1.0}},{"type":"minecraft:mul","argument1":1.5,"argument2":{"type":"minecraft:noise","noise":"minecraft:spaghetti_3d_2","xz_scale":0.6666666666666666,"y_scale":0.6666666666666666}},{"type":"minecraft:mul","argument1":2.0,"argument2":{"type":"minecraft:noise","noise":"minecraft:spaghetti_3d_2","xz_scale":0.5,"y_scale":0.5}}],"input":{"type":"minecraft:cache_once","argument":{"type":"minecraft:noise","noise":"minecraft:spaghetti_3d_rarity","xz_scale":2.0,"y_scale":1.0}},"thresholds":[-0.5,0.0,0.5]}}},"argument2":{"type":"minecraft:add","argument1":-0.0765,"argument2":{"type":"minecraft:mul","argument1":-0.011499999999999996,"argument2":{"type":"minecraft:noise","noise":"minecraft:spaghetti_3d_thickness","xz_scale":1.0,"y_scale":1.0}}}},"max":1.0,"min":-1.0}}; Second: Failed to parse either. First: Not a number: {"type":"minecraft:clamp","input":{"type":"minecraft:add","argument1":{"type":"minecraft:max","argument1":{"type":"minecraft:abs","argument":{"type":"minecraft:interval_select","functions":[{"type":"minecraft:mul","argument1":0.75,"argument2":{"type":"minecraft:noise","noise":"minecraft:spaghetti_3d_1","xz_scale":1.3333333333333333,"y_scale":1.3333333333333333}},{"type":"minecraft:mul","argument1":1.0,"argument2":{"type":"minecraft:noise","noise":"minecraft:spaghetti_3d_1","xz_scale":1.0,"y_scale":1.0}},{"type":"minecraft:mul","argument1":1.5,"argument2":{"type":"minecraft:noise","noise":"minecraft:spaghetti_3d_1","xz_scale":0.6666666666666666,"y_scale":0.6666666666666666}},{"type":"minecraft:mul","argument1":2.0,"argument2":{"type":"minecraft:noise","noise":"minecraft:spaghetti_3d_1","xz_scale":0.5,"y_scale":0.5}}],"input":{"type":"minecraft:cache_once","argument":{"type":"minecraft:noise","noise":"minecraft:spaghetti_3d_rarity","xz_scale":2.0,"y_scale":1.0}},"thresholds":[-0.5,0.0,0.5]}},"argument2":{"type":"minecraft:abs","argument":{"type":"minecraft:interval_select","functions":[{"type":"minecraft:mul","argument1":0.75,"argument2":{"type":"minecraft:noise","noise":"minecraft:spaghetti_3d_2","xz_scale":1.3333333333333333,"y_scale":1.3333333333333333}},{"type":"minecraft:mul","argument1":1.0,"argument2":{"type":"minecraft:noise","noise":"minecraft:spaghetti_3d_2","xz_scale":1.0,"y_scale":1.0}},{"type":"minecraft:mul","argument1":1.5,"argument2":{"type":"minecraft:noise","noise":"minecraft:spaghetti_3d_2","xz_scale":0.6666666666666666,"y_scale":0.6666666666666666}},{"type":"minecraft:mul","argument1":2.0,"argument2":{"type":"minecraft:noise","noise":"minecraft:spaghetti_3d_2","xz_scale":0.5,"y_scale":0.5}}],"input":{"type":"minecraft:cache_once","argument":{"type":"minecraft:noise","noise":"minecraft:spaghetti_3d_rarity","xz_scale":2.0,"y_scale":1.0}},"thresholds":[-0.5,0.0,0.5]}}},"argument2":{"type":"minecraft:add","argument1":-0.0765,"argument2":{"type":"minecraft:mul","argument1":-0.011499999999999996,"argument2":{"type":"minecraft:noise","noise":"minecraft:spaghetti_3d_thickness","xz_scale":1.0,"y_scale":1.0}}}},"max":1.0,"min":-1.0}; Second: Failed to parse either. First: Not a number: {"type":"minecraft:add","argument1":{"type":"minecraft:max","argument1":{"type":"minecraft:abs","argument":{"type":"minecraft:interval_select","functions":[{"type":"minecraft:mul","argument1":0.75,"argument2":{"type":"minecraft:noise","noise":"minecraft:spaghetti_3d_1","xz_scale":1.3333333333333333,"y_scale":1.3333333333333333}},{"type":"minecraft:mul","argument1":1.0,"argument2":{"type":"minecraft:noise","noise":"minecraft:spaghetti_3d_1","xz_scale":1.0,"y_scale":1.0}},{"type":"minecraft:mul","argument1":1.5,"argument2":{"type":"minecraft:noise","noise":"minecraft:spaghetti_3d_1","xz_scale":0.6666666666666666,"y_scale":0.6666666666666666}},{"type":"minecraft:mul","argument1":2.0,"argument2":{"type":"minecraft:noise","noise":"minecraft:spaghetti_3d_1","xz_scale":0.5,"y_scale":0.5}}],"input":{"type":"minecraft:cache_once","argument":{"type":"minecraft:noise","noise":"minecraft:spaghetti_3d_rarity","xz_scale":2.0,"y_scale":1.0}},"thresholds":[-0.5,0.0,0.5]}},"argument2":{"type":"minecraft:abs","argument":{"type":"minecraft:interval_select","functions":[{"type":"minecraft:mul","argument1":0.75,"argument2":{"type":"minecraft:noise","noise":"minecraft:spaghetti_3d_2","xz_scale":1.3333333333333333,"y_scale":1.3333333333333333}},{"type":"minecraft:mul","argument1":1.0,"argument2":{"type":"minecraft:noise","noise":"minecraft:spaghetti_3d_2","xz_scale":1.0,"y_scale":1.0}},{"type":"minecraft:mul","argument1":1.5,"argument2":{"type":"minecraft:noise","noise":"minecraft:spaghetti_3d_2","xz_scale":0.6666666666666666,"y_scale":0.6666666666666666}},{"type":"minecraft:mul","argument1":2.0,"argument2":{"type":"minecraft:noise","noise":"minecraft:spaghetti_3d_2","xz_scale":0.5,"y_scale":0.5}}],"input":{"type":"minecraft:cache_once","argument":{"type":"minecraft:noise","noise":"minecraft:spaghetti_3d_rarity","xz_scale":2.0,"y_scale":1.0}},"thresholds":[-0.5,0.0,0.5]}}},"argument2":{"type":"minecraft:add","argument1":-0.0765,"argument2":{"type":"minecraft:mul","argument1":-0.011499999999999996,"argument2":{"type":"minecraft:noise","noise":"minecraft:spaghetti_3d_thickness","xz_scale":1.0,"y_scale":1.0}}}}; Second: Failed to parse either. First: Not a number: {"type":"minecraft:max","argument1":{"type":"minecraft:abs","argument":{"type":"minecraft:interval_select","functions":[{"type":"minecraft:mul","argument1":0.75,"argument2":{"type":"minecraft:noise","noise":"minecraft:spaghetti_3d_1","xz_scale":1.3333333333333333,"y_scale":1.3333333333333333}},{"type":"minecraft:mul","argument1":1.0,"argument2":{"type":"minecraft:noise","noise":"minecraft:spaghetti_3d_1","xz_scale":1.0,"y_scale":1.0}},{"type":"minecraft:mul","argument1":1.5,"argument2":{"type":"minecraft:noise","noise":"minecraft:spaghetti_3d_1","xz_scale":0.6666666666666666,"y_scale":0.6666666666666666}},{"type":"minecraft:mul","argument1":2.0,"argument2":{"type":"minecraft:noise","noise":"minecraft:spaghetti_3d_1","xz_scale":0.5,"y_scale":0.5}}],"input":{"type":"minecraft:cache_once","argument":{"type":"minecraft:noise","noise":"minecraft:spaghetti_3d_rarity","xz_scale":2.0,"y_scale":1.0}},"thresholds":[-0.5,0.0,0.5]}},"argument2":{"type":"minecraft:abs","argument":{"type":"minecraft:interval_select","functions":[{"type":"minecraft:mul","argument1":0.75,"argument2":{"type":"minecraft:noise","noise":"minecraft:spaghetti_3d_2","xz_scale":1.3333333333333333,"y_scale":1.3333333333333333}},{"type":"minecraft:mul","argument1":1.0,"argument2":{"type":"minecraft:noise","noise":"minecraft:spaghetti_3d_2","xz_scale":1.0,"y_scale":1.0}},{"type":"minecraft:mul","argument1":1.5,"argument2":{"type":"minecraft:noise","noise":"minecraft:spaghetti_3d_2","xz_scale":0.6666666666666666,"y_scale":0.6666666666666666}},{"type":"minecraft:mul","argument1":2.0,"argument2":{"type":"minecraft:noise","noise":"minecraft:spaghetti_3d_2","xz_scale":0.5,"y_scale":0.5}}],"input":{"type":"minecraft:cache_once","argument":{"type":"minecraft:noise","noise":"minecraft:spaghetti_3d_rarity","xz_scale":2.0,"y_scale":1.0}},"thresholds":[-0.5,0.0,0.5]}}}; Second: Failed to parse either. First: Not a number: {"type":"minecraft:abs","argument":{"type":"minecraft:interval_select","functions":[{"type":"minecraft:mul","argument1":0.75,"argument2":{"type":"minecraft:noise","noise":"minecraft:spaghetti_3d_2","xz_scale":1.3333333333333333,"y_scale":1.3333333333333333}},{"type":"minecraft:mul","argument1":1.0,"argument2":{"type":"minecraft:noise","noise":"minecraft:spaghetti_3d_2","xz_scale":1.0,"y_scale":1.0}},{"type":"minecraft:mul","argument1":1.5,"argument2":{"type":"minecraft:noise","noise":"minecraft:spaghetti_3d_2","xz_scale":0.6666666666666666,"y_scale":0.6666666666666666}},{"type":"minecraft:mul","argument1":2.0,"argument2":{"type":"minecraft:noise","noise":"minecraft:spaghetti_3d_2","xz_scale":0.5,"y_scale":0.5}}],"input":{"type":"minecraft:cache_once","argument":{"type":"minecraft:noise","noise":"minecraft:spaghetti_3d_rarity","xz_scale":2.0,"y_scale":1.0}},"thresholds":[-0.5,0.0,0.5]}}; Second: Failed to parse either. First: Not a number: {"type":"minecraft:interval_select","functions":[{"type":"minecraft:mul","argument1":0.75,"argument2":{"type":"minecraft:noise","noise":"minecraft:spaghetti_3d_2","xz_scale":1.3333333333333333,"y_scale":1.3333333333333333}},{"type":"minecraft:mul","argument1":1.0,"argument2":{"type":"minecraft:noise","noise":"minecraft:spaghetti_3d_2","xz_scale":1.0,"y_scale":1.0}},{"type":"minecraft:mul","argument1":1.5,"argument2":{"type":"minecraft:noise","noise":"minecraft:spaghetti_3d_2","xz_scale":0.6666666666666666,"y_scale":0.6666666666666666}},{"type":"minecraft:mul","argument1":2.0,"argument2":{"type":"minecraft:noise","noise":"minecraft:spaghetti_3d_2","xz_scale":0.5,"y_scale":0.5}}],"input":{"type":"minecraft:cache_once","argument":{"type":"minecraft:noise","noise":"minecraft:spaghetti_3d_rarity","xz_scale":2.0,"y_scale":1.0}},"thresholds":[-0.5,0.0,0.5]}; Second: Unknown registry key in ResourceKey[minecraft:root / minecraft:worldgen/density_function_type]: minecraft:interval_select; Failed to parse either. First: Not a number: {"type":"minecraft:abs","argument":{"type":"minecraft:interval_select","functions":[{"type":"minecraft:mul","argument1":0.75,"argument2":{"type":"minecraft:noise","noise":"minecraft:spaghetti_3d_1","xz_scale":1.3333333333333333,"y_scale":1.3333333333333333}},{"type":"minecraft:mul","argument1":1.0,"argument2":{"type":"minecraft:noise","noise":"minecraft:spaghetti_3d_1","xz_scale":1.0,"y_scale":1.0}},{"type":"minecraft:mul","argument1":1.5,"argument2":{"type":"minecraft:noise","noise":"minecraft:spaghetti_3d_1","xz_scale":0.6666666666666666,"y_scale":0.6666666666666666}},{"type":"minecraft:mul","argument1":2.0,"argument2":{"type":"minecraft:noise","noise":"minecraft:spaghetti_3d_1","xz_scale":0.5,"y_scale":0.5}}],"input":{"type":"minecraft:cache_once","argument":{"type":"minecraft:noise","noise":"minecraft:spaghetti_3d_rarity","xz_scale":2.0,"y_scale":1.0}},"thresholds":[-0.5,0.0,0.5]}}; Second: Failed to parse either. First: Not a number: {"type":"minecraft:interval_select","functions":[{"type":"minecraft:mul","argument1":0.75,"argument2":{"type":"minecraft:noise","noise":"minecraft:spaghetti_3d_1","xz_scale":1.3333333333333333,"y_scale":1.3333333333333333}},{"type":"minecraft:mul","argument1":1.0,"argument2":{"type":"minecraft:noise","noise":"minecraft:spaghetti_3d_1","xz_scale":1.0,"y_scale":1.0}},{"type":"minecraft:mul","argument1":1.5,"argument2":{"type":"minecraft:noise","noise":"minecraft:spaghetti_3d_1","xz_scale":0.6666666666666666,"y_scale":0.6666666666666666}},{"type":"minecraft:mul","argument1":2.0,"argument2":{"type":"minecraft:noise","noise":"minecraft:spaghetti_3d_1","xz_scale":0.5,"y_scale":0.5}}],"input":{"type":"minecraft:cache_once","argument":{"type":"minecraft:noise","noise":"minecraft:spaghetti_3d_rarity","xz_scale":2.0,"y_scale":1.0}},"thresholds":[-0.5,0.0,0.5]}; Second: Unknown registry key in ResourceKey[minecraft:root / minecraft:worldgen/density_function_type]: minecraft:interval_select
+	at com.mojang.serialization.DataResult$Error.getOrThrow(DataResult.java:287)
+	at com.mojang.serialization.DataResult.getOrThrow(DataResult.java:81)
+	at net.minecraft.resources.RegistryLoadTask$PendingRegistration.loadFromResource(RegistryLoadTask.java:109)
+	... 9 more
+>> Errors in element minecraft:overworld/caves/spaghetti_2d:
+java.lang.IllegalStateException: Failed to parse minecraft:overworld/caves/spaghetti_2d from pack file/geoworld-datapack
+	at net.minecraft.resources.RegistryLoadTask$PendingRegistration.loadFromResource(RegistryLoadTask.java:116)
+	at net.minecraft.resources.ResourceManagerRegistryLoadTask.lambda$load$2(ResourceManagerRegistryLoadTask.java:55)
+	at net.minecraft.util.thread.ParallelMapTransform$Container.applyOperation(ParallelMapTransform.java:123)
+	at net.minecraft.util.thread.ParallelMapTransform$SingleTaskSplitter.lambda$scheduleBatch$0(ParallelMapTransform.java:155)
+	at java.base/java.util.concurrent.CompletableFuture$AsyncRun.run(CompletableFuture.java:1825)
+	at java.base/java.util.concurrent.CompletableFuture$AsyncRun.exec(CompletableFuture.java:1817)
+	at java.base/java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:511)
+	at java.base/java.util.concurrent.ForkJoinPool$WorkQueue.topLevelExec(ForkJoinPool.java:1450)
+	at java.base/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:2019)
+	at java.base/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:187)
+Caused by: java.lang.IllegalStateException: Failed to parse either. First: Not a number: {"type":"minecraft:clamp","input":{"type":"minecraft:max","argument1":{"type":"minecraft:add","argument1":{"type":"minecraft:abs","argument":{"type":"minecraft:interval_select","functions":[{"type":"minecraft:mul","argument1":0.5,"argument2":{"type":"minecraft:noise","noise":"minecraft:spaghetti_2d","xz_scale":2.0,"y_scale":2.0}},{"type":"minecraft:mul","argument1":0.75,"argument2":{"type":"minecraft:noise","noise":"minecraft:spaghetti_2d","xz_scale":1.3333333333333333,"y_scale":1.3333333333333333}},{"type":"minecraft:mul","argument1":1.0,"argument2":{"type":"minecraft:noise","noise":"minecraft:spaghetti_2d","xz_scale":1.0,"y_scale":1.0}},{"type":"minecraft:mul","argument1":2.0,"argument2":{"type":"minecraft:noise","noise":"minecraft:spaghetti_2d","xz_scale":0.5,"y_scale":0.5}},{"type":"minecraft:mul","argument1":3.0,"argument2":{"type":"minecraft:noise","noise":"minecraft:spaghetti_2d","xz_scale":0.3333333333333333,"y_scale":0.3333333333333333}}],"input":{"type":"minecraft:noise","noise":"minecraft:spaghetti_2d_modulator","xz_scale":2.0,"y_scale":1.0},"thresholds":[-0.75,-0.5,0.5,0.75]}},"argument2":{"type":"minecraft:mul","argument1":0.083,"argument2":"minecraft:overworld/caves/spaghetti_2d_thickness_modulator"}},"argument2":{"type":"minecraft:cube","argument":{"type":"minecraft:add","argument1":{"type":"minecraft:abs","argument":{"type":"minecraft:add","argument1":{"type":"minecraft:flat_cache","argument":{"type":"minecraft:add","argument1":0.0,"argument2":{"type":"minecraft:mul","argument1":8.0,"argument2":{"type":"minecraft:noise","noise":"minecraft:spaghetti_2d_elevation","xz_scale":1.0,"y_scale":0.0}}}},"argument2":{"type":"minecraft:y_clamped_gradient","from_value":8.0,"from_y":-64,"to_value":-40.0,"to_y":320}}},"argument2":"minecraft:overworld/caves/spaghetti_2d_thickness_modulator"}}},"max":1.0,"min":-1.0}; Second: Failed to parse either. First: Not a number: {"type":"minecraft:max","argument1":{"type":"minecraft:add","argument1":{"type":"minecraft:abs","argument":{"type":"minecraft:interval_select","functions":[{"type":"minecraft:mul","argument1":0.5,"argument2":{"type":"minecraft:noise","noise":"minecraft:spaghetti_2d","xz_scale":2.0,"y_scale":2.0}},{"type":"minecraft:mul","argument1":0.75,"argument2":{"type":"minecraft:noise","noise":"minecraft:spaghetti_2d","xz_scale":1.3333333333333333,"y_scale":1.3333333333333333}},{"type":"minecraft:mul","argument1":1.0,"argument2":{"type":"minecraft:noise","noise":"minecraft:spaghetti_2d","xz_scale":1.0,"y_scale":1.0}},{"type":"minecraft:mul","argument1":2.0,"argument2":{"type":"minecraft:noise","noise":"minecraft:spaghetti_2d","xz_scale":0.5,"y_scale":0.5}},{"type":"minecraft:mul","argument1":3.0,"argument2":{"type":"minecraft:noise","noise":"minecraft:spaghetti_2d","xz_scale":0.3333333333333333,"y_scale":0.3333333333333333}}],"input":{"type":"minecraft:noise","noise":"minecraft:spaghetti_2d_modulator","xz_scale":2.0,"y_scale":1.0},"thresholds":[-0.75,-0.5,0.5,0.75]}},"argument2":{"type":"minecraft:mul","argument1":0.083,"argument2":"minecraft:overworld/caves/spaghetti_2d_thickness_modulator"}},"argument2":{"type":"minecraft:cube","argument":{"type":"minecraft:add","argument1":{"type":"minecraft:abs","argument":{"type":"minecraft:add","argument1":{"type":"minecraft:flat_cache","argument":{"type":"minecraft:add","argument1":0.0,"argument2":{"type":"minecraft:mul","argument1":8.0,"argument2":{"type":"minecraft:noise","noise":"minecraft:spaghetti_2d_elevation","xz_scale":1.0,"y_scale":0.0}}}},"argument2":{"type":"minecraft:y_clamped_gradient","from_value":8.0,"from_y":-64,"to_value":-40.0,"to_y":320}}},"argument2":"minecraft:overworld/caves/spaghetti_2d_thickness_modulator"}}}; Second: Failed to parse either. First: Not a number: {"type":"minecraft:add","argument1":{"type":"minecraft:abs","argument":{"type":"minecraft:interval_select","functions":[{"type":"minecraft:mul","argument1":0.5,"argument2":{"type":"minecraft:noise","noise":"minecraft:spaghetti_2d","xz_scale":2.0,"y_scale":2.0}},{"type":"minecraft:mul","argument1":0.75,"argument2":{"type":"minecraft:noise","noise":"minecraft:spaghetti_2d","xz_scale":1.3333333333333333,"y_scale":1.3333333333333333}},{"type":"minecraft:mul","argument1":1.0,"argument2":{"type":"minecraft:noise","noise":"minecraft:spaghetti_2d","xz_scale":1.0,"y_scale":1.0}},{"type":"minecraft:mul","argument1":2.0,"argument2":{"type":"minecraft:noise","noise":"minecraft:spaghetti_2d","xz_scale":0.5,"y_scale":0.5}},{"type":"minecraft:mul","argument1":3.0,"argument2":{"type":"minecraft:noise","noise":"minecraft:spaghetti_2d","xz_scale":0.3333333333333333,"y_scale":0.3333333333333333}}],"input":{"type":"minecraft:noise","noise":"minecraft:spaghetti_2d_modulator","xz_scale":2.0,"y_scale":1.0},"thresholds":[-0.75,-0.5,0.5,0.75]}},"argument2":{"type":"minecraft:mul","argument1":0.083,"argument2":"minecraft:overworld/caves/spaghetti_2d_thickness_modulator"}}; Second: Failed to parse either. First: Not a number: {"type":"minecraft:abs","argument":{"type":"minecraft:interval_select","functions":[{"type":"minecraft:mul","argument1":0.5,"argument2":{"type":"minecraft:noise","noise":"minecraft:spaghetti_2d","xz_scale":2.0,"y_scale":2.0}},{"type":"minecraft:mul","argument1":0.75,"argument2":{"type":"minecraft:noise","noise":"minecraft:spaghetti_2d","xz_scale":1.3333333333333333,"y_scale":1.3333333333333333}},{"type":"minecraft:mul","argument1":1.0,"argument2":{"type":"minecraft:noise","noise":"minecraft:spaghetti_2d","xz_scale":1.0,"y_scale":1.0}},{"type":"minecraft:mul","argument1":2.0,"argument2":{"type":"minecraft:noise","noise":"minecraft:spaghetti_2d","xz_scale":0.5,"y_scale":0.5}},{"type":"minecraft:mul","argument1":3.0,"argument2":{"type":"minecraft:noise","noise":"minecraft:spaghetti_2d","xz_scale":0.3333333333333333,"y_scale":0.3333333333333333}}],"input":{"type":"minecraft:noise","noise":"minecraft:spaghetti_2d_modulator","xz_scale":2.0,"y_scale":1.0},"thresholds":[-0.75,-0.5,0.5,0.75]}}; Second: Failed to parse either. First: Not a number: {"type":"minecraft:interval_select","functions":[{"type":"minecraft:mul","argument1":0.5,"argument2":{"type":"minecraft:noise","noise":"minecraft:spaghetti_2d","xz_scale":2.0,"y_scale":2.0}},{"type":"minecraft:mul","argument1":0.75,"argument2":{"type":"minecraft:noise","noise":"minecraft:spaghetti_2d","xz_scale":1.3333333333333333,"y_scale":1.3333333333333333}},{"type":"minecraft:mul","argument1":1.0,"argument2":{"type":"minecraft:noise","noise":"minecraft:spaghetti_2d","xz_scale":1.0,"y_scale":1.0}},{"type":"minecraft:mul","argument1":2.0,"argument2":{"type":"minecraft:noise","noise":"minecraft:spaghetti_2d","xz_scale":0.5,"y_scale":0.5}},{"type":"minecraft:mul","argument1":3.0,"argument2":{"type":"minecraft:noise","noise":"minecraft:spaghetti_2d","xz_scale":0.3333333333333333,"y_scale":0.3333333333333333}}],"input":{"type":"minecraft:noise","noise":"minecraft:spaghetti_2d_modulator","xz_scale":2.0,"y_scale":1.0},"thresholds":[-0.75,-0.5,0.5,0.75]}; Second: Unknown registry key in ResourceKey[minecraft:root / minecraft:worldgen/density_function_type]: minecraft:interval_select
+	at com.mojang.serialization.DataResult$Error.getOrThrow(DataResult.java:287)
+	at com.mojang.serialization.DataResult.getOrThrow(DataResult.java:81)
+	at net.minecraft.resources.RegistryLoadTask$PendingRegistration.loadFromResource(RegistryLoadTask.java:109)
+	... 9 more
+> Errors in registry minecraft:worldgen/noise_settings:
+>> Errors in element minecraft:overworld:
+java.lang.IllegalStateException: Failed to parse minecraft:overworld from pack file/geoworld-datapack
+	at net.minecraft.resources.RegistryLoadTask$PendingRegistration.loadFromResource(RegistryLoadTask.java:116)
+	at net.minecraft.resources.ResourceManagerRegistryLoadTask.lambda$load$2(ResourceManagerRegistryLoadTask.java:55)
+	at net.minecraft.util.thread.ParallelMapTransform$Container.applyOperation(ParallelMapTransform.java:123)
+	at net.minecraft.util.thread.ParallelMapTransform$SingleTaskSplitter.lambda$scheduleBatch$0(ParallelMapTransform.java:155)
+	at java.base/java.util.concurrent.CompletableFuture$AsyncRun.run(CompletableFuture.java:1825)
+	at java.base/java.util.concurrent.CompletableFuture$AsyncRun.exec(CompletableFuture.java:1817)
+	at java.base/java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:511)
+	at java.base/java.util.concurrent.ForkJoinPool$WorkQueue.topLevelExec(ForkJoinPool.java:1450)
+	at java.base/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:2019)
+	at java.base/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:187)
+Caused by: java.lang.IllegalStateException: Unknown registry key in ResourceKey[minecraft:root / minecraft:block]: minecraft:cinnabar; Unknown registry key in ResourceKey[minecraft:root / minecraft:block]: minecraft:sulfur; Unknown registry key in ResourceKey[minecraft:root / minecraft:block]: minecraft:cinnabar; Not a json array: "minecraft:sulfur_caves"; Not a json array: "minecraft:desert"; Not a json array: "minecraft:mangrove_swamp"; Not a json array: "minecraft:windswept_gravelly_hills"; Not a json array: "minecraft:windswept_savanna"; Unknown registry key in ResourceKey[minecraft:root / minecraft:block]: minecraft:cinnabar; Unknown registry key in ResourceKey[minecraft:root / minecraft:block]: minecraft:sulfur; Unknown registry key in ResourceKey[minecraft:root / minecraft:block]: minecraft:cinnabar; Not a json array: "minecraft:sulfur_caves"; Not a json array: "minecraft:dripstone_caves"; Not a json array: "minecraft:desert"; Not a json array: "minecraft:windswept_hills"; Not a json array: "minecraft:stony_shore"; Not a json array: "minecraft:stony_peaks"; Not a json array: "minecraft:grove"; Not a json array: "minecraft:jagged_peaks"; Not a json array: "minecraft:snowy_slopes"; Not a json array: "minecraft:frozen_peaks"; Not a json array: "minecraft:mushroom_fields"; Not a json array: "minecraft:mangrove_swamp"; Not a json array: "minecraft:ice_spikes"; Not a json array: "minecraft:windswept_gravelly_hills"; Not a json array: "minecraft:windswept_savanna"; Unknown registry key in ResourceKey[minecraft:root / minecraft:block]: minecraft:cinnabar; Unknown registry key in ResourceKey[minecraft:root / minecraft:block]: minecraft:sulfur; Unknown registry key in ResourceKey[minecraft:root / minecraft:block]: minecraft:cinnabar; Not a json array: "minecraft:sulfur_caves"; Not a json array: "minecraft:dripstone_caves"; Not a json array: "minecraft:desert"; Not a json array: "minecraft:windswept_hills"; Not a json array: "minecraft:stony_shore"; Not a json array: "minecraft:stony_peaks"; Not a json array: "minecraft:grove"; Not a json array: "minecraft:jagged_peaks"; Not a json array: "minecraft:snowy_slopes"; Not a json array: "minecraft:frozen_peaks"; Not a json array: "minecraft:mangrove_swamp"; Not a json array: "minecraft:swamp"; Not a json array: "minecraft:wooded_badlands"; Unknown registry key in ResourceKey[minecraft:root / minecraft:block]: minecraft:quartz
+	at com.mojang.serialization.DataResult$Error.getOrThrow(DataResult.java:287)
+	at com.mojang.serialization.DataResult.getOrThrow(DataResult.java:81)
+	at net.minecraft.resources.RegistryLoadTask$PendingRegistration.loadFromResource(RegistryLoadTask.java:109)
+	... 9 more
+
+[22:09:01] [ServerMain/WARN]: Failed to load datapacks, can't proceed with server load. You can either fix your datapacks or reset to vanilla with --safeMode
+java.util.concurrent.ExecutionException: net.minecraft.ReportedException: Registry Loading
+	at java.base/java.util.concurrent.CompletableFuture.wrapInExecutionException(CompletableFuture.java:345) ~[?:?]
+	at java.base/java.util.concurrent.CompletableFuture.reportGet(CompletableFuture.java:440) ~[?:?]
+	at java.base/java.util.concurrent.CompletableFuture.get(CompletableFuture.java:2094) ~[?:?]
+	at net.minecraft.server.Main.main(Main.java:282) ~[paper-26.1.2.jar:26.1.2-63-711c5de]
+	at io.papermc.paper.PaperBootstrap.boot(PaperBootstrap.java:21) ~[paper-26.1.2.jar:26.1.2-63-711c5de]
+	at org.bukkit.craftbukkit.Main.main(Main.java:204) ~[paper-26.1.2.jar:26.1.2-63-711c5de]
+	at io.papermc.paperclip.Paperclip.lambda$main$0(Paperclip.java:42) ~[?:?]
+	at java.base/java.lang.Thread.run(Thread.java:1474) ~[?:?]
+Caused by: net.minecraft.ReportedException: Registry Loading
+	at net.minecraft.resources.RegistryDataLoader.createReportWithBriefInfo(RegistryDataLoader.java:311) ~[paper-26.1.2.jar:26.1.2-63-711c5de]
+	at net.minecraft.resources.RegistryDataLoader.logErrors(RegistryDataLoader.java:270) ~[paper-26.1.2.jar:26.1.2-63-711c5de]
+	at net.minecraft.resources.RegistryDataLoader.lambda$load$2(RegistryDataLoader.java:220) ~[paper-26.1.2.jar:26.1.2-63-711c5de]
+	at java.base/java.util.concurrent.CompletableFuture$UniApply.tryFire(CompletableFuture.java:667) ~[?:?]
+	at java.base/java.util.concurrent.CompletableFuture$Completion.exec(CompletableFuture.java:504) ~[?:?]
+	at java.base/java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:511) ~[?:?]
+	at java.base/java.util.concurrent.ForkJoinPool$WorkQueue.topLevelExec(ForkJoinPool.java:1450) ~[?:?]
+	at java.base/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:2019) ~[?:?]
+	at java.base/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:187) ~[?:?]
+Caused by: java.lang.IllegalStateException: Failed to load registries due to errors
+	at net.minecraft.resources.RegistryDataLoader.createReportWithBriefInfo(RegistryDataLoader.java:291) ~[paper-26.1.2.jar:26.1.2-63-711c5de]
+	... 8 more
