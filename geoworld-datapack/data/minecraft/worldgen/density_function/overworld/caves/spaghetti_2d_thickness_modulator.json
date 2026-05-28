@@ -1,12 +1,8 @@
 {
   "type": "minecraft:cache_once",
   "argument": {
-    "type": "minecraft:mapped_noise",
+    "type": "minecraft:noise",
     "noise": "minecraft:spaghetti_2d_thickness",
-    "input_min": -1.0,
-    "input_max": 1.0,
-    "output_min": -0.1,
-    "output_max": -0.05,
     "xz_scale": 2.0,
     "y_scale": 1.0
   }
