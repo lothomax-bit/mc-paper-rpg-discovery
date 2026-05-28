@@ -3,12 +3,12 @@
   "downfall": 0.9,
   "has_precipitation": true,
   "effects": {
-    "fog_color": 5812234,
-    "water_color": 3832597,
-    "water_fog_color": 5258471,
-    "sky_color": 5812234,
-    "grass_color": 9285927,
-    "foliage_color": 9285927
+    "fog_color": 5136219,
+    "water_color": 5536023,
+    "water_fog_color": 270131,
+    "sky_color": 5136219,
+    "grass_color": 9470064,
+    "foliage_color": 9470064
   },
   "spawners": {
     "monster": [],
@@ -19,5 +19,7 @@
   },
   "features": [[],[],[],[],[],[],[],[],[],[],[]],
   "spawn_costs": {},
-  "carvers": {}
+  "carvers": {
+    "air": []
+  }
 }

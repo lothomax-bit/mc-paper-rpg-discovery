@@ -3,10 +3,10 @@
   "downfall": 0.0,
   "has_precipitation": false,
   "effects": {
-    "fog_color": 16737792,
+    "fog_color": 13458176,
     "water_color": 4159204,
     "water_fog_color": 329011,
-    "sky_color": 16737792,
+    "sky_color": 13458176,
     "grass_color": 10053120,
     "foliage_color": 10053120
   },
@@ -19,5 +19,7 @@
   },
   "features": [[],[],[],[],[],[],[],[],[],[],[]],
   "spawn_costs": {},
-  "carvers": {}
+  "carvers": {
+    "air": []
+  }
 }

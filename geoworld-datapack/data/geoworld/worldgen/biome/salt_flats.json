@@ -1,5 +1,5 @@
 {
-  "temperature": 1.5,
+  "temperature": 1.8,
   "downfall": 0.0,
   "has_precipitation": false,
   "effects": {
@@ -17,5 +17,7 @@
   },
   "features": [[],[],[],[],[],[],[],[],[],[],[]],
   "spawn_costs": {},
-  "carvers": {}
+  "carvers": {
+    "air": []
+  }
 }
