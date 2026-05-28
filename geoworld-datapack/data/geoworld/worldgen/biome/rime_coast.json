@@ -23,7 +23,6 @@
     "water_creature": [],
     "water_ambient": []
   },
-  "features": [[],[],[],[],[],[],[],[],[],[],[]],
   "spawn_costs": {},
-  "carvers": {}
+  "features": [[],[],[],[],[],[],[],[],[],[],[]]
 }
