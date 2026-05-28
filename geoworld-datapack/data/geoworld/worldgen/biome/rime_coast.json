@@ -1,15 +1,20 @@
 {
-  "temperature": -0.5,
+  "temperature": -0.3,
   "downfall": 0.5,
   "has_precipitation": true,
   "effects": {
-    "fog_color": 11591679,
-    "water_color": 4020182,
+    "fog_color": 10543359,
+    "water_color": 3815423,
     "water_fog_color": 329011,
-    "sky_color": 11591679,
-    "grass_color": 7832447,
-    "foliage_color": 7832447,
-    "water_color_override": 4020182
+    "sky_color": 10543359,
+    "grass_color": 9945762,
+    "foliage_color": 9540484,
+    "particle": {
+      "probability": 0.05,
+      "options": {
+        "type": "minecraft:snowflake"
+      }
+    }
   },
   "spawners": {
     "monster": [],
@@ -20,7 +25,5 @@
   },
   "features": [[],[],[],[],[],[],[],[],[],[],[]],
   "spawn_costs": {},
-  "carvers": {
-    "air": []
-  }
+  "carvers": {}
 }

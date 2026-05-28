@@ -4,11 +4,11 @@
   "has_precipitation": true,
   "effects": {
     "fog_color": 8103167,
-    "water_color": 4445678,
+    "water_color": 4445183,
     "water_fog_color": 270131,
     "sky_color": 8103167,
-    "grass_color": 9748797,
-    "foliage_color": 9748797
+    "grass_color": 9617994,
+    "foliage_color": 8439583
   },
   "spawners": {
     "monster": [],
@@ -19,7 +19,5 @@
   },
   "features": [[],[],[],[],[],[],[],[],[],[],[]],
   "spawn_costs": {},
-  "carvers": {
-    "air": []
-  }
+  "carvers": {}
 }

@@ -3,10 +3,10 @@
   "downfall": 0.9,
   "has_precipitation": true,
   "effects": {
-    "fog_color": 7972607,
+    "fog_color": 8233983,
     "water_color": 4159204,
     "water_fog_color": 329011,
-    "sky_color": 7972607
+    "sky_color": 8233983
   },
   "spawners": {
     "monster": [],
@@ -17,7 +17,5 @@
   },
   "features": [[],[],[],[],[],[],[],[],[],[],[]],
   "spawn_costs": {},
-  "carvers": {
-    "air": []
-  }
+  "carvers": {}
 }
