@@ -1,12 +1,12 @@
 {
-  "temperature": 0.5,
-  "downfall": 0.3,
-  "has_precipitation": false,
+  "temperature": 0.8,
+  "downfall": 0.9,
+  "has_precipitation": true,
   "effects": {
-    "fog_color": 7864320,
+    "fog_color": 12638463,
     "water_color": 4159204,
     "water_fog_color": 329011,
-    "sky_color": 7864320
+    "sky_color": 7972607
   },
   "spawners": {
     "monster": [],
@@ -15,5 +15,19 @@
     "water_creature": [],
     "water_ambient": []
   },
-  "features": [[],[],[],[],[],[],[],[],[],[],[]]
+  "features": [
+    [],
+    [],
+    [],
+    [],
+    [],
+    [],
+    [],
+    [],
+    [],
+    [],
+    []
+  ],
+  "spawn_costs": {},
+  "carvers": {}
 }
