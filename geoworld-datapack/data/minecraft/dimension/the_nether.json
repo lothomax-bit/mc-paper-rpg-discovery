@@ -2,7 +2,7 @@
   "type": "minecraft:the_nether",
   "generator": {
     "type": "minecraft:noise",
-    "settings": "minecraft:the_nether",
+    "settings": "minecraft:nether",
     "biome_source": {
       "type": "minecraft:multi_noise",
       "biomes": [
