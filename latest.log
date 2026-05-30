@@ -1,53 +1,62 @@
-[19:36:20] [ServerMain/INFO]: [bootstrap] Running Java 25 (OpenJDK 64-Bit Server VM 25.0.3+9-LTS; Eclipse Adoptium Temurin-25.0.3+9) on Windows Server 2025 10.0 (amd64)
-[19:36:20] [ServerMain/INFO]: [bootstrap] Loading Paper 26.1.2-63-main@711c5de (2026-05-11T08:20:02Z) for Minecraft 26.1.2
-[19:36:20] [ServerMain/INFO]: [PluginInitializerManager] Initializing plugins...
-[19:36:21] [ServerMain/INFO]: [PluginInitializerManager] Initialized 23 plugins
-[19:36:21] [ServerMain/INFO]: [PluginInitializerManager] Paper plugins (2):
+[11:28:46] [ServerMain/INFO]: [bootstrap] Running Java 25 (OpenJDK 64-Bit Server VM 25.0.3+9-LTS; Eclipse Adoptium Temurin-25.0.3+9) on Windows Server 2025 10.0 (amd64)
+[11:28:46] [ServerMain/INFO]: [bootstrap] Loading Paper 26.1.2-63-main@711c5de (2026-05-11T08:20:02Z) for Minecraft 26.1.2
+[11:28:47] [ServerMain/INFO]: [PluginInitializerManager] Initializing plugins...
+[11:28:47] [ServerMain/INFO]: [PluginInitializerManager] Initialized 23 plugins
+[11:28:47] [ServerMain/INFO]: [PluginInitializerManager] Paper plugins (2):
  - RoseStacker (1.5.40), ToolStats (2.0.4)
-[19:36:21] [ServerMain/INFO]: [PluginInitializerManager] Bukkit plugins (21):
+[11:28:47] [ServerMain/INFO]: [PluginInitializerManager] Bukkit plugins (21):
  - AnvilORM (1.0.1), AuraSkills (2.3.12), AuthorityAdmin (2.4.2), Backuper (4.0.5), BlueMap (5.20), Chunky (1.5.3), DHSupport (0.13.1), DeathChest (2.2.9), GSit (3.3.3), Geyser-Spigot (2.10.0-SNAPSHOT), InteractionVisualizer (2026.1.1.0), Maintenance (5.0.0), Multiverse-Core (5.6.2), Multiverse-Inventories (5.3.3), Multiverse-Portals (5.2.2), MythicMobs (5.12.0-SNAPSHOT-local), Plan (5.7 build 3306), ProtocolLib (5.4.0), ViaBackwards (5.9.1), ViaVersion (5.9.1), floodgate (2.2.5-SNAPSHOT (b132-5a72b6a))
-[19:36:24] [ServerMain/INFO]: Environment: Environment[sessionHost=https://sessionserver.mojang.com, servicesHost=https://api.minecraftservices.com, profilesHost=https://api.mojang.com, name=PROD]
-[19:36:24] [ServerMain/INFO]: Found new data pack file/bukkit, loading it automatically
-[19:36:24] [ServerMain/INFO]: Found new data pack file/geoworld-datapack, loading it automatically
-[19:36:24] [ServerMain/INFO]: Found new data pack paper, loading it automatically
-[19:36:25] [Worker-Main-4/ERROR]: Registry loading errors:
-> Errors in registry minecraft:dimension:
->> Errors in element minecraft:the_end:
-java.lang.IllegalStateException: Failed to parse minecraft:the_end from pack file/geoworld-datapack
-	at net.minecraft.resources.RegistryLoadTask$PendingRegistration.loadFromResource(RegistryLoadTask.java:116)
-	at net.minecraft.resources.ResourceManagerRegistryLoadTask.lambda$load$2(ResourceManagerRegistryLoadTask.java:55)
-	at net.minecraft.util.thread.ParallelMapTransform$Container.applyOperation(ParallelMapTransform.java:123)
-	at net.minecraft.util.thread.ParallelMapTransform$SingleTaskSplitter.lambda$scheduleBatch$0(ParallelMapTransform.java:155)
-	at java.base/java.util.concurrent.CompletableFuture$AsyncRun.run(CompletableFuture.java:1825)
-	at java.base/java.util.concurrent.CompletableFuture$AsyncRun.exec(CompletableFuture.java:1817)
+[11:28:51] [ServerMain/INFO]: Environment: Environment[sessionHost=https://sessionserver.mojang.com, servicesHost=https://api.minecraftservices.com, profilesHost=https://api.mojang.com, name=PROD]
+[11:28:51] [ServerMain/WARN]: Error reading pack metadata, attempting fallback type
+com.google.gson.JsonParseException: Pack declares support for version newer than 81, but is missing mandatory fields min_format and max_format
+	at com.mojang.serialization.DataResult$Error.getOrThrow(DataResult.java:287) ~[datafixerupper-9.0.19.jar:?]
+	at net.minecraft.server.packs.resources.ResourceMetadata$2.getSection(ResourceMetadata.java:39) ~[paper-26.1.2.jar:26.1.2-63-711c5de]
+	at net.minecraft.server.packs.AbstractPackResources.getMetadataSection(AbstractPackResources.java:24) ~[paper-26.1.2.jar:26.1.2-63-711c5de]
+	at net.minecraft.server.packs.repository.Pack.readPackMetadata(Pack.java:53) ~[paper-26.1.2.jar:26.1.2-63-711c5de]
+	at net.minecraft.server.packs.repository.Pack.readMetaAndCreate(Pack.java:32) ~[paper-26.1.2.jar:26.1.2-63-711c5de]
+	at net.minecraft.server.packs.repository.FolderRepositorySource.lambda$loadPacks$0(FolderRepositorySource.java:54) ~[paper-26.1.2.jar:26.1.2-63-711c5de]
+	at net.minecraft.server.packs.repository.FolderRepositorySource.discoverPacks(FolderRepositorySource.java:80) ~[paper-26.1.2.jar:26.1.2-63-711c5de]
+	at net.minecraft.server.packs.repository.FolderRepositorySource.loadPacks(FolderRepositorySource.java:52) ~[paper-26.1.2.jar:26.1.2-63-711c5de]
+	at net.minecraft.server.packs.repository.PackRepository.discoverAvailable(PackRepository.java:52) ~[paper-26.1.2.jar:26.1.2-63-711c5de]
+	at net.minecraft.server.packs.repository.PackRepository.reload(PackRepository.java:44) ~[paper-26.1.2.jar:26.1.2-63-711c5de]
+	at net.minecraft.server.MinecraftServer.configurePackRepository(MinecraftServer.java:2388) ~[paper-26.1.2.jar:26.1.2-63-711c5de]
+	at net.minecraft.server.WorldLoader$PackConfig.createResourceManager(WorldLoader.java:107) ~[paper-26.1.2.jar:26.1.2-63-711c5de]
+	at java.base/java.util.concurrent.CompletableFuture$AsyncSupply.run(CompletableFuture.java:1789) ~[?:?]
+	at net.minecraft.util.Util.blockUntilDone(Util.java:1092) ~[paper-26.1.2.jar:26.1.2-63-711c5de]
+	at net.minecraft.util.Util.blockUntilDone(Util.java:1081) ~[paper-26.1.2.jar:26.1.2-63-711c5de]
+	at net.minecraft.server.Main.main(Main.java:246) ~[paper-26.1.2.jar:26.1.2-63-711c5de]
+	at io.papermc.paper.PaperBootstrap.boot(PaperBootstrap.java:21) ~[paper-26.1.2.jar:26.1.2-63-711c5de]
+	at org.bukkit.craftbukkit.Main.main(Main.java:204) ~[paper-26.1.2.jar:26.1.2-63-711c5de]
+	at io.papermc.paperclip.Paperclip.lambda$main$0(Paperclip.java:42) ~[?:?]
+	at java.base/java.lang.Thread.run(Thread.java:1474) ~[?:?]
+[11:28:51] [ServerMain/INFO]: Found new data pack file/bukkit, loading it automatically
+[11:28:51] [ServerMain/INFO]: Found new data pack file/geoworld-datapack, loading it automatically
+[11:28:51] [ServerMain/INFO]: Found new data pack paper, loading it automatically
+[11:28:51] [Worker-Main-2/ERROR]: Registry loading errors:
+> Errors in registry minecraft:root:
+>> Errors in element minecraft:worldgen/placed_feature:
+java.lang.IllegalStateException: Unbound values in registry ResourceKey[minecraft:root / minecraft:worldgen/placed_feature]: [minecraft:fluid_spring_lava, minecraft:fluid_spring_water, minecraft:fossil_coal, minecraft:fossil_diamonds, minecraft:ore_ancient_debris_small, minecraft:ore_clay_with_copper, minecraft:ore_clay_with_lapis]
+	at net.minecraft.core.MappedRegistry.freeze(MappedRegistry.java:311)
+	at net.minecraft.resources.RegistryLoadTask.freezeRegistry(RegistryLoadTask.java:82)
+	at net.minecraft.resources.RegistryDataLoader.lambda$load$3(RegistryDataLoader.java:218)
+	at java.base/java.util.stream.ReferencePipeline$2$1.accept(ReferencePipeline.java:196)
+	at java.base/java.util.AbstractList$RandomAccessSpliterator.forEachRemaining(AbstractList.java:722)
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:570)
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:560)
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:635)
+	at java.base/java.util.stream.AbstractPipeline.evaluateToArrayNode(AbstractPipeline.java:291)
+	at java.base/java.util.stream.ReferencePipeline.toArray(ReferencePipeline.java:652)
+	at java.base/java.util.stream.ReferencePipeline.toArray(ReferencePipeline.java:658)
+	at java.base/java.util.stream.ReferencePipeline.toList(ReferencePipeline.java:663)
+	at net.minecraft.resources.RegistryDataLoader.lambda$load$2(RegistryDataLoader.java:218)
+	at java.base/java.util.concurrent.CompletableFuture$UniApply.tryFire(CompletableFuture.java:667)
+	at java.base/java.util.concurrent.CompletableFuture$Completion.exec(CompletableFuture.java:504)
 	at java.base/java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:511)
 	at java.base/java.util.concurrent.ForkJoinPool$WorkQueue.topLevelExec(ForkJoinPool.java:1450)
 	at java.base/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:2019)
 	at java.base/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:187)
-Caused by: java.lang.IllegalStateException: Failed to get element ResourceKey[minecraft:worldgen/noise_settings / minecraft:the_end]
-	at com.mojang.serialization.DataResult$Error.getOrThrow(DataResult.java:287)
-	at com.mojang.serialization.DataResult.getOrThrow(DataResult.java:81)
-	at net.minecraft.resources.RegistryLoadTask$PendingRegistration.loadFromResource(RegistryLoadTask.java:109)
-	... 9 more
->> Errors in element minecraft:the_nether:
-java.lang.IllegalStateException: Failed to parse minecraft:the_nether from pack file/geoworld-datapack
-	at net.minecraft.resources.RegistryLoadTask$PendingRegistration.loadFromResource(RegistryLoadTask.java:116)
-	at net.minecraft.resources.ResourceManagerRegistryLoadTask.lambda$load$2(ResourceManagerRegistryLoadTask.java:55)
-	at net.minecraft.util.thread.ParallelMapTransform$Container.applyOperation(ParallelMapTransform.java:123)
-	at net.minecraft.util.thread.ParallelMapTransform$SingleTaskSplitter.lambda$scheduleBatch$0(ParallelMapTransform.java:155)
-	at java.base/java.util.concurrent.CompletableFuture$AsyncRun.run(CompletableFuture.java:1825)
-	at java.base/java.util.concurrent.CompletableFuture$AsyncRun.exec(CompletableFuture.java:1817)
-	at java.base/java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:511)
-	at java.base/java.util.concurrent.ForkJoinPool$WorkQueue.topLevelExec(ForkJoinPool.java:1450)
-	at java.base/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:2019)
-	at java.base/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:187)
-Caused by: java.lang.IllegalStateException: Failed to get element ResourceKey[minecraft:worldgen/noise_settings / minecraft:the_nether]
-	at com.mojang.serialization.DataResult$Error.getOrThrow(DataResult.java:287)
-	at com.mojang.serialization.DataResult.getOrThrow(DataResult.java:81)
-	at net.minecraft.resources.RegistryLoadTask$PendingRegistration.loadFromResource(RegistryLoadTask.java:109)
-	... 9 more
 
-[19:36:25] [ServerMain/WARN]: Failed to load datapacks, can't proceed with server load. You can either fix your datapacks or reset to vanilla with --safeMode
+[11:28:51] [ServerMain/WARN]: Failed to load datapacks, can't proceed with server load. You can either fix your datapacks or reset to vanilla with --safeMode
 java.util.concurrent.ExecutionException: net.minecraft.ReportedException: Registry Loading
 	at java.base/java.util.concurrent.CompletableFuture.wrapInExecutionException(CompletableFuture.java:345) ~[?:?]
 	at java.base/java.util.concurrent.CompletableFuture.reportGet(CompletableFuture.java:440) ~[?:?]
