@@ -1,0 +1,111 @@
+# GeoWorld MythicMobs RandomSpawns – Ocean
+# Generiert aus docs/CUSTOM_BIOMES.md
+# Ablageort: plugins/MythicMobs/RandomSpawns/geoworld_ocean.yml
+
+AbyssalHunter:
+  MobType: AbyssalHunter
+  Worlds: world
+  Chance: 0.05
+  Priority: 1
+  Action: ADD
+  Conditions:
+  - biome DEEP_OCEAN
+
+DeepOneSorcerer:
+  MobType: DeepOneSorcerer
+  Worlds: world
+  Chance: 0.05
+  Priority: 1
+  Action: ADD
+  Conditions:
+  - biome DEEP_OCEAN
+
+LuminousJellyfish:
+  MobType: LuminousJellyfish
+  Worlds: world
+  Chance: 0.05
+  Priority: 1
+  Action: ADD
+  Conditions:
+  - biome DEEP_OCEAN
+
+CoralGuardian:
+  MobType: CoralGuardian
+  Worlds: world
+  Chance: 0.05
+  Priority: 1
+  Action: ADD
+  Conditions:
+  - biome DEEP_OCEAN
+
+IslandPirate:
+  MobType: IslandPirate
+  Worlds: world
+  Chance: 0.05
+  Priority: 1
+  Action: ADD
+  Conditions:
+  - biome DEEP_OCEAN
+
+SandCrab:
+  MobType: SandCrab
+  Worlds: world
+  Chance: 0.05
+  Priority: 1
+  Action: ADD
+  Conditions:
+  - biome DEEP_OCEAN
+
+DrownedKnight:
+  MobType: DrownedKnight
+  Worlds: world
+  Chance: 0.05
+  Priority: 1
+  Action: ADD
+  Conditions:
+  - biome DEEP_OCEAN
+
+TideCaller:
+  MobType: TideCaller
+  Worlds: world
+  Chance: 0.05
+  Priority: 1
+  Action: ADD
+  Conditions:
+  - biome DEEP_OCEAN
+
+PearlOyster:
+  MobType: PearlOyster
+  Worlds: world
+  Chance: 0.05
+  Priority: 1
+  Action: ADD
+  Conditions:
+  - biome DEEP_OCEAN
+
+LaguneShark:
+  MobType: LaguneShark
+  Worlds: world
+  Chance: 0.05
+  Priority: 1
+  Action: ADD
+  Conditions:
+  - biome DEEP_OCEAN
+
+VolcanoSpirit:
+  MobType: VolcanoSpirit
+  Worlds: world
+  Chance: 0.05
+  Priority: 1
+  Action: ADD
+  Conditions:
+  - biome DEEP_OCEAN
+
+LavaGull:
+  MobType: LavaGull
+  Worlds: world
+  Chance: 0.05
+  Priority: 1
+  Action: ADD
+  Conditions:
+  - biome DEEP_OCEAN

@@ -1,10 +1,6 @@
 {
   "pack": {
-    "pack_format": 101,
-    "supported_formats": {
-      "min_inclusive": 101,
-      "max_inclusive": 101
-    },
+    "pack_format": 101.1,
     "description": "GeoWorld \u2013 Epic terrain up to Y 2000 with massive biomes"
   }
 }

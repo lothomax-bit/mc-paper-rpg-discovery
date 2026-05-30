@@ -1,0 +1,165 @@
+# GeoWorld MythicMobs RandomSpawns – Mystic
+# Generiert aus docs/CUSTOM_BIOMES.md
+# Ablageort: plugins/MythicMobs/RandomSpawns/geoworld_mystic.yml
+
+StarFragment:
+  MobType: StarFragment
+  Worlds: world
+  Chance: 0.05
+  Priority: 1
+  Action: ADD
+  Conditions:
+  - biome DARK_FOREST
+
+CelestialGuardian:
+  MobType: CelestialGuardian
+  Worlds: world
+  Chance: 0.05
+  Priority: 1
+  Action: ADD
+  Conditions:
+  - biome DARK_FOREST
+
+DreamWeaver:
+  MobType: DreamWeaver
+  Worlds: world
+  Chance: 0.05
+  Priority: 1
+  Action: ADD
+  Conditions:
+  - biome DARK_FOREST
+
+Nightmare:
+  MobType: Nightmare
+  Worlds: world
+  Chance: 0.05
+  Priority: 1
+  Action: ADD
+  Conditions:
+  - biome DARK_FOREST
+
+RuneGuardian:
+  MobType: RuneGuardian
+  Worlds: world
+  Chance: 0.05
+  Priority: 1
+  Action: ADD
+  Conditions:
+  - biome DARK_FOREST
+
+AncientSeer:
+  MobType: AncientSeer
+  Worlds: world
+  Chance: 0.05
+  Priority: 1
+  Action: ADD
+  Conditions:
+  - biome DARK_FOREST
+
+EclipsePhantom:
+  MobType: EclipsePhantom
+  Worlds: world
+  Chance: 0.05
+  Priority: 1
+  Action: ADD
+  Conditions:
+  - biome DARK_FOREST
+
+SolarWraith:
+  MobType: SolarWraith
+  Worlds: world
+  Chance: 0.05
+  Priority: 1
+  Action: ADD
+  Conditions:
+  - biome DARK_FOREST
+
+OasisDjinn:
+  MobType: OasisDjinn
+  Worlds: world
+  Chance: 0.05
+  Priority: 1
+  Action: ADD
+  Conditions:
+  - biome DARK_FOREST
+
+MirageHydra:
+  MobType: MirageHydra
+  Worlds: world
+  Chance: 0.05
+  Priority: 1
+  Action: ADD
+  Conditions:
+  - biome DARK_FOREST
+
+MoonElemental:
+  MobType: MoonElemental
+  Worlds: world
+  Chance: 0.05
+  Priority: 1
+  Action: ADD
+  Conditions:
+  - biome DARK_FOREST
+
+LunarWolf:
+  MobType: LunarWolf
+  Worlds: world
+  Chance: 0.05
+  Priority: 1
+  Action: ADD
+  Conditions:
+  - biome DARK_FOREST
+
+ThunderCallerWyvern:
+  MobType: ThunderCallerWyvern
+  Worlds: world
+  Chance: 0.05
+  Priority: 1
+  Action: ADD
+  Conditions:
+  - biome DARK_FOREST
+
+StormGolem:
+  MobType: StormGolem
+  Worlds: world
+  Chance: 0.05
+  Priority: 1
+  Action: ADD
+  Conditions:
+  - biome DARK_FOREST
+
+SporeVine:
+  MobType: SporeVine
+  Worlds: world
+  Chance: 0.05
+  Priority: 1
+  Action: ADD
+  Conditions:
+  - biome DARK_FOREST
+
+JungleStalker:
+  MobType: JungleStalker
+  Worlds: world
+  Chance: 0.05
+  Priority: 1
+  Action: ADD
+  Conditions:
+  - biome DARK_FOREST
+
+RuinsCurator:
+  MobType: RuinsCurator
+  Worlds: world
+  Chance: 0.05
+  Priority: 1
+  Action: ADD
+  Conditions:
+  - biome DARK_FOREST
+
+ColossalStatue:
+  MobType: ColossalStatue
+  Worlds: world
+  Chance: 0.05
+  Priority: 1
+  Action: ADD
+  Conditions:
+  - biome DARK_FOREST

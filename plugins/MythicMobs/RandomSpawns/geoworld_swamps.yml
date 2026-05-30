@@ -1,0 +1,57 @@
+# GeoWorld MythicMobs RandomSpawns – Swamps
+# Generiert aus docs/CUSTOM_BIOMES.md
+# Ablageort: plugins/MythicMobs/RandomSpawns/geoworld_swamps.yml
+
+BayouWitch:
+  MobType: BayouWitch
+  Worlds: world
+  Chance: 0.05
+  Priority: 1
+  Action: ADD
+  Conditions:
+  - biome SWAMP
+
+VoodooSkeleton:
+  MobType: VoodooSkeleton
+  Worlds: world
+  Chance: 0.05
+  Priority: 1
+  Action: ADD
+  Conditions:
+  - biome SWAMP
+
+BogCrocodile:
+  MobType: BogCrocodile
+  Worlds: world
+  Chance: 0.05
+  Priority: 1
+  Action: ADD
+  Conditions:
+  - biome SWAMP
+
+GlowFrog:
+  MobType: GlowFrog
+  Worlds: world
+  Chance: 0.05
+  Priority: 1
+  Action: ADD
+  Conditions:
+  - biome SWAMP
+
+WillOWisp:
+  MobType: WillOWisp
+  Worlds: world
+  Chance: 0.05
+  Priority: 1
+  Action: ADD
+  Conditions:
+  - biome SWAMP
+
+MoorBanshee:
+  MobType: MoorBanshee
+  Worlds: world
+  Chance: 0.05
+  Priority: 1
+  Action: ADD
+  Conditions:
+  - biome SWAMP

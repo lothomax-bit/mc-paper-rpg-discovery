@@ -1,0 +1,30 @@
+# GeoWorld MythicMobs RandomSpawns – Waterfall
+# Generiert aus docs/CUSTOM_BIOMES.md
+# Ablageort: plugins/MythicMobs/RandomSpawns/geoworld_waterfall.yml
+
+CaveHermit:
+  MobType: CaveHermit
+  Worlds: world
+  Chance: 0.05
+  Priority: 1
+  Action: ADD
+  Conditions:
+  - biome RIVER
+
+WaterfallSpirit:
+  MobType: WaterfallSpirit
+  Worlds: world
+  Chance: 0.05
+  Priority: 1
+  Action: ADD
+  Conditions:
+  - biome RIVER
+
+MossGolem:
+  MobType: MossGolem
+  Worlds: world
+  Chance: 0.05
+  Priority: 1
+  Action: ADD
+  Conditions:
+  - biome RIVER

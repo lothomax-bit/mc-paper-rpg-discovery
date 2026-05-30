@@ -72,22 +72,3 @@ MossGolem:
     Health: 0.5
     Damage: 0.25
 
-RandomSpawning:
-  CaveHermit:
-    Enabled: false
-    Worlds: world
-    Biomes: RIVER
-    Chance: 0.05
-    MaxMobsPerChunk: 2
-  WaterfallSpirit:
-    Enabled: false
-    Worlds: world
-    Biomes: RIVER
-    Chance: 0.05
-    MaxMobsPerChunk: 2
-  MossGolem:
-    Enabled: false
-    Worlds: world
-    Biomes: RIVER
-    Chance: 0.05
-    MaxMobsPerChunk: 2

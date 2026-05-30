@@ -1,0 +1,57 @@
+# GeoWorld MythicMobs RandomSpawns – Mountains
+# Generiert aus docs/CUSTOM_BIOMES.md
+# Ablageort: plugins/MythicMobs/RandomSpawns/geoworld_mountains.yml
+
+CrystalGolem:
+  MobType: CrystalGolem
+  Worlds: world
+  Chance: 0.05
+  Priority: 1
+  Action: ADD
+  Conditions:
+  - biome MOUNTAINS
+
+ShardWyvern:
+  MobType: ShardWyvern
+  Worlds: world
+  Chance: 0.05
+  Priority: 1
+  Action: ADD
+  Conditions:
+  - biome MOUNTAINS
+
+CloudEagle:
+  MobType: CloudEagle
+  Worlds: world
+  Chance: 0.05
+  Priority: 1
+  Action: ADD
+  Conditions:
+  - biome MOUNTAINS
+
+PlateauWarden:
+  MobType: PlateauWarden
+  Worlds: world
+  Chance: 0.05
+  Priority: 1
+  Action: ADD
+  Conditions:
+  - biome MOUNTAINS
+
+LavaStalker:
+  MobType: LavaStalker
+  Worlds: world
+  Chance: 0.05
+  Priority: 1
+  Action: ADD
+  Conditions:
+  - biome MOUNTAINS
+
+ObsidianColossus:
+  MobType: ObsidianColossus
+  Worlds: world
+  Chance: 0.05
+  Priority: 1
+  Action: ADD
+  Conditions:
+  - biome MOUNTAINS
