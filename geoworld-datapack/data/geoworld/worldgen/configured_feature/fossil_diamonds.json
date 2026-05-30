@@ -10,7 +10,7 @@
       "minecraft:fossil/skull_1_diamonds"
     ],
     "fossil_processors": "minecraft:fossil_rot",
-    "overlay_processors": "minecraft:fossil_diamonds",
+    "overlay_processors": "geoworld:fossil_diamonds",
     "max_empty_corners_allowed": 4
   }
 }
