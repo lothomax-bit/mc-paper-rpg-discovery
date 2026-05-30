@@ -1,12 +1,12 @@
 {
   "temperature": 0.5,
-  "downfall": 0.9,
+  "downfall": 0.5,
   "has_precipitation": true,
   "effects": {
-    "fog_color": 1718364,
-    "water_color": 1722492,
-    "water_fog_color": 665676,
-    "sky_color": 2116220
+    "fog_color": 330260,
+    "water_color": 199979,
+    "water_fog_color": 659226,
+    "sky_color": 1712960
   },
   "spawners": {
     "monster": [],
@@ -29,7 +29,9 @@
     []
   ],
   "spawn_costs": {},
-  "carvers": {
-    "air": ["minecraft:cave","minecraft:cave_extra_underground","minecraft:canyon"]
-  }
+  "carvers": [
+    "minecraft:cave",
+    "minecraft:cave_extra_underground",
+    "minecraft:canyon"
+  ]
 }
