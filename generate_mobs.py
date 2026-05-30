@@ -213,11 +213,18 @@ for cat, mobs in categories.items():
 
             f.write("\n")
 
-        f.write("RandomSpawning:\n")
+
+    with open(f"plugins/MythicMobs/RandomSpawns/geoworld_{cat}.yml", "w") as rf:
+        rf.write(f"# GeoWorld MythicMobs RandomSpawns – {cat.capitalize()}\n")
+        rf.write("# Generiert aus docs/CUSTOM_BIOMES.md\n")
+        rf.write(f"# Ablageort: plugins/MythicMobs/RandomSpawns/geoworld_{cat}.yml\n\n")
+
         for mob in mobs:
-            f.write(f"  {mob}:\n")
-            f.write(f"    Enabled: false\n")
-            f.write(f"    Worlds: world\n")
-            f.write(f"    Biomes: {biome_mapping.get(cat, 'PLAINS')}\n")
-            f.write(f"    Chance: 0.05\n")
-            f.write(f"    MaxMobsPerChunk: 2\n")
+            rf.write(f"{mob}:\n")
+            rf.write(f"  MobType: {mob}\n")
+            rf.write(f"  Worlds: world\n")
+            rf.write(f"  Chance: 0.05\n")
+            rf.write(f"  Priority: 1\n")
+            rf.write(f"  Action: ADD\n")
+            rf.write(f"  Conditions:\n")
+            rf.write(f"  - biome {biome_mapping.get(cat, 'PLAINS')}\n\n")

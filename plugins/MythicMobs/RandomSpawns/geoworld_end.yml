@@ -1,0 +1,57 @@
+# GeoWorld MythicMobs RandomSpawns – End
+# Generiert aus docs/CUSTOM_BIOMES.md
+# Ablageort: plugins/MythicMobs/RandomSpawns/geoworld_end.yml
+
+EndCrawler:
+  MobType: EndCrawler
+  Worlds: world
+  Chance: 0.05
+  Priority: 1
+  Action: ADD
+  Conditions:
+  - biome THE_END
+
+ChorusReaper:
+  MobType: ChorusReaper
+  Worlds: world
+  Chance: 0.05
+  Priority: 1
+  Action: ADD
+  Conditions:
+  - biome THE_END
+
+VoidSentinel:
+  MobType: VoidSentinel
+  Worlds: world
+  Chance: 0.05
+  Priority: 1
+  Action: ADD
+  Conditions:
+  - biome THE_END
+
+OblivionBoss:
+  MobType: OblivionBoss
+  Worlds: world
+  Chance: 0.05
+  Priority: 1
+  Action: ADD
+  Conditions:
+  - biome THE_END
+
+SpireGargoyle:
+  MobType: SpireGargoyle
+  Worlds: world
+  Chance: 0.05
+  Priority: 1
+  Action: ADD
+  Conditions:
+  - biome THE_END
+
+EndKnight:
+  MobType: EndKnight
+  Worlds: world
+  Chance: 0.05
+  Priority: 1
+  Action: ADD
+  Conditions:
+  - biome THE_END
