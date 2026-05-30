@@ -1,12 +1,12 @@
 {
-  "temperature": 0.7,
+  "temperature": 0.8,
   "downfall": 0.9,
   "has_precipitation": true,
   "effects": {
-    "fog_color": 5013504,
-    "water_color": 3832892,
-    "water_fog_color": 1644032,
-    "sky_color": 7842047
+    "fog_color": 4006426,
+    "water_color": 4866090,
+    "water_fog_color": 2760208,
+    "sky_color": 5914672
   },
   "spawners": {
     "monster": [],
@@ -16,18 +16,20 @@
     "water_ambient": []
   },
   "features": [
+    ["minecraft:lake_lava_underground","minecraft:lake_lava_surface"],
+    ["minecraft:amethyst_geode"],
+    ["minecraft:disk_gravel","minecraft:disk_sand","minecraft:disk_clay","minecraft:underwater_magma"],
+    ["minecraft:monster_room","minecraft:fossil_coal","minecraft:fossil_diamonds","minecraft:ore_coal_upper","minecraft:ore_coal_lower","minecraft:ore_iron_upper","minecraft:ore_iron_middle","minecraft:ore_iron_small","minecraft:ore_gold","minecraft:ore_gold_lower","minecraft:ore_redstone","minecraft:ore_redstone_lower","minecraft:ore_diamond","minecraft:ore_diamond_large","minecraft:ore_diamond_buried","minecraft:ore_lapis","minecraft:ore_lapis_buried","minecraft:ore_copper","minecraft:ore_copper_large","minecraft:ore_emerald","minecraft:ore_ancient_debris_large","minecraft:ore_ancient_debris_small","minecraft:ore_dirt","minecraft:ore_gravel","minecraft:ore_granite_upper","minecraft:ore_granite_lower","minecraft:ore_diorite_upper","minecraft:ore_diorite_lower","minecraft:ore_andesite_upper","minecraft:ore_andesite_lower","minecraft:ore_tuff","minecraft:ore_clay_with_lapis","minecraft:ore_clay_with_copper"],
+    ["minecraft:fluid_spring_water","minecraft:fluid_spring_lava"],
     [],
     [],
+    ["minecraft:freeze_top_layer"],
     [],
-    [],
-    [],
-    [],
-    [],
-    [],
-    [],
-    [],
+    ["minecraft:spring_water","minecraft:spring_lava"],
     []
   ],
   "spawn_costs": {},
-  "carvers": []
+  "carvers": {
+    "air": ["minecraft:cave","minecraft:cave_extra_underground","minecraft:canyon"]
+  }
 }
