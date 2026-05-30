@@ -1,6 +1,8 @@
 {
   "pack": {
-    "pack_format": 101.1,
-    "description": "GeoWorld \u2013 Epic terrain up to Y 2000 with massive biomes"
+    "pack_format": 101,
+    "description": "GeoWorld \u2013 Epic terrain up to Y 2000 with massive biomes",
+    "min_format": 101,
+    "max_format": 101
   }
 }
