@@ -7,1215 +7,543 @@
       "type": "minecraft:multi_noise",
       "biomes": [
         {
+          "biome": "minecraft:plains",
+          "parameters": {
+            "continentalness": [-1.0, 1.0],
+            "depth": 0.0,
+            "erosion": [-1.0, 1.0],
+            "humidity": [-1.0, 1.0],
+            "offset": 0.1,
+            "temperature": [-1.0, 1.0],
+            "weirdness": [-1.0, 1.0]
+          }
+        },
+        {
           "biome": "geoworld:abyssal_trench",
           "parameters": {
-            "continentalness": [
-              -1.0,
-              -0.7
-            ],
+            "continentalness": [-1.0, -0.7],
             "depth": 1.0,
-            "erosion": [
-              -1.0,
-              1.0
-            ],
-            "humidity": [
-              -1.0,
-              1.0
-            ],
+            "erosion": [-1.0, 1.0],
+            "humidity": [-1.0, 1.0],
             "offset": 0.0,
-            "temperature": [
-              -1.0,
-              1.0
-            ],
-            "weirdness": [
-              -1.0,
-              1.0
-            ]
+            "temperature": [-1.0, 1.0],
+            "weirdness": [-1.0, 1.0]
           }
         },
         {
           "biome": "geoworld:bioluminescent_shallows",
           "parameters": {
-            "continentalness": [
-              -0.2,
-              0.0
-            ],
+            "continentalness": [-0.2, 0.0],
             "depth": 0.0,
-            "erosion": [
-              -1.0,
-              1.0
-            ],
-            "humidity": [
-              -1.0,
-              1.0
-            ],
+            "erosion": [-1.0, 1.0],
+            "humidity": [-1.0, 1.0],
             "offset": 0.0,
-            "temperature": [
-              0.5,
-              1.0
-            ],
-            "weirdness": [
-              -1.0,
-              1.0
-            ]
+            "temperature": [0.5, 1.0],
+            "weirdness": [-1.0, 1.0]
           }
         },
         {
           "biome": "geoworld:coral_archipelago",
           "parameters": {
-            "continentalness": [
-              -0.1,
-              0.1
-            ],
+            "continentalness": [-0.1, 0.1],
             "depth": 0.0,
-            "erosion": [
-              -1.0,
-              1.0
-            ],
-            "humidity": [
-              -1.0,
-              1.0
-            ],
+            "erosion": [-1.0, 1.0],
+            "humidity": [-1.0, 1.0],
             "offset": 0.0,
-            "temperature": [
-              0.8,
-              1.0
-            ],
-            "weirdness": [
-              -1.0,
-              1.0
-            ]
+            "temperature": [0.7, 1.0],
+            "weirdness": [-1.0, 1.0]
           }
         },
         {
           "biome": "geoworld:glacial_abyss",
           "parameters": {
-            "continentalness": [
-              -0.6,
-              -0.2
-            ],
-            "depth": [
-              0.5,
-              1.0
-            ],
-            "erosion": [
-              -1.0,
-              1.0
-            ],
-            "humidity": [
-              -1.0,
-              1.0
-            ],
+            "continentalness": [-0.6, -0.2],
+            "depth": [0.5, 1.0],
+            "erosion": [-1.0, 1.0],
+            "humidity": [-1.0, 1.0],
             "offset": 0.0,
-            "temperature": [
-              -1.0,
-              -0.7
-            ],
-            "weirdness": [
-              -1.0,
-              1.0
-            ]
+            "temperature": [-1.0, -0.7],
+            "weirdness": [-1.0, 1.0]
           }
         },
         {
           "biome": "geoworld:sunken_city",
           "parameters": {
-            "continentalness": [
-              -0.5,
-              -0.2
-            ],
-            "depth": [
-              0.8,
-              1.0
-            ],
-            "erosion": [
-              -1.0,
-              1.0
-            ],
-            "humidity": [
-              -1.0,
-              1.0
-            ],
+            "continentalness": [-0.5, -0.2],
+            "depth": [0.8, 1.0],
+            "erosion": [-1.0, 1.0],
+            "humidity": [-1.0, 1.0],
             "offset": 0.0,
-            "temperature": [
-              -1.0,
-              1.0
-            ],
-            "weirdness": [
-              -1.0,
-              1.0
-            ]
+            "temperature": [-1.0, 1.0],
+            "weirdness": [-1.0, 1.0]
           }
         },
         {
           "biome": "geoworld:pearl_lagoon",
           "parameters": {
-            "continentalness": [
-              -0.15,
-              0.05
-            ],
+            "continentalness": [-0.15, 0.05],
             "depth": 0.0,
-            "erosion": [
-              -1.0,
-              1.0
-            ],
-            "humidity": [
-              -1.0,
-              1.0
-            ],
+            "erosion": [-1.0, 1.0],
+            "humidity": [-1.0, 1.0],
             "offset": 0.0,
-            "temperature": [
-              0.6,
-              1.0
-            ],
-            "weirdness": [
-              -1.0,
-              1.0
-            ]
+            "temperature": [0.5, 1.0],
+            "weirdness": [-1.0, 1.0]
           }
         },
         {
           "biome": "geoworld:volcanic_island",
           "parameters": {
-            "continentalness": [
-              -0.1,
-              0.15
-            ],
+            "continentalness": [-0.1, 0.15],
             "depth": 0.0,
-            "erosion": [
-              -1.0,
-              1.0
-            ],
-            "humidity": [
-              -1.0,
-              1.0
-            ],
+            "erosion": [-1.0, 1.0],
+            "humidity": [-1.0, 1.0],
             "offset": 0.0,
-            "temperature": [
-              1.5,
-              2.0
-            ],
-            "weirdness": [
-              -1.0,
-              1.0
-            ]
+            "temperature": [0.8, 1.0],
+            "weirdness": [-1.0, 1.0]
           }
         },
         {
           "biome": "geoworld:rime_coast",
           "parameters": {
-            "continentalness": [
-              -0.2,
-              0.1
-            ],
+            "continentalness": [-0.2, 0.1],
             "depth": 0.0,
-            "erosion": [
-              -1.0,
-              1.0
-            ],
-            "humidity": [
-              -1.0,
-              1.0
-            ],
+            "erosion": [-1.0, 1.0],
+            "humidity": [-1.0, 1.0],
             "offset": 0.0,
-            "temperature": [
-              -1.0,
-              -0.5
-            ],
-            "weirdness": [
-              -1.0,
-              1.0
-            ]
+            "temperature": [-1.0, -0.5],
+            "weirdness": [-1.0, 1.0]
           }
         },
         {
           "biome": "geoworld:crystal_peaks",
           "parameters": {
-            "continentalness": [
-              0.6,
-              1.0
-            ],
+            "continentalness": [0.6, 1.0],
             "depth": 0.0,
-            "erosion": [
-              -1.0,
-              -0.6
-            ],
-            "humidity": [
-              -1.0,
-              1.0
-            ],
+            "erosion": [-1.0, -0.6],
+            "humidity": [-1.0, 1.0],
             "offset": 0.0,
-            "temperature": [
-              -1.0,
-              1.0
-            ],
-            "weirdness": [
-              0.5,
-              1.0
-            ]
+            "temperature": [-1.0, 1.0],
+            "weirdness": [0.5, 1.0]
           }
         },
         {
           "biome": "geoworld:skyreach_plateau",
           "parameters": {
-            "continentalness": [
-              0.5,
-              0.8
-            ],
+            "continentalness": [0.5, 0.8],
             "depth": 0.0,
-            "erosion": [
-              -0.4,
-              -0.2
-            ],
-            "humidity": [
-              -1.0,
-              1.0
-            ],
+            "erosion": [-0.4, -0.2],
+            "humidity": [-1.0, 1.0],
             "offset": 0.0,
-            "temperature": [
-              -0.3,
-              0.3
-            ],
-            "weirdness": [
-              -1.0,
-              1.0
-            ]
+            "temperature": [-0.3, 0.3],
+            "weirdness": [-1.0, 1.0]
           }
         },
         {
           "biome": "geoworld:obsidian_spires",
           "parameters": {
-            "continentalness": [
-              0.4,
-              0.8
-            ],
+            "continentalness": [0.4, 0.8],
             "depth": 0.0,
-            "erosion": [
-              -0.8,
-              -0.4
-            ],
-            "humidity": [
-              -1.0,
-              1.0
-            ],
+            "erosion": [-0.8, -0.4],
+            "humidity": [-1.0, 1.0],
             "offset": 0.0,
-            "temperature": [
-              1.5,
-              2.0
-            ],
-            "weirdness": [
-              -1.0,
-              1.0
-            ]
+            "temperature": [0.8, 1.0],
+            "weirdness": [-1.0, 1.0]
           }
         },
         {
           "biome": "geoworld:floating_isles",
           "parameters": {
-            "continentalness": [
-              0.3,
-              0.7
-            ],
+            "continentalness": [0.3, 0.7],
             "depth": 0.0,
-            "erosion": [
-              -1.0,
-              -0.7
-            ],
-            "humidity": [
-              -1.0,
-              1.0
-            ],
+            "erosion": [-1.0, -0.7],
+            "humidity": [-1.0, 1.0],
             "offset": 0.0,
-            "temperature": [
-              -1.0,
-              1.0
-            ],
-            "weirdness": [
-              0.8,
-              1.0
-            ]
+            "temperature": [-1.0, 1.0],
+            "weirdness": [0.8, 1.0]
           }
         },
         {
           "biome": "geoworld:bamboo_highlands",
           "parameters": {
-            "continentalness": [
-              0.4,
-              0.7
-            ],
+            "continentalness": [0.4, 0.7],
             "depth": 0.0,
-            "erosion": [
-              -0.3,
-              0.1
-            ],
-            "humidity": [
-              0.6,
-              1.0
-            ],
+            "erosion": [-0.3, 0.1],
+            "humidity": [0.6, 1.0],
             "offset": 0.0,
-            "temperature": [
-              -1.0,
-              1.0
-            ],
-            "weirdness": [
-              -1.0,
-              1.0
-            ]
+            "temperature": [-1.0, 1.0],
+            "weirdness": [-1.0, 1.0]
           }
         },
         {
           "biome": "geoworld:rune_highlands",
           "parameters": {
-            "continentalness": [
-              0.4,
-              0.7
-            ],
+            "continentalness": [0.4, 0.7],
             "depth": 0.0,
-            "erosion": [
-              -0.4,
-              0.0
-            ],
-            "humidity": [
-              -1.0,
-              1.0
-            ],
+            "erosion": [-0.4, 0.0],
+            "humidity": [-1.0, 1.0],
             "offset": 0.0,
-            "temperature": [
-              -1.0,
-              1.0
-            ],
-            "weirdness": [
-              -0.3,
-              0.3
-            ]
+            "temperature": [-1.0, 1.0],
+            "weirdness": [-0.3, 0.3]
           }
         },
         {
           "biome": "geoworld:thunder_steppe",
           "parameters": {
-            "continentalness": [
-              0.3,
-              0.7
-            ],
+            "continentalness": [0.3, 0.7],
             "depth": 0.0,
-            "erosion": [
-              0.2,
-              0.6
-            ],
-            "humidity": [
-              -1.0,
-              1.0
-            ],
+            "erosion": [0.2, 0.6],
+            "humidity": [-1.0, 1.0],
             "offset": 0.0,
-            "temperature": [
-              -1.0,
-              1.0
-            ],
-            "weirdness": [
-              0.5,
-              1.0
-            ]
+            "temperature": [-1.0, 1.0],
+            "weirdness": [0.5, 1.0]
           }
         },
         {
           "biome": "geoworld:ancient_forest",
           "parameters": {
-            "continentalness": [
-              0.1,
-              0.5
-            ],
+            "continentalness": [0.1, 0.5],
             "depth": 0.0,
-            "erosion": [
-              0.0,
-              0.4
-            ],
-            "humidity": [
-              0.7,
-              1.0
-            ],
+            "erosion": [0.0, 0.4],
+            "humidity": [0.7, 1.0],
             "offset": 0.0,
-            "temperature": [
-              0.5,
-              0.9
-            ],
-            "weirdness": [
-              -1.0,
-              1.0
-            ]
+            "temperature": [0.4, 0.9],
+            "weirdness": [-1.0, 1.0]
           }
         },
         {
           "biome": "geoworld:ember_plains",
           "parameters": {
-            "continentalness": [
-              0.1,
-              0.6
-            ],
+            "continentalness": [0.1, 0.6],
             "depth": 0.0,
-            "erosion": [
-              0.2,
-              0.8
-            ],
-            "humidity": [
-              -1.0,
-              1.0
-            ],
+            "erosion": [0.2, 0.8],
+            "humidity": [-1.0, 1.0],
             "offset": 0.0,
-            "temperature": [
-              1.8,
-              2.0
-            ],
-            "weirdness": [
-              -1.0,
-              1.0
-            ]
+            "temperature": [0.8, 1.0],
+            "weirdness": [-1.0, 1.0]
           }
         },
         {
           "biome": "geoworld:salt_flats",
           "parameters": {
-            "continentalness": [
-              0.2,
-              0.7
-            ],
+            "continentalness": [0.2, 0.7],
             "depth": 0.0,
-            "erosion": [
-              0.5,
-              1.0
-            ],
-            "humidity": [
-              -1.0,
-              -0.6
-            ],
+            "erosion": [0.5, 1.0],
+            "humidity": [-1.0, -0.6],
             "offset": 0.0,
-            "temperature": [
-              1.5,
-              2.0
-            ],
-            "weirdness": [
-              -1.0,
-              1.0
-            ]
+            "temperature": [0.7, 1.0],
+            "weirdness": [-1.0, 1.0]
           }
         },
         {
           "biome": "geoworld:fungal_expanse",
           "parameters": {
-            "continentalness": [
-              0.0,
-              0.4
-            ],
+            "continentalness": [0.0, 0.4],
             "depth": 0.0,
-            "erosion": [
-              -1.0,
-              1.0
-            ],
-            "humidity": [
-              0.8,
-              1.0
-            ],
+            "erosion": [-1.0, 1.0],
+            "humidity": [0.8, 1.0],
             "offset": 0.0,
-            "temperature": [
-              0.7,
-              1.0
-            ],
-            "weirdness": [
-              -1.0,
-              -0.5
-            ]
+            "temperature": [0.5, 1.0],
+            "weirdness": [-1.0, -0.5]
           }
         },
         {
           "biome": "geoworld:aurora_tundra",
           "parameters": {
-            "continentalness": [
-              0.1,
-              0.6
-            ],
+            "continentalness": [0.1, 0.6],
             "depth": 0.0,
-            "erosion": [
-              0.4,
-              1.0
-            ],
-            "humidity": [
-              -1.0,
-              1.0
-            ],
+            "erosion": [0.4, 1.0],
+            "humidity": [-1.0, 1.0],
             "offset": 0.0,
-            "temperature": [
-              -1.0,
-              -0.6
-            ],
-            "weirdness": [
-              -1.0,
-              1.0
-            ]
+            "temperature": [-1.0, -0.6],
+            "weirdness": [-1.0, 1.0]
           }
         },
         {
           "biome": "geoworld:petrified_wasteland",
           "parameters": {
-            "continentalness": [
-              0.2,
-              0.6
-            ],
+            "continentalness": [0.2, 0.6],
             "depth": 0.0,
-            "erosion": [
-              -1.0,
-              1.0
-            ],
-            "humidity": [
-              -0.8,
-              -0.4
-            ],
+            "erosion": [-1.0, 1.0],
+            "humidity": [-0.8, -0.4],
             "offset": 0.0,
-            "temperature": [
-              0.3,
-              0.7
-            ],
-            "weirdness": [
-              -0.8,
-              -0.3
-            ]
+            "temperature": [0.3, 0.7],
+            "weirdness": [-0.8, -0.3]
           }
         },
         {
           "biome": "geoworld:whispering_pines",
           "parameters": {
-            "continentalness": [
-              0.1,
-              0.5
-            ],
+            "continentalness": [0.1, 0.5],
             "depth": 0.0,
-            "erosion": [
-              0.0,
-              0.5
-            ],
-            "humidity": [
-              0.4,
-              0.7
-            ],
+            "erosion": [0.0, 0.5],
+            "humidity": [0.4, 0.7],
             "offset": 0.0,
-            "temperature": [
-              0.2,
-              0.6
-            ],
-            "weirdness": [
-              -1.0,
-              1.0
-            ]
+            "temperature": [0.2, 0.6],
+            "weirdness": [-1.0, 1.0]
           }
         },
         {
           "biome": "geoworld:haunted_grove",
           "parameters": {
-            "continentalness": [
-              0.1,
-              0.5
-            ],
+            "continentalness": [0.1, 0.5],
             "depth": 0.0,
-            "erosion": [
-              -1.0,
-              1.0
-            ],
-            "humidity": [
-              0.3,
-              0.6
-            ],
+            "erosion": [-1.0, 1.0],
+            "humidity": [0.3, 0.6],
             "offset": 0.0,
-            "temperature": [
-              -1.0,
-              1.0
-            ],
-            "weirdness": [
-              -0.6,
-              -0.2
-            ]
+            "temperature": [-1.0, 1.0],
+            "weirdness": [-0.6, -0.2]
           }
         },
         {
           "biome": "geoworld:golden_woodland",
           "parameters": {
-            "continentalness": [
-              0.1,
-              0.6
-            ],
+            "continentalness": [0.1, 0.6],
             "depth": 0.0,
-            "erosion": [
-              -1.0,
-              1.0
-            ],
-            "humidity": [
-              0.2,
-              0.5
-            ],
+            "erosion": [-1.0, 1.0],
+            "humidity": [0.2, 0.5],
             "offset": 0.0,
-            "temperature": [
-              0.5,
-              0.8
-            ],
-            "weirdness": [
-              -1.0,
-              1.0
-            ]
+            "temperature": [0.4, 0.8],
+            "weirdness": [-1.0, 1.0]
           }
         },
         {
           "biome": "geoworld:twilight_canopy",
           "parameters": {
-            "continentalness": [
-              0.1,
-              0.5
-            ],
+            "continentalness": [0.1, 0.5],
             "depth": 0.0,
-            "erosion": [
-              -1.0,
-              1.0
-            ],
-            "humidity": [
-              0.6,
-              0.9
-            ],
+            "erosion": [-1.0, 1.0],
+            "humidity": [0.6, 0.9],
             "offset": 0.0,
-            "temperature": [
-              -1.0,
-              1.0
-            ],
-            "weirdness": [
-              -0.4,
-              0.0
-            ]
+            "temperature": [-1.0, 1.0],
+            "weirdness": [-0.4, 0.0]
           }
         },
         {
           "biome": "geoworld:ancient_ruins",
           "parameters": {
-            "continentalness": [
-              0.2,
-              0.6
-            ],
+            "continentalness": [0.2, 0.6],
             "depth": 0.0,
-            "erosion": [
-              -1.0,
-              1.0
-            ],
-            "humidity": [
-              -1.0,
-              1.0
-            ],
+            "erosion": [-1.0, 1.0],
+            "humidity": [-1.0, 1.0],
             "offset": 0.0,
-            "temperature": [
-              0.3,
-              0.7
-            ],
-            "weirdness": [
-              -0.5,
-              -0.1
-            ]
+            "temperature": [0.3, 0.7],
+            "weirdness": [-0.5, -0.1]
           }
         },
         {
           "biome": "geoworld:spore_jungle",
           "parameters": {
-            "continentalness": [
-              0.1,
-              0.5
-            ],
+            "continentalness": [0.1, 0.5],
             "depth": 0.0,
-            "erosion": [
-              -1.0,
-              1.0
-            ],
-            "humidity": [
-              0.8,
-              1.0
-            ],
+            "erosion": [-1.0, 1.0],
+            "humidity": [0.8, 1.0],
             "offset": 0.0,
-            "temperature": [
-              0.8,
-              1.2
-            ],
-            "weirdness": [
-              -0.3,
-              0.3
-            ]
+            "temperature": [0.6, 1.0],
+            "weirdness": [-0.3, 0.3]
           }
         },
         {
           "biome": "geoworld:cursed_bayou",
           "parameters": {
-            "continentalness": [
-              0.0,
-              0.3
-            ],
+            "continentalness": [0.0, 0.3],
             "depth": 0.0,
-            "erosion": [
-              -1.0,
-              1.0
-            ],
-            "humidity": [
-              0.8,
-              1.0
-            ],
+            "erosion": [-1.0, 1.0],
+            "humidity": [0.8, 1.0],
             "offset": 0.0,
-            "temperature": [
-              0.6,
-              1.0
-            ],
-            "weirdness": [
-              -0.8,
-              -0.4
-            ]
+            "temperature": [0.5, 1.0],
+            "weirdness": [-0.8, -0.4]
           }
         },
         {
           "biome": "geoworld:mangrove_labyrinth",
           "parameters": {
-            "continentalness": [
-              -0.05,
-              0.2
-            ],
+            "continentalness": [-0.05, 0.2],
             "depth": 0.0,
-            "erosion": [
-              -1.0,
-              1.0
-            ],
-            "humidity": [
-              0.9,
-              1.0
-            ],
+            "erosion": [-1.0, 1.0],
+            "humidity": [0.9, 1.0],
             "offset": 0.0,
-            "temperature": [
-              0.7,
-              1.0
-            ],
-            "weirdness": [
-              -1.0,
-              1.0
-            ]
+            "temperature": [0.6, 1.0],
+            "weirdness": [-1.0, 1.0]
           }
         },
         {
           "biome": "geoworld:peat_moors",
           "parameters": {
-            "continentalness": [
-              0.1,
-              0.4
-            ],
+            "continentalness": [0.1, 0.4],
             "depth": 0.0,
-            "erosion": [
-              -1.0,
-              1.0
-            ],
-            "humidity": [
-              0.5,
-              0.8
-            ],
+            "erosion": [-1.0, 1.0],
+            "humidity": [0.5, 0.8],
             "offset": 0.0,
-            "temperature": [
-              0.2,
-              0.5
-            ],
-            "weirdness": [
-              -0.4,
-              0.0
-            ]
+            "temperature": [0.2, 0.5],
+            "weirdness": [-0.4, 0.0]
           }
         },
         {
           "biome": "geoworld:dune_sea",
           "parameters": {
-            "continentalness": [
-              0.2,
-              0.8
-            ],
+            "continentalness": [0.2, 0.8],
             "depth": 0.0,
-            "erosion": [
-              0.3,
-              0.7
-            ],
-            "humidity": [
-              -1.0,
-              -0.7
-            ],
+            "erosion": [0.3, 0.7],
+            "humidity": [-1.0, -0.7],
             "offset": 0.0,
-            "temperature": [
-              1.5,
-              2.0
-            ],
-            "weirdness": [
-              -1.0,
-              1.0
-            ]
+            "temperature": [0.7, 1.0],
+            "weirdness": [-1.0, 1.0]
           }
         },
         {
           "biome": "geoworld:red_canyon",
           "parameters": {
-            "continentalness": [
-              0.3,
-              0.7
-            ],
+            "continentalness": [0.3, 0.7],
             "depth": 0.0,
-            "erosion": [
-              -0.2,
-              0.3
-            ],
-            "humidity": [
-              -0.8,
-              -0.4
-            ],
+            "erosion": [-0.2, 0.3],
+            "humidity": [-0.8, -0.4],
             "offset": 0.0,
-            "temperature": [
-              1.2,
-              1.8
-            ],
-            "weirdness": [
-              -1.0,
-              1.0
-            ]
+            "temperature": [0.6, 1.0],
+            "weirdness": [-1.0, 1.0]
           }
         },
         {
           "biome": "geoworld:volcanic_ashfields",
           "parameters": {
-            "continentalness": [
-              0.2,
-              0.6
-            ],
+            "continentalness": [0.2, 0.6],
             "depth": 0.0,
-            "erosion": [
-              0.1,
-              0.5
-            ],
-            "humidity": [
-              -1.0,
-              -0.5
-            ],
+            "erosion": [0.1, 0.5],
+            "humidity": [-1.0, -0.5],
             "offset": 0.0,
-            "temperature": [
-              1.6,
-              2.0
-            ],
-            "weirdness": [
-              -1.0,
-              1.0
-            ]
+            "temperature": [0.7, 1.0],
+            "weirdness": [-1.0, 1.0]
           }
         },
         {
           "biome": "geoworld:mirage_oasis",
           "parameters": {
-            "continentalness": [
-              0.3,
-              0.6
-            ],
+            "continentalness": [0.3, 0.6],
             "depth": 0.0,
-            "erosion": [
-              -1.0,
-              1.0
-            ],
-            "humidity": [
-              -0.8,
-              -0.3
-            ],
+            "erosion": [-1.0, 1.0],
+            "humidity": [-0.8, -0.3],
             "offset": 0.0,
-            "temperature": [
-              1.5,
-              2.0
-            ],
-            "weirdness": [
-              0.4,
-              0.8
-            ]
+            "temperature": [0.7, 1.0],
+            "weirdness": [0.4, 0.8]
           }
         },
         {
           "biome": "geoworld:eclipse_valley",
           "parameters": {
-            "continentalness": [
-              0.2,
-              0.6
-            ],
+            "continentalness": [0.2, 0.6],
             "depth": 0.0,
-            "erosion": [
-              -1.0,
-              1.0
-            ],
-            "humidity": [
-              -1.0,
-              1.0
-            ],
+            "erosion": [-1.0, 1.0],
+            "humidity": [-1.0, 1.0],
             "offset": 0.0,
-            "temperature": [
-              0.3,
-              0.7
-            ],
-            "weirdness": [
-              0.6,
-              1.0
-            ]
+            "temperature": [0.3, 0.7],
+            "weirdness": [0.6, 1.0]
           }
         },
         {
           "biome": "geoworld:starfall_meadow",
           "parameters": {
-            "continentalness": [
-              0.1,
-              0.5
-            ],
+            "continentalness": [0.1, 0.5],
             "depth": 0.0,
-            "erosion": [
-              -1.0,
-              1.0
-            ],
-            "humidity": [
-              -1.0,
-              1.0
-            ],
+            "erosion": [-1.0, 1.0],
+            "humidity": [-1.0, 1.0],
             "offset": 0.0,
-            "temperature": [
-              0.4,
-              0.8
-            ],
-            "weirdness": [
-              0.5,
-              0.8
-            ]
+            "temperature": [0.4, 0.8],
+            "weirdness": [0.5, 0.8]
           }
         },
         {
           "biome": "geoworld:dream_forest",
           "parameters": {
-            "continentalness": [
-              0.1,
-              0.5
-            ],
+            "continentalness": [0.1, 0.5],
             "depth": 0.0,
-            "erosion": [
-              -1.0,
-              1.0
-            ],
-            "humidity": [
-              0.5,
-              0.9
-            ],
+            "erosion": [-1.0, 1.0],
+            "humidity": [0.5, 0.9],
             "offset": 0.0,
-            "temperature": [
-              -1.0,
-              1.0
-            ],
-            "weirdness": [
-              0.3,
-              0.7
-            ]
+            "temperature": [-1.0, 1.0],
+            "weirdness": [0.3, 0.7]
           }
         },
         {
           "biome": "geoworld:moonstone_basin",
           "parameters": {
-            "continentalness": [
-              0.2,
-              0.5
-            ],
+            "continentalness": [0.2, 0.5],
             "depth": 0.0,
-            "erosion": [
-              -1.0,
-              1.0
-            ],
-            "humidity": [
-              -1.0,
-              1.0
-            ],
+            "erosion": [-1.0, 1.0],
+            "humidity": [-1.0, 1.0],
             "offset": 0.0,
-            "temperature": [
-              0.3,
-              0.6
-            ],
-            "weirdness": [
-              -0.2,
-              0.3
-            ]
+            "temperature": [0.3, 0.6],
+            "weirdness": [-0.2, 0.3]
           }
         },
         {
           "biome": "geoworld:verdant_chasms",
           "parameters": {
-            "continentalness": [
-              0.1,
-              0.5
-            ],
-            "depth": [
-              0.8,
-              1.0
-            ],
-            "erosion": [
-              -1.0,
-              1.0
-            ],
-            "humidity": [
-              0.8,
-              1.0
-            ],
+            "continentalness": [0.1, 0.5],
+            "depth": [0.8, 1.0],
+            "erosion": [-1.0, 1.0],
+            "humidity": [0.8, 1.0],
             "offset": 0.0,
-            "temperature": [
-              0.6,
-              0.9
-            ],
-            "weirdness": [
-              -1.0,
-              1.0
-            ]
+            "temperature": [0.5, 0.9],
+            "weirdness": [-1.0, 1.0]
           }
         },
         {
           "biome": "geoworld:crystal_caverns",
           "parameters": {
-            "continentalness": [
-              0.2,
-              0.7
-            ],
-            "depth": [
-              0.6,
-              1.0
-            ],
-            "erosion": [
-              -1.0,
-              1.0
-            ],
-            "humidity": [
-              -1.0,
-              1.0
-            ],
+            "continentalness": [0.2, 0.7],
+            "depth": [0.6, 1.0],
+            "erosion": [-1.0, 1.0],
+            "humidity": [-1.0, 1.0],
             "offset": 0.0,
-            "temperature": [
-              -1.0,
-              1.0
-            ],
-            "weirdness": [
-              0.2,
-              0.8
-            ]
+            "temperature": [-1.0, 1.0],
+            "weirdness": [0.2, 0.8]
           }
         },
         {
           "biome": "geoworld:magma_depths",
           "parameters": {
-            "continentalness": [
-              0.1,
-              0.7
-            ],
-            "depth": [
-              0.7,
-              1.0
-            ],
-            "erosion": [
-              -1.0,
-              1.0
-            ],
-            "humidity": [
-              -1.0,
-              1.0
-            ],
+            "continentalness": [0.1, 0.7],
+            "depth": [0.7, 1.0],
+            "erosion": [-1.0, 1.0],
+            "humidity": [-1.0, 1.0],
             "offset": 0.0,
-            "temperature": [
-              1.8,
-              2.0
-            ],
-            "weirdness": [
-              -1.0,
-              1.0
-            ]
+            "temperature": [0.8, 1.0],
+            "weirdness": [-1.0, 1.0]
           }
         },
         {
           "biome": "geoworld:echo_chambers",
           "parameters": {
-            "continentalness": [
-              0.1,
-              0.6
-            ],
-            "depth": [
-              0.5,
-              0.9
-            ],
-            "erosion": [
-              -1.0,
-              1.0
-            ],
-            "humidity": [
-              -1.0,
-              1.0
-            ],
+            "continentalness": [0.1, 0.6],
+            "depth": [0.5, 0.9],
+            "erosion": [-1.0, 1.0],
+            "humidity": [-1.0, 1.0],
             "offset": 0.0,
-            "temperature": [
-              -1.0,
-              1.0
-            ],
-            "weirdness": [
-              -1.0,
-              1.0
-            ]
+            "temperature": [-1.0, 1.0],
+            "weirdness": [-1.0, 1.0]
           }
         },
         {
           "biome": "geoworld:fungal_depths",
           "parameters": {
-            "continentalness": [
-              0.0,
-              0.4
-            ],
-            "depth": [
-              0.6,
-              1.0
-            ],
-            "erosion": [
-              -1.0,
-              1.0
-            ],
-            "humidity": [
-              0.8,
-              1.0
-            ],
+            "continentalness": [0.0, 0.4],
+            "depth": [0.6, 1.0],
+            "erosion": [-1.0, 1.0],
+            "humidity": [0.8, 1.0],
             "offset": 0.0,
-            "temperature": [
-              -1.0,
-              1.0
-            ],
-            "weirdness": [
-              -1.0,
-              1.0
-            ]
+            "temperature": [-1.0, 1.0],
+            "weirdness": [-1.0, 1.0]
           }
         },
         {
           "biome": "geoworld:lava_falls",
           "parameters": {
-            "continentalness": [
-              0.1,
-              0.5
-            ],
-            "depth": [
-              0.5,
-              1.0
-            ],
-            "erosion": [
-              -1.0,
-              1.0
-            ],
-            "humidity": [
-              -1.0,
-              1.0
-            ],
+            "continentalness": [0.1, 0.5],
+            "depth": [0.5, 1.0],
+            "erosion": [-1.0, 1.0],
+            "humidity": [-1.0, 1.0],
             "offset": 0.0,
-            "temperature": [
-              1.8,
-              2.0
-            ],
-            "weirdness": [
-              -1.0,
-              1.0
-            ]
+            "temperature": [0.8, 1.0],
+            "weirdness": [-1.0, 1.0]
           }
         }
       ]
